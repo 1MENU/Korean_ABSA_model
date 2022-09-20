@@ -67,6 +67,8 @@ def eval_model(tokenizer, ce_model, data, device, dataset_type, wandb_on):
 
     pred_data = copy.deepcopy(data)
 
+    count = 0
+
     for sentence in pred_data:
         form = sentence['sentence_form']
         sentence['annotation'] = []
@@ -83,7 +85,11 @@ def eval_model(tokenizer, ce_model, data, device, dataset_type, wandb_on):
             attention_mask = torch.tensor([tokenized_data['attention_mask']]).to(device)
 
             with torch.no_grad():
-                ce_logits = ce_model(input_ids, attention_mask)
+                ce_logits, cls = ce_model.return_cls(input_ids, attention_mask)
+
+                if count == 0:
+                    print(cls)
+                    count = 10
 
             ce_predictions = torch.argmax(ce_logits, dim = -1)
 
