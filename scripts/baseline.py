@@ -9,7 +9,6 @@ from transformers import XLMRobertaModel, AutoTokenizer
 from torch.utils.data import DataLoader, TensorDataset
 from transformers import get_linear_schedule_with_warmup
 from transformers import AdamW
-from datasets import load_metric
 from sklearn.metrics import f1_score
 import pandas as pd
 import copy
@@ -18,6 +17,7 @@ PADDING_TOKEN = 1
 S_OPEN_TOKEN = 0
 S_CLOSE_TOKEN = 2
 
+# 21개
 entity_property_pair = [
     '제품 전체#일반', '제품 전체#가격', '제품 전체#디자인', '제품 전체#품질', '제품 전체#편의성', '제품 전체#인지도',
     '본품#일반', '본품#디자인', '본품#품질', '본품#편의성', '본품#다양성',
