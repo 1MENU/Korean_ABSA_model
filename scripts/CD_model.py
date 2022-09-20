@@ -1,4 +1,4 @@
-from util.model_utils import *
+from util.module_utils import *
 from base_data import *
 
 class SimpleClassifier(nn.Module):

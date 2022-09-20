@@ -31,9 +31,9 @@ dev_file_list = ["dev1.jsonl"]
 test_label_file_list = ["test1.jsonl"]
 
 if args.kfold == 0:
-    train_data = jsonlload(train_file_list[0])
-    dev_data = jsonlload(dev_file_list[0])
-    test_data = jsonlload(test_label_file_list[0])
+    train_data = jsonlload(train_file_list)
+    dev_data = jsonlload(dev_file_list)
+    test_data = jsonlload(test_label_file_list)
 else:
     train_data, dev_data = stratified_KFold(train_file_list, args.nsplit, args.kfold, 'Answer(FALSE = 0, TRUE = 1)')   # train list, n_split, k번째 fold 사용, label name
     test_data = jsonlload(test_label_file_list[0])
@@ -43,7 +43,7 @@ tokenizer = AutoTokenizer.from_pretrained(args.pretrained)
 num_added_toks = tokenizer.add_special_tokens(special_tokens_dict)
 
 train_CD_data, train_SC_data = CD_dataset(train_data, tokenizer, 256)
-TrainLoader = DataLoader(train_data, batch_size = args.batch_size)
+TrainLoader = DataLoader(train_CD_data, batch_size = args.batch_size)
 
 
 mymodel = RoBertaBaseClassifier(args.pretrained)
