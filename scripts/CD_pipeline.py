@@ -11,7 +11,6 @@ parser.add_argument('--epochs', type=int, default=20)
 parser.add_argument('--lr', type=float, default=1e-5)
 parser.add_argument('--weight_decay', type=float, default=0.01)
 parser.add_argument('--seed' , type=int , default = 5, help='random seed (default: 5)')
-parser.add_argument('--device', type=int, default=0)
 parser.add_argument('--wandb', type=int, default=1, help='wandb on / off')
 parser.add_argument('--LS', type=float, default=0.00, help='label smoothing')
 parser.add_argument('--save', type=int, default=0, help='model save')
@@ -22,7 +21,7 @@ parser.add_argument('--optimizer', default="AdamW")
 
 args = parser.parse_args()
 
-device = torch.device(f'cuda:{args.device}')
+device = torch.device('cuda:0')
 
 set_seed(args.seed, device) #random seed 정수로 고정.
 
@@ -71,7 +70,7 @@ optimizer = build_optimizer(entity_property_optimizer_grouped_parameters, lr=arg
 
 scheduler = get_linear_schedule_with_warmup(
     optimizer,
-    num_warmup_steps=0,
+    num_warmup_steps = 0,
     num_training_steps = args.epochs * len(TrainLoader)
 )
 
