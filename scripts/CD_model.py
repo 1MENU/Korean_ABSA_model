@@ -42,15 +42,3 @@ class RoBertaBaseClassifier(nn.Module):
         logits = self.labels_classifier(sequence_output)
 
         return logits
-
-    def return_cls(self, input_ids, attention_mask):
-        outputs = self.model(
-            input_ids=input_ids,
-            attention_mask=attention_mask,
-            token_type_ids=None
-        )
-
-        sequence_output = outputs[0]
-        logits = self.labels_classifier(sequence_output)
-
-        return logits, sequence_output
