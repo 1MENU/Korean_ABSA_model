@@ -198,6 +198,7 @@ def stratified_KFold(file_list, n_splits, which_k, label_name):
 
             return features_train, features_test
 
+import pprint
 
 # jsonl 파일 읽어서 list에 저장
 def jsonlload(fname_list, encoding="utf-8"):

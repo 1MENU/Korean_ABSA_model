@@ -26,9 +26,9 @@ device = torch.device('cuda:0')
 set_seed(args.seed, device) #random seed 정수로 고정.
 
 
-train_file_list = ["train1.jsonl"]
-dev_file_list = ["dev1.jsonl"]
-test_label_file_list = ["test1.jsonl"]
+train_file_list = ["train.jsonl"]
+dev_file_list = ["dev.jsonl"]
+test_label_file_list = ["test.jsonl"]
 
 if args.kfold == 0:
     train_data = jsonlload(train_file_list)
@@ -36,7 +36,7 @@ if args.kfold == 0:
     test_data = jsonlload(test_label_file_list)
 else:
     train_data, dev_data = stratified_KFold(train_file_list, args.nsplit, args.kfold, 'Answer(FALSE = 0, TRUE = 1)')   # train list, n_split, k번째 fold 사용, label name
-    test_data = jsonlload(test_label_file_list[0])
+    test_data = jsonlload(test_label_file_list)
 
 
 tokenizer = AutoTokenizer.from_pretrained(args.pretrained)
