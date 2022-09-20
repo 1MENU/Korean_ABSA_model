@@ -7,17 +7,6 @@ from CD_model import *
 task_name = 'CD'
 
 
-
-polarity_count = 0
-entity_property_count = 0
-
-if not os.path.exists("../saved_model/category_extraction/"):
-    os.makedirs("../saved_model/category_extraction/")
-if not os.path.exists("../saved_model/polarity_classification/"):
-    os.makedirs("../saved_mod   el/polarity_classification/")
-
-
-
 bestF1 = -1 #0 ~ 1
 bestLoss = 10
 
