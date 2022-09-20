@@ -76,14 +76,3 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
             entity_property_data_dict['label'].append(label_name_to_id['False'])
 
     return entity_property_data_dict, polarity_data_dict
-
-
-def get_CD_dataset(train_data, dev_data, test_data, pretrained_tokenizer):
-    tokenizer = AutoTokenizer.from_pretrained(pretrained_tokenizer)
-    num_added_toks = tokenizer.add_special_tokens(special_tokens_dict)
-
-    train_CD_data, train_SC_data = CD_dataset(train_data, tokenizer, 256)
-    dev_CD_data, dev_SC_data = CD_dataset(dev_data, tokenizer, 256)
-    test_CD_data, test_SC_data = CD_dataset(test_data, tokenizer, 256)
-
-    return train_CD_data, dev_CD_data, test_CD_data
