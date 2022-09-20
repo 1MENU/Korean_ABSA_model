@@ -20,14 +20,6 @@ def set_seed(seedNum, device):
 
 from torch.utils.data import DataLoader
 
-def load_data(dataset_train, dataset_dev, dataset_test_label, batch_size):
-    TrainLoader = DataLoader(dataset_train, batch_size = batch_size)
-    EvalLoader = DataLoader(dataset_dev, batch_size = batch_size)
-    InferenceLoader = DataLoader(dataset_test_label, batch_size = batch_size)
-
-    return TrainLoader, EvalLoader, InferenceLoader
-
-
 from torch.optim import AdamW, SGD
 
 def build_optimizer(parameters, lr, weight_decay, type):
