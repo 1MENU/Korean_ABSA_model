@@ -106,12 +106,12 @@ def eval_model(tokenizer, ce_model, data, device, dataset_type, wandb_on):
 
     f1 = evaluation_f1(data, pred_data)['category extraction result']['F1']
 
-    if dataset_type == "eval":
+    if dataset_type == "eval" :
         print('eval_f1 = ', f1, " eval_loss = ") 
         if wandb_on:
             wandb.log({"eval_f1": f1})    # "eval_loss": avg_loss
     
-    else:
+    elif dataset_type == "test" :
         print('test_acc = ', f1, " test_loss = ")
         if wandb_on:
             wandb.log({"test_f1": f1})
@@ -127,17 +127,17 @@ def inference_model(model, data_loader, lf, device):
 
     all_loss = []
 
-    for batchIdx, (input_ids, token_type_ids, attention_mask, label) in enumerate(data_loader):
-        with torch.no_grad(): #autograd 끔->속도향상. 사실 model.eval()하면 안해줘도 됨.
+    for batchIdx, (input_ids, input_mask, label) in enumerate(data_loader):
+        with torch.no_grad():
+            model.zero_grad() #model weight 초기화
+
             input_ids = input_ids.to(device) #move param_buffers to gpu
-            token_type_ids = token_type_ids.to(device)
-            attention_mask = attention_mask.to(device)
-            
+            input_mask = input_mask.to(device)
             label = label.long().to(device)
 
-            output = model(input_ids, token_type_ids, attention_mask)
-
-            loss = lf(output,label)
+            output = model(input_ids, input_mask) #shape: 
+            
+            loss = lf(output, label)
             all_loss.append(loss)
 
         if y_pred is None:
