@@ -1,0 +1,21 @@
+#LSS edited
+# Custom added by LSS
+git_remote/*
+runs/*
+
+# dataset/task1_grammar/*
+# dataset/task2_homonym/*
+# dataset/task3_COPA/*
+# dataset/task4_boolQA/*
+
+*.pt
+
+__pycache__
+*.pyc
+
+scripts/__pycache__/*
+
+scripts/wandb/*
+wandb/*
+
+api_key.txt
