@@ -161,7 +161,10 @@ def inference_model(model, data_loader, lf, device):
 
     y_pred = np.argmax(y_pred, axis=1)
     result = compute_metrics(y_pred, y_true)["acc"]
+
+    f1 = f1_score(y_true, y_pred)
     
     print('test_acc = ', result, " test_loss = ", avg_loss)
+    print('test_f1 = ', f1)
     
-    return y_pred_softmax, custom_loss
+    return y_pred_softmax, custom_loss, f1

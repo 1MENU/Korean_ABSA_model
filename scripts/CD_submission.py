@@ -1,5 +1,6 @@
 from CD_dataset import *
 from CD_model import *
+from CD_module import *
 
 parser = argparse.ArgumentParser()
 

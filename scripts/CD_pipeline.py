@@ -26,9 +26,9 @@ device = torch.device('cuda:0')
 set_seed(args.seed, device) #random seed 정수로 고정.
 
 
-train_file_list = ["train.jsonl"]
-dev_file_list = ["dev.jsonl"]
-test_label_file_list = ["test.jsonl"]
+train_file_list = ["train1.jsonl"]
+dev_file_list = ["dev1.jsonl"]
+test_label_file_list = ["test1.jsonl"]
 
 if args.kfold == 0:
     train_data = jsonlload(train_file_list)
@@ -45,28 +45,31 @@ num_added_toks = tokenizer.add_special_tokens(special_tokens_dict)
 train_CD_data, train_SC_data = CD_dataset(train_data, tokenizer, 256)
 TrainLoader = DataLoader(train_CD_data, batch_size = args.batch_size)
 
+dev_CD_data, dev_SC_data = CD_dataset(dev_data, tokenizer, 256)
+DevLoader = DataLoader(dev_CD_data, batch_size = args.batch_size)
+
 
 mymodel = RoBertaBaseClassifier(args.pretrained)
 mymodel.to(device)
 
 
-# entity_property_model_optimizer_setting
-FULL_FINETUNING = True
-if FULL_FINETUNING:
-    entity_property_param_optimizer = list(mymodel.named_parameters())
-    no_decay = ['bias', 'gamma', 'beta']
-    entity_property_optimizer_grouped_parameters = [
-        {'params': [p for n, p in entity_property_param_optimizer if not any(nd in n for nd in no_decay)],
-            'weight_decay_rate': 0.01},
-        {'params': [p for n, p in entity_property_param_optimizer if any(nd in n for nd in no_decay)],
-            'weight_decay_rate': 0.0}
-    ]
-else:
-    entity_property_param_optimizer = list(mymodel.classifier.named_parameters())
-    entity_property_optimizer_grouped_parameters = [{"params": [p for n, p in entity_property_param_optimizer]}]
+# # entity_property_model_optimizer_setting
+# FULL_FINETUNING = True
+# if FULL_FINETUNING:
+#     entity_property_param_optimizer = list(mymodel.named_parameters())
+#     no_decay = ['bias', 'gamma', 'beta']
+#     entity_property_optimizer_grouped_parameters = [
+#         {'params': [p for n, p in entity_property_param_optimizer if not any(nd in n for nd in no_decay)],
+#             'weight_decay_rate': 0.01},
+#         {'params': [p for n, p in entity_property_param_optimizer if any(nd in n for nd in no_decay)],
+#             'weight_decay_rate': 0.0}
+#     ]
+# else:
+#     entity_property_param_optimizer = list(mymodel.classifier.named_parameters())
+#     entity_property_optimizer_grouped_parameters = [{"params": [p for n, p in entity_property_param_optimizer]}]
 
 
-optimizer = build_optimizer(entity_property_optimizer_grouped_parameters, lr=args.lr, weight_decay=args.weight_decay, type = args.optimizer)
+optimizer = build_optimizer(mymodel.parameters(), lr=args.lr, weight_decay=args.weight_decay, type = args.optimizer)
 
 scheduler = get_linear_schedule_with_warmup(
     optimizer,
@@ -113,7 +116,10 @@ for epoch in range(args.epochs):
 
     f1 = eval_model(tokenizer, mymodel, copy.deepcopy(dev_data), device, "eval", args.wandb)
 
-    test_f1 = eval_model(tokenizer, mymodel, copy.deepcopy(test_data), device, "test", args.wandb)
+    f1_ = inference_model(mymodel, DevLoader, lf, device)
+
+    # test_f1 = eval_model(tokenizer, mymodel, copy.deepcopy(test_data), device, "test", args.wandb)
+    test_f1 = f1
 
     if bestF1 < (f1 + test_f1) / 2 :
         bestF1 = (f1 + test_f1) / 2
@@ -121,7 +127,7 @@ for epoch in range(args.epochs):
         print("! new high ! -> ", bestF1)
 
         if args.save:
-            torch.save(mymodel.state_dict(), f"{saveDirPth_str}/{task_name}/{args.name}.pt")
+            torch.save(mymodel.state_dict(), f"{saveDirPth_str}{task_name}/{args.name}.pt")
 
     # if bestLoss > (loss + test_loss) / 2 :
     #     bestLoss = (loss + test_loss) / 2
