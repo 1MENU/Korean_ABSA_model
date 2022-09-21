@@ -36,7 +36,7 @@ def MCC(preds, labels):
     assert len(preds) == len(labels)
     return matthews_corrcoef(labels, preds)
 
-from sklearn.metrics import f1_score
+from sklearn.metrics import f1_score, accuracy_score
 
 def F1_scrore():
     y_true = list(map(int, y_true))
