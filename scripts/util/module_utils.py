@@ -11,12 +11,21 @@ import copy
 
 from util.utils import *
 
+datasetPth = '../dataset/'
+saveDirPth_str = "../materials/saved_model/"
+predPth = '../materials/pred/'
+submissionPth = '../materials/submission/'
 
 
-if not os.path.exists("../saved_model/category_extraction/"):
-    os.makedirs("../saved_model/category_extraction/")
-if not os.path.exists("../saved_model/polarity_classification/"):
-    os.makedirs("../saved_model/polarity_classification/")
+
+def make_directories(task):
+    if not os.path.exists(saveDirPth_str + task + "/"):
+        os.makedirs(saveDirPth_str + task + "/")
+    if not os.path.exists(predPth + task + "/"):
+        os.makedirs(predPth + task + "/")
+    if not os.path.exists(submissionPth + task + "/"):
+        os.makedirs(submissionPth + task + "/")
+
 
 def set_seed(seedNum, device):
     torch.manual_seed(seedNum)
@@ -151,18 +160,13 @@ def evaluation_f1(true_data, pred_data):
         'F1': 0 if (pipeline_recall+pipeline_precision) == 0 else 2*pipeline_recall*pipeline_precision/(pipeline_recall+pipeline_precision)
     }
 
+    print(ce_eval)
+
     return {
         'category extraction result': ce_result,
         'entire pipeline result': pipeline_result
     }
 
-
-homePth = getParentPath(os.getcwd())
-datasetPth = homePth + '/dataset/'
-
-saveDirPth_str = homePth + '/materials/model_save/'
-predPth = homePth + '/materials/pred/'
-submissionPth = homePth + '/materials/submission/'
 
 
 from sklearn.model_selection import StratifiedKFold

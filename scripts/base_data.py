@@ -4,7 +4,7 @@ entity_property_pair = [
     '패키지/구성품#일반', '패키지/구성품#디자인', '패키지/구성품#품질', '패키지/구성품#편의성', '패키지/구성품#다양성',
     '브랜드#일반', '브랜드#가격', '브랜드#디자인', '브랜드#품질', '브랜드#인지도',
                     ]
-label_id_to_name = ['True', 'False']
+label_id_to_name = ['False', 'True',]
 label_name_to_id = {label_id_to_name[i]: i for i in range(len(label_id_to_name))}
 
 polarity_id_to_name = ['positive', 'negative', 'neutral']
