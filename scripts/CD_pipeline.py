@@ -6,11 +6,11 @@ from base_data import *
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--name', default="defalut")
-parser.add_argument('-bs', '--batch_size', type=int, default=4)
+parser.add_argument('-bs', '--batch_size', type=int, default=16)
 parser.add_argument('--epochs', type=int, default=20)
 parser.add_argument('--lr', type=float, default=1e-5)
 parser.add_argument('--weight_decay', type=float, default=0.01)
-parser.add_argument('--seed' , type=int , default = 5, help='random seed (default: 5)')
+parser.add_argument('--seed' , type=int , default = 1, help='random seed (default: 1)')
 parser.add_argument('--wandb', type=int, default=1, help='wandb on / off')
 parser.add_argument('--LS', type=float, default=0.00, help='label smoothing')
 parser.add_argument('--save', type=int, default=0, help='model save')
@@ -21,14 +21,14 @@ parser.add_argument('--optimizer', default="AdamW")
 
 args = parser.parse_args()
 
-device = torch.device('cuda:0')
+device = torch.device('cuda')
 
 set_seed(args.seed, device) #random seed 정수로 고정.
 
 
-train_file_list = ["train1.jsonl"]
-dev_file_list = ["dev1.jsonl"]
-test_label_file_list = ["test1.jsonl"]
+train_file_list = ["train.jsonl"]
+dev_file_list = ["dev.jsonl"]
+test_label_file_list = ["test.jsonl"]
 
 if args.kfold == 0:
     train_data = jsonlload(train_file_list)
@@ -114,12 +114,12 @@ for epoch in range(args.epochs):
 
     minLoss = train_model(mymodel, TrainLoader, lf, optimizer, scheduler, device, args.wandb) #1epoch마다 eval
 
-    f1 = eval_model(tokenizer, mymodel, copy.deepcopy(dev_data), device, "eval", args.wandb)
+    f1, loss = eval_model(mymodel, DevLoader, lf, device, "eval", args.wandb)
 
-    f1_ = inference_model(mymodel, DevLoader, lf, device)
+    # f1_ = inference_model(mymodel, DevLoader, lf, device)
 
-    # test_f1 = eval_model(tokenizer, mymodel, copy.deepcopy(test_data), device, "test", args.wandb)
-    test_f1 = f1
+    # test_f1, test_loss = eval_model(tokenizer, mymodel, copy.deepcopy(test_data), device, "test", args.wandb)
+    test_f1, test_loss = f1, loss
 
     if bestF1 < (f1 + test_f1) / 2 :
         bestF1 = (f1 + test_f1) / 2
@@ -129,18 +129,18 @@ for epoch in range(args.epochs):
         if args.save:
             torch.save(mymodel.state_dict(), f"{saveDirPth_str}{task_name}/{args.name}.pt")
 
-    # if bestLoss > (loss + test_loss) / 2 :
-    #     bestLoss = (loss + test_loss) / 2
-    #     bestLoss_at = epoch
-    #     print("! new low ! -> ", bestLoss)
+    if bestLoss > (loss + test_loss) / 2 :
+        bestLoss = (loss + test_loss) / 2
+        bestLoss_at = epoch
+        print("! new low ! -> ", bestLoss)
 
-    # if epoch >= bestAcc_at + 5 and epoch >= bestLoss_at + 5 : break
+    if epoch >= bestF1_at + 5 and epoch >= bestLoss_at + 5 : break
 
 
 if args.wandb:
     wandb.log({"Best_F1" : bestF1, "Best_Loss" : bestLoss})
 
 print('\nFinish')
-print(f'best F1 : {bestF1}(Best F1 around epoch {bestF1_at})')
-# print(f'bestLoss : {bestLoss}(Best Loss around epoch {bestLoss_at})\n')
+print(f'best F1 : {bestF1} (Best F1 around epoch {bestF1_at})')
+print(f'bestLoss : {bestLoss} (Best Loss around epoch {bestLoss_at})\n')
 print("time per epoch :", (time.time() - start)/args.epochs)

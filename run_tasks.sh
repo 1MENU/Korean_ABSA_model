@@ -44,4 +44,4 @@ cd scripts
 
 
 run_task 1 CD
-python CD_pipeline.py --epochs 30 --name test_1 --batch_size=16 --lr=3e-6
+CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --epochs 25 --name test_0 --batch_size=32 --lr=3e-6
