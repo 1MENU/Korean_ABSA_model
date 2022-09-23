@@ -54,11 +54,17 @@ def train_model(model, data_loader, lf, optimizer, scheduler, device, wandb_on):
     min_loss = min(min_loss, avg_loss)
 
     y_pred = np.argmax(y_pred, axis=1)
-    accuracy = compute_metrics(y_pred, y_true)["acc"]
+    
+    yy = y_true | y_pred
 
-    print("acc = ", accuracy,", loss = ",avg_loss)
+    y_true = y_true[yy == 1]
+    y_pred = y_pred[yy == 1]
+
+    f1_b = f1_score(y_true, y_pred, average = 'binary')
+
+    print("f1 = ", f1_b,", loss = ", avg_loss)
     if wandb_on:
-        wandb.log({"Train_accuracy": accuracy, "Train_loss": avg_loss})
+        wandb.log({"Train_f1": f1_b, "Train_loss": avg_loss})
 
     return min_loss
 
@@ -102,16 +108,21 @@ def eval_model(model, data_loader, lf, device, dataset_type, wandb_on):
     y_pred = y_pred[yy == 1]
 
     f1_b = f1_score(y_true, y_pred, average = 'binary')
-    f1_mirco = f1_score(y_true, y_pred, average = 'micro')
-    f1_macro = f1_score(y_true, y_pred, average = 'macro')
-    acc = accuracy_score(y_true, y_pred)
-
-    print('eval_f1 = ', f1_b, f1_mirco, f1_macro)
-    print('eval_Acc = ', acc)
+    
+    if dataset_type == "eval" :
+        print('eval_f1 = ', f1_b, " eval_loss = ", avg_loss) 
+        if wandb_on:
+            wandb.log({"eval_f1": f1_b, "eval_loss" : avg_loss})    # "eval_loss": avg_loss
+    
+    elif dataset_type == "test" :
+        print('test_acc = ', f1_b, " test_loss = ", avg_loss) 
+        if wandb_on:
+            wandb.log({"test_f1": f1_b, "test_loss" : avg_loss})
+            
 
     return f1_b, avg_loss
 
-
+from sklearn.metrics import confusion_matrix
 
 def inference_model(model, data_loader, lf, device):
     model.eval()
@@ -166,6 +177,8 @@ def inference_model(model, data_loader, lf, device):
 
     y_true = y_true[yy == 1]
     y_pred = y_pred[yy == 1]
+    
+    
 
     f1_b = f1_score(y_true, y_pred, average = 'binary')
     f1_mirco = f1_score(y_true, y_pred, average = 'micro')
@@ -179,48 +192,59 @@ def inference_model(model, data_loader, lf, device):
 
 
 
-# def eval_model(tokenizer, ce_model, data, device, dataset_type, wandb_on):
+def eval_model_(tokenizer, ce_model, data, device, dataset_type, wandb_on):
 
-#     ce_model.eval()
-
-#     pred_data = copy.deepcopy(data)
-
-#     for sentence in pred_data:
-#         form = sentence['sentence_form']
-#         sentence['annotation'] = []
-
-#         if type(form) != str:
-#             print("form type is arong: ", form)
-#             continue
-
-#         for pair in entity_property_pair:
-
-#             tokenized_data = tokenizer(form, pair, padding='max_length', max_length=256, truncation=True)
-
-#             input_ids = torch.tensor([tokenized_data['input_ids']]).to(device)
-#             attention_mask = torch.tensor([tokenized_data['attention_mask']]).to(device)
-
-#             with torch.no_grad():
-#                 ce_logits = ce_model(input_ids, attention_mask)
-
-#             ce_predictions = torch.argmax(ce_logits, dim = -1)
-
-#             ce_result = label_id_to_name[ce_predictions[0]]
-
-#             if ce_result == 'True':
-
-#                 sentence['annotation'].append([pair, 'positive'])   # 그냥 전부 postive로 설정. (CE 성능이 궁금한거라 상관없음)
-
-#     f1 = evaluation_f1(data, pred_data)['category extraction result']['F1']
-
-#     if dataset_type == "eval" :
-#         print('eval_f1 = ', f1, " eval_loss = ") 
-#         if wandb_on:
-#             wandb.log({"eval_f1": f1})    # "eval_loss": avg_loss
+    y_pred = None #model prediction list
     
-#     elif dataset_type == "test" :
-#         print('test_acc = ', f1, " test_loss = ")
-#         if wandb_on:
-#             wandb.log({"test_f1": f1})
+    ce_model.eval()
 
-#     return f1
+    pred_data = copy.deepcopy(data)
+
+    for sentence in pred_data:
+        form = sentence['sentence_form']
+        sentence['annotation'] = []
+
+        if type(form) != str:
+            print("form type is arong: ", form)
+            continue
+
+        for pair in entity_property_pair:
+
+            tokenized_data = tokenizer(form, pair, padding='max_length', max_length=256, truncation=True)
+
+            input_ids = torch.tensor([tokenized_data['input_ids']]).to(device)
+            attention_mask = torch.tensor([tokenized_data['attention_mask']]).to(device)
+
+            with torch.no_grad():
+                ce_logits = ce_model(input_ids, attention_mask)
+                if y_pred is None:
+                    y_pred = ce_logits.detach().cpu().numpy()
+                else:
+                    y_pred = np.append(y_pred, ce_logits.detach().cpu().numpy(), axis=0)
+
+            ce_predictions = torch.argmax(ce_logits, dim = -1)
+
+            ce_result = label_id_to_name[ce_predictions[0]]
+
+            if ce_result == 'True':
+
+                sentence['annotation'].append([pair, 'positive'])   # 그냥 전부 postive로 설정. (CE 성능이 궁금한거라 상관없음)
+
+    f1 = evaluation_f1(data, data)['category extraction result']['F1']
+    
+    
+    print(f1)
+    
+    
+
+    # if dataset_type == "eval" :
+    #     print('eval_f1 = ', f1, " eval_loss = ") 
+    #     if wandb_on:
+    #         wandb.log({"eval_f1": f1})    # "eval_loss": avg_loss
+    
+    # elif dataset_type == "test" :
+    #     print('test_acc = ', f1, " test_loss = ")
+    #     if wandb_on:
+    #         wandb.log({"test_f1": f1})
+
+    return f1
