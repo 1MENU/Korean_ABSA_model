@@ -26,8 +26,8 @@ device = torch.device('cuda')
 set_seed(args.seed, device) #random seed 정수로 고정.
 
 
-train_file_list = ["train.jsonl"]
-dev_file_list = ["dev.jsonl"]
+train_file_list = ["train1.jsonl"]
+dev_file_list = ["dev1.jsonl"]
 test_label_file_list = ["test.jsonl"]
 
 if args.kfold == 0:
@@ -118,7 +118,9 @@ for epoch in range(args.epochs):
 
     # f1_ = inference_model(mymodel, DevLoader, lf, device)
 
-    # test_f1, test_loss = eval_model(tokenizer, mymodel, copy.deepcopy(test_data), device, "test", args.wandb)
+    # aaa = eval_model_(tokenizer, mymodel, copy.deepcopy(dev_data), device, "eval", args.wandb)
+    
+    
     test_f1, test_loss = f1, loss
 
     if bestF1 < (f1 + test_f1) / 2 :
