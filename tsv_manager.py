@@ -20,8 +20,12 @@ test_data = jsonlload(test_label_file_list)
 data = []
 
 for utterance in test_data:
-    data += utterance['sentence_form']
+    data += [str(utterance['sentence_form'])]
+    
+    print(utterance['sentence_form'])
 
+
+print(data)
 
 df = pd.DataFrame(data)
 writer = pd.ExcelWriter('test.xlsx')
