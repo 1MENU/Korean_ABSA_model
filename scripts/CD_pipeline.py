@@ -7,7 +7,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--name', default="defalut")
 parser.add_argument('-bs', '--batch_size', type=int, default=16)
-parser.add_argument('--epochs', type=int, default=20)
+parser.add_argument('--epochs', type=int, default=9999)
 parser.add_argument('--lr', type=float, default=1e-5)
 parser.add_argument('--weight_decay', type=float, default=0.01)
 parser.add_argument('--seed' , type=int , default = 1, help='random seed (default: 1)')
@@ -25,28 +25,23 @@ device = torch.device('cuda')
 
 set_seed(args.seed, device) #random seed 정수로 고정.
 
-
+# multiple files
 train_file_list = ["train.jsonl"]
 dev_file_list = ["dev.jsonl"]
 test_label_file_list = ["test.jsonl"]
 
-if args.kfold == 0:
+if args.kfold == 0:     # not split K-fold
     train_data = jsonlload(train_file_list)
     dev_data = jsonlload(dev_file_list)
     test_data = jsonlload(test_label_file_list)
-else:
+else:   # split K-fold
     train_data, dev_data = stratified_KFold(train_file_list, args.nsplit, args.kfold, 'Answer(FALSE = 0, TRUE = 1)')   # train list, n_split, k번째 fold 사용, label name
     test_data = jsonlload(test_label_file_list)
 
 
-tokenizer = AutoTokenizer.from_pretrained(args.pretrained)
-num_added_toks = tokenizer.add_special_tokens(special_tokens_dict)
+dataset_train, dataset_dev, dataset_test = get_CD_dataset(train_data, dev_data, test_data, args.pretrained)
 
-train_CD_data, train_SC_data = CD_dataset(train_data, tokenizer, 256)
-TrainLoader = DataLoader(train_CD_data, batch_size = args.batch_size)
-
-dev_CD_data, dev_SC_data = CD_dataset(dev_data, tokenizer, 256)
-DevLoader = DataLoader(dev_CD_data, batch_size = args.batch_size)
+TrainLoader, DevLoader, InferenceLoader = load_data(dataset_train, dataset_dev, dataset_test, batch_size = args.batch_size)
 
 
 mymodel = RoBertaBaseClassifier(args.pretrained)
@@ -54,20 +49,19 @@ mymodel = RoBertaBaseClassifier(args.pretrained)
 mymodel.to(device)
 
 
-# # entity_property_model_optimizer_setting
-# FULL_FINETUNING = True
-# if FULL_FINETUNING:
-#     entity_property_param_optimizer = list(mymodel.named_parameters())
-#     no_decay = ['bias', 'gamma', 'beta']
-#     entity_property_optimizer_grouped_parameters = [
-#         {'params': [p for n, p in entity_property_param_optimizer if not any(nd in n for nd in no_decay)],
-#             'weight_decay_rate': 0.01},
-#         {'params': [p for n, p in entity_property_param_optimizer if any(nd in n for nd in no_decay)],
-#             'weight_decay_rate': 0.0}
-#     ]
-# else:
-#     entity_property_param_optimizer = list(mymodel.classifier.named_parameters())
-#     entity_property_optimizer_grouped_parameters = [{"params": [p for n, p in entity_property_param_optimizer]}]
+FULL_FINETUNING = True
+if FULL_FINETUNING:
+    entity_property_param_optimizer = list(mymodel.named_parameters())
+    no_decay = ['bias', 'gamma', 'beta']
+    entity_property_optimizer_grouped_parameters = [
+        {'params': [p for n, p in entity_property_param_optimizer if not any(nd in n for nd in no_decay)],
+            'weight_decay_rate': 0.01},
+        {'params': [p for n, p in entity_property_param_optimizer if any(nd in n for nd in no_decay)],
+            'weight_decay_rate': 0.0}
+    ]
+else:
+    entity_property_param_optimizer = list(mymodel.classifier.named_parameters())
+    entity_property_optimizer_grouped_parameters = [{"params": [p for n, p in entity_property_param_optimizer]}]
 
 
 optimizer = build_optimizer(mymodel.parameters(), lr=args.lr, weight_decay=args.weight_decay, type = args.optimizer)
@@ -97,6 +91,7 @@ if args.wandb:
     wandb.init(entity="malmung_team1", project=task_name, name = args.name, config = config)
 
 
+
 print(f'\n[len {task_name}] train : {len(train_data)}, dev : {len(dev_data)}, test : {len(test_data)}\n')
 
 print(f'Task : {task_name}, Model : {args.pretrained}, Wandb : {"off" if args.wandb == 0 else "on"}, Device : {device}, Epochs : {args.epochs}')
@@ -113,14 +108,9 @@ for epoch in range(args.epochs):
 
     print(f'[epoch {epoch}]')
 
-    minLoss = train_model(mymodel, TrainLoader, lf, optimizer, scheduler, device, args.wandb) #1epoch마다 eval
+    minLoss = train_model(mymodel, TrainLoader, lf, optimizer, scheduler, device, args.wandb)
 
     f1, loss = eval_model(mymodel, DevLoader, lf, device, "eval", args.wandb)
-
-    # f1_ = inference_model(mymodel, DevLoader, lf, device)
-
-    # aaa = eval_model_(tokenizer, mymodel, copy.deepcopy(dev_data), device, "eval", args.wandb)
-    
     
     test_f1, test_loss = f1, loss
 
@@ -138,8 +128,6 @@ for epoch in range(args.epochs):
         print("! new low ! -> ", bestLoss)
 
     if epoch >= bestF1_at + 5 and epoch >= bestLoss_at + 5 : break
-    
-    print("time : ", time.time() - start)
 
 
 if args.wandb:

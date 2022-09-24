@@ -17,12 +17,13 @@ predPth = '../materials/pred/'
 submissionPth = '../materials/submission/'
 
 
-
 def make_directories(task):
     if not os.path.exists(saveDirPth_str + task + "/"):
         os.makedirs(saveDirPth_str + task + "/")
+        
     if not os.path.exists(predPth + task + "/"):
         os.makedirs(predPth + task + "/")
+        
     if not os.path.exists(submissionPth + task + "/"):
         os.makedirs(submissionPth + task + "/")
 
@@ -40,6 +41,7 @@ from torch.utils.data import DataLoader
 
 from torch.optim import AdamW, SGD
 
+# build various type of optimizers
 def build_optimizer(parameters, lr, weight_decay, type):
     if type == "AdamW":
         optimizer = AdamW(parameters, lr=lr, weight_decay=weight_decay, eps=1e-8)
@@ -242,6 +244,7 @@ def load_TSNE(out, y_true):
 
     plt.savefig('boston.png')
 
+
 def softmax(x):
     
     max = np.max(x,axis=1,keepdims=True) #returns max of each row and keeps same dims
@@ -249,3 +252,12 @@ def softmax(x):
     sum = np.sum(e_x,axis=1,keepdims=True) #returns sum of each row and keeps same dims
     f_x = e_x / sum 
     return f_x
+
+
+def load_data(dataset_train, dataset_dev, dataset_test_label, batch_size):
+    
+    TrainLoader = DataLoader(dataset_train, batch_size = batch_size)
+    EvalLoader = DataLoader(dataset_dev, batch_size = batch_size)
+    InferenceLoader = DataLoader(dataset_test_label, batch_size = batch_size)
+
+    return TrainLoader, EvalLoader, InferenceLoader
