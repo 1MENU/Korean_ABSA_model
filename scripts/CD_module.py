@@ -40,9 +40,6 @@ def train_model(model, data_loader, lf, optimizer, scheduler, device, wandb_on):
         optimizer.step()
         # scheduler.step()
 
-        # loss.backward() #기울기 계산
-        # optimizer.step() #가중치 업데이트
-
         if y_pred is None:
             y_pred = output.detach().cpu().numpy()
             y_true = label.detach().cpu().numpy()
@@ -118,11 +115,11 @@ def eval_model(model, data_loader, lf, device, dataset_type, wandb_on):
         print('test_acc = ', f1_b, " test_loss = ", avg_loss) 
         if wandb_on:
             wandb.log({"test_f1": f1_b, "test_loss" : avg_loss})
-            
 
     return f1_b, avg_loss
 
 from sklearn.metrics import confusion_matrix
+
 
 def inference_model(model, data_loader, lf, device):
     model.eval()
