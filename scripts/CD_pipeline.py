@@ -127,7 +127,9 @@ for epoch in range(args.epochs):
         bestLoss_at = epoch
         print("! new low ! -> ", bestLoss)
 
-    if epoch >= bestF1_at + 5 and epoch >= bestLoss_at + 5 : break
+    if epoch >= bestF1_at + 5 and epoch >= bestLoss_at + 5 :
+        final_epoch = epoch
+        break
 
 
 if args.wandb:
@@ -136,4 +138,4 @@ if args.wandb:
 print('\nFinish')
 print(f'best F1 : {bestF1} (Best F1 around epoch {bestF1_at})')
 print(f'bestLoss : {bestLoss} (Best Loss around epoch {bestLoss_at})\n')
-print("time per epoch :", (time.time() - start)/args.epochs)
+print("time per epoch :", (time.time() - start)/final_epoch)
