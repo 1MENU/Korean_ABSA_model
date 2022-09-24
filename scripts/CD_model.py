@@ -27,7 +27,7 @@ class RoBertaBaseClassifier(nn.Module):
         
         self.model = AutoModel.from_pretrained(pretrained_model)
 
-        self.model.resize_token_embeddings(config.vocab_size + 8)
+        self.model.resize_token_embeddings(config.vocab_size + len(special_tokens_dict['additional_special_tokens']))
 
         self.labels_classifier = SimpleClassifier(config, 0.1, 2)
 

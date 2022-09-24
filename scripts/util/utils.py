@@ -17,18 +17,6 @@ from torch import nn
 
 import time
 
-TOKEN_MAX_LENGTH = {
-    'COLA' : 64,
-    'WiC' : 256,
-    'COPA' : 40,
-    'BoolQ' : (400, 80)
-} #train, dev ,test, test_labeled
-# COPA, COLA는 딱 맞게 잘라놨음. 
-#wic는 287 이상이어야 하는데, 일단 아래로. unimodel이니깐, 최대 271+287=558까지.
-#boolq는 478 이상이어야 하는데, 일단은 400으로함. question=80이면 됨. (Q는 최대 432까지 가능.)
-
-
-
 
 
 #individual Metric

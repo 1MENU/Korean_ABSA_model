@@ -14,7 +14,7 @@ def jsonlload(fname_list, encoding="utf-8"):
 
     return json_list
 
-test_label_file_list = ["test.jsonl"]
+test_label_file_list = ["train.jsonl"]
 test_data = jsonlload(test_label_file_list)
 
 data = []
