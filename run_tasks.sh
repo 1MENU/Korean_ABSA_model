@@ -44,4 +44,4 @@ cd scripts
 
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --epochs 300 --name base_model_bs64 --batch_size=64 --lr=5e-6
+python CD_pipeline.py --epochs 300 --name base_model_bs64 --batch_size=64 --lr=5e-6

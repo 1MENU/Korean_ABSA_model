@@ -1,33 +1,31 @@
 import pandas as pd
-import csv
-import os
+import json
 
-df = pd.read_csv("dataset/task3_COPA/SKT_COPA_Train.tsv", sep="\t")
+# jsonl 파일 읽어서 list에 저장
+def jsonlload(fname_list, encoding="utf-8"):
+    json_list = []
 
-df = df[['ID', 'sentence', 'question', '1', '2', 'Answer']]
+    for index, value in enumerate(fname_list):
+        fname = "dataset/" + value
 
-# df.rename(columns = {'SENTENCE1':'SENTENCE2', 'SENTENCE2':'SENTENCE1', 'start_s1':'start_s2', 'start_s2':'start_s1', 'end_s1':'end_s2', 'end_s2':'end_s1'}, inplace=True)
+        with open(fname, encoding=encoding) as f:
+            for line in f.readlines():
+                json_list.append(json.loads(line))
 
-df.loc[df['question'] == "결과", 'question'] = "임시"
-df.loc[df['question'] == "원인", 'question'] = "결과"
-df.loc[df['question'] == "임시", 'question'] = "원인"
+    return json_list
 
-ans1 = df.loc[df['Answer'] == 1, '1']
-ans2 = df.loc[df['Answer'] == 2, '2']
+test_label_file_list = ["test.jsonl"]
+test_data = jsonlload(test_label_file_list)
 
-sent1 = df.loc[df['Answer'] == 1, 'sentence']
-sent2 = df.loc[df['Answer'] == 2, 'sentence']
+data = []
 
-df.loc[df['Answer'] == 1, 'sentence'] = ans1
-df.loc[df['Answer'] == 1, '1'] = sent1
-
-df.loc[df['Answer'] == 2, 'sentence'] = ans2
-df.loc[df['Answer'] == 2, '2'] = sent2
+for utterance in test_data:
+    data += utterance['sentence_form']
 
 
-df.loc[df['Answer'] == "원인", 'question'] = "결과"
-df.loc[df['Answer'] == "임시", 'question'] = "원인"
+df = pd.DataFrame(data)
+writer = pd.ExcelWriter('test.xlsx')
+df.to_excel(writer, sheet_name='welcome', index=False)
+writer.save()
 
-print(df)
 
-df.to_csv('dataset/task3_COPA/SKT_COPA_Train_flip1.tsv', sep="\t", index = False)

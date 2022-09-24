@@ -26,8 +26,8 @@ device = torch.device('cuda')
 set_seed(args.seed, device) #random seed 정수로 고정.
 
 
-train_file_list = ["train1.jsonl"]
-dev_file_list = ["dev1.jsonl"]
+train_file_list = ["train.jsonl"]
+dev_file_list = ["dev.jsonl"]
 test_label_file_list = ["test.jsonl"]
 
 if args.kfold == 0:
@@ -50,6 +50,7 @@ DevLoader = DataLoader(dev_CD_data, batch_size = args.batch_size)
 
 
 mymodel = RoBertaBaseClassifier(args.pretrained)
+#mymodel = torch.nn.DataParallel(mymodel)
 mymodel.to(device)
 
 
@@ -137,6 +138,8 @@ for epoch in range(args.epochs):
         print("! new low ! -> ", bestLoss)
 
     if epoch >= bestF1_at + 5 and epoch >= bestLoss_at + 5 : break
+    
+    print("time : ", time.time() - start)
 
 
 if args.wandb:
