@@ -8,13 +8,15 @@ class SimpleClassifier(nn.Module):
         self.dense = nn.Linear(config.hidden_size, config.hidden_size)
         self.dropout = nn.Dropout(dropout)
         self.output = nn.Linear(config.hidden_size, num_label)
+        self.gelu = nn.GELU()
 
     def forward(self, features):
         x = features[:, 0, :]
-        x = self.dropout(x)
+        # x = self.dropout(x)
         x = self.dense(x)                   
-        x = torch.tanh(x)
-        x = self.dropout(x)
+        # x = torch.tanh(x)
+        # x = self.dropout(x)
+        x = self.gelu(x)
         x = self.output(x)
         return x
 
