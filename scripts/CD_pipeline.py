@@ -14,7 +14,7 @@ parser.add_argument('--seed' , type=int , default = 1, help='random seed (defaul
 parser.add_argument('--wandb', type=int, default=1, help='wandb on / off')
 parser.add_argument('--LS', type=float, default=0.00, help='label smoothing')
 parser.add_argument('--save', type=int, default=0, help='model save')
-parser.add_argument('--nsplit', type=int, default=7, help='n split K-Fold')
+parser.add_argument('--nsplit', type=int, default=0, help='n split K-Fold')
 parser.add_argument('--kfold', type=int, default=0, help='n split K-Fold')
 parser.add_argument('--pretrained', default="xlm-roberta-base")
 parser.add_argument('--optimizer', default="AdamW")
@@ -49,19 +49,19 @@ mymodel = RoBertaBaseClassifier(args.pretrained)
 mymodel.to(device)
 
 
-FULL_FINETUNING = True
-if FULL_FINETUNING:
-    entity_property_param_optimizer = list(mymodel.named_parameters())
-    no_decay = ['bias', 'gamma', 'beta']
-    entity_property_optimizer_grouped_parameters = [
-        {'params': [p for n, p in entity_property_param_optimizer if not any(nd in n for nd in no_decay)],
-            'weight_decay_rate': 0.01},
-        {'params': [p for n, p in entity_property_param_optimizer if any(nd in n for nd in no_decay)],
-            'weight_decay_rate': 0.0}
-    ]
-else:
-    entity_property_param_optimizer = list(mymodel.classifier.named_parameters())
-    entity_property_optimizer_grouped_parameters = [{"params": [p for n, p in entity_property_param_optimizer]}]
+# FULL_FINETUNING = True
+# if FULL_FINETUNING:
+#     entity_property_param_optimizer = list(mymodel.named_parameters())
+#     no_decay = ['bias', 'gamma', 'beta']
+#     entity_property_optimizer_grouped_parameters = [
+#         {'params': [p for n, p in entity_property_param_optimizer if not any(nd in n for nd in no_decay)],
+#             'weight_decay_rate': 0.01},
+#         {'params': [p for n, p in entity_property_param_optimizer if any(nd in n for nd in no_decay)],
+#             'weight_decay_rate': 0.0}
+#     ]
+# else:
+#     entity_property_param_optimizer = list(mymodel.classifier.named_parameters())
+#     entity_property_optimizer_grouped_parameters = [{"params": [p for n, p in entity_property_param_optimizer]}]
 
 
 optimizer = build_optimizer(mymodel.parameters(), lr=args.lr, weight_decay=args.weight_decay, type = args.optimizer)
@@ -87,8 +87,10 @@ if args.wandb:
         "optimizer" : args.optimizer,
         "K-Fold" : f'{args.kfold}/{args.nsplit}'
     }
+    
+    wandb_name = name_wandb(args.name, config)
 
-    wandb.init(entity="malmung_team1", project=task_name, name = args.name, config = config)
+    wandb.init(entity="malmung_team1", project=task_name, name = wandb_name, config = config)
 
 
 
