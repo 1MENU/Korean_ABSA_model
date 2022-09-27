@@ -15,12 +15,14 @@ cd scripts
 # CUDA_VISIBLE_DEVICES=0
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name="base_gelu" \
+
+CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name="bilstm-1" \
     --batch_size=16 --lr=3e-6 --pretrained="klue/roberta-large" \
     --seed=1
-CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "base_gelu" \
-    --batch_size=64 --lr=2e-5 --pretrained="monologg/koelectra-base-v3-discriminator" \
-    --seed=11 --LS=0.01
+
+# CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "base_gelu" \
+#     --batch_size=64 --lr=2e-5 --pretrained="monologg/koelectra-base-v3-discriminator" \
+#     --seed=11 --LS=0.01
 
 
 
