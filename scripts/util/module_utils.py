@@ -261,3 +261,23 @@ def load_data(dataset_train, dataset_dev, dataset_test_label, batch_size):
     InferenceLoader = DataLoader(dataset_test_label, batch_size = batch_size)
 
     return TrainLoader, EvalLoader, InferenceLoader
+
+
+def name_wandb(arg_name, config):
+    
+    pretrained = config['pretrained']
+    
+    if pretrained == "klue/roberta-large":
+        pretrained = "Rl"
+    elif pretrained == "monologg/koelectra-base-v3-discriminator":
+        pretrained = "K"
+    elif pretrained == "klue/roberta-base":
+        pretrained = "Rb"
+    
+    bs =  config["batch_size"]
+    lr = config["lr"]
+    seed = config["seed"]
+    
+    name = f"{arg_name}_{bs}_{lr}_{pretrained}_rs{seed}"
+    
+    return name
