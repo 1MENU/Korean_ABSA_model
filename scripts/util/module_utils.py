@@ -270,9 +270,14 @@ def name_wandb(arg_name, config):
     if pretrained == "klue/roberta-large":
         pretrained = "Rl"
     elif pretrained == "monologg/koelectra-base-v3-discriminator":
-        pretrained = "K"
+        pretrained = "KoE"
     elif pretrained == "klue/roberta-base":
         pretrained = "Rb"
+    elif pretrained == "kykim/electra-kor-base":
+        pretrained = "kykE"
+    elif pretrained == "beomi/KcELECTRA-base":
+        pretrained = "KcE"
+        
     
     bs =  config["batch_size"]
     lr = config["lr"]
