@@ -1,15 +1,15 @@
-from util.model_utils import *
+from util.module_utils import *
+from base_data import *
 
 class SimpleClassifier(nn.Module):
 
-    def __init__(self, args, num_label):
+    def __init__(self, config, dropout, num_label):
         super().__init__()
-        self.dense = nn.Linear(args.classifier_hidden_size, args.classifier_hidden_size)
-        self.dropout = nn.Dropout(args.classifier_dropout_prob)
-        self.output = nn.Linear(args.classifier_hidden_size, num_label)
+        self.dense = nn.Linear(config.hidden_size * 4, config.hidden_size * 4)
+        self.dropout = nn.Dropout(dropout)
+        self.output = nn.Linear(config.hidden_size * 4, num_label)
 
-    def forward(self, features):
-        x = features[:, 0, :]
+    def forward(self, x):
         x = self.dropout(x)
         x = self.dense(x)
         x = torch.tanh(x)
@@ -18,31 +18,64 @@ class SimpleClassifier(nn.Module):
         return x
 
 
+class biLSTMClassifier(nn.Module):
+    
+    def __init__(self, config, num_label):
+        super().__init__()
+        self.dense = nn.Linear(config.hidden_size, config.hidden_size)
+        
+        self.size = 256
+        
+        self.lstm = nn.LSTM(
+            input_size = config.hidden_size, 
+            hidden_size = self.size, 
+            num_layers = 1, 
+            bias = True, 
+            batch_first = True, 
+            dropout = 0.0, 
+            bidirectional = True
+        )
+        
+        self.classifier = nn.Linear(self.size*2, 3)
+
+    def forward(self, x):
+        
+        h0 = torch.zeros(2, x.size(0), self.size).to('cuda') # (BATCH SIZE, SEQ_LENGTH, HIDDEN_SIZE)
+        c0 = torch.zeros(2, x.size(0), self.size).to('cuda') # hidden state와 동일
+        
+        out, _ = self.lstm(x, (h0, c0))
+        
+        out = self.classifier(out[:, -1, :])
+        
+        return out
+
+
 class RoBertaBaseClassifier(nn.Module):
-    def __init__(self, args, num_label, len_tokenizer):
+    def __init__(self, pretrained_model):
         super(RoBertaBaseClassifier, self).__init__()
 
-        self.num_label = num_label
-        self.xlm_roberta = XLMRobertaModel.from_pretrained(args.base_model)
-        self.xlm_roberta.resize_token_embeddings(len_tokenizer)
+        config = AutoConfig.from_pretrained(pretrained_model)
+        
+        self.model = AutoModel.from_pretrained(pretrained_model)
 
-        self.labels_classifier = SimpleClassifier(args, self.num_label)
+        self.model.resize_token_embeddings(config.vocab_size + len(special_tokens_dict['additional_special_tokens']))
 
-    def forward(self, input_ids, attention_mask, labels=None):
-        outputs = self.xlm_roberta(
+        self.labels_classifier = SimpleClassifier(config, 0.1, 3)
+        # self.bi_lstm = biLSTMClassifier(config, 2)
+
+    def forward(self, input_ids, token_type_ids, attention_mask):
+        outputs = self.model(
             input_ids=input_ids,
             attention_mask=attention_mask,
-            token_type_ids=None
-        )
-
-        sequence_output = outputs[0]
-        logits = self.labels_classifier(sequence_output)
-
-        loss = None
-
-        if labels is not None:
-            loss_fct = nn.CrossEntropyLoss()
-            loss = loss_fct(logits.view(-1, self.num_label),
-                                                labels.view(-1))
-
-        return loss, logits
+            output_hidden_states = True
+        )   # token_type_ids=token_type_ids,
+        
+        outputs=torch.cat([outputs['hidden_states'][9][:, 0, :], outputs['hidden_states'][10][:, 0, :], outputs['hidden_states'][11][:, 0, :], outputs['hidden_states'][12][:, 0, :]], dim = -1)
+        logits = self.labels_classifier(outputs)
+        
+        # cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
+        # logits = self.labels_classifier(cls_token)
+        
+        # logits = self.bi_lstm(outputs['last_hidden_state'])
+        
+        return logits
