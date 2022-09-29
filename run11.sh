@@ -16,17 +16,12 @@ cd scripts
 
 run_task 1 CD
 CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "base" \
-    --batch_size=32 --lr=2e-5 --pretrained="monologg/koelectra-base-v3-discriminator" \
+    --batch_size=16 --lr=8e-6 --pretrained="kykim/funnel-kor-base" \
     --seed=21
 
 # run_task 1 CD
 # CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "base" \
-#     --batch_size=32 --lr=2e-5 --pretrained="kykim/electra-kor-base" \
-#     --seed=21
-
-# run_task 1 CD
-# CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "base" \
-#     --batch_size=32 --lr=2e-5 --pretrained="tunib/electra-ko-base" \
+#     --batch_size=32 --lr=2e-5 --pretrained="hyunwoongko/brainsbert-base" \
 #     --seed=21
 
 # run_task 1 CD

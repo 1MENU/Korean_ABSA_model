@@ -5,9 +5,9 @@ class SimpleClassifier(nn.Module):
 
     def __init__(self, config, dropout, num_label):
         super().__init__()
-        self.dense = nn.Linear(config.hidden_size * 4, config.hidden_size * 4)
+        self.dense = nn.Linear(config.hidden_size, config.hidden_size)
         self.dropout = nn.Dropout(dropout)
-        self.output = nn.Linear(config.hidden_size * 4, num_label)
+        self.output = nn.Linear(config.hidden_size, num_label)
 
     def forward(self, x):
         x = self.dropout(x)
@@ -50,9 +50,9 @@ class biLSTMClassifier(nn.Module):
         return out
 
 
-class RoBertaBaseClassifier(nn.Module):
+class CD_model(nn.Module):
     def __init__(self, pretrained_model):
-        super(RoBertaBaseClassifier, self).__init__()
+        super(CD_model, self).__init__()
 
         config = AutoConfig.from_pretrained(pretrained_model)
         
@@ -66,15 +66,16 @@ class RoBertaBaseClassifier(nn.Module):
     def forward(self, input_ids, token_type_ids, attention_mask):
         outputs = self.model(
             input_ids=input_ids,
-            attention_mask=attention_mask,
-            output_hidden_states = True
-        )   # token_type_ids=token_type_ids,
+            token_type_ids=token_type_ids,
+            attention_mask=attention_mask
+        )
+        # , output_hidden_states = True
         
-        outputs=torch.cat([outputs['hidden_states'][9][:, 0, :], outputs['hidden_states'][10][:, 0, :], outputs['hidden_states'][11][:, 0, :], outputs['hidden_states'][12][:, 0, :]], dim = -1)
-        logits = self.labels_classifier(outputs)
+        # outputs=torch.cat([outputs['hidden_states'][9][:, 0, :], outputs['hidden_states'][10][:, 0, :], outputs['hidden_states'][11][:, 0, :], outputs['hidden_states'][12][:, 0, :]], dim = -1)
+        # logits = self.labels_classifier(outputs)
         
-        # cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
-        # logits = self.labels_classifier(cls_token)
+        cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
+        logits = self.labels_classifier(cls_token)
         
         # logits = self.bi_lstm(outputs['last_hidden_state'])
         
