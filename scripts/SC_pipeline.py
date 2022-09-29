@@ -44,7 +44,7 @@ dataset_train, dataset_dev, dataset_test = get_CD_dataset(train_data, dev_data, 
 TrainLoader, DevLoader, InferenceLoader = load_data(dataset_train, dataset_dev, dataset_test, batch_size = args.batch_size)
 
 
-mymodel = RoBertaBaseClassifier(args.pretrained)
+mymodel = SC_model(args.pretrained)
 #mymodel = torch.nn.DataParallel(mymodel)
 mymodel.to(device)
 

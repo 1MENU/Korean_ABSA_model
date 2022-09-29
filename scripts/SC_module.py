@@ -8,6 +8,9 @@ task_name = 'SC'
 
 make_directories(task_name)
 
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
+
 bestF1 = -1 #0 ~ 1
 bestLoss = 10
 
