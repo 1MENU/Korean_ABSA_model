@@ -5,6 +5,7 @@ from CD_module import *
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--model', required = True)
+parser.add_argument('--pretrained', default="monologg/koelectra-base-v3-discriminator")
 parser.add_argument('-bs', '--batch_size', type=int, default=128)
 parser.add_argument('--device', type=int, default=0)
 
@@ -15,16 +16,14 @@ device = torch.device(f'cuda:{args.device}')
 model_name = args.model     # "last4-1"
 
 
-test_label_file_list = ["../dataset/test_labeled.jsonl"]  # test data
-test_df = jsonlload(test_label_file_list)
+test_file_list = ["../dataset/test.jsonl"]  # test data
+test_data = jsonlload(test_file_list)
 
-dataset_test = CD_dataset(test_df)   # test dataset object
+dataset_train, dataset_dev, dataset_test = get_CD_dataset(test_data, test_data, test_data, args.pretrained)
 
 InferenceLoader = DataLoader(dataset_test, batch_size = args.batch_size)
 
-pretrained_model = "monologg/koelectra-base-v3-discriminator"   # pretrained model
-
-mymodel = RoBertaBaseClassifier(pretrained_model)  # test model
+mymodel = CD_model(args.pretrained)  # test model
 
 mymodel.load_state_dict(torch.load(f'{saveDirPth_str}{task_name}/{model_name}.pt'))
 mymodel.to(device)
