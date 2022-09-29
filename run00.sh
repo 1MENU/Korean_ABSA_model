@@ -16,16 +16,13 @@ cd scripts
 
 run_task 1 CD
 CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "base" \
-    --batch_size=32 --lr=3e-6 --pretrained="klue/roberta-base" \
+    --batch_size=32 --lr=2e-5 --pretrained="jinmang2/kpfbert" \
     --seed=21
 
 run_task 1 CD
 CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "base" \
-    --batch_size=32 --lr=2e-5 --pretrained="monologg/koelectra-base-v3-discriminator" \
+    --batch_size=32 --lr=1e-5 --pretrained="lassl/bert-ko-base" \
     --seed=21
-
-
-
 
 
 

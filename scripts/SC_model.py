@@ -50,9 +50,9 @@ class biLSTMClassifier(nn.Module):
         return out
 
 
-class RoBertaBaseClassifier(nn.Module):
+class SC_model(nn.Module):
     def __init__(self, pretrained_model):
-        super(RoBertaBaseClassifier, self).__init__()
+        super(SC_model, self).__init__()
 
         config = AutoConfig.from_pretrained(pretrained_model)
         
@@ -66,9 +66,10 @@ class RoBertaBaseClassifier(nn.Module):
     def forward(self, input_ids, token_type_ids, attention_mask):
         outputs = self.model(
             input_ids=input_ids,
+            token_type_ids=token_type_ids,
             attention_mask=attention_mask,
             output_hidden_states = True
-        )   # token_type_ids=token_type_ids,
+        )
         
         outputs=torch.cat([outputs['hidden_states'][9][:, 0, :], outputs['hidden_states'][10][:, 0, :], outputs['hidden_states'][11][:, 0, :], outputs['hidden_states'][12][:, 0, :]], dim = -1)
         logits = self.labels_classifier(outputs)
