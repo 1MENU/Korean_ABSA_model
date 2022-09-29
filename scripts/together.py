@@ -46,7 +46,7 @@ num_added_toks = SC_tokenizer.add_special_tokens(special_tokens_dict)
 
 output_data = copy.deepcopy(test_data)
 
-for sentence in copy.deepcopy(output_data):
+for sentence in output_data:
     
     form = sentence['sentence_form']
     sentence['annotation'] = []
@@ -84,8 +84,6 @@ for sentence in copy.deepcopy(output_data):
                 output = SC_model(input_ids, token_type_ids, attention_mask)
 
             SC_predictions = torch.argmax(output, dim=-1)
-            
-            polarity_id_to_name = ['positive', 'negative', 'neutral']
             
             if SC_predictions == 0: SC_result = 'positive'
             elif SC_predictions == 1: SC_result = 'negative'

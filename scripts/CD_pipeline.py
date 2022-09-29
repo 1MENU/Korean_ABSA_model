@@ -28,15 +28,15 @@ set_seed(args.seed, device) #random seed 정수로 고정.
 # multiple files
 train_file_list = ["train.jsonl"]
 dev_file_list = ["dev.jsonl"]
-test_label_file_list = ["test.jsonl"]
+test_file_list = ["test.jsonl"]
 
 if args.kfold == 0:     # not split K-fold
     train_data = jsonlload(train_file_list)
     dev_data = jsonlload(dev_file_list)
-    test_data = jsonlload(test_label_file_list)
+    test_data = jsonlload(test_file_list)
 else:   # split K-fold
     train_data, dev_data = stratified_KFold(train_file_list, args.nsplit, args.kfold, 'Answer(FALSE = 0, TRUE = 1)')   # train list, n_split, k번째 fold 사용, label name
-    test_data = jsonlload(test_label_file_list)
+    test_data = jsonlload(test_file_list)
 
 
 dataset_train, dataset_dev, dataset_test = get_CD_dataset(train_data, dev_data, test_data, args.pretrained)
