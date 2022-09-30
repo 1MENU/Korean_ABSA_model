@@ -35,7 +35,9 @@ if args.kfold == 0:     # not split K-fold
     dev_data = jsonlload(dev_file_list)
     test_data = jsonlload(test_file_list)
 else:   # split K-fold
-    train_data, dev_data = stratified_KFold(train_file_list, args.nsplit, args.kfold, 'Answer(FALSE = 0, TRUE = 1)')   # train list, n_split, k번째 fold 사용, label name
+    #train_data, dev_data = stratified_KFold(train_file_list, args.nsplit, args.kfold, 'Answer(FALSE = 0, TRUE = 1)')  
+    
+    # train list, n_split, k번째 fold 사용, label name
     test_data = jsonlload(test_file_list)
 
 
