@@ -171,7 +171,21 @@ def evaluation_f1(true_data, pred_data):
 
 
 
-from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import StratifiedKFold, KFold
+def kFold (file_list, n_splits, which_k):
+    kf = KFold(n_splits = n_splits, shuffle=True)
+    data = pd.DataFrame()
+    
+    for data_file in file_list:
+        data = pd.concat([data, pd.read_csv(os.path.join(datasetPth, data_file), sep="\t")])
+    features = data.iloc[:,:]
+    for train_index, test_index in kf.split(data):
+        n_iter += 1
+        if n_iter == which_k:
+            features_train = features.iloc[train_index]
+            features_test = features.iloc[test_index]
+            print(f'------------------ {n_splits}-Fold 중 {n_iter}번째 ------------------')
+            return features_train, features_test
 
 def stratified_KFold(file_list, n_splits, which_k, label_name):
 
