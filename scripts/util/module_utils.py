@@ -172,13 +172,10 @@ def evaluation_f1(true_data, pred_data):
 
 
 from sklearn.model_selection import StratifiedKFold, KFold
-def kFold (train_list, dev_list, file_list, n_splits, which_k):
+def kFold ( file_list, n_splits, which_k):
     kf = KFold(n_splits = n_splits, shuffle=True)
     
-    data = pd.DataFrame(train_list+dev_list)
-    
-    for data_file in file_list:
-        data = pd.concat([data, pd.read_csv(os.path.join(datasetPth, data_file), sep="\t")])
+    data = jsonltoDataFrame(file_list)
     features = data.iloc[:,:]
     for train_index, test_index in kf.split(data):
         n_iter += 1
