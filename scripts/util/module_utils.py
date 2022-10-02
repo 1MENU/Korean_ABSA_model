@@ -277,6 +277,10 @@ def name_wandb(arg_name, config):
         pretrained = "kykE"
     elif pretrained == "beomi/KcELECTRA-base":
         pretrained = "KcE"
+    elif pretrained == "kykim/funnel-kor-base":
+        pretrained = "fun"
+    elif pretrained == "tunib/electra-ko-base":
+        pretrained = "tunib"
         
     
     bs =  config["batch_size"]

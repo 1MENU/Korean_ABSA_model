@@ -10,10 +10,10 @@ class SimpleClassifier(nn.Module):
         self.output = nn.Linear(config.hidden_size, num_label)
 
     def forward(self, x):
-        x = self.dropout(x)
-        x = self.dense(x)                   
-        x = torch.tanh(x)
-        x = self.dropout(x)
+        # x = self.dropout(x)
+        # x = self.dense(x)                   
+        # x = torch.tanh(x)
+        # x = self.dropout(x)
         x = self.output(x)
         return x
 
@@ -45,7 +45,7 @@ class biLSTMClassifier(nn.Module):
         
         out, _ = self.lstm(x, (h0, c0))
         
-        out = self.classifier(out[:, -1, :])
+        out = self.classifier(out[:, 0, :])
         
         return out
 
