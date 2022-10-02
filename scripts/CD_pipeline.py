@@ -1,3 +1,4 @@
+from tkinter import N
 from CD_module import *
 from base_data import *
 
@@ -49,20 +50,27 @@ mymodel = CD_model(args.pretrained)
 mymodel.to(device)
 
 
-# FULL_FINETUNING = True
-# if FULL_FINETUNING:
-#     entity_property_param_optimizer = list(mymodel.named_parameters())
-#     no_decay = ['bias', 'gamma', 'beta']
-#     entity_property_optimizer_grouped_parameters = [
-#         {'params': [p for n, p in entity_property_param_optimizer if not any(nd in n for nd in no_decay)],
-#             'weight_decay_rate': 0.01},
-#         {'params': [p for n, p in entity_property_param_optimizer if any(nd in n for nd in no_decay)],
-#             'weight_decay_rate': 0.0}
-#     ]
-# else:
-#     entity_property_param_optimizer = list(mymodel.classifier.named_parameters())
-#     entity_property_optimizer_grouped_parameters = [{"params": [p for n, p in entity_property_param_optimizer]}]
+FULL_FINETUNING = True
+if FULL_FINETUNING:
+    entity_property_param_optimizer = list(mymodel.named_parameters())
+    # no_decay = ['LayerNorm']
+    no_decay = ['bias', 'gamma', 'beta']
+    entity_property_optimizer_grouped_parameters = [
+        {'params': [p for n, p in entity_property_param_optimizer if not any(nd in n for nd in no_decay)],
+            'weight_decay_rate': 0.01},
+        {'params': [p for n, p in entity_property_param_optimizer if any(nd in n for nd in no_decay)],
+            'weight_decay_rate': 0.0}
+    ]
+    # {'params': [n for n, p in entity_property_param_optimizer if any(nd in n for nd in no_decay)], 'weight_decay_rate': 0.0}
+else:
+    entity_property_param_optimizer = list(mymodel.classifier.named_parameters())
+    entity_property_optimizer_grouped_parameters = [{"params": [p for n, p in entity_property_param_optimizer]}]
 
+# for name, param in mymodel.state_dict().items():
+#     print(name, param.size())
+
+# print(entity_property_optimizer_grouped_parameters[2])
+# exit()
 
 optimizer = build_optimizer(mymodel.parameters(), lr=args.lr, weight_decay=args.weight_decay, type = args.optimizer)
 
