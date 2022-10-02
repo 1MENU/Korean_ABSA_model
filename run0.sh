@@ -14,31 +14,23 @@ cd scripts
 
 # CUDA_VISIBLE_DEVICES=0
 
-run_task 1 CD
-CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "base" \
-    --batch_size=32 --lr=3e-6 --pretrained="klue/roberta-base" \
-    --seed=21
+
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "base" \
-    --batch_size=32 --lr=2e-5 --pretrained="monologg/koelectra-base-v3-discriminator" \
-    --seed=21
-
+CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "pair+cls+form+1lay" \
+    --batch_size=32 --lr=2e-5 --pretrained="tunib/electra-ko-base" \
+    --LS=0.05 --seed=31
 
 
 
 
 
 # "klue/roberta-base"
-# "monologg/koelectra-base-v3-discriminator"
-# "jinmang2/kpfbert"
-# "lassl/bert-ko-base"
 # "kykim/electra-kor-base"
 # 'tunib/electra-ko-base'
 # "kykim/funnel-kor-base"
-# "hyunwoongko/brainsbert-base"
 
-
+# "monologg/koelectra-base-v3-discriminator"
 
 
 
@@ -57,7 +49,7 @@ CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "base" \
 #     --batch_size=64 --lr=2e-5 --pretrained="kykim/electra-kor-base" \
 #     --seed=111 --LS=0.001
 
- run_task 2 SC
-CUDA_VISIBLE_DEVICES=0 python SC_pipeline.py --name "2CLS" \
-    --batch_size=32 --lr=2e-5 --pretrained="beomi/KcELECTRA-base" \
-    --seed=1111 --weight_decay=0.001
+#  run_task 2 SC
+# CUDA_VISIBLE_DEVICES=0 python SC_pipeline.py --name "2CLS" \
+#     --batch_size=32 --lr=2e-5 --pretrained="beomi/KcELECTRA-base" \
+#     --seed=1111 --weight_decay=0.001

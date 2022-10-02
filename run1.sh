@@ -14,23 +14,9 @@ cd scripts
 
 # CUDA_VISIBLE_DEVICES=1
 
+
+
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "base" \
-    --batch_size=32 --lr=2e-5 --pretrained="monologg/koelectra-base-v3-discriminator" \
-    --seed=21
-
-# run_task 1 CD
-# CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "base" \
-#     --batch_size=32 --lr=2e-5 --pretrained="kykim/electra-kor-base" \
-#     --seed=21
-
-# run_task 1 CD
-# CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "base" \
-#     --batch_size=32 --lr=2e-5 --pretrained="tunib/electra-ko-base" \
-#     --seed=21
-
-# run_task 1 CD
-# CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "2CLS" \
-#     --batch_size=32 --lr=2e-5 --pretrained="beomi/KcELECTRA-base" \
-#     --seed=1111 --weight_decay=0.001
-# 이건 clean 전처리 함수 적용 안함 아직
+CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "pair+cls+form+1lay" \
+    --batch_size=32 --lr=3e-6 --pretrained="klue/roberta-base" \
+    --seed=1
