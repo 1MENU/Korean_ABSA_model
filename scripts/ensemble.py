@@ -1,4 +1,6 @@
 import argparse
+from Doyeon.team1.scripts.util.utils import F1_scrore
+from scripts.CD_dataset import get_CD_dataset
 from scripts.baseline import evaluation_f1
 from scripts.util.module_utils import jsonlload, jsonltoDataFrame
 import numpy as np
@@ -13,7 +15,7 @@ parser = argparse.ArgumentParser()
 
 # 입력받을 인자값 등록
 parser.add_argument('--name', default="defalut")
-parser.add_argument('--task', required = True)
+parser.add_argument('--task', required = True) # CD or SD
 parser.add_argument('--preds', nargs='+')
 parser.add_argument('--weights', type=float, nargs='+')
 parser.add_argument('--label', required = True, nargs='+') # CD or SD
@@ -25,10 +27,6 @@ task_name = args.task
 
 pred_model = []
 final_submission_pred = None
-# TODO : CD에 대한 앙상블
-# TODO : SD에 대한 앙상블
-# 근데 평가하는 방법은 같으니까 하나의 함수로 가능하지 않을까
-
 #예측값에 똑같은 가중치를 주어서 argmax하여 결과값도출
 for i in range(len(args.preds)):
     pred = np.load(f'{predPth}{task_name}/{args.preds[i]}.npy')
@@ -40,14 +38,23 @@ for i in range(len(args.preds)):
     else:
         final_submission_pred += pred_model[i] * args.weights[i]
         
-test_label_file_list = args.label  # test data
-test_df = jsonltoDataFrame(test_label_file_list) #리스트 타입으로 변환
+test_label_file_list = args.label  # test data의 정답값
+test_data = jsonlload(test_label_file_list) #리스트 타입으로 변환
+dataset_test , dataset_test , dataset_test = get_CD_dataset(test_data, test_data, test_data, args.pretrained)
+# label= test_df["annotation"].to_list() # CD, SD둘다 annotation 사용
+# label = sum(label, [])
+# df = pd.DataFrame(label)
 
-label= test_df["annotation"] # CD, SD둘다 annotation 사용
 final_submission_pred = np.argmax(final_submission_pred, axis=1)
 
+# 파일 어떻게 쓰는지 확인해야 수정가능
+yy = np.logical_or(dataset_test, final_submission_pred)
+
+y_true = dataset_test[np.where(np.logical_and(yy=1))]
+y_pred = final_submission_pred[np.where(np.logical_and(yy=1))]
+
 #결과랑 예측값 받아서 정확도 반환
-result = evaluation_f1(true_data= label, pred_data=final_submission_pred)
+result = F1_scrore(y_true, y_pred, average="binary")
 
 print(f"[{task_name}] {args.name}")
 print(args.preds)
