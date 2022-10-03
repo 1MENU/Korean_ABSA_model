@@ -171,7 +171,19 @@ def evaluation_f1(true_data, pred_data):
 
 
 
-from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import StratifiedKFold, KFold
+def kFold ( file_list, n_splits, which_k):
+    kf = KFold(n_splits = n_splits, shuffle=True)
+    
+    data = jsonltoDataFrame(file_list)
+    features = data.iloc[:,:]
+    for train_index, test_index in kf.split(data):
+        n_iter += 1
+        if n_iter == which_k:
+            features_train = features.iloc[train_index]
+            features_test = features.iloc[test_index]
+            print(f'------------------ {n_splits}-Fold 중 {n_iter}번째 ------------------')
+            return features_train, features_test
 
 def stratified_KFold(file_list, n_splits, which_k, label_name):
 
@@ -219,7 +231,17 @@ def jsonlload(fname_list, encoding="utf-8"):
 
     return json_list
 
+def jsonltoDataFrame(fname_list, encoding="utf-8"):
+    df = pd.DataFrame()
 
+    for index, value in enumerate(fname_list):
+        fname = value
+        idf = pd.read_json(fname, lines=True)
+        df = pd.concat([df, idf],ignore_index=True)
+        
+    #print(df)
+    return df
+    
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 
