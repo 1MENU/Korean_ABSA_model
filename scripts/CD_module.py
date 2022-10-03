@@ -178,8 +178,6 @@ def inference_model(model, data_loader, lf, device):
 
     y_true = y_true[yy == 1]
     y_pred = y_pred[yy == 1]
-    
-    
 
     f1_b = f1_score(y_true, y_pred, average = 'binary')
     f1_mirco = f1_score(y_true, y_pred, average = 'micro')
