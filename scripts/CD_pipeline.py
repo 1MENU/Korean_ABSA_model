@@ -46,7 +46,6 @@ TrainLoader, DevLoader, InferenceLoader = load_data(dataset_train, dataset_dev, 
 
 
 mymodel = CD_model(args.pretrained)
-#mymodel = torch.nn.DataParallel(mymodel)
 mymodel.to(device)
 
 
@@ -69,7 +68,7 @@ else:
 # for name, param in mymodel.state_dict().items():
 #     print(name, param.size())
 
-# print(entity_property_optimizer_grouped_parameters[2])
+# # print(entity_property_optimizer_grouped_parameters[2])
 # exit()
 
 optimizer = build_optimizer(mymodel.parameters(), lr=args.lr, weight_decay=args.weight_decay, type = args.optimizer)

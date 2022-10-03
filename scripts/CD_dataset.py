@@ -64,7 +64,7 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
 
         # 이 자리에 전처리 가능
         
-        sent = pair + tokenizer.cls_token + form
+        sent = form + tokenizer.cls_token + pair
         
         tokenized_data = tokenizer(sent, padding='max_length', max_length=max_len, truncation=True)
         
