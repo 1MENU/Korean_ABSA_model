@@ -48,6 +48,7 @@ dataset_test , dataset_test , dataset_test = get_CD_dataset(test_data, test_data
 final_submission_pred = np.argmax(final_submission_pred, axis=1)
 
 # 파일 어떻게 쓰는지 확인해야 수정가능
+#넘파이 파일 어떻게 생긴거야
 yy = np.logical_or(dataset_test, final_submission_pred)
 
 y_true = dataset_test[np.where(np.logical_and(yy=1))]
