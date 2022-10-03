@@ -16,7 +16,8 @@ import numpy as np
 from torch import nn
 
 import time
-
+import re
+from soynlp.normalizer import *
 
 
 #individual Metric
