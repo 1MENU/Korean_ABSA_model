@@ -60,7 +60,8 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
             break
 
         # 이 자리에 전처리 가능
-
+        
+        form = replace_marks(form)
         
         tokenized_data = tokenizer(pair, form, padding='max_length', max_length=max_len, truncation=True)
         
