@@ -14,11 +14,6 @@ def CD_dataset(raw_data, tokenizer, max_len):
 
     for utterance in raw_data:
 
-        # 이 자리에 전처리 할 수 있음. utterance['sentence_form'] 변형
-        # def preprocessing(utterance['sentence_form']) return str
-        utterance['sentence_form']=replace_marks(utterance['sentence_form'])
-
-
         entity_property_data_dict, polarity_data_dict = tokenize_and_align_labels(tokenizer, utterance['sentence_form'], utterance['annotation'], max_len)
         
         input_ids_list.extend(entity_property_data_dict['input_ids'])
