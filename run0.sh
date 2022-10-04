@@ -17,9 +17,9 @@ cd scripts
 
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "form+cls+pair+1lay" \
+CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "biLstm_0cat-1" \
     --batch_size=32 --lr=2e-5 --pretrained="tunib/electra-ko-base" \
-    --LS=0.05 --seed=31
+    --LS=0.05 --seed=31 --save=1
 
 
 
