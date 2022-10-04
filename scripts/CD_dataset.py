@@ -3,7 +3,6 @@ from base_data import *
 import re
 from soynlp.normalizer import *
 from hanspell import spell_checker
-from bs4 import BeautifulSoup as bf
 
 
 def CD_dataset(raw_data, tokenizer, max_len):
@@ -70,8 +69,9 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         # 이 자리에 전처리 가능
         
         form=replace_marks(form)
-        #print(type(form))
-        #input()
+        pair=replace_htag(pair)
+        
+        
         sent = pair + tokenizer.cls_token + form
         
         tokenized_data = tokenizer(sent, padding='max_length', max_length=max_len, truncation=True)
@@ -121,40 +121,33 @@ def get_CD_dataset(train_data, dev_data, test_data, pretrained_tokenizer):
 
     return train_CD_data, dev_CD_data, test_CD_data
 
+def special_tok_change(sentence):
+    #'&name&', '&affiliation&', '&social-security-num&', 
+    # '&tel-num&', '&card-num&', '&bank-account&', '&num&', '&online-account&'
+    sentence=re.sub('&name&','$name$',sentence)
+    sentence=re.sub('&affiliation&','$affiliation$',sentence)
+    sentence=re.sub('&social-security-num&','$social-security-num$',sentence)
+    sentence=re.sub('&tel-num&','$tel-num$',sentence)
+    sentence=re.sub('&card-num&','$card-num$',sentence)
+    sentence=re.sub('&bank-account&','$bank-account$',sentence)
+    sentence=re.sub('&num&','$num$',sentence)
+    sentence=re.sub('&online-account&','$online-account$',sentence)
+    
+    return sentence
 
 
-"""
-수정필요 
+
 def spacing_sent(sentence):
-    #Py-Hanspell 이용 - Py-Hanspell은 네이버 한글 맞춤법 검사기를 바탕으로 만들어진 패키지
-    #sentence=replace_htag(sentence)
-    sentence="#&name&이유식 들어가면서 만들어줘야겠다.. 생각했는데 역시나 넘나 간편한 #베이비쿡솔로 .."
+    
+    sentence=special_tok_change(sentence) # xml 파싱 시에 &에서 오류발생해서 다 바꿔주기
+    sentence=re.sub('&','',sentence)
     result_train = spell_checker.check(sentence)
     sentence = result_train.as_dict()['checked']
-    sentence = bf(sentence, features="html.parser")
-   # print("change")
-    print(sentence)
-    #input()
+    
     return sentence 
-"""
 
-def replace_marks(sentence):
-    """
-    tokenization 전 통일하지 않은 문장부호 제거하는 함수
-    strip() 양 끝의 대상 제거
-    re.sub() 대상 변경. 공백이면 삭제
-    """
-    print(sentence)
-    # 💝이거는 ❤
-    # 긍정, 중립, 부정 이모티콘 하나로 통일?
-    # ㅠㅅㅜ :D ^^ +_+/ ^-^* ㅎ_ㅎ
-    # 어 근데 tokenizer에서 ^^ 어떻게 처리되나 확인 먼저
-    # ㅠㅠㅠㅠㅠㅠㅠㅠㅠ 나 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ 두 개로 바꾸기...... 어케한담.........
-    # ㅠㅜㅠ ㅜㅠㅜ ㅜㅜ 통일? 좀 어려울듯
-    # ;;;;;;; 이런거
-    # /^[ㄱ-ㅎ|가-힣]+$/ 한글 1개 이상
-
-    # 텍스트 이모지
+def del_emoticon1(sentence):
+      # 텍스트 이모지
     sentence = re.sub('\^\^', '', sentence)
     sentence = re.sub(':\)', '', sentence)
     sentence = re.sub('>.<', '', sentence)
@@ -169,68 +162,90 @@ def replace_marks(sentence):
     sentence = re.sub('\^-\^*', '', sentence)
     sentence = re.sub('ㅎ_ㅎ', '', sentence)
     sentence= re.sub('-_-', '', sentence)
-    # sentence = re.sub('', '', sentence)
+    sentence=re.sub('ㅋㅋ', '', sentence)
+    sentence=re.sub('ㅎㅎ','',sentence)
+    sentence=re.sub('ㅠㅠ','',sentence)
+    sentence=re.sub('ㅜㅜ','',sentence)
+    sentence=re.sub('ㅜ','',sentence)
     
-    # 해시태그 바꾸기
-    sentence = re.sub('#', ',', sentence)
-    
-    # 👍🏻 👌 🤡👠 🎵 🍰🎂 🙋🏻 🙏🏻 𖤐➰ 🌹💋😲🖒💆‍♀😡👌 😴💧🙆‍♂ 😺🙆‍♂💆🏻‍♀🙆🏻🌻😮🐥🌝 \\ dev데이터셋
-    # 🌹 👦🏼 👍🏻👏🏻🤘💡🍼 😲🙃🐱 🕺💝🕷🕸🏃‍♀✌🏻 💋💄📸💯💋👌🚗💬 🤮🎵🍎➰ 👆💎 🍷😜 🙆‍♂🖐💧🙋🏻‍♀ // train
-    # 이모지 통일/감소
-    sentence = re.sub('👍🏻', ' ', sentence)
-    sentence = re.sub('😄', ' ', sentence)
-    sentence = re.sub('🖒', ' ', sentence)
-    sentence = re.sub('👌', '  ', sentence)
-    sentence = re.sub('🤡', '  ', sentence)
-    sentence = re.sub('👠', '  ', sentence)
-    sentence = re.sub('🎵', '  ', sentence)
-    sentence = re.sub('🍰', '  ', sentence)
-    sentence = re.sub('🎂', '  ', sentence)
-    sentence = re.sub('🙋🏻', '  ', sentence)
-    sentence = re.sub('🙏🏻', '  ', sentence)
-    sentence = re.sub('𖤐', '  ', sentence)
-    sentence = re.sub('➰', '  ', sentence)
-    sentence = re.sub('🌹', '  ', sentence)
-    sentence = re.sub('💋', '  ', sentence)
-    sentence = re.sub('😲', '  ', sentence)
-    sentence = re.sub('💆‍♀', '  ', sentence)
-    sentence = re.sub('😡', '  ', sentence)
-    sentence = re.sub('😴', '  ', sentence)
-    sentence = re.sub('💧', '  ', sentence)
-    sentence = re.sub('🙆‍♂', '  ', sentence)
-    sentence = re.sub('😺', '  ', sentence)
-    sentence = re.sub('💆🏻‍♀', '  ', sentence)
-    sentence = re.sub('🙆🏻', '  ', sentence)
-    sentence = re.sub('🌻', '  ', sentence)
-    sentence = re.sub('😮', '  ', sentence)
-    sentence = re.sub('🐥', '  ', sentence)
-    sentence = re.sub('🌝', '  ', sentence)
-    sentence = re.sub('👦🏼', '  ', sentence)
-    sentence = re.sub('👏🏻', '  ', sentence)
-    sentence = re.sub('🤘', '  ', sentence)
-    sentence = re.sub('💡', '  ', sentence)
-    sentence = re.sub('🍼', '  ', sentence)
-    sentence = re.sub('😲', '  ', sentence)
-    sentence = re.sub('🙃', '  ', sentence)
-    sentence = re.sub('🐱', '  ', sentence)
-    sentence = re.sub('🕺', '  ', sentence)
-    sentence = re.sub('🕷', ' ', sentence)
-    sentence = re.sub('🕸', ' ', sentence)
-    sentence = re.sub('🏃‍♀', '  ', sentence)
-    sentence = re.sub('✌🏻', '  ', sentence)
-    sentence = re.sub('💯', '  ', sentence)
-    sentence = re.sub('🤮', ' ', sentence)
-    sentence = re.sub('😜', ' ', sentence)
-    sentence = re.sub('🖐', ' ', sentence)
-    
-    sentence=repeat_normalize(sentence, num_repeats=2)      
-    print(sentence)
-    
-    input()
-                
     return sentence
 
-def replace_htag(sentence):
-    # 해시태그 바꾸기
+def del_emoticon2(sentence):   
+    # 👍🏻 👌 🤡👠 🎵 🍰🎂 🙋🏻 🙏🏻 𖤐➰ 🌹💋😲🖒💆‍♀😡👌 😴💧🙆‍♂ 😺🙆‍♂💆🏻‍♀🙆🏻🌻😮🐥🌝 \\ dev데이터셋
+    # 🌹 👦🏼 👍🏻👏🏻🤘💡🍼 😲🙃🐱 🕺💝🕷🕸🏃‍♀✌🏻 💋💄📸💯💋👌🚗💬 🤮🎵🍎➰ 👆💎 🍷😜 🙆‍♂🖐💧🙋🏻‍♀ // train
+    # 이모지 통일/감소 
+    sentence=re.sub('👍','',sentence)
+    sentence=re.sub('💕','',sentence)
+    sentence=re.sub('🌸','', sentence)
+    sentence=re.sub('📸','',sentence)
+    sentence = re.sub('👍🏻', ''  , sentence)
+    sentence = re.sub('😄', ''  , sentence)
+    sentence = re.sub('🖒', ''  , sentence)
+    sentence = re.sub('👌', ''  , sentence)
+    sentence = re.sub('🤡', ''  , sentence)
+    sentence = re.sub('👠', ''  , sentence)
+    sentence = re.sub('🎵', ''  , sentence)
+    sentence = re.sub('🍰', ''  , sentence)
+    sentence = re.sub('🎂', ''  , sentence)
+    sentence = re.sub('🙋🏻', ''  , sentence)
+    sentence = re.sub('🙏🏻', ''  , sentence)
+    sentence = re.sub('𖤐', ''  , sentence)
+    sentence = re.sub('➰', ''  , sentence)
+    sentence = re.sub('🌹', ''  , sentence)
+    sentence = re.sub('💋', ''  , sentence)
+    sentence = re.sub('😲', ''  , sentence)
+    sentence = re.sub('💆‍♀', ''  , sentence)
+    sentence = re.sub('😡', ''  , sentence)
+    sentence = re.sub('😴', ''  , sentence)
+    sentence = re.sub('💧', ''  , sentence)
+    sentence = re.sub('🙆‍♂', ''  , sentence)
+    sentence = re.sub('😺', ''  , sentence)
+    sentence = re.sub('💆🏻‍♀', ''  , sentence)
+    sentence = re.sub('🙆🏻', ''  , sentence)
+    sentence = re.sub('🌻', ''  , sentence)
+    sentence = re.sub('😮', ''  , sentence)
+    sentence = re.sub('🐥', ''  , sentence)
+    sentence = re.sub('🌝', ''  , sentence)
+    sentence = re.sub('👦🏼', ''  , sentence)
+    sentence = re.sub('👏🏻', ''  , sentence)
+    sentence = re.sub('🤘', ''  , sentence)
+    sentence = re.sub('💡', ''  , sentence)
+    sentence = re.sub('🍼', ''  , sentence)
+    sentence = re.sub('😲', ''  , sentence)
+    sentence = re.sub('🙃', ''  , sentence)
+    sentence = re.sub('🐱', ''  , sentence)
+    sentence = re.sub('🕺', ''  , sentence)
+    sentence = re.sub('🕷', ''  , sentence)
+    sentence = re.sub('🕸', ''  , sentence)
+    sentence = re.sub('🏃‍♀', ''  , sentence)
+    sentence = re.sub('✌🏻', ''  , sentence)
+    sentence = re.sub('💯', ''  , sentence)
+    sentence = re.sub('🤮', ''  , sentence)
+    sentence = re.sub('😜', ''  , sentence)
+    sentence = re.sub('🖐', ''  , sentence)
+    
+    return sentence
+
+def replace_htag(sentence): # annotation 해시 제거 용 
+    # 해시태그 바꾸기    #문장내에서는 해시태그 공백으로 바꿔주고 속성 범주에서는 #->, 로 바꿔주기 
     sentence = re.sub('#', ', ', sentence)
+    return sentence
+
+def repeat_del(sentence): #의미없는 반복 제거 함수 
+    sentence=repeat_normalize(sentence, num_repeats=2)   
+    return sentence
+
+def replace_marks(sentence):
+
+    sentence=spacing_sent(sentence)
+    # 텍스트이모티콘 제거 
+    sentence=del_emoticon1(sentence)
+    # 이모티콘 제거 
+    sentence=del_emoticon2(sentence)
+    # 해시태그 바꾸기
+    sentence=sentence = re.sub('#', '', sentence)
+    #반복제거 
+    sentence=repeat_del(sentence)
+
+                    
     return sentence
