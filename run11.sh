@@ -16,6 +16,6 @@ cd scripts
 
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "biLstm_0cat-1" \
+CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "spell_p+cls+f+1lay" \
     --batch_size=16 --lr=8e-6 --pretrained="kykim/funnel-kor-base" \
     --seed=21 --save=1

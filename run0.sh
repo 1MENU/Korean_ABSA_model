@@ -16,10 +16,10 @@ cd scripts
 
 
 
-run_task 1 CD
-CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "biLstm_0cat-1" \
-    --batch_size=32 --lr=2e-5 --pretrained="tunib/electra-ko-base" \
-    --LS=0.05 --seed=31 --save=1
+# run_task 1 CD
+# CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "spell_p+cls+f+1lay" \
+#     --batch_size=32 --lr=2e-5 --pretrained="tunib/electra-ko-base" \
+#     --LS=0.05 --seed=31 --save=1
 
 
 
@@ -49,7 +49,7 @@ CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "biLstm_0cat-1" \
 #     --batch_size=64 --lr=2e-5 --pretrained="kykim/electra-kor-base" \
 #     --seed=111 --LS=0.001
 
-#  run_task 2 SC
-# CUDA_VISIBLE_DEVICES=0 python SC_pipeline.py --name "2CLS" \
-#     --batch_size=32 --lr=2e-5 --pretrained="beomi/KcELECTRA-base" \
-#     --seed=1111 --weight_decay=0.001
+ run_task 2 SC
+CUDA_VISIBLE_DEVICES=0 python SC_pipeline.py --name "last4" \
+    --batch_size=32 --lr=2e-5 --pretrained="beomi/KcELECTRA-base" \
+    --seed=1111 --weight_decay=0.001 --save=1

@@ -67,7 +67,7 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         
         form = spacing_sent(form)
         
-        sent = pair + tokenizer.cls + form
+        sent = pair + tokenizer.cls_token + form
         
         tokenized_data = tokenizer(sent, padding='max_length', max_length=max_len, truncation=True)
         
