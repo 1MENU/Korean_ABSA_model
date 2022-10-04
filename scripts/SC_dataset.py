@@ -63,7 +63,7 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         # def preprocessing(form) return str
         # tokenizer에 어떻게 들어갈지 형식도 변형
         
-        tokenized_data = tokenizer(pair, form, padding='max_length', max_length=max_len, truncation=True)
+        tokenized_data = tokenizer(form, pair, padding='max_length', max_length=max_len, truncation=True)
         
         for annotation in annotations:
             entity_property = annotation[0]
