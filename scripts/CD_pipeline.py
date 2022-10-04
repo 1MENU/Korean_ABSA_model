@@ -36,7 +36,9 @@ if args.kfold == 0:     # not split K-fold
     dev_data = jsonlload(dev_file_list)
     test_data = jsonlload(test_file_list)
 else:   # split K-fold
-    train_data, dev_data = stratified_KFold(train_file_list, args.nsplit, args.kfold, 'Answer(FALSE = 0, TRUE = 1)')   # train list, n_split, k번째 fold 사용, label name
+    #train_data, dev_data = stratified_KFold(train_file_list, args.nsplit, args.kfold, 'Answer(FALSE = 0, TRUE = 1)')  
+    
+    # train list, n_split, k번째 fold 사용, label name
     test_data = jsonlload(test_file_list)
 
 
@@ -46,7 +48,6 @@ TrainLoader, DevLoader, InferenceLoader = load_data(dataset_train, dataset_dev, 
 
 
 mymodel = CD_model(args.pretrained)
-#mymodel = torch.nn.DataParallel(mymodel)
 mymodel.to(device)
 
 
@@ -69,7 +70,7 @@ else:
 # for name, param in mymodel.state_dict().items():
 #     print(name, param.size())
 
-# print(entity_property_optimizer_grouped_parameters[2])
+# # print(entity_property_optimizer_grouped_parameters[2])
 # exit()
 
 optimizer = build_optimizer(mymodel.parameters(), lr=args.lr, weight_decay=args.weight_decay, type = args.optimizer)
@@ -130,7 +131,7 @@ for epoch in range(args.epochs):
         print("! new high ! -> ", bestF1)
 
         if args.save:
-            torch.save(mymodel.state_dict(), f"{saveDirPth_str}{task_name}/{args.name}.pt")
+            torch.save(mymodel.state_dict(), f"{saveDirPth_str}{task_name}/{wandb_name}.pt")
 
     if bestLoss > (loss + test_loss) / 2 :
         bestLoss = (loss + test_loss) / 2
