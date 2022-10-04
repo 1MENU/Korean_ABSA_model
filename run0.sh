@@ -16,40 +16,7 @@ cd scripts
 
 
 
-# run_task 1 CD
-# CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "spell_p+cls+f+1lay" \
-#     --batch_size=32 --lr=2e-5 --pretrained="tunib/electra-ko-base" \
-#     --LS=0.05 --seed=31 --save=1
-
-
-
-
-
-# "klue/roberta-base"
-# "kykim/electra-kor-base"
-# 'tunib/electra-ko-base'
-# "kykim/funnel-kor-base"
-
-# "monologg/koelectra-base-v3-discriminator"
-
-
-
-# run_task 2 SC
-# CUDA_VISIBLE_DEVICES=0 python SC_pipeline.py --name "base" \
-#     --batch_size=32 --lr=3e-6 --pretrained="klue/roberta-base" \
-#     --seed=1
-
-# run_task 2 SC
-# CUDA_VISIBLE_DEVICES=0 python SC_pipeline.py --name "base" \
-#     --batch_size=64 --lr=1e-5 --pretrained="monologg/koelectra-base-v3-discriminator" \
-#     --seed=11 --LS=0.01
-
-# run_task 2 SC
-# CUDA_VISIBLE_DEVICES=0 python SC_pipeline.py --name "base" \
-#     --batch_size=64 --lr=2e-5 --pretrained="kykim/electra-kor-base" \
-#     --seed=111 --LS=0.001
-
- run_task 2 SC
-CUDA_VISIBLE_DEVICES=0 python SC_pipeline.py --name "last4" \
-    --batch_size=32 --lr=2e-5 --pretrained="beomi/KcELECTRA-base" \
-    --seed=1111 --weight_decay=0.001 --save=1
+run_task 1 CD
+CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "no_emo_1lay" \
+    --batch_size=32 --lr=2e-5 --pretrained="kykim/electra-kor-base" \
+    --LS=0.01 --weight_decay=0.001 --seed=41 --save=1

@@ -17,8 +17,19 @@ def CD_dataset(raw_data, tokenizer, max_len):
     polarity_token_labels_list = []
 
     for utterance in raw_data:
+        
+        # 이 자리에 전처리 가능
+        
+        # print("B : ", utterance['sentence_form'])
+        
+        form = remove_emoji(utterance['sentence_form'])
+        
+        # form = repeat_del(form)
+        # form = remove_texticon(form)
+        
+        # print("A : ", form)
 
-        entity_property_data_dict, polarity_data_dict = tokenize_and_align_labels(tokenizer, utterance['sentence_form'], utterance['annotation'], max_len)
+        entity_property_data_dict, polarity_data_dict = tokenize_and_align_labels(tokenizer, form, utterance['annotation'], max_len)
         
         input_ids_list.extend(entity_property_data_dict['input_ids'])
         token_type_ids_list.extend(entity_property_data_dict['token_type_ids'])
@@ -63,13 +74,14 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         if pd.isna(form):
             break
 
-        # 이 자리에 전처리 가능
+
+        # 이 자리에는 toknizer에 들어갈 구조 변경 가능
         
-        form = spacing_sent(form)
+        # sent = pair + tokenizer.cls_token + form
         
-        sent = pair + tokenizer.cls_token + form
+        pair = replace_htag(pair)
         
-        tokenized_data = tokenizer(sent, padding='max_length', max_length=max_len, truncation=True)
+        tokenized_data = tokenizer(form, pair, padding='max_length', max_length=max_len, truncation=True)
         
         for annotation in annotations:
             entity_property = annotation[0]
@@ -137,32 +149,42 @@ def spacing_sent(sentence):
     
     sentence=special_tok_change(sentence) # xml 파싱 시에 &에서 오류발생해서 다 바꿔주기
     sentence=re.sub('&',', ',sentence)
+    
+    print("before : ", sentence)
+    
     result_train = spell_checker.check(sentence)
     sentence = result_train.as_dict()['checked']
+    
+    print("after : ", sentence)
     
     return sentence 
 
 def remove_texticon(sentence):
       # 텍스트 이모지
     sentence = re.sub('\^\^', '', sentence)
+    # sentence = re.sub('*ㅅ*', '', sentence)
     sentence = re.sub(':\)', '', sentence)
     sentence = re.sub('>.<', '', sentence)
     sentence = re.sub('> 3 <', '', sentence)
     sentence = re.sub('// _ //', '', sentence)
     sentence = re.sub('ㅋ.ㅋ', '', sentence)
     sentence = re.sub('\(--\)\(__\)', '', sentence)
-    sentence = re.sub('💝', '❤', sentence)
+    sentence = re.sub('❤', '', sentence)
     sentence = re.sub('ㅠㅅㅜ', '', sentence)
     sentence = re.sub('\:D', '', sentence)
     sentence = re.sub('\+_\+/', '', sentence)
     sentence = re.sub('\^-\^*', '', sentence)
+    sentence=re.sub('^^','',sentence)
     sentence = re.sub('ㅎ_ㅎ', '', sentence)
     sentence= re.sub('-_-', '', sentence)
     sentence=re.sub('ㅋㅋ', '', sentence)
     sentence=re.sub('ㅎㅎ','',sentence)
     sentence=re.sub('ㅠㅠ','',sentence)
     sentence=re.sub('ㅜㅜ','',sentence)
-    sentence=re.sub('ㅜ','',sentence)
+    
+    sentence=re.sub('~','',sentence)
+    # sentence=re.sub('ㅜ','',sentence)
+    # ▲, ㅎㅎㅎ, ㅋㅋㅋ, >_<, ㅠ_ㅠ, ♩​, ♥, +_+
     
     return sentence
 
@@ -223,7 +245,7 @@ def del_emoticon2(sentence):
     return sentence
 
 def replace_htag(sentence): # annotation 해시 제거 용 
-    # 해시태그 바꾸기    #문장내에서는 해시태그 공백으로 바꿔주고 속성 범주에서는 #->, 로 바꿔주기 
+    # 해시태그 바꾸기
     sentence = re.sub('#', ', ', sentence)
     return sentence
 

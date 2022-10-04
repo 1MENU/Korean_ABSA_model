@@ -15,8 +15,10 @@ cd scripts
 # CUDA_VISIBLE_DEVICES=1
 
 
+# CUDA_VISIBLE_DEVICES=1 python together.py --cd="spell_p+cls+f+1lay_16_8e-06_fun_rs21" --sc="last4_32_2e-05_KcE_rs1111"
+
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "spell_p+cls+f+1lay" \
-    --batch_size=32 --lr=3e-6 --pretrained="klue/roberta-base" \
-    --seed=1 --save=1
+CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "pair,_1lay" \
+    --batch_size=32 --lr=2e-5 --pretrained="kykim/electra-kor-base" \
+    --LS=0.01 --weight_decay=0.001 --seed=41 --save=1
