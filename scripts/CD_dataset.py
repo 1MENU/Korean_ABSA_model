@@ -18,9 +18,6 @@ def CD_dataset(raw_data, tokenizer, max_len):
 
     for utterance in raw_data:
 
-        # 이 자리에 전처리 할 수 있음. utterance['sentence_form'] 변형
-        # def preprocessing(utterance['sentence_form']) return str
-        
         entity_property_data_dict, polarity_data_dict = tokenize_and_align_labels(tokenizer, utterance['sentence_form'], utterance['annotation'], max_len)
         
         input_ids_list.extend(entity_property_data_dict['input_ids'])
@@ -68,13 +65,7 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
 
         # 이 자리에 전처리 가능
         
-        form=replace_marks(form)
-        pair=replace_htag(pair)
-        
-        
-        sent = pair + tokenizer.cls_token + form
-        
-        tokenized_data = tokenizer(sent, padding='max_length', max_length=max_len, truncation=True)
+        tokenized_data = tokenizer(form, pair, padding='max_length', max_length=max_len, truncation=True)
         
         for annotation in annotations:
             entity_property = annotation[0]
@@ -120,6 +111,7 @@ def get_CD_dataset(train_data, dev_data, test_data, pretrained_tokenizer):
     test_CD_data, test_SC_data = CD_dataset(test_data, tokenizer, 256)
 
     return train_CD_data, dev_CD_data, test_CD_data
+
 
 def special_tok_change(sentence):
     #'&name&', '&affiliation&', '&social-security-num&', 
@@ -249,3 +241,13 @@ def replace_marks(sentence):
 
                     
     return sentence
+
+def remove_emoji(input_string):
+    emoji_pattern = re.compile("["
+        u"\U0001F600-\U0001F64F"  # emoticons
+        u"\U0001F300-\U0001F5FF"  # symbols & pictographs
+        u"\U0001F680-\U0001F6FF"  # transport & map symbols
+        u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
+                           "]+", flags=re.UNICODE)
+    
+    return emoji_pattern.sub(r'', input_string) # no emoji
