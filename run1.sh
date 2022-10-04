@@ -17,6 +17,6 @@ cd scripts
 
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "form+cls+pair+1lay" \
+CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "biLstm_0cat-1" \
     --batch_size=32 --lr=3e-6 --pretrained="klue/roberta-base" \
-    --seed=1
+    --seed=1 --save=1
