@@ -65,7 +65,11 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
 
         # 이 자리에 전처리 가능
         
-        tokenized_data = tokenizer(form, pair, padding='max_length', max_length=max_len, truncation=True)
+        form = spacing_sent(form)
+        
+        sent = pair + tokenizer.cls + form
+        
+        tokenized_data = tokenizer(sent, padding='max_length', max_length=max_len, truncation=True)
         
         for annotation in annotations:
             entity_property = annotation[0]
@@ -113,32 +117,32 @@ def get_CD_dataset(train_data, dev_data, test_data, pretrained_tokenizer):
     return train_CD_data, dev_CD_data, test_CD_data
 
 
-def special_tok_change(sentence):
-    #'&name&', '&affiliation&', '&social-security-num&', 
-    # '&tel-num&', '&card-num&', '&bank-account&', '&num&', '&online-account&'
-    sentence=re.sub('&name&','$name$',sentence)
-    sentence=re.sub('&affiliation&','$affiliation$',sentence)
-    sentence=re.sub('&social-security-num&','$social-security-num$',sentence)
-    sentence=re.sub('&tel-num&','$tel-num$',sentence)
-    sentence=re.sub('&card-num&','$card-num$',sentence)
-    sentence=re.sub('&bank-account&','$bank-account$',sentence)
-    sentence=re.sub('&num&','$num$',sentence)
-    sentence=re.sub('&online-account&','$online-account$',sentence)
-    
-    return sentence
-
 
 
 def spacing_sent(sentence):
     
+    def special_tok_change(sentence):
+        #'&name&', '&affiliation&', '&social-security-num&', 
+        # '&tel-num&', '&card-num&', '&bank-account&', '&num&', '&online-account&'
+        sentence=re.sub('&name&','$name$',sentence)
+        sentence=re.sub('&affiliation&','$affiliation$',sentence)
+        sentence=re.sub('&social-security-num&','$social-security-num$',sentence)
+        sentence=re.sub('&tel-num&','$tel-num$',sentence)
+        sentence=re.sub('&card-num&','$card-num$',sentence)
+        sentence=re.sub('&bank-account&','$bank-account$',sentence)
+        sentence=re.sub('&num&','$num$',sentence)
+        sentence=re.sub('&online-account&','$online-account$',sentence)
+    
+        return sentence
+    
     sentence=special_tok_change(sentence) # xml 파싱 시에 &에서 오류발생해서 다 바꿔주기
-    sentence=re.sub('&','',sentence)
+    sentence=re.sub('&',', ',sentence)
     result_train = spell_checker.check(sentence)
     sentence = result_train.as_dict()['checked']
     
     return sentence 
 
-def del_emoticon1(sentence):
+def remove_texticon(sentence):
       # 텍스트 이모지
     sentence = re.sub('\^\^', '', sentence)
     sentence = re.sub(':\)', '', sentence)
