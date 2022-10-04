@@ -129,7 +129,7 @@ for epoch in range(args.epochs):
         print("! new high ! -> ", bestF1)
 
         if args.save:
-            torch.save(mymodel.state_dict(), f"{saveDirPth_str}{task_name}/{args.name}.pt")
+            torch.save(mymodel.state_dict(), f"{saveDirPth_str}{task_name}/{wandb_name}.pt")
 
     if bestLoss > (loss + test_loss) / 2 :
         bestLoss = (loss + test_loss) / 2
