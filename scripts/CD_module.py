@@ -133,15 +133,16 @@ def inference_model(model, data_loader, lf, device):
 
     all_loss = []
 
-    for batchIdx, (input_ids, input_mask, label) in enumerate(data_loader):
+    for batchIdx, (input_ids, token_type_ids, input_mask, label) in enumerate(data_loader):
         with torch.no_grad():
             model.zero_grad() #model weight 초기화
 
             input_ids = input_ids.to(device) #move param_buffers to gpu
+            token_type_ids = token_type_ids.to(device)
             input_mask = input_mask.to(device)
             label = label.long().to(device)
 
-            output = model(input_ids, input_mask) #shape: 
+            output = model(input_ids, token_type_ids, input_mask) #shape: 
             
             loss = lf(output, label)
             all_loss.append(loss)
@@ -156,38 +157,39 @@ def inference_model(model, data_loader, lf, device):
     avg_loss = (sum(all_loss)/len(all_loss)).detach().cpu().float()
 
     y_pred_softmax = softmax(y_pred)
-    y_true_expand = np.expand_dims(y_true, axis=1)
+    # y_true_expand = np.expand_dims(y_true, axis=1)
 
-    custom_loss = 1 - np.take_along_axis(y_pred_softmax, y_true_expand, axis=1)
+    # custom_loss = 1 - np.take_along_axis(y_pred_softmax, y_true_expand, axis=1)
 
-    y_pred = np.argmax(y_pred, axis=1)
-    result = compute_metrics(y_pred, y_true)["acc"]
+    # y_pred = np.argmax(y_pred, axis=1)
+    # result = compute_metrics(y_pred, y_true)["acc"]
 
-    f1 = f1_score(y_true, y_pred)
-    acc = accuracy_score(y_true, y_pred)
+    # f1 = f1_score(y_true, y_pred)
+    # acc = accuracy_score(y_true, y_pred)
     
-    print('test_acc = ', result, acc, " test_loss = ", avg_loss)
+    # print('test_acc = ', result, acc, " test_loss = ", avg_loss)
 
-    yy = y_true | y_pred
+    # yy = y_true | y_pred
 
-    print(y_true[yy == 1])
-    print(y_pred[yy == 1])
+    # print(y_true[yy == 1])
+    # print(y_pred[yy == 1])
 
-    print(len(y_true[yy == 1]))
-    print(len(y_pred[yy == 1]))
+    # print(len(y_true[yy == 1]))
+    # print(len(y_pred[yy == 1]))
 
-    y_true = y_true[yy == 1]
-    y_pred = y_pred[yy == 1]
+    # y_true = y_true[yy == 1]
+    # y_pred = y_pred[yy == 1]
 
-    f1_b = f1_score(y_true, y_pred, average = 'binary')
-    f1_mirco = f1_score(y_true, y_pred, average = 'micro')
-    f1_macro = f1_score(y_true, y_pred, average = 'macro')
-    acc = accuracy_score(y_true, y_pred)
+    # f1_b = f1_score(y_true, y_pred, average = 'binary')
+    # f1_mirco = f1_score(y_true, y_pred, average = 'micro')
+    # f1_macro = f1_score(y_true, y_pred, average = 'macro')
+    # acc = accuracy_score(y_true, y_pred)
 
-    print('test_f1 = ', f1_b, f1_mirco, f1_macro)
-    print('test_Acc = ', acc)
+    # print('test_f1 = ', f1_b, f1_mirco, f1_macro)
+    # print('test_Acc = ', acc)
 
-    return y_pred_softmax, custom_loss, f1
+    return y_pred_softmax
+    # return y_pred_softmax, custom_loss, f1
 
 
 
