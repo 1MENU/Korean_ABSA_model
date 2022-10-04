@@ -1,5 +1,9 @@
 from util.utils import *
 from base_data import *
+import re
+from soynlp.normalizer import *
+from hanspell import spell_checker
+
 
 def CD_dataset(raw_data, tokenizer, max_len):
     input_ids_list = []
@@ -61,8 +65,6 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
 
         # 이 자리에 전처리 가능
         
-        # form = replace_marks(form)
-        
         tokenized_data = tokenizer(form, pair, padding='max_length', max_length=max_len, truncation=True)
         
         for annotation in annotations:
@@ -110,115 +112,135 @@ def get_CD_dataset(train_data, dev_data, test_data, pretrained_tokenizer):
 
     return train_CD_data, dev_CD_data, test_CD_data
 
-"""
-1. 이모티콘 → 텍스트 대체
-    - Test set 에는 이모티콘 개수 자체는 적음
-2. 텍스트 이모지 (ex, :) , ^^, >.<, > 3 <, // _ //, ㅋ.ㅋ, (--)(__) )
-    1. 이모티콘
-    2. ㅎㅎㅎ 혹은 ㅋㅋㅋ
-    
-3. ~~데이터 증강~~
-4. 음성어, 의태어 처리 
-    1. 토크나이저를 돌려보았을 때의 결과 (아래 참고)
-    2. 5번, 6번 포함
-5. 정규화(normalization) : ㅋㅋㅋㅋㅋㅋㅋㅋㅋ, ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ, ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ,  ;;;;;;;;;; 같은거 
-tokenize 되는 사이즈에 맞게 통일하기. (그냥이랑 / ## 붙어서 나오는 버전이랑 나눠서 ex) ㅎㅎㅎㅎ, #ㅎㅎ) (근데 이거 toknizer에 따라 다름) → KCELECTRA 에서 해결 가능
-6. 반복되는 어미 ( “강추추추추추…”)
-7. # (해시테그), 삭제
-8. 띄어쓰기, 맞춤법 교정기 api 써서 전처리
-    1. ex) “부드러운 잴느낌이랄까”
-    
-    https://github.com/Beomi/KcELECTRA
-    
-"""
 
-def replace_marks(sentence):
-    """
-    tokenization 전
-    strip() 양 끝의 대상 제거
-    re.sub() 대상 변경. 공백이면 삭제
-    sentence = re.sub('', '', sentence)
-    """
-    print(sentence)
-    # 텍스트 이모지
-    sentence = re.sub('\^\^', 'ㅋㅋ', sentence)
-    sentence = re.sub(':\)', 'ㅋㅋ', sentence)
-    sentence = re.sub('>.<', 'ㅋㅋ', sentence)
-    sentence = re.sub('> 3 <', 'ㅋㅋ', sentence)
-    sentence = re.sub('// _ //', 'ㅋㅋ', sentence)
-    sentence = re.sub('ㅋ.ㅋ', 'ㅋㅋ', sentence)
-    sentence = re.sub('\(--\)\(__\)', 'ㅋㅋ', sentence)
-    sentence = re.sub('💝', '❤', sentence)
-    sentence = re.sub('ㅠㅅㅜ', 'ㅠㅠ', sentence)
-    sentence = re.sub(':D', 'ㅎㅎ', sentence)
-    sentence = re.sub('\+_\+/', 'ㅋㅋ', sentence)
-    sentence = re.sub('\^-\^*', 'ㅎㅎ', sentence)
-    sentence = re.sub('ㅎ_ㅎ', 'ㅎㅎ', sentence)
-    sentence = re.sub('-_-', '', sentence)
-    # sentence = re.sub('', '', sentence)
-        
-    # 해시태그 바꾸기
-    sentence = re.sub('#', ', ', sentence)
+def special_tok_change(sentence):
+    #'&name&', '&affiliation&', '&social-security-num&', 
+    # '&tel-num&', '&card-num&', '&bank-account&', '&num&', '&online-account&'
+    sentence=re.sub('&name&','$name$',sentence)
+    sentence=re.sub('&affiliation&','$affiliation$',sentence)
+    sentence=re.sub('&social-security-num&','$social-security-num$',sentence)
+    sentence=re.sub('&tel-num&','$tel-num$',sentence)
+    sentence=re.sub('&card-num&','$card-num$',sentence)
+    sentence=re.sub('&bank-account&','$bank-account$',sentence)
+    sentence=re.sub('&num&','$num$',sentence)
+    sentence=re.sub('&online-account&','$online-account$',sentence)
     
-
-    # 👍🏻 👌 🤡👠 🎵 🍰🎂 🙋🏻 🙏🏻 𖤐➰ 🌹💋😲🖒💆‍♀😡👌 😴💧🙆‍♂ 😺🙆‍♂💆🏻‍♀🙆🏻🌻😮🐥🌝 \\ dev데이터셋
-    # 🌹 👦🏼 👍🏻👏🏻🤘💡🍼 😲🙃🐱 🕺💝🕷🕸🏃‍♀✌🏻 💋💄📸💯💋👌🚗💬 🤮🎵🍎➰ 👆💎 🍷😜 🙆‍♂🖐💧🙋🏻‍♀ // train
-    # 이모지 통일/감소
-    sentence = re.sub('👍🏻', '👍', sentence)
-    sentence = re.sub('😄', '👍 ', sentence)
-    sentence = re.sub('🖒', '👍', sentence)
-    sentence = re.sub('👌', '👍', sentence)
-    sentence = re.sub('🤡', '👍', sentence)
-    sentence = re.sub('👠', '👍', sentence)
-    sentence = re.sub('🎵', '👍', sentence)
-    sentence = re.sub('🍰', '👍', sentence)
-    sentence = re.sub('🎂', '👍', sentence)
-    sentence = re.sub('🙋🏻', '👍', sentence)
-    sentence = re.sub('🙏🏻', '👍', sentence)
-    sentence = re.sub('𖤐', '👍', sentence)
-    sentence = re.sub('➰', '👍', sentence)
-    sentence = re.sub('🌹', '👍', sentence)
-    sentence = re.sub('💋', '👍', sentence)
-    sentence = re.sub('😲', '👍', sentence)
-    sentence = re.sub('💆‍♀', '👍', sentence)
-    sentence = re.sub('😡', '👍', sentence)
-    sentence = re.sub('😴', '👍', sentence)
-    sentence = re.sub('💧', '👍', sentence)
-    sentence = re.sub('🙆‍♂', '👍', sentence)
-    sentence = re.sub('😺', '👍', sentence)
-    sentence = re.sub('💆🏻‍♀', '👍', sentence)
-    sentence = re.sub('🙆🏻', '👍', sentence)
-    sentence = re.sub('🌻', '👍', sentence)
-    sentence = re.sub('😮', '👍', sentence)
-    sentence = re.sub('🐥', '👍', sentence)
-    sentence = re.sub('🌝', '👍', sentence)
-    sentence = re.sub('👦🏼', '👍', sentence)
-    sentence = re.sub('👏🏻', '👍', sentence)
-    sentence = re.sub('🤘', '👍', sentence)
-    sentence = re.sub('💡', '👍', sentence)
-    sentence = re.sub('🍼', '👍', sentence)
-    sentence = re.sub('😲', '👍', sentence)
-    sentence = re.sub('🙃', '👍', sentence)
-    sentence = re.sub('🐱', '👍', sentence)
-    sentence = re.sub('🕺', '👍', sentence)
-    sentence = re.sub('🕷', '싫다 ', sentence)
-    sentence = re.sub('🕸', '싫다 ', sentence)
-    sentence = re.sub('🏃‍♀', '👍', sentence)
-    sentence = re.sub('✌🏻', '👍', sentence)
-    sentence = re.sub('💯', '👍', sentence)
-    sentence = re.sub('🤮', '싫다 ', sentence)
-    sentence = re.sub('😜', '👍', sentence)
-    sentence = re.sub('🖐', '👍', sentence)
-    
-    # 반복 문자 삭제 ㅋㅋㅋㅋㅋㅋ, ㅎㅎㅎㅎㅎㅎ, 강추추추추추
-    sentence = repeat_normalize(sentence, num_repeats=2)
-       
     return sentence
 
-def replace_htag(annotation):
+
+
+def spacing_sent(sentence):
+    
+    sentence=special_tok_change(sentence) # xml 파싱 시에 &에서 오류발생해서 다 바꿔주기
+    sentence=re.sub('&','',sentence)
+    result_train = spell_checker.check(sentence)
+    sentence = result_train.as_dict()['checked']
+    
+    return sentence 
+
+def del_emoticon1(sentence):
+      # 텍스트 이모지
+    sentence = re.sub('\^\^', '', sentence)
+    sentence = re.sub(':\)', '', sentence)
+    sentence = re.sub('>.<', '', sentence)
+    sentence = re.sub('> 3 <', '', sentence)
+    sentence = re.sub('// _ //', '', sentence)
+    sentence = re.sub('ㅋ.ㅋ', '', sentence)
+    sentence = re.sub('\(--\)\(__\)', '', sentence)
+    sentence = re.sub('💝', '❤', sentence)
+    sentence = re.sub('ㅠㅅㅜ', '', sentence)
+    sentence = re.sub('\:D', '', sentence)
+    sentence = re.sub('\+_\+/', '', sentence)
+    sentence = re.sub('\^-\^*', '', sentence)
+    sentence = re.sub('ㅎ_ㅎ', '', sentence)
+    sentence= re.sub('-_-', '', sentence)
+    sentence=re.sub('ㅋㅋ', '', sentence)
+    sentence=re.sub('ㅎㅎ','',sentence)
+    sentence=re.sub('ㅠㅠ','',sentence)
+    sentence=re.sub('ㅜㅜ','',sentence)
+    sentence=re.sub('ㅜ','',sentence)
+    
+    return sentence
+
+def del_emoticon2(sentence):   
+    # 👍🏻 👌 🤡👠 🎵 🍰🎂 🙋🏻 🙏🏻 𖤐➰ 🌹💋😲🖒💆‍♀😡👌 😴💧🙆‍♂ 😺🙆‍♂💆🏻‍♀🙆🏻🌻😮🐥🌝 \\ dev데이터셋
+    # 🌹 👦🏼 👍🏻👏🏻🤘💡🍼 😲🙃🐱 🕺💝🕷🕸🏃‍♀✌🏻 💋💄📸💯💋👌🚗💬 🤮🎵🍎➰ 👆💎 🍷😜 🙆‍♂🖐💧🙋🏻‍♀ // train
+    # 이모지 통일/감소 
+    sentence=re.sub('👍','',sentence)
+    sentence=re.sub('💕','',sentence)
+    sentence=re.sub('🌸','', sentence)
+    sentence=re.sub('📸','',sentence)
+    sentence = re.sub('👍🏻', ''  , sentence)
+    sentence = re.sub('😄', ''  , sentence)
+    sentence = re.sub('🖒', ''  , sentence)
+    sentence = re.sub('👌', ''  , sentence)
+    sentence = re.sub('🤡', ''  , sentence)
+    sentence = re.sub('👠', ''  , sentence)
+    sentence = re.sub('🎵', ''  , sentence)
+    sentence = re.sub('🍰', ''  , sentence)
+    sentence = re.sub('🎂', ''  , sentence)
+    sentence = re.sub('🙋🏻', ''  , sentence)
+    sentence = re.sub('🙏🏻', ''  , sentence)
+    sentence = re.sub('𖤐', ''  , sentence)
+    sentence = re.sub('➰', ''  , sentence)
+    sentence = re.sub('🌹', ''  , sentence)
+    sentence = re.sub('💋', ''  , sentence)
+    sentence = re.sub('😲', ''  , sentence)
+    sentence = re.sub('💆‍♀', ''  , sentence)
+    sentence = re.sub('😡', ''  , sentence)
+    sentence = re.sub('😴', ''  , sentence)
+    sentence = re.sub('💧', ''  , sentence)
+    sentence = re.sub('🙆‍♂', ''  , sentence)
+    sentence = re.sub('😺', ''  , sentence)
+    sentence = re.sub('💆🏻‍♀', ''  , sentence)
+    sentence = re.sub('🙆🏻', ''  , sentence)
+    sentence = re.sub('🌻', ''  , sentence)
+    sentence = re.sub('😮', ''  , sentence)
+    sentence = re.sub('🐥', ''  , sentence)
+    sentence = re.sub('🌝', ''  , sentence)
+    sentence = re.sub('👦🏼', ''  , sentence)
+    sentence = re.sub('👏🏻', ''  , sentence)
+    sentence = re.sub('🤘', ''  , sentence)
+    sentence = re.sub('💡', ''  , sentence)
+    sentence = re.sub('🍼', ''  , sentence)
+    sentence = re.sub('😲', ''  , sentence)
+    sentence = re.sub('🙃', ''  , sentence)
+    sentence = re.sub('🐱', ''  , sentence)
+    sentence = re.sub('🕺', ''  , sentence)
+    sentence = re.sub('🕷', ''  , sentence)
+    sentence = re.sub('🕸', ''  , sentence)
+    sentence = re.sub('🏃‍♀', ''  , sentence)
+    sentence = re.sub('✌🏻', ''  , sentence)
+    sentence = re.sub('💯', ''  , sentence)
+    sentence = re.sub('🤮', ''  , sentence)
+    sentence = re.sub('😜', ''  , sentence)
+    sentence = re.sub('🖐', ''  , sentence)
+    
+    return sentence
+
+def replace_htag(sentence): # annotation 해시 제거 용 
+    # 해시태그 바꾸기    #문장내에서는 해시태그 공백으로 바꿔주고 속성 범주에서는 #->, 로 바꿔주기 
+    sentence = re.sub('#', ', ', sentence)
+    return sentence
+
+def repeat_del(sentence): #의미없는 반복 제거 함수 
+    sentence=repeat_normalize(sentence, num_repeats=2)   
+    return sentence
+
+def replace_marks(sentence):
+
+    sentence=spacing_sent(sentence)
+    # 텍스트이모티콘 제거 
+    sentence=del_emoticon1(sentence)
+    # 이모티콘 제거 
+    sentence=del_emoticon2(sentence)
     # 해시태그 바꾸기
-    annotation = re.sub('#', ', ', annotation)
-    return annotation
+    sentence=sentence = re.sub('#', '', sentence)
+    #반복제거 
+    sentence=repeat_del(sentence)
+
+                    
+    return sentence
 
 def remove_emoji(input_string):
     emoji_pattern = re.compile("["
