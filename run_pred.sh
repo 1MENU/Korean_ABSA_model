@@ -19,36 +19,6 @@ format_check(){     # Format Check
 
 cd scripts
 
-# # task1 : COLA
-# run_task 1 COLA
-# python COLA_submission.py --model "a"
-# python COLA_submission.py --model "ars2"
-
-
-# # task2 : WiC
-# run_task 2 WiC
-# python WIC_submission.py --model "a"
-# python WIC_submission.py --model "ars2"
-
-
-# task3 : COPA
-run_task 3 COPA
-python COPA_submission.py --model c
-python COPA_submission.py --model cf
-
-
-# # task4 : BoolQ
-# run_task 4 BoolQ
-# python BoolQ_submission.py --model d-0
-# python BoolQ_submission.py --model d-1
-
-
-
-
-cd ..
-
-# enssemble
-
-
-# # # Format Check
-# format_check materials/submission/cola/aa-0.json
+# task1 : CD
+run_task 1 CD
+CUDA_VISIBLE_DEVICES=1 python CD_pred.py --model="pair,_1lay_16_8e-06_fun_rs21" --pretrained="kykim/funnel-kor-base"

@@ -6,12 +6,11 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--model', required = True)
 parser.add_argument('--pretrained', default="monologg/koelectra-base-v3-discriminator")
-parser.add_argument('-bs', '--batch_size', type=int, default=128)
-parser.add_argument('--device', type=int, default=0)
+parser.add_argument('-bs', '--batch_size', type=int, default=32)
 
 args = parser.parse_args()
 
-device = torch.device(f'cuda:{args.device}')
+device = torch.device('cuda')
 
 model_name = args.model     # "last4-1"
 
@@ -30,7 +29,7 @@ mymodel.to(device)
 
 lf = LabelSmoothingLoss(smoothing = 0.00)
 
-submission_pred, loss = inference_model(mymodel, InferenceLoader, lf, device) # y_pred_softmax, custom_loss, f1
+submission_pred = inference_model(mymodel, InferenceLoader, lf, device) # y_pred_softmax, custom_loss, f1
 
 # l = np.where(loss > 0.8)[0]
 # pd.set_option('display.max_rows', None)
