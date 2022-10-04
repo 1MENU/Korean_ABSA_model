@@ -10,10 +10,10 @@ label_name_to_id = {label_id_to_name[i]: i for i in range(len(label_id_to_name))
 polarity_id_to_name = ['positive', 'negative', 'neutral']
 polarity_name_to_id = {polarity_id_to_name[i]: i for i in range(len(polarity_id_to_name))}
 
-special_tokens_dict = {
-    'additional_special_tokens': ['$name$', '$affiliation$', '$social-security-num$', '$tel-num$', '$card-num$', '$bank-account$', '$num$', '$online-account$']
-}
-
 # special_tokens_dict = {
-#     'additional_special_tokens': ['&name&', '&affiliation&', '&social-security-num&', '&tel-num&', '&card-num&', '&bank-account&', '&num&', '&online-account&']
+#     'additional_special_tokens': ['$name$', '$affiliation$', '$social-security-num$', '$tel-num$', '$card-num$', '$bank-account$', '$num$', '$online-account$']
 # }
+
+special_tokens_dict = {
+    'additional_special_tokens': ['&name&', '&affiliation&', '&social-security-num&', '&tel-num&', '&card-num&', '&bank-account&', '&num&', '&online-account&']
+}

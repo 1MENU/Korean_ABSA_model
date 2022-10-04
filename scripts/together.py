@@ -20,8 +20,8 @@ device = torch.device("cuda")
 test_file_list = ["test.jsonl"]
 test_data = jsonlload(test_file_list)
 
-CD_pretrained = ""
-SC_pretrained = ""
+CD_pretrained = "kykim/funnel-kor-base"
+SC_pretrained = "beomi/KcELECTRA-base"
 
 
 CD_model = CD_model(CD_pretrained)
@@ -46,6 +46,8 @@ num_added_toks = SC_tokenizer.add_special_tokens(special_tokens_dict)
 
 output_data = copy.deepcopy(test_data)
 
+print(output_data)
+
 for sentence in output_data:
     
     form = sentence['sentence_form']
@@ -55,11 +57,15 @@ for sentence in output_data:
         print("form type is arong: ", form)
         continue
     
+    form_spell = spacing_sent(form)
+    
     for pair in entity_property_pair:
         
         # 이 자리에 전처리
         
-        tokenized_data = CD_tokenizer(form, pair, padding='max_length', max_length=256, truncation=True)
+        sent = pair + CD_tokenizer.cls_token + form_spell
+        
+        tokenized_data = CD_tokenizer(sent, padding='max_length', max_length=256, truncation=True)
 
         input_ids = torch.tensor([tokenized_data['input_ids']]).to(device)
         token_type_ids = torch.tensor([tokenized_data['token_type_ids']]).to(device)
@@ -95,4 +101,13 @@ for sentence in output_data:
 
 # output_data가 결과물
 
-print('F1 result: ', evaluation_f1(test_data, output_data))
+# print('F1 result: ', evaluation_f1(test_data, output_data))
+
+# json 개체를 파일이름으로 깔끔하게 저장
+def jsondump(j, fname):
+    with open(fname, "w", encoding="UTF8") as f:
+        # json.dump(j, f, ensure_ascii=False)
+        for i in j:
+            f.write(json.dumps(i, ensure_ascii=False) + "\n")
+
+jsondump(output_data, "first.jsonl")
