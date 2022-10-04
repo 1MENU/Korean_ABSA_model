@@ -30,7 +30,7 @@ mymodel.to(device)
 
 lf = LabelSmoothingLoss(smoothing = 0.00)
 
-submission_pred, loss = inference_model(mymodel, InferenceLoader, lf, device)
+submission_pred, loss = inference_model(mymodel, InferenceLoader, lf, device) # y_pred_softmax, custom_loss, f1
 
 # l = np.where(loss > 0.8)[0]
 # pd.set_option('display.max_rows', None)
