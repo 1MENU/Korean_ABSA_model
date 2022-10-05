@@ -20,7 +20,7 @@ device = torch.device("cuda")
 test_file_list = ["test.jsonl"]
 test_data = jsonlload(test_file_list)
 
-CD_pretrained = "kykim/funnel-kor-base"
+CD_pretrained = "kykim/electra-kor-base"    # "kykim/funnel-kor-base"
 SC_pretrained = "beomi/KcELECTRA-base"
 
 
@@ -57,15 +57,18 @@ for sentence in output_data:
         print("form type is arong: ", form)
         continue
     
-    form_spell = spacing_sent(form)
+    # form_spell = spacing_sent(form)
     
     for pair in entity_property_pair:
         
         # 이 자리에 전처리
         
-        sent = pair + CD_tokenizer.cls_token + form_spell
+        final_pair = pair
+        final_pair = replace_htag(final_pair)
         
-        tokenized_data = CD_tokenizer(sent, padding='max_length', max_length=256, truncation=True)
+        # sent = pair + CD_tokenizer.cls_token + form_spells
+        
+        tokenized_data = CD_tokenizer(form, final_pair, padding='max_length', max_length=256, truncation=True)
 
         input_ids = torch.tensor([tokenized_data['input_ids']]).to(device)
         token_type_ids = torch.tensor([tokenized_data['token_type_ids']]).to(device)
