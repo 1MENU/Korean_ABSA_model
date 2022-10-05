@@ -16,6 +16,6 @@ cd scripts
 
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "no_emo_1lay" \
+CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "noDecay_1lay" \
     --batch_size=16 --lr=8e-6 --pretrained="kykim/funnel-kor-base" \
     --seed=21 --save=1

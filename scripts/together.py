@@ -10,6 +10,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--cd', required = True)
 parser.add_argument('--sc', required = True)
+parser.add_argument('--name', required = True)
 parser.add_argument('-bs', '--batch_size', type=int, default=128)
 
 args = parser.parse_args()
@@ -113,4 +114,6 @@ def jsondump(j, fname):
         for i in j:
             f.write(json.dumps(i, ensure_ascii=False) + "\n")
 
-jsondump(output_data, "first.jsonl")
+file_name = args.name
+
+jsondump(output_data, f"{file_name}.jsonl")
