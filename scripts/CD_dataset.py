@@ -79,7 +79,7 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         # 이 자리에는 toknizer에 들어갈 구조 변경 가능
         
         final_pair = pair
-        final_pair = replace_htag(final_pair)
+        final_pair = replace_htag(final_pair, '의 ')
         
         # sent = pair + tokenizer.cls_token + form
         
@@ -248,9 +248,9 @@ def del_emoticon2(sentence):
     
     return sentence
 
-def replace_htag(sentence): # annotation 해시 제거 용 
+def replace_htag(sentence, to): # annotation 해시 제거 용 
     # 해시태그 바꾸기
-    sentence = re.sub('#', ', ', sentence)
+    sentence = re.sub('#', to, sentence)
     return sentence
 
 def repeat_del(sentence): #의미없는 반복 제거 함수 
