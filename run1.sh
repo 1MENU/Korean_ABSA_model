@@ -19,6 +19,6 @@ cd scripts
 
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "pair,_1lay" \
+CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "noDecay_1lay" \
     --batch_size=32 --lr=2e-5 --pretrained="kykim/electra-kor-base" \
     --LS=0.01 --weight_decay=0.001 --seed=41 --save=1
