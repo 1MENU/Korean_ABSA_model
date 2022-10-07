@@ -114,6 +114,6 @@ def jsondump(j, fname):
         for i in j:
             f.write(json.dumps(i, ensure_ascii=False) + "\n")
 
-file_name = args.name
+file_name = submissionPth + args.name
 
-jsondump(output_data, f"{file_name}.jsonl")
+jsondump(output_data, f"{file_name}.json")

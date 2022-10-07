@@ -16,7 +16,6 @@ saveDirPth_str = "../materials/saved_model/"
 predPth = '../materials/pred/'
 submissionPth = '../materials/submission/'
 
-
 def make_directories(task):
     if not os.path.exists(saveDirPth_str + task + "/"):
         os.makedirs(saveDirPth_str + task + "/")
@@ -70,7 +69,7 @@ class LabelSmoothingLoss(nn.Module):
 
 
 def evaluation_f1(true_data, pred_data):
-
+    
     true_data_list = true_data
     pred_data_list = pred_data
 
