@@ -21,7 +21,7 @@ device = torch.device("cuda")
 test_file_list = ["test.jsonl"]
 test_data = jsonlload(test_file_list)
 
-CD_pretrained = "kykim/electra-kor-base"    # "kykim/funnel-kor-base"
+CD_pretrained = "kykim/funnel-kor-base"     # "kykim/electra-kor-base"    # "kykim/funnel-kor-base"
 SC_pretrained = "beomi/KcELECTRA-base"
 
 
@@ -65,7 +65,7 @@ for sentence in output_data:
         # 이 자리에 전처리
         
         final_pair = pair
-        final_pair = replace_htag(final_pair)
+        # final_pair = replace_htag(final_pair)
         
         # sent = pair + CD_tokenizer.cls_token + form_spells
         

@@ -88,7 +88,7 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         
         
         
-        tokenized_data = tokenizer(final_pair, form, padding='max_length', max_length=max_len, truncation=True)
+        tokenized_data = tokenizer(form, final_pair, padding='max_length', max_length=max_len, truncation=True)
         
         for annotation in annotations:
             entity_property = annotation[0]
@@ -167,7 +167,8 @@ def spacing_sent(sentence):
     return sentence 
 
 def remove_texticon(sentence):
-      # 텍스트 이모지
+    # 텍스트 이모지
+    
     sentence = re.sub('\^\^', '', sentence)
     # sentence = re.sub('*ㅅ*', '', sentence)
     sentence = re.sub(':\)', '', sentence)

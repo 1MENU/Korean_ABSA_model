@@ -7,7 +7,7 @@ class SimpleClassifier(nn.Module):
         super().__init__()
         self.dense = nn.Linear(config.hidden_size, config.hidden_size)
         self.dropout = nn.Dropout(dropout)
-        self.output = nn.Linear(config.hidden_size * 4, num_label)
+        self.output = nn.Linear(config.hidden_size, num_label)
 
     def forward(self, x):
         # x = self.dropout(x)
