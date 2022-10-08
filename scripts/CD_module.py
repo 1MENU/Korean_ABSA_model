@@ -169,7 +169,7 @@ def inference_model(model, data_loader, lf, device):
     
     # print('test_acc = ', result, acc, " test_loss = ", avg_loss)
 
-    # yy = y_true | y_pred
+    yy = y_true | y_pred
 
     # print(y_true[yy == 1])
     # print(y_pred[yy == 1])
@@ -177,16 +177,12 @@ def inference_model(model, data_loader, lf, device):
     # print(len(y_true[yy == 1]))
     # print(len(y_pred[yy == 1]))
 
-    # y_true = y_true[yy == 1]
-    # y_pred = y_pred[yy == 1]
+    y_true = y_true[yy == 1]
+    y_pred = y_pred[yy == 1]
 
-    # f1_b = f1_score(y_true, y_pred, average = 'binary')
-    # f1_mirco = f1_score(y_true, y_pred, average = 'micro')
-    # f1_macro = f1_score(y_true, y_pred, average = 'macro')
-    # acc = accuracy_score(y_true, y_pred)
+    f1_b = f1_score(y_true, y_pred, average = 'binary')
 
-    # print('test_f1 = ', f1_b, f1_mirco, f1_macro)
-    # print('test_Acc = ', acc)
+    print('test_f1 = ', f1_b)
 
     return y_pred_softmax
     # return y_pred_softmax, custom_loss, f1

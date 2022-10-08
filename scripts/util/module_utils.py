@@ -49,7 +49,6 @@ def build_optimizer(parameters, lr, weight_decay, type):
 
     return optimizer
 
-
 class LabelSmoothingLoss(nn.Module):
     def __init__(self, classes = 2, smoothing=0.0, dim=-1):
         super(LabelSmoothingLoss, self).__init__()
