@@ -6,7 +6,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--model', required = True)
 parser.add_argument('--pretrained', default="monologg/koelectra-base-v3-discriminator")
-parser.add_argument('-bs', '--batch_size', type=int, default=32)
+parser.add_argument('-bs', '--batch_size', type=int, default=256)
 
 args = parser.parse_args()
 
@@ -15,7 +15,7 @@ device = torch.device('cuda')
 model_name = args.model     # "last4-1"
 
 
-test_file_list = ["../dataset/test.jsonl"]  # test data
+test_file_list = ["../dataset/train.jsonl"]  # test data
 test_data = jsonlload(test_file_list)
 
 dataset_train, dataset_dev, dataset_test = get_CD_dataset(test_data, test_data, test_data, args.pretrained)

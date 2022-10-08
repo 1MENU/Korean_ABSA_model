@@ -15,12 +15,12 @@ cd scripts
 # CUDA_VISIBLE_DEVICES=0
 
 
-# run_task 1 CD
-# CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "noDecay_1lay" \
-#     --batch_size=16 --lr=8e-6 --pretrained="kykim/funnel-kor-base" \
-#     --seed=21 --save=1
-
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "1lay" \
-    --batch_size=16 --lr=7e-6 --pretrained="kykim/funnel-kor-base" \
-    --LS=0.01 --seed=11 --save=1
+CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "last4_1lay" \
+    --batch_size=16 --lr=8e-6 --pretrained="kykim/funnel-kor-base" \
+    --seed=21 --save=1
+
+# run_task 1 CD
+# CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "1lay" \
+#     --batch_size=16 --lr=7e-6 --pretrained="kykim/funnel-kor-base" \
+#     --LS=0.01 --seed=11 --save=1

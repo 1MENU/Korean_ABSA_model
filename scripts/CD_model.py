@@ -7,7 +7,7 @@ class SimpleClassifier(nn.Module):
         super().__init__()
         self.dense = nn.Linear(config.hidden_size, config.hidden_size)
         self.dropout = nn.Dropout(dropout)
-        self.output = nn.Linear(config.hidden_size, num_label)
+        self.output = nn.Linear(config.hidden_size * 4, num_label)
 
     def forward(self, x):
         # x = self.dropout(x)
@@ -62,8 +62,8 @@ class CD_model(nn.Module):
 
         self.model.resize_token_embeddings(config.vocab_size + len(special_tokens_dict['additional_special_tokens']))
 
-        self.labels_classifier = SimpleClassifier(config, 0.1, 2)
-        # self.bi_lstm = biLSTMClassifier(config, 2)
+        # self.labels_classifier = SimpleClassifier(config, 0.1, 2)
+        self.bi_lstm = biLSTMClassifier(config, 2)
 
     def forward(self, input_ids, token_type_ids, attention_mask):
         outputs = self.model(
@@ -76,9 +76,9 @@ class CD_model(nn.Module):
         # outputs=torch.cat([outputs['hidden_states'][9][:, 0, :], outputs['hidden_states'][10][:, 0, :], outputs['hidden_states'][11][:, 0, :], outputs['hidden_states'][12][:, 0, :]], dim = -1)
         # logits = self.labels_classifier(outputs)
         
-        cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
-        logits = self.labels_classifier(cls_token)
+        # cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
+        # logits = self.labels_classifier(cls_token)
         
-        # logits = self.bi_lstm(outputs['last_hidden_state'])
+        logits = self.bi_lstm(outputs['last_hidden_state'])
         
         return logits

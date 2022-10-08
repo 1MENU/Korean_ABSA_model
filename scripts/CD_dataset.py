@@ -24,6 +24,8 @@ def CD_dataset(raw_data, tokenizer, max_len):
         
         form = utterance['sentence_form']
         
+        # form = spacing_sent(form)
+        
         # form = remove_emoji(form)
         # form = repeat_del(form)
         # form = remove_texticon(form)
