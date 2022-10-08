@@ -168,7 +168,12 @@ def inference_model(model, data_loader, lf, device):
     # acc = accuracy_score(y_true, y_pred)
     
     # print('test_acc = ', result, acc, " test_loss = ", avg_loss)
+    
+    y_pred = np.argmax(y_pred, axis=1)
 
+    # print(y_true)
+    # print(y_pred)
+    
     yy = y_true | y_pred
 
     # print(y_true[yy == 1])

@@ -21,6 +21,6 @@ cd scripts
 
 # task1 : CD
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=1 python CD_pred.py --model="pair,_1lay_16_8e-06_fun_rs21" --pretrained="kykim/electra-kor-base"
+CUDA_VISIBLE_DEVICES=0 python CD_pred.py --model="addCategory_1lay_32_2e-05_kykE_rs41" --pretrained="kykim/electra-kor-base"
 
 # kykim/electra-kor-base
