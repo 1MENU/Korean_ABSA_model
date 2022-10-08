@@ -36,7 +36,7 @@ class biLSTMClassifier(nn.Module):
             bidirectional = True
         )
         
-        self.classifier = nn.Linear(self.size*2 * 2, 2)
+        self.classifier = nn.Linear(self.size * 2, 2)
 
     def forward(self, x):
         
@@ -45,9 +45,9 @@ class biLSTMClassifier(nn.Module):
         
         out, _ = self.lstm(x, (h0, c0))
         
-        output_concat = torch.cat([out[:, 0, :], out[:, -1, :]], dim = -1)
+        # output_concat = torch.cat([out[:, 0, :], out[:, -1, :]], dim = -1)
         
-        out = self.classifier(output_concat)
+        out = self.classifier(out[:, 0, :])
         
         return out
 
