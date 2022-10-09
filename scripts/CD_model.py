@@ -47,7 +47,7 @@ class biLSTMClassifier(nn.Module):
         
         # output_concat = torch.cat([out[:, 0, :], out[:, -1, :]], dim = -1)
         
-        out = self.classifier(out[:, 0, :])
+        out = self.classifier(out[:, -1, :])
         
         return out
 
