@@ -70,7 +70,7 @@ def train_model(model, data_loader, lf, optimizer, scheduler, device, wandb_on):
 
 
 
-def eval_model(model, data_loader, lf, device, dataset_type, wandb_on):
+def eval_model(model, data_loader, lf, device, wandb_on):
     model.eval()
 
     y_true = None #label list
@@ -110,15 +110,9 @@ def eval_model(model, data_loader, lf, device, dataset_type, wandb_on):
 
     f1_b = f1_score(y_true, y_pred, average = 'binary')
     
-    if dataset_type == "eval" :
-        print('eval_f1 = ', f1_b, " eval_loss = ", avg_loss) 
-        if wandb_on:
-            wandb.log({"eval_f1": f1_b, "eval_loss" : avg_loss})    # "eval_loss": avg_loss
-    
-    elif dataset_type == "test" :
-        print('test_acc = ', f1_b, " test_loss = ", avg_loss) 
-        if wandb_on:
-            wandb.log({"test_f1": f1_b, "test_loss" : avg_loss})
+    print('eval_f1 = ', f1_b, " eval_loss = ", avg_loss)
+    if wandb_on:
+        wandb.log({"eval_f1": f1_b, "eval_loss" : avg_loss})
 
     return f1_b, avg_loss
 
@@ -157,30 +151,13 @@ def inference_model(model, data_loader, lf, device):
     avg_loss = (sum(all_loss)/len(all_loss)).detach().cpu().float()
 
     y_pred_softmax = softmax(y_pred)
-    # y_true_expand = np.expand_dims(y_true, axis=1)
+    y_true_expand = np.expand_dims(y_true, axis=1)
 
-    # custom_loss = 1 - np.take_along_axis(y_pred_softmax, y_true_expand, axis=1)
-
-    # y_pred = np.argmax(y_pred, axis=1)
-    # result = compute_metrics(y_pred, y_true)["acc"]
-
-    # f1 = f1_score(y_true, y_pred)
-    # acc = accuracy_score(y_true, y_pred)
-    
-    # print('test_acc = ', result, acc, " test_loss = ", avg_loss)
+    custom_loss = 1 - np.take_along_axis(y_pred_softmax, y_true_expand, axis=1)
     
     y_pred = np.argmax(y_pred, axis=1)
-
-    # print(y_true)
-    # print(y_pred)
     
     yy = y_true | y_pred
-
-    # print(y_true[yy == 1])
-    # print(y_pred[yy == 1])
-
-    # print(len(y_true[yy == 1]))
-    # print(len(y_pred[yy == 1]))
 
     y_true = y_true[yy == 1]
     y_pred = y_pred[yy == 1]
@@ -189,12 +166,11 @@ def inference_model(model, data_loader, lf, device):
 
     print('test_f1 = ', f1_b)
 
-    return y_pred_softmax
-    # return y_pred_softmax, custom_loss, f1
+    return y_pred_softmax, custom_loss
 
 
 
-def eval_model_(tokenizer, ce_model, data, device, dataset_type, wandb_on):
+def eval_model_(tokenizer, ce_model, data, device, wandb_on):
 
     y_pred = None #model prediction list
     
@@ -236,17 +212,5 @@ def eval_model_(tokenizer, ce_model, data, device, dataset_type, wandb_on):
     
     
     print(f1)
-    
-    
-
-    # if dataset_type == "eval" :
-    #     print('eval_f1 = ', f1, " eval_loss = ") 
-    #     if wandb_on:
-    #         wandb.log({"eval_f1": f1})    # "eval_loss": avg_loss
-    
-    # elif dataset_type == "test" :
-    #     print('test_acc = ', f1, " test_loss = ")
-    #     if wandb_on:
-    #         wandb.log({"test_f1": f1})
 
     return f1

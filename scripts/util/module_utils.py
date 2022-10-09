@@ -23,8 +23,8 @@ def make_directories(task):
     if not os.path.exists(predPth + task + "/"):
         os.makedirs(predPth + task + "/")
         
-    if not os.path.exists(submissionPth + task + "/"):
-        os.makedirs(submissionPth + task + "/")
+    if not os.path.exists(submissionPth):
+        os.makedirs(submissionPth)
 
 
 def set_seed(seedNum, device):
