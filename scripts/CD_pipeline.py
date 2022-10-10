@@ -58,13 +58,15 @@ if FULL_FINETUNING:
         {'params': [p for n, p in entity_property_param_optimizer if any(nd in n for nd in no_decay)],
             'weight_decay_rate': 0.0}
     ]
-    
+
 
 optimizer = build_optimizer(entity_property_optimizer_grouped_parameters, lr=args.lr, weight_decay=args.weight_decay, type = args.optimizer)
 
 scheduler = build_scheduler(optimizer, name = args.scheduler)
 
-lf = LabelSmoothingLoss(smoothing = args.LS) # nn.CrossEntropyLoss()
+# lf = LabelSmoothingLoss(smoothing = args.LS) # nn.CrossEntropyLoss()
+
+lf = FocalLossWithSmoothing(2, lb_smooth = args.LS)
 
 
 if args.wandb:
