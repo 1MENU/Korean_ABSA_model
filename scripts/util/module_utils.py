@@ -317,7 +317,13 @@ def name_wandb(arg_name, config):
     bs =  config["batch_size"]
     lr = config["lr"]
     seed = config["seed"]
+    kFold, nSplit = config["K-Fold"].split('/')
+    scheduler = config["scheduler"]
     
-    name = f"{arg_name}_{bs}_{lr}_{pretrained}_rs{seed}"
+    if scheduler == "None":
+        scheduler = "N"
+    
+    
+    name = f"{arg_name}_{bs}_{lr}_{scheduler}_{kFold}F{nSplit}_rs{seed}_{pretrained}"
     
     return name

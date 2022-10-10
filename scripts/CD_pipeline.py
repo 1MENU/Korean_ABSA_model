@@ -16,6 +16,7 @@ parser.add_argument('--nsplit', type=int, default=0, help='n split K-Fold')
 parser.add_argument('--kfold', type=int, default=0, help='n split K-Fold')
 parser.add_argument('--pretrained', default="xlm-roberta-base")
 parser.add_argument('--optimizer', default="AdamW")
+parser.add_argument('--scheduler', default="None")
 parser.add_argument('--early_stop', default=1)
 
 args = parser.parse_args()
@@ -80,6 +81,7 @@ if args.wandb:
         "weight_decay" : args.weight_decay,
         "LS" : args.LS,
         "optimizer" : args.optimizer,
+        "scheduler" : args.scheduler,
         "K-Fold" : f'{args.kfold}/{args.nsplit}'
     }
     
