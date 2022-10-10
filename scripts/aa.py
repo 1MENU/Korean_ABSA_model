@@ -32,4 +32,4 @@ def jsondump(j, fname):
 
 file_name = submissionPth + "data"
 
-jsondump(data, f"{file_name}.json")
+jsondump(data, f"{file_name}.jsonl")

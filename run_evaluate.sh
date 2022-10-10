@@ -8,4 +8,4 @@
 
 cd scripts
 
-python evaluate.py --pred="first.jsonl" --test="data.jsonl"
+python evaluate.py --pred="first.jsonl" --test="data.json"
