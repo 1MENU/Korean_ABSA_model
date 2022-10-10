@@ -1,4 +1,5 @@
 
+from copy import deepcopy
 from base_data import *
 from util.module_utils import *
 
@@ -21,6 +22,18 @@ pred_data3 = jsonlload(pred3)
 
 test_data = jsonlload(label)
 
+# for i in range(len(test_data)):
+    
+#     test_data[i]['annotation'] = []
+    
+#     for pair in entity_property_pair:
+#         y_category = pair
+#         aa = ["null"]
+#         y_polarity = "positive"
+        
+#         test_data[i]['annotation'].append([y_category, aa, y_polarity])
+        
+# test_data[0]['annotation'] = []
 
 score_1 = evaluation_f1(test_data, pred_data1)
 score_1 = abs(0.5899 - score_1['entire pipeline result']['F1']) * 100
@@ -30,15 +43,19 @@ score_2 = evaluation_f1(test_data, pred_data2)
 score_2 = abs(0.5623 - score_2['entire pipeline result']['F1']) * 100
 print("score_2 : ", score_2)
 
-score_3 = evaluation_f1(test_data, pred_data3)
-score_3 = abs(0.0008 - score_3['entire pipeline result']['F1']) * 100
-print("score_3 : ", score_3)
+# score_3 = evaluation_f1(test_data, pred_data3)
+# score_3 = abs(0.0008 - score_3['entire pipeline result']['F1']) * 100
+# print("score_3 : ", score_3)
 
 save_1 = score_1
 save_2 = score_2
 
-exit()
+first_1 = score_1
+first_2 = score_2
 
+copy_data = deepcopy(test_data)
+
+exit()
 
 for i in range(len(test_data)):
     
@@ -63,15 +80,25 @@ for i in range(len(test_data)):
             score_2 = abs(0.5623 - score_2['entire pipeline result']['F1']) * 100
             # print("score_2 : ", score_2)
             
-            if save_1 <= score_1 and save_2 <= score_2 :
-                test_data[i]['annotation'].remove([y_category, aa, y_polarity])
+            test_data[i]['annotation'].remove([y_category, aa, y_polarity])
+            
+            if save_1 <= score_1 or save_2 <= score_2 :
+                pass
             
             else:
                 save_1 = score_1
                 save_2 = score_2
                 
-                print(test_data[i])
+                test_data[i]['annotation'].append([y_category, aa, y_polarity])
+                
+                copy_data[i]['annotation'].append([y_category, aa, y_polarity])
+                
+                print(copy_data[i])
                 break
+            
+    test_data[i]['annotation'] = []
+    save_1 = first_1
+    save_2 = first_2
         
     
 # json 개체를 파일이름으로 깔끔하게 저장
@@ -83,6 +110,6 @@ def jsondump(j, fname):
 
 file_name = submissionPth + "lll"
 
-jsondump(test_data, f"{file_name}.jsonl")
+jsondump(copy_data, f"{file_name}.jsonl")
 
 # 860 ~ 1289
