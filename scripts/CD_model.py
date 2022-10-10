@@ -24,7 +24,7 @@ class biLSTMClassifier(nn.Module):
         super().__init__()
         self.dense = nn.Linear(config.hidden_size, config.hidden_size)
         
-        self.size = 256
+        self.size = 100
         
         self.lstm = nn.LSTM(
             input_size = config.hidden_size, 
