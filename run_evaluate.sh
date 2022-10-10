@@ -6,8 +6,4 @@
 
 # sh run_tasks.sh 하면 안되고 bash run_tasks.sh 해야됨
 
-python tsv_manager.py
-
-cd scripts
-
-# python TSNE.py
+python evaluate.py --pred= --test=
