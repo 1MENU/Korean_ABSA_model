@@ -39,6 +39,7 @@ def set_seed(seedNum, device):
 from torch.utils.data import DataLoader
 
 from torch.optim import AdamW, SGD
+from torch.optim.lr_scheduler import _LRScheduler, ExponentialLR, ReduceLROnPlateau, CyclicLR
 
 # build various type of optimizers
 def build_optimizer(parameters, lr, weight_decay, type):
@@ -48,6 +49,16 @@ def build_optimizer(parameters, lr, weight_decay, type):
         optimizer = SGD(parameters, lr=lr, momentum=0.9, weight_decay=weight_decay)
 
     return optimizer
+
+def build_scheduler(optimizer, name):
+    if name == "ExponentialLR":
+        scheduler = ExponentialLR(optimizer)
+    elif name == "ReduceLROnPlateau":
+        scheduler = ReduceLROnPlateau(optimizer)
+    elif name == "CyclicLR":
+        scheduler = CyclicLR(optimizer)
+        
+    return scheduler  
 
 class LabelSmoothingLoss(nn.Module):
     def __init__(self, classes = 2, smoothing=0.0, dim=-1):
