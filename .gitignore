@@ -3,7 +3,7 @@
 git_remote/*
 runs/*
 
-dataset/*
+dataset/
 
 *.pt
 
