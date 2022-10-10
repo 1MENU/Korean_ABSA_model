@@ -5,6 +5,7 @@ import torch
 import numpy as np
 import random
 from torch import nn
+import torch.nn.functional as F
 import os
 
 import copy
@@ -57,6 +58,8 @@ def build_scheduler(optimizer, name):
         scheduler = ReduceLROnPlateau(optimizer)
     elif name == "CyclicLR":
         scheduler = CyclicLR(optimizer)
+    elif name == "None":
+        scheduler = False
         
     return scheduler  
 
@@ -145,7 +148,7 @@ class FocalLossWithSmoothing(nn.Module):
             one_hot_key = one_hot_key.permute(0, 3, 1, 2)
         if one_hot_key.device != logits.device:
             one_hot_key = one_hot_key.to(logits.device)
-        pt = one_hot_key * F.softmax(logits)
+        pt = one_hot_key * F.softmax(logits, dim=-1)
         difficulty_level = torch.pow(1 - pt, self._gamma)
         return difficulty_level
     
