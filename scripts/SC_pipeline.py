@@ -16,6 +16,7 @@ parser.add_argument('--nsplit', type=int, default=0, help='n split K-Fold')
 parser.add_argument('--kfold', type=int, default=0, help='n split K-Fold')
 parser.add_argument('--pretrained', default="xlm-roberta-base")
 parser.add_argument('--optimizer', default="AdamW")
+parser.add_argument('--scheduler', default="None")
 parser.add_argument('--early_stop', default=1)
 
 args = parser.parse_args()
@@ -25,8 +26,8 @@ device = torch.device('cuda')
 set_seed(args.seed, device) #random seed 정수로 고정.
 
 # multiple files
-train_file_list = ["dev.jsonl"]
-dev_file_list = ["train.jsonl"]
+train_file_list = ["train.jsonl"]
+dev_file_list = ["dev.jsonl"]
 test_file_list = ["test.jsonl"]
 
 if args.kfold == 0:     # not split K-fold
@@ -38,7 +39,7 @@ else:   # split K-fold
     test_data = jsonlload(test_file_list)
 
 
-dataset_train, dataset_dev, dataset_test = get_SC_dataset(train_data, dev_data, test_data, args.pretrained, max_len = 256)
+dataset_train, dataset_dev, dataset_test = get_SC_dataset(train_data, dev_data, test_data, args.pretrained, max_len = 100)
 
 TrainLoader, DevLoader, InferenceLoader = load_data(dataset_train, dataset_dev, dataset_test, batch_size = args.batch_size)
 
@@ -80,6 +81,7 @@ if args.wandb:
         "weight_decay" : args.weight_decay,
         "LS" : args.LS,
         "optimizer" : args.optimizer,
+        "scheduler" : args.scheduler,
         "K-Fold" : f'{args.kfold}/{args.nsplit}'
     }
     
