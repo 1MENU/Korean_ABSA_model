@@ -62,11 +62,7 @@ if FULL_FINETUNING:
 
 optimizer = build_optimizer(entity_property_optimizer_grouped_parameters, lr=args.lr, weight_decay=args.weight_decay, type = args.optimizer)
 
-scheduler = get_linear_schedule_with_warmup(
-    optimizer,
-    num_warmup_steps = 0,
-    num_training_steps = args.epochs * len(TrainLoader)
-)
+scheduler = build_scheduler(optimizer, name = args.scheduler)
 
 lf = LabelSmoothingLoss(smoothing = args.LS) # nn.CrossEntropyLoss()
 
