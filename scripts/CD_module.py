@@ -41,7 +41,7 @@ def train_model(model, data_loader, lf, optimizer, scheduler, device, wandb_on):
         
         torch.nn.utils.clip_grad_norm_(parameters=model.parameters(), max_norm=1.0)
         optimizer.step()
-        # scheduler.step()
+        if scheduler != False : scheduler.step()
 
         if y_pred is None:
             y_pred = output.detach().cpu().numpy()

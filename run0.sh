@@ -17,9 +17,9 @@ cd scripts
 # --nsplit=3 --kfold=1
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "pf_biLstm-1" \
+CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "1lay_len100_focal" \
     --batch_size=32 --lr=2e-5 --pretrained="kykim/electra-kor-base" \
-    --LS=0.01 --weight_decay=0.001 --seed=41 --save=1 --nsplit=3 --kfold=1
+    --LS=0.01 --weight_decay=0.001 --seed=41 --save=1
 
 # run_task 1 CD
 # CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "1lay" \
