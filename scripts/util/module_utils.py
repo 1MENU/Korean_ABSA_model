@@ -160,7 +160,7 @@ def evaluation_f1(true_data, pred_data):
         'F1': 0 if (pipeline_recall+pipeline_precision) == 0 else 2*pipeline_recall*pipeline_precision/(pipeline_recall+pipeline_precision)
     }
 
-    print(ce_eval)
+    # print(ce_eval)
 
     return {
         'category extraction result': ce_result,

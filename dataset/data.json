@@ -1,4 +1,4 @@
-{"id": "nikluge-sa-2022-test-00001", "sentence_form": "하나 사려고 알아보는 중인데 맘에드는거 발견", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00001", "sentence_form": "하나 사려고 알아보는 중인데 맘에드는거 발견", "annotation": [["본품#일반", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00002", "sentence_form": "동양인 피부톤과 잘 어울리고 우아한 분위기를 풍긴다네?", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00003", "sentence_form": "근데 이건 마르살라보다 더 지나친 색 같은데..", "annotation": [["본품#일반", ["null"], "neutral"]]}
 {"id": "nikluge-sa-2022-test-00004", "sentence_form": "나스 색조가 다 그렇지만서도 어데이셔스 라인은 진짜 색 기막히게 뽑는것 같다", "annotation": [["본품#일반", ["null"], "positive"]]}
@@ -857,70 +857,70 @@
 {"id": "nikluge-sa-2022-test-00857", "sentence_form": "(박수)", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00858", "sentence_form": "실제로 사용 해봐야 알겠지만 거의 집에서 사용할 나는 더더욱 배터리 걱정이 없을 것 같다.", "annotation": []}
 {"id": "nikluge-sa-2022-test-00859", "sentence_form": "밖에 들고 나가도 완충해서 나가면 하루 정도는 끄떡 없을 듯. ​​", "annotation": [["제품 전체#품질", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00860", "sentence_form": "그리고 사실 보호필름 사도 잘 붙일 자신이 없다....... ​​", "annotation": []}
-{"id": "nikluge-sa-2022-test-00861", "sentence_form": "아 그리고 17인치 모델에서 종종 오줌액정 불량이 있다는 후기를 몇개 접해서...아주 걱정 했었다.", "annotation": []}
-{"id": "nikluge-sa-2022-test-00862", "sentence_form": "전원 켜보기 전까지 계속 긴장함.", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00863", "sentence_form": "다행히 막눈인 내가 봤을 때는 누런 액정인 것 같지 않지만.. 살짝 누래도 뭐 어때", "annotation": []}
-{"id": "nikluge-sa-2022-test-00864", "sentence_form": "난 따뜻한 색감 좋아하니까 구냥 쓰지 뭐^^!", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00860", "sentence_form": "그리고 사실 보호필름 사도 잘 붙일 자신이 없다....... ​​", "annotation": [["패키지/구성품#편의성", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00861", "sentence_form": "아 그리고 17인치 모델에서 종종 오줌액정 불량이 있다는 후기를 몇개 접해서...아주 걱정 했었다.", "annotation": [["본품#품질", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00862", "sentence_form": "전원 켜보기 전까지 계속 긴장함.", "annotation": [["제품 전체#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00863", "sentence_form": "다행히 막눈인 내가 봤을 때는 누런 액정인 것 같지 않지만.. 살짝 누래도 뭐 어때", "annotation": [["본품#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00864", "sentence_form": "난 따뜻한 색감 좋아하니까 구냥 쓰지 뭐^^!", "annotation": [["본품#일반", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00865", "sentence_form": "하루종일 사무실 데스크탑에 길들여진 나로써는 이거 있고 없고 차이가 정말 크다.", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00866", "sentence_form": "너어무 편함.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00867", "sentence_form": "그리고 전원버튼 누를 때 지문인식도 같이 되서 좋다. ​​", "annotation": [["본품#품질", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00868", "sentence_form": "SD카드 리더기와 헤드셋 단자, 그리고 넉넉한 USB 포트가 마음에 든다.", "annotation": []}
+{"id": "nikluge-sa-2022-test-00868", "sentence_form": "SD카드 리더기와 헤드셋 단자, 그리고 넉넉한 USB 포트가 마음에 든다.", "annotation": [["본품#일반", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00869", "sentence_form": "SSD256 업그레이드 해서 용량 빵빵하다. 희희. ​​", "annotation": [["본품#품질", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00870", "sentence_form": "아니 내용물이 이게 다여..", "annotation": [["본품#일반", ["null"], "neutral"]]}
-{"id": "nikluge-sa-2022-test-00871", "sentence_form": "당황했는데설명서 보니까 열어보래..​​", "annotation": [["제품 전체#일반", ["null"], "neutral"], ["본품#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00870", "sentence_form": "아니 내용물이 이게 다여..", "annotation": [["본품#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00871", "sentence_form": "당황했는데설명서 보니까 열어보래..​​", "annotation": [["제품 전체#일반", ["null"], "neutral"]]}
 {"id": "nikluge-sa-2022-test-00872", "sentence_form": "심플하구만....", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00873", "sentence_form": "진짜 소리 하나도 안나고 너무 좋다.", "annotation": []}
+{"id": "nikluge-sa-2022-test-00873", "sentence_form": "진짜 소리 하나도 안나고 너무 좋다.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00874", "sentence_form": "옆사람 방해 안될 듯! ​​", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00875", "sentence_form": "사진에 잘 안나왔는데 키스킨..딱 어떤 느낌이냐면 축축하고 꿉꿉한 느낌이라 희한하게 자판에 잘 붙어 있는다.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00876", "sentence_form": "잘 붙어있어서 좋긴 한데 보기에는 별로 ㅎ.....", "annotation": []}
+{"id": "nikluge-sa-2022-test-00876", "sentence_form": "잘 붙어있어서 좋긴 한데 보기에는 별로 ㅎ.....", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#디자인", ["null"], "negative"]]}
 {"id": "nikluge-sa-2022-test-00877", "sentence_form": "그리고 핵신기했던 거..!", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00878", "sentence_form": "Virtoo by LG 라는 어플을 받고 컴퓨터와 연동 시키면 폰에 오는 알림과 전화, 메시지를 컴퓨터로 확인 할 수 있다.", "annotation": []}
+{"id": "nikluge-sa-2022-test-00878", "sentence_form": "Virtoo by LG 라는 어플을 받고 컴퓨터와 연동 시키면 폰에 오는 알림과 전화, 메시지를 컴퓨터로 확인 할 수 있다.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00879", "sentence_form": "세상 좋네얌...", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00880", "sentence_form": "아직까지 윈도우10 적응이 잘 안되지만 ㅎ..뭐 괜찮아지겠지.", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00880", "sentence_form": "아직까지 윈도우10 적응이 잘 안되지만 ㅎ..뭐 괜찮아지겠지.", "annotation": [["제품 전체#일반", ["null"], "neutral"]]}
 {"id": "nikluge-sa-2022-test-00881", "sentence_form": "아무튼 나처럼 영상이나 보고 인터넷이나 하고 블로그나 할 사람들에게는 최고의 노트북이 아닐까.", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00882", "sentence_form": "가볍고 예쁘고 빠르고.", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00883", "sentence_form": "근데 치명적인 단점은 비싸다는 점..ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ;;;;;;;", "annotation": [["제품 전체#가격", ["null"], "neutral"]]}
-{"id": "nikluge-sa-2022-test-00884", "sentence_form": "그래듀...디자인과 무게가 중요하다면 그램 사야지 뭐 어쩌겄어요..?", "annotation": [["제품 전체#디자인", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00882", "sentence_form": "가볍고 예쁘고 빠르고.", "annotation": [["제품 전체#편의성", ["null"], "positive"], ["제품 전체#디자인", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00883", "sentence_form": "근데 치명적인 단점은 비싸다는 점..ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ;;;;;;;", "annotation": [["제품 전체#가격", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00884", "sentence_form": "그래듀...디자인과 무게가 중요하다면 그램 사야지 뭐 어쩌겄어요..?", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00885", "sentence_form": "삼성 데스크탑 오디세이, 디자인과 편의성을 겸비하다", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00886", "sentence_form": "삼성전자의 야심작인 삼성 데스크탑 오디세이는 게이밍 데스크탑 치고는 작은 부피에도 불구하고, 강력한 쿨링과 편의성까지 겸비하고 있습니다.", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00887", "sentence_form": "기계치라도 어렵지 않은 저장공간 업그레이드", "annotation": []}
-{"id": "nikluge-sa-2022-test-00888", "sentence_form": "하지만 삼성 데스크탑 Odyssey는 덮개를 열고, 슬롯에 SSD나 하드디스크를 장착하기만 하면 업그레이드 과정이 완료됩니다.", "annotation": []}
-{"id": "nikluge-sa-2022-test-00889", "sentence_form": "덕분에 초보자라도 기사님을 부를 필요없이 본인이 직접 손쉽게 업그레이드할 수 있습니다.", "annotation": []}
+{"id": "nikluge-sa-2022-test-00887", "sentence_form": "기계치라도 어렵지 않은 저장공간 업그레이드", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00888", "sentence_form": "하지만 삼성 데스크탑 Odyssey는 덮개를 열고, 슬롯에 SSD나 하드디스크를 장착하기만 하면 업그레이드 과정이 완료됩니다.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00889", "sentence_form": "덕분에 초보자라도 기사님을 부를 필요없이 본인이 직접 손쉽게 업그레이드할 수 있습니다.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00890", "sentence_form": "600W 대용량 파워 서플라이와 고성능 쿨러로 안정적인 작동 보장", "annotation": [["본품#품질", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00891", "sentence_form": "삼성 데스크탑 오디세이는 추후 업그레이드와 장시간 사용에 대비해서 600W의 대용량 파워서플라이를 장착했습니다.", "annotation": []}
+{"id": "nikluge-sa-2022-test-00891", "sentence_form": "삼성 데스크탑 오디세이는 추후 업그레이드와 장시간 사용에 대비해서 600W의 대용량 파워서플라이를 장착했습니다.", "annotation": [["본품#품질", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00892", "sentence_form": "제가 직접 테스트해본 결과 삼성 데스크탑 오디세이는 그런 불만으로부터 어느정도 자유롭다고 생각됩니다.", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00893", "sentence_form": "영상을 보시면 아시겠지만, 쿨러가 돌아가는 소음은 볼륨을 키워야 들리는 정도로, 게임 소리를 듣는데 전혀 지장이 되지 않는다는 것을 알 수 있습니다.", "annotation": [["본품#품질", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00894", "sentence_form": "환경에 따라 차이는 있겠지만 개인적으로 삼성 데스크탑 Odyssey 를 평가한다면 높은 공간 활용도와 안정성, 그리고 초보자를 배려한 업그레이드 편의성까지 겸비한 훌륭한 제품이라고 생각됩니다.", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00895", "sentence_form": "유명 셀럽들도 사용하고 있다는 더유핏의 LED 기기!", "annotation": [["제품 전체#인지도", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00896", "sentence_form": "티레이저 기미제거는 633nm LED 빛으로 피부 깊숙이 나비존을 집중케어하는 제품으로 하루에 10분씩만 사용해도 뽀얀 피부를 되찾을 수 있는 기기입니다!", "annotation": [["본품#품질", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00897", "sentence_form": "빛의나무 추출 성분이 미백과 멜라닌 색소 억제 기능을 도와주고 강력한 미백 시너지 효과도 느낄 수 있다고해서 받자마자 매일매일 10분씩 꾸준히 이용해왔어요 ㅎㅎ", "annotation": [["본품#품질", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00898", "sentence_form": "사용법은 너무나간단!ㅎㅎ", "annotation": [["제품 전체#편의성", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00898", "sentence_form": "사용법은 너무나간단!ㅎㅎ", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00899", "sentence_form": "LED 기기에 건전지를 넣어주고 안경처럼 착용만 해주면 끝!", "annotation": [["본품#편의성", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00900", "sentence_form": "시야를 막는게 아니기 때문에 코에 살짝 걸친 후 저는 웹툰도 보고 할거 다했네요 ㅎㅎ", "annotation": []}
+{"id": "nikluge-sa-2022-test-00900", "sentence_form": "시야를 막는게 아니기 때문에 코에 살짝 걸친 후 저는 웹툰도 보고 할거 다했네요 ㅎㅎ", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00901", "sentence_form": "요즘 얼굴 마스크 LED 기기가 한창 유행이다보니 이런거 넘 하나 갖구싶었는데 고가의 제품을 사긴 부담스럽고~ 더유핏에서 부담없이 하나 장만해서 너무 만족스러웠어요!", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#가격", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00902", "sentence_form": "내구성도 좋아 오랫동안 제 피부를 지켜줄 것 만 같은 느낌!!", "annotation": [["제품 전체#품질", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00903", "sentence_form": "고글느낌이라 착용법도 아주 간단한데 딱 봐도 쉬워보이죠 ㅎㅎ?", "annotation": [["본품#편의성", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00904", "sentence_form": "요 나비존 속 기미 개선에 도움을 줄 뿐만 아니라 피부색도 개선되고 눈 및 다크서클도 개선된다고 해요~", "annotation": [["본품#품질", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00905", "sentence_form": "요즘 확실히 피부톤이 밝아져서 다들 무슨 관리 받냐고 물어보는 ㅎㅎ", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00902", "sentence_form": "내구성도 좋아 오랫동안 제 피부를 지켜줄 것 만 같은 느낌!!", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00903", "sentence_form": "고글느낌이라 착용법도 아주 간단한데 딱 봐도 쉬워보이죠 ㅎㅎ?", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00904", "sentence_form": "요 나비존 속 기미 개선에 도움을 줄 뿐만 아니라 피부색도 개선되고 눈 및 다크서클도 개선된다고 해요~", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00905", "sentence_form": "요즘 확실히 피부톤이 밝아져서 다들 무슨 관리 받냐고 물어보는 ㅎㅎ", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00906", "sentence_form": "그런 제가 부러웠는지 요즘은 조군도 티레이저 기미제거 LED 기기를 매일 사용하고 있어요! ㅎㅎ", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00907", "sentence_form": "단기간에 즉각적인 개선효과가 나타나는 만큼 LED 기기 관심가지셨다면 더유핏 티레이저 이용해보시길 추천드립니다 ♥", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00907", "sentence_form": "단기간에 즉각적인 개선효과가 나타나는 만큼 LED 기기 관심가지셨다면 더유핏 티레이저 이용해보시길 추천드립니다 ♥", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00908", "sentence_form": "오늘은 저렴한 가격에 이용할 수 있는 미니마사지기! 닥터포텐 저주파안마기 리뷰를 남겨볼까 해요 :)", "annotation": [["제품 전체#가격", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00909", "sentence_form": "요즘 대세인 EMS 저주파 운동기구를 집에서 간단하게 이용할 수 없는 부담없는 미니마사지기 랍니다!", "annotation": [["제품 전체#편의성", ["null"], "positive"], ["제품 전체#인지도", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00910", "sentence_form": "사무실에서 앉아 일하는 시간이 많다보니 어깨가 굉장히 결리는 편인데 그렇다고 사무실에서 시끄러운 안마기를 가져다둘 수도 없고 집에서 휴식을 취할때도 편히 이용할 수 있는걸 찾다가 닥터포텐 미니마사지기를 찾게되엇죠!", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00911", "sentence_form": "작고 앙증맞아 휴대하면서 사용하기 안성맞춤!", "annotation": []}
-{"id": "nikluge-sa-2022-test-00912", "sentence_form": "정말 작고 귀엽죠?ㅎㅎ", "annotation": []}
-{"id": "nikluge-sa-2022-test-00913", "sentence_form": "그치만 요 작은아이가 실력은 상상이상이니 기대해보세요!", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00911", "sentence_form": "작고 앙증맞아 휴대하면서 사용하기 안성맞춤!", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00912", "sentence_form": "정말 작고 귀엽죠?ㅎㅎ", "annotation": [["제품 전체#편의성", ["null"], "positive"], ["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00913", "sentence_form": "그치만 요 작은아이가 실력은 상상이상이니 기대해보세요!", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00914", "sentence_form": "패드부분은 이렇게 부드러운 잴느낌이랄까", "annotation": [["본품#품질", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00915", "sentence_form": "붙이면 부드럽게 붙고 떨어지는 재질이고 세척후 여러번 재사용이 가능해요!", "annotation": [["제품 전체#품질", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00916", "sentence_form": "불편한 부위에 척 붙인 후 강도는 버튼으로 간편하게 조절이 가능합니다 !ㅎㅎㅎ", "annotation": []}
-{"id": "nikluge-sa-2022-test-00917", "sentence_form": "첨에 멋모르고 가장 세게했다가 따끔해서 깜짝 놀랐...ㅎㅎ", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00915", "sentence_form": "붙이면 부드럽게 붙고 떨어지는 재질이고 세척후 여러번 재사용이 가능해요!", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00916", "sentence_form": "불편한 부위에 척 붙인 후 강도는 버튼으로 간편하게 조절이 가능합니다 !ㅎㅎㅎ", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00917", "sentence_form": "첨에 멋모르고 가장 세게했다가 따끔해서 깜짝 놀랐...ㅎㅎ", "annotation": [["본품#품질", ["null"], "neutral"]]}
 {"id": "nikluge-sa-2022-test-00918", "sentence_form": "뭉친 피로를 풀어줘서 미니마사지기로 사용해도 좋지만 잘때는 뱃살에 붙이고 뱃살아~ 빠져라 하면서 자구있어요 ㅎㅎ", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00919", "sentence_form": "매일매일하면 그 효과가 더욱좋은 미니마사지기!", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00920", "sentence_form": "요거하나 구비해두시고 묵은피로 싹 풀어보세요!", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00921", "sentence_form": "만인의 고질병인 손목터널 증후근을 근본적으로 에방할 수 있는 혁신적인제품!!", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00922", "sentence_form": "더가볍고 더작고 더저렴하게 탄생한 마우스에요 ㅎㅎ", "annotation": [["제품 전체#가격", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00923", "sentence_form": "블루투스 지원이 가능하기 때문에 노트북 뿐만아니라 핸드폰에서도 사용이 가능해요!ㅎㅎ", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00922", "sentence_form": "더가볍고 더작고 더저렴하게 탄생한 마우스에요 ㅎㅎ", "annotation": [["제품 전체#가격", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00923", "sentence_form": "블루투스 지원이 가능하기 때문에 노트북 뿐만아니라 핸드폰에서도 사용이 가능해요!ㅎㅎ", "annotation": [["본품#편의성", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00924", "sentence_form": "이제는 핸드폰으로 영상을보든 작업을 하든 누워서 편하게 하실 수 있답니다!ㅎㅎ", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00925", "sentence_form": "태블릿은 물론 노트북 컴퓨터 모두 사용할 수 있어 너무너무 편한 마우스에요 ㅎㅎ", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00926", "sentence_form": "기존의 디지털휠방식 블루투스 마우스보다 훨저렴한 가격에 구입할 수 있어 더욱 경제적인데요!", "annotation": [["제품 전체#가격", ["null"], "positive"]]}
@@ -928,13 +928,13 @@
 {"id": "nikluge-sa-2022-test-00928", "sentence_form": "완전 신세계 입니당!!", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00929", "sentence_form": "자주는 아니지만 한번씩 열심히 게임을 하기 위해 게이밍 7.1채널 헤드셋을 마련했어요!! ㅋㅋ", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00930", "sentence_form": "BMC GROZA 게이밍 진동 헤드셋은 7.1채널 헤드셋 중에서도 가성비 갑이라는 제품이에요 :)", "annotation": [["제품 전체#가격", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00931", "sentence_form": "뭐, 가상 7.1 서라운드를 지원하고, 바이브레이션 기능이 있는 진동헤드셋이고 노이즈를 줄여주는 기능이랑 소프트 이어패드로 착용감이 편하다? 뭐 이런 장점들이 있는 것 같네요~", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00931", "sentence_form": "뭐, 가상 7.1 서라운드를 지원하고, 바이브레이션 기능이 있는 진동헤드셋이고 노이즈를 줄여주는 기능이랑 소프트 이어패드로 착용감이 편하다? 뭐 이런 장점들이 있는 것 같네요~", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00932", "sentence_form": "제품이 오자마자 사진부터 찍고 두근두근~ 설레는 맘으로 개봉했어요!", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00933", "sentence_form": "꼼꼼하게 잘 포장되어 있고, 해외 유명브랜드에서 나오는 고가의 제품들이 부럽지 않을만한 고급스러움도 느껴지네요!", "annotation": []}
+{"id": "nikluge-sa-2022-test-00933", "sentence_form": "꼼꼼하게 잘 포장되어 있고, 해외 유명브랜드에서 나오는 고가의 제품들이 부럽지 않을만한 고급스러움도 느껴지네요!", "annotation": [["패키지/구성품#일반", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00934", "sentence_form": "가격대비 성능 뿐만 아니라 개인적으로 디자인도 꽤나 좋은 점수를 주고 싶어요!", "annotation": [["제품 전체#가격", ["null"], "positive"], ["제품 전체#디자인", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00935", "sentence_form": "제품 박스에도 적혀있던 것처럼 소프트 이어패드를 장착하여 오래 장착하고 있어도 크게 불편함이 없는 착용감을 느낄 수 있어요 :)", "annotation": [["본품#품질", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00936", "sentence_form": "그동안 중저가, 중고가 제품에서는 찾기 힘들었던 헤드셋 리모콘!!", "annotation": []}
-{"id": "nikluge-sa-2022-test-00937", "sentence_form": "7.1 게이밍 헤드셋 BMC 제품에는 리모콘이 달려있어서 쉽게 컨트롤 할 수 있네요~", "annotation": []}
+{"id": "nikluge-sa-2022-test-00935", "sentence_form": "제품 박스에도 적혀있던 것처럼 소프트 이어패드를 장착하여 오래 장착하고 있어도 크게 불편함이 없는 착용감을 느낄 수 있어요 :)", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00936", "sentence_form": "그동안 중저가, 중고가 제품에서는 찾기 힘들었던 헤드셋 리모콘!!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00937", "sentence_form": "7.1 게이밍 헤드셋 BMC 제품에는 리모콘이 달려있어서 쉽게 컨트롤 할 수 있네요~", "annotation": [["본품#편의성", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00938", "sentence_form": "선에도 디테일한 패턴을 적용했는데요.", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["본품#디자인", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00939", "sentence_form": "선 두께가 어느정도 있어서 내구성에서도 걱정 없을 듯 합니다 ^^", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00940", "sentence_form": "은은하게 빛나는 라이팅 LED를 통해 보는 사람이나 착용하는 사람 모두에게 고급스럽고 세련된 느낌이 들게 해요!", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
@@ -1936,7 +1936,7 @@
 {"id": "nikluge-sa-2022-test-01936", "sentence_form": "공기압이 서서히 채워지면서 압력을 가해 혈액순환이 잘 되지 않아 잘 붓는 종아리를 꼼꼼하게 주물러줘요", "annotation": [["본품#품질", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-01937", "sentence_form": "3D 에어 기능은 정~~말 시원해요", "annotation": [["본품#품질", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-01938", "sentence_form": "강추 강추!!!!", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-01939", "sentence_form": "사운드만 들어도 시원하네요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01939", "sentence_form": "사운드만 들어도 시원하네요", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-01940", "sentence_form": "다리 전체가 따스해지니 밤에 하고 있으면 잠이 솔솔 올 정도에요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-01941", "sentence_form": "종아리 라인까지 예쁘게 다듬어주는 기분이 들어요", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-01942", "sentence_form": "커버는 탈부착이 가능해서 위생적인 관리까지 가능하지요", "annotation": []}
