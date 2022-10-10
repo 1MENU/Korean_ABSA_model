@@ -1,5 +1,5 @@
 {"id": "nikluge-sa-2022-test-00001", "sentence_form": "하나 사려고 알아보는 중인데 맘에드는거 발견", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
-{"id": "nikluge-sa-2022-test-00002", "sentence_form": "동양인 피부톤과 잘 어울리고 우아한 분위기를 풍긴다네?", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00002", "sentence_form": "동양인 피부톤과 잘 어울리고 우아한 분위기를 풍긴다네?", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00003", "sentence_form": "근데 이건 마르살라보다 더 지나친 색 같은데..", "annotation": [["본품#일반", ["null"], "neutral"]]}
 {"id": "nikluge-sa-2022-test-00004", "sentence_form": "나스 색조가 다 그렇지만서도 어데이셔스 라인은 진짜 색 기막히게 뽑는것 같다", "annotation": [["본품#일반", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00005", "sentence_form": "색상만 보면 이걸 어떻게 발라.. 싶겠지만 의외로 너무너무 괜찮다", "annotation": [["본품#일반", ["null"], "positive"]]}
