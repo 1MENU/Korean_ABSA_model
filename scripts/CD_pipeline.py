@@ -25,8 +25,8 @@ device = torch.device('cuda')
 set_seed(args.seed, device) #random seed 정수로 고정.
 
 # multiple files
-train_file_list = ["dev.jsonl"]
-dev_file_list = ["train.jsonl"]
+train_file_list = ["train.jsonl"]
+dev_file_list = ["dev.jsonl"]
 test_file_list = ["test.jsonl"]
 
 if args.kfold == 0:     # not split K-fold
@@ -38,7 +38,7 @@ else:   # split K-fold
     test_data = jsonlload(test_file_list)
 
 
-dataset_train, dataset_dev, dataset_test = get_CD_dataset(train_data, dev_data, test_data, args.pretrained)
+dataset_train, dataset_dev, dataset_test = get_CD_dataset(train_data, dev_data, test_data, args.pretrained, max_len = 256)
 
 TrainLoader, DevLoader, InferenceLoader = load_data(dataset_train, dataset_dev, dataset_test, batch_size = args.batch_size)
 
@@ -50,7 +50,6 @@ mymodel.to(device)
 FULL_FINETUNING = True
 if FULL_FINETUNING:
     entity_property_param_optimizer = list(mymodel.named_parameters())
-    # no_decay = ['LayerNorm']
     no_decay = ['bias', 'LayerNorm.weight']
     entity_property_optimizer_grouped_parameters = [
         {'params': [p for n, p in entity_property_param_optimizer if not any(nd in n for nd in no_decay)],

@@ -173,15 +173,16 @@ from sklearn.model_selection import StratifiedKFold, KFold
 
 def kFold (file_list, n_splits, which_k):
     
-    kf = KFold(n_splits = n_splits, shuffle=True)
+    kf = KFold(n_splits = n_splits, shuffle=True, random_state=1)
     
     data = jsonlload(file_list)
+    
     data = np.array(data)
     
     n_iter = 0
     
     for train_index, test_index in kf.split(data):
-        print("train : ", train_index)
+        
         print("test : ", test_index)
         
         n_iter += 1
@@ -189,9 +190,6 @@ def kFold (file_list, n_splits, which_k):
             features_train = data[train_index]
             features_test = data[test_index]
             print(f'------------------ {n_splits}-Fold 중 {n_iter}번째 ------------------')
-            
-            print(features_train[:5])
-            print(features_test[:5])
             
             return features_train, features_test
 
@@ -245,6 +243,7 @@ def jsonltoDataFrame(fname_list, encoding="utf-8"):
     df = pd.DataFrame()
 
     for index, value in enumerate(fname_list):
+        print(value['annotation'])
         fname = value
         idf = pd.read_json(fname, lines=True)
         df = pd.concat([df, idf],ignore_index=True)
