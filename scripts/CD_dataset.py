@@ -76,9 +76,6 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         isPairInOpinion = False
         if pd.isna(form):
             break
-
-        form = replace_marks(form)
-        pair = replace_htag(pair)
         
         # 이 자리에는 toknizer에 들어갈 구조 변경 가능
         
@@ -242,10 +239,10 @@ def repeat_del(sentence): #의미없는 반복 제거 함수
     sentence=repeat_normalize(sentence, num_repeats=2)   
     return sentence
 
-def replace_htag(annotation):
+def replace_htag(sentence, to): # annotation 해시 제거 용 
     # 해시태그 바꾸기
-    annotation = re.sub('#', ', ', annotation)
-    return annotation
+    sentence = re.sub('#', to, sentence)
+    return sentence
 
 def replace_marks(sentence):
     # 띄어쓰기
@@ -256,8 +253,5 @@ def replace_marks(sentence):
     sentence = remove_texticon(sentence)
     # 이모티콘 제거 
     sentence = del_emoji_all(sentence)
-    # 해시태그 바꾸기
-    sentence = sentence = re.sub('#', '', sentence)
-
     
     return sentence
