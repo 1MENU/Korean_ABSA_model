@@ -15,6 +15,6 @@ cd scripts
 # CUDA_VISIBLE_DEVICES=0
 
 CUDA_VISIBLE_DEVICES=0 python together.py \
-    --cd="addCategory_1lay_16_8e-06_fun_rs21" \
+    --cd="dev_pf_biLstm-1_32_2e-05_kykE_rs41" \
     --sc="last4_32_2e-05_KcE_rs1111" \
-    --name="third"
+    --name="fourt"
