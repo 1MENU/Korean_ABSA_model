@@ -26,8 +26,8 @@ device = torch.device('cuda')
 set_seed(args.seed, device) #random seed 정수로 고정.
 
 # multiple files
-train_file_list = ["aug.jsonl", "dev.jsonl", "aug.jsonl"]
-dev_file_list = ["train.jsonl"]
+train_file_list = ["train.jsonl", "dev.jsonl"]
+dev_file_list = []
 test_file_list = ["test.jsonl"]
 
 if args.kfold == 0:     # not split K-fold
@@ -35,14 +35,13 @@ if args.kfold == 0:     # not split K-fold
     dev_data = jsonlload(dev_file_list)
     test_data = jsonlload(test_file_list)
 else:   # split K-fold
-    train_data, dev_data = kFold(train_file_list, args.nsplit, args.kfold)  # train list, n_split, k번째 fold 사용
+    train_data, dev_data = custom_stratified_KFold(train_file_list, args.nsplit, args.kfold)
     test_data = jsonlload(test_file_list)
 
 
 dataset_train, dataset_dev, dataset_test = get_CD_dataset(train_data, dev_data, test_data, args.pretrained, max_len = 100)
 
 TrainLoader, DevLoader, InferenceLoader = load_data(dataset_train, dataset_dev, dataset_test, batch_size = args.batch_size)
-
 
 mymodel = CD_model(args.pretrained)
 mymodel.to(device)
