@@ -2264,7 +2264,7 @@
 {"id": "nikluge-sa-2022-dev-02264", "sentence_form": "꾸준히 사용하고 내 잡티 다 털어버릴테닷!!", "annotation": [["제품 전체#일반", [null, 0, 0], "positive"]]}
 {"id": "nikluge-sa-2022-dev-02265", "sentence_form": "벌써 몇통째 쓰는지 모를정도로 내가 좋아하는 애정템!!", "annotation": [["제품 전체#일반", [null, 0, 0], "positive"]]}
 {"id": "nikluge-sa-2022-dev-02266", "sentence_form": "보습, 튼살개선에 좋은 바이오오일!", "annotation": [["제품 전체#품질", ["바이오오일", 13, 18], "positive"]]}
-{"id": "nikluge-sa-2022-dev-02267", "sentence_form": "끈적이지 않아 더 좋아^^", "annotation": [["제품 전체#인지도", [null, 0, 0], "positive"], ["본품#품질", [null, 0, 0], "positive"]]}
+{"id": "nikluge-sa-2022-dev-02267", "sentence_form": "끈적이지 않아 더 좋아^^", "annotation": [["본품#품질", [null, 0, 0], "positive"]]}
 {"id": "nikluge-sa-2022-dev-02268", "sentence_form": "촉촉함과 윤기를 전달해 탄력넘치는 탱탱한피부로 만들어준다니 대박이구나!!", "annotation": [["본품#품질", [null, 0, 0], "positive"]]}
 {"id": "nikluge-sa-2022-dev-02269", "sentence_form": "세라마이드, 티트리 잎 함유 및 두피 장벽 성분 함유로 민감한 두피를 진정시켜주고 보습 충전해주는 #더마엔모어 #세라수딩샴푸", "annotation": [["본품#품질", ["세라마이드, 티트리 잎", 0, 12], "positive"], ["본품#품질", ["두피 장벽 성분", 18, 26], "positive"]]}
 {"id": "nikluge-sa-2022-dev-02270", "sentence_form": "두피가 상쾌하고 머릿결도 부드러워 넘 맘에들자냐!!", "annotation": [["본품#품질", [null, 0, 0], "positive"]]}

@@ -15,6 +15,6 @@ cd scripts
 # CUDA_VISIBLE_DEVICES=0
 
 CUDA_VISIBLE_DEVICES=0 python together.py \
-    --cd="1lay_len100_focal_128_2e-05_N_0F0_rs41_kykE" \
+    --cd="aug_1lay_len100_focal_256_2e-05_N_0F0_rs77_kykE" \
     --sc="last4_32_2e-05_KcE_rs1111" \
-    --name="fourt"
+    --name="fifth"
