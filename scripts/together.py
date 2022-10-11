@@ -69,7 +69,7 @@ for sentence in output_data:
         
         # sent = pair + CD_tokenizer.cls_token + form_spells
         
-        tokenized_data = CD_tokenizer(final_pair, form, padding='max_length', max_length=256, truncation=True)
+        tokenized_data = CD_tokenizer(final_pair, form, padding='max_length', max_length=100, truncation=True)
 
         input_ids = torch.tensor([tokenized_data['input_ids']]).to(device)
         token_type_ids = torch.tensor([tokenized_data['token_type_ids']]).to(device)
