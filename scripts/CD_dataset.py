@@ -204,8 +204,7 @@ def remove_texticon(sentence):
     sentence = re.sub('\^_\^', '', sentence)
     sentence = re.sub(':-\)', '', sentence)
     sentence = re.sub('ㅎㅅㅎ', '', sentence)
-    sentence = re.sub('~~~', '', sentence)    
-    # sentence = re.sub('', '', sentence)
+    sentence = re.sub('~~~', '', sentence)
     
     return sentence
 

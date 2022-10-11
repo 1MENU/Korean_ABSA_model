@@ -26,8 +26,8 @@ device = torch.device('cuda')
 set_seed(args.seed, device) #random seed 정수로 고정.
 
 # multiple files
-train_file_list = ["train.jsonl"]
-dev_file_list = ["dev.jsonl"]
+train_file_list = ["aug.jsonl", "dev.jsonl", "aug.jsonl"]
+dev_file_list = ["train.jsonl"]
 test_file_list = ["test.jsonl"]
 
 if args.kfold == 0:     # not split K-fold
@@ -64,9 +64,9 @@ optimizer = build_optimizer(entity_property_optimizer_grouped_parameters, lr=arg
 
 scheduler = build_scheduler(optimizer, name = args.scheduler)
 
-# lf = LabelSmoothingLoss(smoothing = args.LS) # nn.CrossEntropyLoss()
+lf = LabelSmoothingLoss(smoothing = args.LS) # nn.CrossEntropyLoss()
 
-lf = FocalLossWithSmoothing(2, lb_smooth = args.LS)
+# lf = FocalLossWithSmoothing(2, lb_smooth = args.LS)
 
 
 if args.wandb:

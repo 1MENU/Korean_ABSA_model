@@ -321,6 +321,7 @@ def jsonlload(fname_list, encoding="utf-8"):
 
         with open(fname, encoding=encoding) as f:
             for line in f.readlines():
+                # print(line)
                 json_list.append(json.loads(line))
 
     return json_list
