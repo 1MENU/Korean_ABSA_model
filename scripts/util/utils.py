@@ -40,58 +40,63 @@ def jsondump(j, fname):
             f.write(json.dumps(i, ensure_ascii=False) + "\n")
 
 
-from sklearn.model_selection import StratifiedKFold, KFold
 
+from sklearn.model_selection import StratifiedKFold
 
-def kFold (file_list, n_splits, which_k):
+entity_property_pair = [
     
-    kf = KFold(n_splits = n_splits, shuffle=True, random_state=1)
+    '본품#품질', '제품 전체#일반', '제품 전체#품질', '본품#일반', '제품 전체#디자인',
+    '본품#편의성', '제품 전체#편의성', '제품 전체#인지도', '패키지/구성품#디자인', '브랜드#일반',
+    '제품 전체#가격', '패키지/구성품#편의성', '패키지/구성품#일반', '본품#다양성', '본품#디자인',
+    '브랜드#품질', '패키지/구성품#품질', '브랜드#인지도', '브랜드#가격', '패키지/구성품#다양성',
+    '제품 전체#다양성', '본품#가격', '브랜드#디자인', '패키지/구성품#가격', '본품#인지도'
     
+]   # 분포도 순서
+
+def custom_stratified_KFold(file_list, n_splits, which_k):
+    
+    def jsonlload(fname_list, encoding="utf-8"):
+        json_list = []
+
+        for index, value in enumerate(fname_list):
+            fname = "../dataset/" + value
+
+            with open(fname, encoding=encoding) as f:
+                for line in f.readlines():
+                    # print(line)
+                    json_list.append(json.loads(line))
+
+        return json_list
+
     data = jsonlload(file_list)
+    label = []
     
-    data = np.array(data)
+    for d in data:
+        
+        annotation = d["annotation"]
+        
+        ano_index = entity_property_pair.index(annotation[0][0])
+        
+        for a in annotation:
+            if entity_property_pair.index(a[0]) > ano_index:
+                ano_index = entity_property_pair.index(a[0])
+        
+        label.append(ano_index)
+
+
+    skf = StratifiedKFold(n_splits = n_splits, shuffle = True, random_state=1)
     
     n_iter = 0
-    
-    for train_index, test_index in kf.split(data):
-        
-        print("test : ", test_index)
-        
+
+    for train_idx, test_idx in skf.split(data, label):
         n_iter += 1
+
+        # print(test_idx)
+
         if n_iter == which_k:
-            features_train = data[train_index]
-            features_test = data[test_index]
             print(f'------------------ {n_splits}-Fold 중 {n_iter}번째 ------------------')
             
-            return features_train, features_test
-
-def custom_stratified_KFold(file_list, n_splits, which_k, label_name):
-
-    skf = StratifiedKFold(n_splits = n_splits, shuffle = True)
-
-    data = pd.DataFrame()
-    
-    for data_file in file_list:
-        data = pd.concat([data, pd.read_csv(os.path.join(datasetPth, data_file), sep="\t")])
-
-    features = data.iloc[:,:]
-
-    label = data[label_name]
-
-    n_iter = 0
-
-    for train_idx, test_idx in skf.split(features, label):
-        n_iter += 1
-
-        # label_train = label.iloc[train_idx]
-        # label_test = label.iloc[test_idx]
-
-        features_train = features.iloc[train_idx]
-        features_test = features.iloc[test_idx]
-
-        if n_iter == which_k:
-            print(f'------------------ {n_splits}-Fold 중 {n_iter}번째 ------------------')
-
-            # print(features_test)
+            features_train = [data[i] for i in train_idx]
+            features_test = [data[i] for i in test_idx]
 
             return features_train, features_test

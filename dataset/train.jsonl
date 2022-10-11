@@ -2994,7 +2994,7 @@
 {"id": "nikluge-sa-2022-train-02994", "sentence_form": "지금 입었는데 매우 따뜻하고 따갑다", "annotation": [["제품 전체#품질", [null, 0, 0], "neutral"]]}
 {"id": "nikluge-sa-2022-train-02995", "sentence_form": "보드랍고 아주 좋다", "annotation": [["제품 전체#품질", [null, 0, 0], "positive"]]}
 {"id": "nikluge-sa-2022-train-02996", "sentence_form": "겨울에 코트 안에 유용하게 입을 듯.", "annotation": [["제품 전체#일반", [null, 0, 0], "positive"]]}
-{"id": "nikluge-sa-2022-train-02997", "sentence_form": "(슬픔)", "annotation": [["제품 전체#가격", [null, 0, 0], "negative"]]}
+{"id": "nikluge-sa-2022-train-02997", "sentence_form": "(슬픔)", "annotation": [["제품 전체#일반", [null, 0, 0], "negative"]]}
 {"id": "nikluge-sa-2022-train-02998", "sentence_form": "보드랍고 괜찮다!", "annotation": [["제품 전체#품질", [null, 0, 0], "positive"]]}
 {"id": "nikluge-sa-2022-train-02999", "sentence_form": "#일본 유니클로 질이 우리나라보다 좋은 것 같으면 기분 탓인가.......", "annotation": [["브랜드#일반", ["유니클로", 4, 8], "neutral"]]}
 {"id": "nikluge-sa-2022-train-03000", "sentence_form": "마지막으로 귀여워서 집어온 모자.", "annotation": [["제품 전체#디자인", ["모자", 15, 17], "positive"]]}
