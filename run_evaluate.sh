@@ -8,4 +8,6 @@
 
 cd scripts
 
+# python no_pred.py
+
 python evaluate.py

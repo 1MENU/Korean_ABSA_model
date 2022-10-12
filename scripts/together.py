@@ -63,12 +63,13 @@ for sentence in output_data:
         
         # 이 자리에 전처리
         
-        final_pair = pair
+        pair_final = pair
+        
         # final_pair = replace_htag(final_pair)
         
-        # sent = pair + CD_tokenizer.cls_token + form_spells
+        sent = form + CD_tokenizer.cls_token + pair_final
         
-        tokenized_data = CD_tokenizer(form, final_pair, padding='max_length', max_length=100, truncation=True)
+        tokenized_data = CD_tokenizer(sent, padding='max_length', max_length=100, truncation=True)
 
         input_ids = torch.tensor([tokenized_data['input_ids']]).to(device)
         token_type_ids = torch.tensor([tokenized_data['token_type_ids']]).to(device)

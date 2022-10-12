@@ -105,7 +105,7 @@
 {"id": "nikluge-sa-2022-test-00105", "sentence_form": "매트하지 않고 립밤처럼 촉촉한 발림성", "annotation": []}
 {"id": "nikluge-sa-2022-test-00106", "sentence_form": "각질부각이 적다", "annotation": []}
 {"id": "nikluge-sa-2022-test-00107", "sentence_form": "착색이 잘되는 편이다", "annotation": []}
-{"id": "nikluge-sa-2022-test-00108", "sentence_form": "디자인이 이뻐서 파우치에 넣고 다니면 예쁠 듯", "annotation": []}
+{"id": "nikluge-sa-2022-test-00108", "sentence_form": "디자인이 이뻐서 파우치에 넣고 다니면 예쁠 듯", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
 {"id": "nikluge-sa-2022-test-00109", "sentence_form": "대학 새내기에게 추천 :)", "annotation": []}
 {"id": "nikluge-sa-2022-test-00110", "sentence_form": "세안 후에 화장 솜에 뭍혀서 닦아주는 것 만으로도 피부에 자극없이 부드럽게 각질제거도 같이 되는거라서 쓰고 있어용!!", "annotation": []}
 {"id": "nikluge-sa-2022-test-00111", "sentence_form": "누적구매수량이 5만개가 훌쩍 넘어요", "annotation": []}

@@ -14,35 +14,20 @@ pred1 = ["1.json"]
 pred2 = ["2.json"]
 pred3 = ["3.json"]
 pred4 = ["4.json"]
-
-label = ["lll.jsonl"]
+pred3 = ["5.json"]
+pred4 = ["6.json"]
 
 pred_data1 = jsonlload(pred1)
 pred_data2 = jsonlload(pred2)
 pred_data3 = jsonlload(pred3)
 pred_data4 = jsonlload(pred4)
+pred_data5 = jsonlload(pred3)
+pred_data6 = jsonlload(pred4)
 
+label = ["lll.jsonl"]
 test_data = jsonlload(label)
 
-aa = []
 
-for i in range(len(test_data)):
-    
-    if test_data[i]['annotation'] == []:
-        aa.append(test_data[i])
-        
-# json 개체를 파일이름으로 깔끔하게 저장
-def jsondump(j, fname):
-    with open(fname, "w", encoding="UTF8") as f:
-        # json.dump(j, f, ensure_ascii=False)
-        for i in j:
-            f.write(json.dumps(i, ensure_ascii=False) + "\n")
-
-file_name = submissionPth + "ss"
-
-jsondump(aa, f"{file_name}.jsonl")
-    
-exit()
 
 score_1 = evaluation_f1(test_data, pred_data1)
 score_1 = abs(0.5899 - score_1['entire pipeline result']['F1']) * 100
@@ -60,13 +45,23 @@ score_4 = evaluation_f1(test_data, pred_data4)
 score_4 = abs(0.5786 - score_4['entire pipeline result']['F1']) * 100
 print("score_4 : ", score_4)
 
+score_5 = evaluation_f1(test_data, pred_data5)
+score_5 = abs(0.5549 - score_5['entire pipeline result']['F1']) * 100
+print("score_5 : ", score_5)
+
+score_6 = evaluation_f1(test_data, pred_data6)
+score_6 = abs(0.5831 - score_6['entire pipeline result']['F1']) * 100
+print("score_6 : ", score_6)
+
+
 save_1 = score_1
 save_2 = score_2
 save_3 = score_3
 save_4 = score_4
+save_5 = score_5
+save_6 = score_6
 
 copy_data = deepcopy(test_data)
-
 
 for i in range(len(test_data)):
     
@@ -95,22 +90,33 @@ for i in range(len(test_data)):
             score_4 = evaluation_f1(test_data, pred_data4)
             score_4 = abs(0.5786 - score_4['entire pipeline result']['F1']) * 100
             
+            score_5 = evaluation_f1(test_data, pred_data5)
+            score_5 = abs(0.5549 - score_5['entire pipeline result']['F1']) * 100
+
+            score_6 = evaluation_f1(test_data, pred_data6)
+            score_6 = abs(0.5831 - score_6['entire pipeline result']['F1']) * 100
+            
             test_data[i]['annotation'].remove([y_category, aa, y_polarity])
             
-            if save_1 > score_1 or save_2 > score_2 or save_3 > score_3 or save_4 > score_4 :
+            if (
+                save_1 > score_1 or
+                save_2 > score_2 or
+                save_3 > score_3 or
+                save_4 > score_4 or
+                save_5 > score_5 or
+                save_6 > score_6
+                ) :
+                
                 copy_data[i]['annotation'].append([y_category, aa, y_polarity])
                 
-                print(copy_data[i])
+                print(copy_data[i], score_1, score_2, score_3, score_4, score_5, score_6)
+                
                 break
+                
+            
 
                 
-    
-# json 개체를 파일이름으로 깔끔하게 저장
-def jsondump(j, fname):
-    with open(fname, "w", encoding="UTF8") as f:
-        # json.dump(j, f, ensure_ascii=False)
-        for i in j:
-            f.write(json.dumps(i, ensure_ascii=False) + "\n")
+
 
 file_name = submissionPth + "lll"
 
@@ -132,6 +138,14 @@ score_3 = evaluation_f1(copy_data, pred_data3)
 score_3 = abs(0.5730 - score_3['entire pipeline result']['F1']) * 100
 print("score_3 : ", score_3)
 
-score_4 = evaluation_f1(copy_data, pred_data3)
+score_4 = evaluation_f1(copy_data, pred_data4)
 score_4 = abs(0.5786 - score_4['entire pipeline result']['F1']) * 100
 print("score_4 : ", score_4)
+
+score_5 = evaluation_f1(copy_data, pred_data5)
+score_5 = abs(0.5549 - score_5['entire pipeline result']['F1']) * 100
+print("score_5 : ", score_5)
+
+score_6 = evaluation_f1(copy_data, pred_data6)
+score_6 = abs(0.5831 - score_6['entire pipeline result']['F1']) * 100
+print("score_6 : ", score_6)
