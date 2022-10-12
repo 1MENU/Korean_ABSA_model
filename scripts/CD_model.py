@@ -47,7 +47,7 @@ class biLSTMClassifier(nn.Module):
         
         # output_concat = torch.cat([out[:, 0, :], out[:, -1, :]], dim = -1)
         
-        out = self.classifier(out[:, -1, :])
+        out = self.classifier(out[:, 0, :])
         
         return out
 
@@ -78,9 +78,9 @@ class CD_model(nn.Module):
         # outputs=torch.cat([outputs['hidden_states'][9][:, 0, :], outputs['hidden_states'][10][:, 0, :], outputs['hidden_states'][11][:, 0, :], outputs['hidden_states'][12][:, 0, :]], dim = -1)
         # logits = self.labels_classifier(outputs)
         
-        cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
-        logits = self.labels_classifier(cls_token)
+        # cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
+        # logits = self.labels_classifier(cls_token)
         
-        # logits = self.bi_lstm(outputs['last_hidden_state'])
+        logits = self.bi_lstm(outputs['last_hidden_state'])
         
         return logits

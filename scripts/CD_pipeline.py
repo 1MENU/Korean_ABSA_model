@@ -63,9 +63,7 @@ optimizer = build_optimizer(entity_property_optimizer_grouped_parameters, lr=arg
 
 scheduler = build_scheduler(optimizer, name = args.scheduler)
 
-lf = LabelSmoothingLoss(smoothing = args.LS) # nn.CrossEntropyLoss()
-
-# lf = FocalLossWithSmoothing(2, lb_smooth = args.LS)
+lf = LabelSmoothingLoss(smoothing = args.LS)
 
 
 if args.wandb:
