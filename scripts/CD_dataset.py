@@ -80,7 +80,7 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         
         # sent = pair_final + tokenizer.cls_token + form
         
-        tokenized_data = tokenizer(form, pair_final, padding='max_length', max_length=max_len, truncation=True)
+        tokenized_data = tokenizer(pair_final, form, padding='max_length', max_length=max_len, truncation=True)
         
         for annotation in annotations:
             entity_property = annotation[0]
