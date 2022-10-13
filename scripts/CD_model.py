@@ -47,7 +47,7 @@ class biLSTMClassifier(nn.Module):
         
         # output_concat = torch.cat([out[:, 0, :], out[:, -1, :]], dim = -1)
         
-        out = self.classifier(out[:, 0, :])
+        out = self.classifier(out[:, -1, :])
         
         return out
 
@@ -63,9 +63,9 @@ class CD_model(nn.Module):
         self.model.resize_token_embeddings(config.vocab_size + len(special_tokens_dict['additional_special_tokens']))
 
         # self.labels_classifier = SimpleClassifier(config, 0.1, 2)
-        # self.bi_lstm = biLSTMClassifier(config, 2)
+        self.bi_lstm = biLSTMClassifier(config, 2)
         
-        self.labels_classifier = nn.Linear(config.hidden_size, 2)
+        # self.labels_classifier = nn.Linear(config.hidden_size, 2)
 
     def forward(self, input_ids, token_type_ids, attention_mask):
         outputs = self.model(
