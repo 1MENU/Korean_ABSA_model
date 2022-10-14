@@ -181,6 +181,4 @@ def replace_marks(sentence):
     # 이모티콘 제거 
     sentence = del_emoji_all(sentence)
     
-    #print("replace_marks 결과 : "+sentence)
-        
     return sentence
