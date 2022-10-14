@@ -19,9 +19,9 @@ def CD_dataset(raw_data, tokenizer, max_len):
         # 이 자리에 전처리 가능
         
         form = utterance['sentence_form']
-        
+        form= replace_marks(form)
         # #반복제거 
-        # form = repeat_del(form, n=3)    
+        #form = repeat_del(form, n=3)    
         # # 텍스트 이모티콘 제거 
         # form = remove_texticon(form)
         # # 이모티콘 제거 
