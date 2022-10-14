@@ -77,7 +77,7 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         # 이 자리에는 toknizer에 들어갈 구조 변경 가능
         
         pair_final = pair
-        pair_final = replace_htag(pair_final, ', ')
+        pair_final = replace_htag(pair_final, '_')
         
         sent = form + tokenizer.cls_token + pair_final
         
