@@ -14,12 +14,7 @@ cd scripts
 
 # CUDA_VISIBLE_DEVICES=0
 
-CUDA_VISIBLE_DEVICES=0 python together.py \
-    --cd="fCp_1lay_256_1e-05_N_2F3_rs2_kykE" \
-    --sc="last4_32_2e-05_KcE_rs1111" \
-    --name="7"
-
-CUDA_VISIBLE_DEVICES=0 python together.py \
+CUDA_VISIBLE_DEVICES=1 python together.py \
     --cd="fCp_1lay_256_2e-05_N_3F3_rs3_kykE" \
     --sc="last4_32_2e-05_KcE_rs1111" \
-    --name="8"
+    --name="9"

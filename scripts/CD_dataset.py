@@ -20,12 +20,14 @@ def CD_dataset(raw_data, tokenizer, max_len):
         
         form = utterance['sentence_form']
         
-        # #반복제거 
-        # form = repeat_del(form, n=3)    
-        # # 텍스트 이모티콘 제거 
-        # form = remove_texticon(form)
-        # # 이모티콘 제거 
-        # form = del_emoji_all(form)
+        #반복제거 
+        form = repeat_del(form, n=3)    
+        # 텍스트 이모티콘 제거 
+        form = remove_texticon(form)
+        # 이모티콘 제거 
+        form = del_emoji_all(form)
+        
+        print(form)
 
         entity_property_data_dict, polarity_data_dict = tokenize_and_align_labels(tokenizer, form, utterance['annotation'], max_len)
         
@@ -75,12 +77,11 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         # 이 자리에는 toknizer에 들어갈 구조 변경 가능
         
         pair_final = pair
+        pair_final = replace_htag(pair_final, ', ')
         
-        # final_pair = replace_htag(final_pair, '의 ')
+        sent = form + tokenizer.cls_token + pair_final
         
-        # sent = pair_final + tokenizer.cls_token + form
-        
-        tokenized_data = tokenizer(pair_final, form, padding='max_length', max_length=max_len, truncation=True)
+        tokenized_data = tokenizer(sent, padding='max_length', max_length=max_len, truncation=True)
         
         for annotation in annotations:
             entity_property = annotation[0]
