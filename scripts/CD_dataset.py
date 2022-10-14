@@ -20,14 +20,15 @@ def CD_dataset(raw_data, tokenizer, max_len):
         
         form = utterance['sentence_form']
         
+        form=replace_marks(form)
         #반복제거 
-        form = repeat_del(form, n=3)    
+        #form = repeat_del(form, n=3)    
         # 텍스트 이모티콘 제거 
-        form = remove_texticon(form)
+        #form = remove_texticon(form)
         # 이모티콘 제거 
-        form = del_emoji_all(form)
+        #form = del_emoji_all(form)
         
-        print(form)
+        #print(form)
 
         entity_property_data_dict, polarity_data_dict = tokenize_and_align_labels(tokenizer, form, utterance['annotation'], max_len)
         
