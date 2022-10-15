@@ -104,6 +104,10 @@ def remove_texticon(sentence):
     sentence = re.sub('~~~', '~', sentence)
     sentence = re.sub('~~', '~', sentence)
     
+    sentence = re.sub('\?\?\?\?', '?', sentence)
+    sentence = re.sub('\?\?\?', '?', sentence)
+    sentence = re.sub('\?\?', '?', sentence)
+    
     sentence = re.sub('\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!', '!', sentence)
     sentence = re.sub('\!\!\!\!\!\!\!\!\!\!\!\!\!\!', '!', sentence)
     sentence = re.sub('\!\!\!\!\!\!\!\!\!\!\!\!\!', '!', sentence)
@@ -119,10 +123,15 @@ def remove_texticon(sentence):
     sentence = re.sub('\!\!\!', '!', sentence)
     sentence = re.sub('\!\!', '!', sentence)
     
+    sentence = re.sub('\?\!', '?', sentence)
+    sentence = re.sub('\!\?', '?', sentence)
+    
     sentence = re.sub('\,\,\,\,',' ', sentence)
     sentence = re.sub('\,\,\,',' ', sentence)
     sentence = re.sub('\,\,',' ',sentence)
 
+    sentence = re.sub('\. \.', ' ', sentence)
+    
     sentence = re.sub('\.\.\.\.\.\.\.\.\.\.\.\.\.\.', ' ', sentence)
     sentence = re.sub('\.\.\.\.\.\.\.\.\.\.\.\.\.', ' ', sentence)
     sentence = re.sub('\.\.\.\.\.\.\.\.\.\.\.\.', ' ', sentence)
@@ -150,12 +159,13 @@ def remove_texticon(sentence):
     sentence = re.sub('` 3`\*','',sentence)
     sentence = re.sub('><','', sentence)
     
-    
+    sentence = re.sub('▲', '', sentence)
+    sentence = re.sub('@.@', '', sentence)
+ 
     
     #그 먼지들을 탁탁 쳐서 제대로 청소해주니까 ;) 더욱 깔끔하게 청소가 되는듯하고요 -
     #replace_marks 결과 : ​타 제품들은 입술에 바르면 바른 부분과 안 바른 부분이 그라 하기도 전에 딱 경계선이 질 정도로 발색과 착색이 강한데, 
     # 이건 물을 많이 탄 듯한 연한 워터 제형이라 야리야리한 장미 꽃잎 색깔이랄까? *_*
-    # *ㅅ* , 
     
     return sentence
 
