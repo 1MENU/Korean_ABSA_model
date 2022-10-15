@@ -15,28 +15,31 @@ def spacing_sent(sentence):
         sentence=re.sub('&bank-account&','$bank-account$',sentence)
         sentence=re.sub('&num&','$num$',sentence)
         sentence=re.sub('&online-account&','$online-account$',sentence)
-    
         return sentence
     
     sentence=special_tok_change(sentence) # xml 파싱 시에 &에서 오류발생해서 다 바꿔주기
     sentence=re.sub('&',', ',sentence)
     
-    print("before : ", sentence)
+   # print("before : ", sentence)
     
     result_train = spell_checker.check(sentence)
     sentence = result_train.as_dict()['checked']
     
-    print("after : ", sentence)
+   # print("after : ", sentence)
     
     return sentence 
 
+
 def remove_texticon(sentence):
     # 텍스트 이모지
-    
-    # 텍스트 이모지
+
+    sentence = re.sub('\;','', sentence)
     sentence = re.sub('\^\^', '', sentence)
     sentence = re.sub(':\)', '', sentence)
     sentence = re.sub('>.<', '', sentence)
+    sentence = re.sub('ㅎㅅㅎ', '', sentence)
+    sentence = re.sub(' \*\_\*','', sentence)
+    sentence = re.sub(' \*ㅅ\*','',sentence)
     sentence = re.sub('> 3 <', '', sentence)
     sentence = re.sub('// _ //', '', sentence)
     sentence = re.sub('ㅋ.ㅋ', '', sentence)
@@ -46,24 +49,42 @@ def remove_texticon(sentence):
     sentence = re.sub('\+_\+/', '', sentence)
     sentence = re.sub('\^-\^*', '', sentence)
     sentence = re.sub('ㅎ_ㅎ', '', sentence)
-    sentence = re.sub('-_-', '', sentence)
-    sentence = re.sub('ㅋ', '', sentence)
-    sentence = re.sub('ㅋㅋ', '', sentence)
-    sentence = re.sub('ㅋㅋ', '', sentence)
-    sentence = re.sub('ㅎ', '', sentence)    
-    sentence = re.sub('ㅎㅎ','', sentence)
-    sentence = re.sub('ㅎㅎ', '', sentence)
-    sentence = re.sub('ㅠ','', sentence)
-    sentence = re.sub('ㅠㅠ','', sentence)
-    sentence = re.sub('ㅠㅠㅠ','', sentence)
-    sentence = re.sub('ㅜ','', sentence)
-    sentence = re.sub('ㅜㅜ','', sentence)
-    sentence = re.sub('ㅜㅜㅜ','', sentence)
+    sentence = re.sub('-_-;', '', sentence)
     sentence = re.sub('\+\+', '', sentence)
     sentence = re.sub('- -', '', sentence)
     sentence = re.sub('`-`', '', sentence)
-    sentence = re.sub('/', '', sentence)
     sentence = re.sub('ෆ', '', sentence)
+    
+    sentence = re.sub('ㅋ', '', sentence)
+    sentence = re.sub(' ㅋ', '', sentence)
+    sentence = re.sub('ㅋㅋ', '', sentence)
+    sentence = re.sub(' ㅋㅋ', '', sentence)
+    sentence = re.sub(' ᄏᄏ','',sentence)
+    sentence = re.sub('ㅋㅋㅋ', '', sentence)
+    sentence = re.sub(' ㅋㅋㅋ', '', sentence)
+    
+    sentence = re.sub('ㅎ', '', sentence)    
+    sentence = re.sub('ㅎㅎ','', sentence)
+    sentence = re.sub('ㅎㅎㅎ', '', sentence) # ᄒᄒᄒ
+    sentence = re.sub(' ᄒᄒᄒ','', sentence)
+    sentence = re.sub(' ㅎ', '', sentence)    
+    sentence = re.sub(' ㅎㅎ','', sentence)
+    sentence = re.sub(' ㅎㅎㅎ', '', sentence)
+    
+    sentence = re.sub('ㅠ','', sentence)
+    sentence = re.sub('ㅠㅠ','', sentence)
+    sentence = re.sub('ㅠㅠㅠ','', sentence)
+    sentence = re.sub(' ㅠ','', sentence)
+    sentence = re.sub(' ㅠㅠ','', sentence)
+    sentence = re.sub(' ㅠㅠㅠ','', sentence)
+    sentence = re.sub('ㅜ_ㅜ','',sentence)
+    sentence = re.sub('ㅜ','', sentence)
+    sentence = re.sub('ㅜㅜ','', sentence)
+    sentence = re.sub('ㅜㅜㅜ','', sentence)
+    sentence = re.sub(' ㅜ','', sentence)
+    sentence = re.sub(' ㅜㅜ','', sentence)
+    sentence = re.sub( 'ㅜㅜㅜ','', sentence)
+    
     sentence = re.sub('\( ◍˃̵㉦˂̵◍ \)', '', sentence)
     sentence = re.sub('ღ`ᴗ`ღ', '', sentence)
     sentence = re.sub('\+_\+', '', sentence)
@@ -73,23 +94,71 @@ def remove_texticon(sentence):
     sentence = re.sub('\^-\^/', '', sentence)
     sentence = re.sub('\^_\^', '', sentence)
     sentence = re.sub(':-\)', '', sentence)
-    sentence = re.sub('ㅎㅅㅎ', '', sentence)
-    sentence = re.sub('~~~', '', sentence)
-    sentence = re.sub('~', '', sentence)
-    sentence = re.sub('~~', '', sentence)
     
-    """
-    ;
-    ~는 안빼야될 듯?
-    ~~만 빼거나
-    3~4일 어쩌고
-    사용해보니~~다르네요
     
-    !!!! 반복제한 안됨
-    ....... 점 반복 제한 안됨
-    / 얘는 왜 뺐지? 필요한 것 같은데
-    """
+    sentence = re.sub('~~~~~~~~', '~', sentence)
+    sentence = re.sub('~~~~~~~', '~', sentence)
+    sentence = re.sub('~~~~~~', '~', sentence)
+    sentence = re.sub('~~~~~', '~', sentence)
+    sentence = re.sub('~~~~', '~', sentence)
+    sentence = re.sub('~~~', '~', sentence)
+    sentence = re.sub('~~', '~', sentence)
     
+    sentence = re.sub('\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!', '!', sentence)
+    sentence = re.sub('\!\!\!\!\!\!\!\!\!\!\!\!\!\!', '!', sentence)
+    sentence = re.sub('\!\!\!\!\!\!\!\!\!\!\!\!\!', '!', sentence)
+    sentence = re.sub('\!\!\!\!\!\!\!\!\!\!\!\!', '!', sentence)
+    sentence = re.sub('\!\!\!\!\!\!\!\!\!\!\!', '!', sentence)
+    sentence = re.sub('\!\!\!\!\!\!\!\!\!\!', '!', sentence)
+    sentence = re.sub('\!\!\!\!\!\!\!\!\!', '!', sentence)
+    sentence = re.sub('\!\!\!\!\!\!\!\!', '!', sentence)
+    sentence = re.sub('\!\!\!\!\!\!\!', '!', sentence)
+    sentence = re.sub('\!\!\!\!\!\!', '!', sentence)
+    sentence = re.sub('\!\!\!\!\!', '!', sentence)
+    sentence = re.sub('\!\!\!\!', '!', sentence)
+    sentence = re.sub('\!\!\!', '!', sentence)
+    sentence = re.sub('\!\!', '!', sentence)
+    
+    sentence = re.sub('\,\,\,\,',' ', sentence)
+    sentence = re.sub('\,\,\,',' ', sentence)
+    sentence = re.sub('\,\,',' ',sentence)
+
+    sentence = re.sub('\.\.\.\.\.\.\.\.\.\.\.\.\.\.', ' ', sentence)
+    sentence = re.sub('\.\.\.\.\.\.\.\.\.\.\.\.\.', ' ', sentence)
+    sentence = re.sub('\.\.\.\.\.\.\.\.\.\.\.\.', ' ', sentence)
+    sentence = re.sub('\.\.\.\.\.\.\.\.\.\.\.', ' ', sentence)
+    sentence = re.sub('\.\.\.\.\.\.\.\.\.\.', ' ', sentence)
+    sentence = re.sub('\.\.\.\.\.\.\.\.\.', ' ', sentence)
+    sentence = re.sub('\.\.\.\.\.\.\.\.', ' ', sentence)
+    sentence = re.sub('\.\.\.\.\.\.\.', ' ', sentence)
+    sentence = re.sub('\.\.\.\.\.\.', ' ', sentence)
+    sentence = re.sub('\.\.\.\.\.', ' ', sentence)
+    sentence = re.sub('\.\.\.\.', ' ', sentence)
+    sentence = re.sub('\.\.\.', ' ', sentence)
+    sentence = re.sub('\.\.', ' ', sentence)
+
+    
+    
+    
+    
+    sentence = re.sub('ꈍ◡ꈍ','', sentence)
+    sentence = re.sub('>__<','', sentence)
+    sentence = re.sub('>_','', sentence)
+    sentence = re.sub('……','', sentence)
+    sentence = re.sub('◡̈\*','', sentence) 
+    sentence = re.sub('\;\)','', sentence)
+    sentence = re.sub('\+ㅁ\+','', sentence)
+    sentence = re.sub(' \:\)','', sentence)
+    sentence = re.sub('\*ㅁ\*','',sentence)
+    sentence = re.sub('` 3`\*','',sentence)
+    sentence = re.sub('><','', sentence)
+    
+    
+    
+    #그 먼지들을 탁탁 쳐서 제대로 청소해주니까 ;) 더욱 깔끔하게 청소가 되는듯하고요 -
+    #replace_marks 결과 : ​타 제품들은 입술에 바르면 바른 부분과 안 바른 부분이 그라 하기도 전에 딱 경계선이 질 정도로 발색과 착색이 강한데, 
+    # 이건 물을 많이 탄 듯한 연한 워터 제형이라 야리야리한 장미 꽃잎 색깔이랄까? *_*
+    # *ㅅ* , 
     
     return sentence
 
@@ -130,6 +199,7 @@ def replace_htag(sentence, to): # annotation 해시 제거 용
 
 def replace_marks(sentence):
     # 띄어쓰기
+    #sentence ="별로네 ,, "
     sentence = spacing_sent(sentence)
     #반복제거 
     sentence = repeat_del(sentence, n=3)    
@@ -137,5 +207,5 @@ def replace_marks(sentence):
     sentence = remove_texticon(sentence)
     # 이모티콘 제거 
     sentence = del_emoji_all(sentence)
-    
-    return sentence
+   
+    return sentence 
