@@ -138,9 +138,6 @@ def remove_texticon(sentence):
     sentence = re.sub('\.\.', ' ', sentence)
 
     
-    
-    
-    
     sentence = re.sub('ꈍ◡ꈍ','', sentence)
     sentence = re.sub('>__<','', sentence)
     sentence = re.sub('>_','', sentence)
@@ -208,4 +205,4 @@ def replace_marks(sentence):
     # 이모티콘 제거 
     sentence = del_emoji_all(sentence)
    
-    return sentence 
+    return sentence
