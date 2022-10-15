@@ -32,7 +32,17 @@ def spacing_sent(sentence):
 
 def remove_texticon(sentence):
     # 텍스트 이모지
-    
+
+#    sentence = re.sub('\,\,\,\,\,','', sentence )
+#    sentence = re.sub('\,\,\,\,','.', sentence)
+#    sentence = re.sub('\,\,\,','.', sentence)
+#    sentence = re.sub('\,\,','.',sentence)
+    sentence = re.sub('\.\.','', sentence )
+    sentence = re.sub('\,\,\,\,\,','', sentence )
+    sentence = re.sub('\,\,\,\,','..', sentence)
+    sentence = re.sub('\,\,\,','..', sentence)
+    sentence = re.sub('\,\,','..',sentence)
+    sentence = re.sub('\;','', sentence)
     sentence = re.sub('\^\^', '', sentence)
     sentence = re.sub(':\)', '', sentence)
     sentence = re.sub('>.<', '', sentence)
@@ -52,7 +62,6 @@ def remove_texticon(sentence):
     sentence = re.sub('\+\+', '', sentence)
     sentence = re.sub('- -', '', sentence)
     sentence = re.sub('`-`', '', sentence)
-    sentence = re.sub('/', '', sentence)
     sentence = re.sub('ෆ', '', sentence)
     sentence = re.sub('ㅋ', '', sentence)
     sentence = re.sub(' ㅋ', '', sentence)
@@ -90,16 +99,16 @@ def remove_texticon(sentence):
     sentence = re.sub('\^-\^/', '', sentence)
     sentence = re.sub('\^_\^', '', sentence)
     sentence = re.sub(':-\)', '', sentence)
-    sentence = re.sub('~~~', '', sentence)
-    sentence = re.sub('~', '', sentence)
-    sentence = re.sub(' ~', '', sentence)
-    sentence = re.sub('~~', '', sentence)
-    sentence = re.sub('\!\!','', sentence)
-    sentence = re.sub('\!\!\!','', sentence)
+    sentence = re.sub('~~~', '~', sentence)
+    #sentence = re.sub('~', '', sentence)
+    #sentence = re.sub(' ~', '', sentence)
+    sentence = re.sub('~~', '~', sentence)
+    sentence = re.sub('\!\!\!','!', sentence)
+    sentence = re.sub('\!\!','!', sentence)
     sentence = re.sub('\!\!\!\!', '', sentence)
     sentence = re.sub('\!\!\!\!\!', '', sentence)
     sentence = re.sub('\!\!\!\!\!\!', '', sentence)
-    sentence = re.sub('\.\.','', sentence)
+    #sentence = re.sub('\.\.','', sentence)
     sentence = re.sub('\.\.\.','', sentence)
     sentence = re.sub('\.\.\.\.\.','', sentence)
     sentence = re.sub('\.\.\.\.\.\.','', sentence)
@@ -173,6 +182,7 @@ def replace_htag(sentence, to): # annotation 해시 제거 용
 
 def replace_marks(sentence):
     # 띄어쓰기
+    #sentence ="별로네 ,, "
     sentence = spacing_sent(sentence)
     #반복제거 
     sentence = repeat_del(sentence, n=3)    
@@ -180,5 +190,5 @@ def replace_marks(sentence):
     sentence = remove_texticon(sentence)
     # 이모티콘 제거 
     sentence = del_emoji_all(sentence)
-    
+   
     return sentence 
