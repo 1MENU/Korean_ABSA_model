@@ -147,3 +147,6 @@ dependencies:
     - wsproto==1.2.0
     - zipp==3.8.1
 prefix: /home/nlplab/anaconda3/envs/team1
+
+# conda env create -f requirements.yaml
+# conda env update --file requirements.yaml --prune
