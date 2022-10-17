@@ -82,11 +82,11 @@ class CD_model(nn.Module):
         
         cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
         
-        e = self.entity_average(outputs['last_hidden_state'], e_mask)
+        # e = self.entity_average(outputs['last_hidden_state'], e_mask)
         
-        output = torch.mul(cls_token, e)        
+        # output = torch.mul(cls_token, e)
         
-        logits = self.labels_classifier(output)
+        logits = self.labels_classifier(cls_token)
         
         # logits = self.bi_lstm(outputs['last_hidden_state'])
         

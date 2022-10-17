@@ -39,7 +39,7 @@ else:   # split K-fold
     test_data = jsonlload(test_file_list)
 
 
-dataset_train, dataset_dev, dataset_test = get_CD_dataset(train_data, dev_data, test_data, args.pretrained, max_len = 100)
+dataset_train, dataset_dev, dataset_test = get_CD_dataset(train_data, dev_data, test_data, args.pretrained, max_len = 90)
 
 TrainLoader, DevLoader, InferenceLoader = load_data(dataset_train, dataset_dev, dataset_test, batch_size = args.batch_size)
 
