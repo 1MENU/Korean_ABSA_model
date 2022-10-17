@@ -131,8 +131,12 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         
         e_mask = [0] * len(tokenized_data['input_ids'])
         
-        for i in range(e_1 + 1, e_2):
-            e_mask[i] = 1
+        # 여기가 뽑아낼 부분
+        # 지금은 2번째 CLS만 뽑아보자
+        e_mask[e_1] = 1
+        
+        # for i in range(e_1 + 1, e_2):
+        #     e_mask[i] = 1
             
         entity_property_data_dict['e_mask'].append(e_mask)
         
@@ -142,7 +146,7 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
 def get_CD_dataset(train_data, dev_data, test_data, pretrained_tokenizer, max_len):
     tokenizer = AutoTokenizer.from_pretrained(pretrained_tokenizer)
     num_added_toks = tokenizer.add_special_tokens(special_tokens_dict)
-
+    
     train_CD_data, train_SC_data = CD_dataset(train_data, tokenizer, max_len)
     dev_CD_data, dev_SC_data = CD_dataset(dev_data, tokenizer, max_len)
     test_CD_data, test_SC_data = CD_dataset(test_data, tokenizer, max_len)
