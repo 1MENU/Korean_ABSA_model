@@ -9,7 +9,8 @@ def CD_dataset(raw_data, tokenizer, max_len):
     token_type_ids_list = []
     token_labels_list = []
     
-    e_mask_list = []
+    e1_mask_list = []
+    e2_mask_list = []
 
     polarity_input_ids_list = []
     polarity_attention_mask_list = []
@@ -41,7 +42,8 @@ def CD_dataset(raw_data, tokenizer, max_len):
         attention_mask_list.extend(entity_property_data_dict['attention_mask'])
         token_labels_list.extend(entity_property_data_dict['label'])
         
-        e_mask_list.extend(entity_property_data_dict['e_mask'])
+        e1_mask_list.extend(entity_property_data_dict['e1_mask'])
+        e2_mask_list.extend(entity_property_data_dict['e2_mask'])
 
         polarity_input_ids_list.extend(polarity_data_dict['input_ids'])
         polarity_token_type_ids_list.extend(polarity_data_dict['token_type_ids'])
@@ -54,7 +56,8 @@ def CD_dataset(raw_data, tokenizer, max_len):
         torch.tensor(token_type_ids_list),
         torch.tensor(attention_mask_list),
         torch.tensor(token_labels_list),
-        torch.tensor(e_mask_list)
+        torch.tensor(e1_mask_list),
+        torch.tensor(e2_mask_list)
         ), TensorDataset(
             torch.tensor(polarity_input_ids_list), 
             torch.tensor(polarity_token_type_ids_list),
@@ -70,7 +73,8 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         'token_type_ids' : [],
         'attention_mask': [],
         'label': [],
-        'e_mask' : []
+        'e1_mask' : [],
+        'e2_mask' : []
     }
     polarity_data_dict = {
         'input_ids': [],
@@ -126,19 +130,24 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
 
 
 
-        e_1 = tokenized_data['input_ids'][1:].index(2)
-        e_2 = tokenized_data['input_ids'].index(3)
+        second_cls = tokenized_data['input_ids'][1:].index(2)
+        last_sep = tokenized_data['input_ids'].index(3)
         
-        e_mask = [0] * len(tokenized_data['input_ids'])
+        e1_mask = [0] * len(tokenized_data['input_ids'])
+        e2_mask = [0] * len(tokenized_data['input_ids'])
         
         # 여기가 뽑아낼 부분
-        # 지금은 2번째 CLS만 뽑아보자
-        e_mask[e_1] = 1
+        # # 지금은 2번째 CLS만 뽑아보자
+        # e_mask[second_cls] = 1
         
-        # for i in range(e_1 + 1, e_2):
-        #     e_mask[i] = 1
+        # 지금은 e1, e2 다 뽑아보자
+        for i in range(1, second_cls):
+            e1_mask[i] = 1
+        for i in range(second_cls + 1, last_sep):
+            e2_mask[i] = 1
             
-        entity_property_data_dict['e_mask'].append(e_mask)
+        entity_property_data_dict['e1_mask'].append(e1_mask)
+        entity_property_data_dict['e2_mask'].append(e2_mask)
         
     return entity_property_data_dict, polarity_data_dict
 

@@ -24,7 +24,7 @@ def train_model(model, data_loader, lf, optimizer, scheduler, device, wandb_on):
 
     all_loss = []
     
-    for batchIdx, (input_ids, token_type_ids, input_mask, label, e_mask) in enumerate(data_loader):
+    for batchIdx, (input_ids, token_type_ids, input_mask, label, e1_mask, e2_mask) in enumerate(data_loader):
         model.zero_grad() #model weight 초기화
 
         input_ids = input_ids.to(device) #move param_buffers to gpu
@@ -32,9 +32,10 @@ def train_model(model, data_loader, lf, optimizer, scheduler, device, wandb_on):
         input_mask = input_mask.to(device)
         label = label.long().to(device)
         
-        e_mask = e_mask.to(device)
+        e1_mask = e1_mask.to(device)
+        e2_mask = e2_mask.to(device)
 
-        output = model(input_ids, token_type_ids, input_mask, e_mask) #shape: 
+        output = model(input_ids, token_type_ids, input_mask, e1_mask, e2_mask) #shape: 
         
         loss = lf(output, label)
         all_loss.append(loss)
@@ -80,7 +81,7 @@ def eval_model(model, data_loader, lf, device, wandb_on):
 
     all_loss = []
 
-    for batchIdx, (input_ids, token_type_ids, input_mask, label, e_mask) in enumerate(data_loader):
+    for batchIdx, (input_ids, token_type_ids, input_mask, label, e1_mask, e2_mask) in enumerate(data_loader):
         with torch.no_grad():
             model.zero_grad() #model weight 초기화
 
@@ -89,9 +90,10 @@ def eval_model(model, data_loader, lf, device, wandb_on):
             input_mask = input_mask.to(device)
             label = label.long().to(device)
             
-            e_mask = e_mask.to(device)
+            e1_mask = e1_mask.to(device)
+            e2_mask = e2_mask.to(device)
 
-            output = model(input_ids, token_type_ids, input_mask, e_mask) #shape: 
+            output = model(input_ids, token_type_ids, input_mask, e1_mask, e2_mask) #shape: 
             
             loss = lf(output, label)
             all_loss.append(loss)

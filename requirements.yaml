@@ -148,5 +148,10 @@ dependencies:
     - zipp==3.8.1
 prefix: /home/nlplab/anaconda3/envs/team1
 
+
+# conda update -n base conda
+# conda update --all
+# python -m pip install --upgrade pip
+
 # conda env create -f requirements.yaml
 # conda env update --file requirements.yaml --prune
