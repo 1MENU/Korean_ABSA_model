@@ -8,6 +8,8 @@ def CD_dataset(raw_data, tokenizer, max_len):
     attention_mask_list = []
     token_type_ids_list = []
     token_labels_list = []
+    
+    e_mask_list = []
 
     polarity_input_ids_list = []
     polarity_attention_mask_list = []
@@ -38,17 +40,21 @@ def CD_dataset(raw_data, tokenizer, max_len):
         token_type_ids_list.extend(entity_property_data_dict['token_type_ids'])
         attention_mask_list.extend(entity_property_data_dict['attention_mask'])
         token_labels_list.extend(entity_property_data_dict['label'])
+        
+        e_mask_list.extend(entity_property_data_dict['e_mask'])
 
         polarity_input_ids_list.extend(polarity_data_dict['input_ids'])
         polarity_token_type_ids_list.extend(polarity_data_dict['token_type_ids'])
         polarity_attention_mask_list.extend(polarity_data_dict['attention_mask'])
         polarity_token_labels_list.extend(polarity_data_dict['label'])
 
+
     return TensorDataset(
         torch.tensor(input_ids_list),
         torch.tensor(token_type_ids_list),
         torch.tensor(attention_mask_list),
-        torch.tensor(token_labels_list)
+        torch.tensor(token_labels_list),
+        torch.tensor(e_mask_list)
         ), TensorDataset(
             torch.tensor(polarity_input_ids_list), 
             torch.tensor(polarity_token_type_ids_list),
@@ -63,7 +69,8 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         'input_ids': [],
         'token_type_ids' : [],
         'attention_mask': [],
-        'label': []
+        'label': [],
+        'e_mask' : []
     }
     polarity_data_dict = {
         'input_ids': [],
@@ -79,11 +86,11 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         
         # 이 자리에는 toknizer에 들어갈 구조 변경 가능
         
-        pair_final = pair + "?"
+        pair_final = pair
         
-        # sent = form + tokenizer.cls_token + pair_final
+        sent = form + tokenizer.cls_token + pair_final
         
-        tokenized_data = tokenizer(form, pair_final, padding='max_length', max_length=max_len, truncation=True)
+        tokenized_data = tokenizer(sent, padding='max_length', max_length=max_len, truncation=True)
         
         for annotation in annotations:
             entity_property = annotation[0]
@@ -117,6 +124,18 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
             entity_property_data_dict['attention_mask'].append(tokenized_data['attention_mask'])
             entity_property_data_dict['label'].append(label_name_to_id['False'])
 
+
+
+        e_1 = tokenized_data['input_ids'][1:].index(2)
+        e_2 = tokenized_data['input_ids'].index(3)
+        
+        e_mask = [0] * len(tokenized_data['input_ids'])
+        
+        for i in range(e_1 + 1, e_2):
+            e_mask[i] = 1
+            
+        entity_property_data_dict['e_mask'].append(e_mask)
+        
     return entity_property_data_dict, polarity_data_dict
 
 

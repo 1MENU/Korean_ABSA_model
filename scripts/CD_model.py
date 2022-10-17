@@ -1,3 +1,4 @@
+from regex import E
 from util.module_utils import *
 from base_data import *
 
@@ -67,7 +68,7 @@ class CD_model(nn.Module):
         
         self.labels_classifier = nn.Linear(config.hidden_size, 2)
 
-    def forward(self, input_ids, token_type_ids, attention_mask):
+    def forward(self, input_ids, token_type_ids, attention_mask, e_mask):
         outputs = self.model(
             input_ids=input_ids,
             token_type_ids=token_type_ids,
@@ -78,9 +79,33 @@ class CD_model(nn.Module):
         # outputs=torch.cat([outputs['hidden_states'][9][:, 0, :], outputs['hidden_states'][10][:, 0, :], outputs['hidden_states'][11][:, 0, :], outputs['hidden_states'][12][:, 0, :]], dim = -1)
         # logits = self.labels_classifier(outputs)
         
+        
         cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
-        logits = self.labels_classifier(cls_token)
+        
+        e = self.entity_average(outputs['last_hidden_state'], e_mask)
+        
+        output = torch.mul(cls_token, e)        
+        
+        logits = self.labels_classifier(output)
         
         # logits = self.bi_lstm(outputs['last_hidden_state'])
         
         return logits
+    
+    
+    @staticmethod
+    def entity_average(hidden_output, e_mask):
+        """
+        Average the entity hidden state vectors (H_i ~ H_j)
+        :param hidden_output: [batch_size, j-i+1, dim]
+        :param e_mask: [batch_size, max_seq_len]
+                e.g. e_mask[0] == [0, 0, 0, 1, 1, 1, 0, 0, ... 0]
+        :return: [batch_size, dim]
+        """
+        e_mask_unsqueeze = e_mask.unsqueeze(1)  # [b, 1, j-i+1]
+        length_tensor = (e_mask != 0).sum(dim=1).unsqueeze(1)  # [batch_size, 1]
+
+        # [b, 1, j-i+1] * [b, j-i+1, dim] = [b, 1, dim] -> [b, dim]
+        sum_vector = torch.bmm(e_mask_unsqueeze.float(), hidden_output).squeeze(1)
+        avg_vector = sum_vector.float() / length_tensor.float()  # broadcasting
+        return avg_vector

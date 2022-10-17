@@ -19,7 +19,7 @@ cd scripts
 
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "original+SEP+?" \
+CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "ent_mul" \
     --batch_size=256 --lr=2e-5 --pretrained="kykim/electra-kor-base" \
     --LS=0.01 --weight_decay=0.01 --seed=1 --save=1 --nsplit=3 --kfold=2
 
