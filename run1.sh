@@ -19,16 +19,21 @@ cd scripts
 
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "spell_fCp_1lay" \
+CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "original+SEP+?" \
     --batch_size=256 --lr=2e-5 --pretrained="kykim/electra-kor-base" \
-    --LS=0.01 --weight_decay=0.01 --seed=1 --save=1 --nsplit=3 --kfold=1
+    --LS=0.01 --weight_decay=0.01 --seed=1 --save=1 --nsplit=3 --kfold=2
 
-run_task 1 CD
-CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "spell_fCp_1lay" \
-    --batch_size=256 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
-    --LS=0.01 --weight_decay=0.001 --seed=2 --save=1 --nsplit=3 --kfold=2
+# run_task 1 CD
+# CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "spell_aug_1Fold" \
+#     --batch_size=256 --lr=2e-5 --pretrained="kykim/electra-kor-base" \
+#     --LS=0.01 --weight_decay=0.01 --seed=1 --save=1 --nsplit=3 --kfold=1
 
-run_task 1 CD
-CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "spell_fCp_1lay" \
-    --batch_size=256 --lr=2e-5 --pretrained="kykim/electra-kor-base" \
-    --LS=0.00 --weight_decay=0.001 --seed=3 --save=1 --nsplit=3 --kfold=3
+# run_task 1 CD
+# CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "spell_fCp_1lay" \
+#     --batch_size=256 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
+#     --LS=0.01 --weight_decay=0.001 --seed=2 --save=1 --nsplit=3 --kfold=2
+
+# run_task 1 CD
+# CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "spell_fCp_1lay" \
+#     --batch_size=256 --lr=2e-5 --pretrained="kykim/electra-kor-base" \
+#     --LS=0.00 --weight_decay=0.001 --seed=3 --save=1 --nsplit=3 --kfold=3

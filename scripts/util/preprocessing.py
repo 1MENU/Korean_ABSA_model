@@ -30,6 +30,63 @@ def spacing_sent(sentence):
     return sentence 
 
 
+def preprocess_texticon(sentence):
+    
+    sentence = re.sub('``',"'", sentence )
+    sentence = re.sub('`',"'", sentence )
+    
+    sentence = re.sub('▲', '', sentence)
+    
+    # ~ 1
+    
+    sentence = re.sub('@.@', '', sentence)
+    sentence = re.sub('ꈍ◡ꈍ','', sentence)
+    sentence = re.sub('>__<','', sentence)
+    sentence = re.sub('>_','', sentence)
+    sentence = re.sub('……','', sentence)
+    sentence = re.sub('◡̈\*','', sentence) 
+    sentence = re.sub('\;\)','', sentence)
+    sentence = re.sub('\+ㅁ\+','', sentence)
+    sentence = re.sub(' \:\)','', sentence)
+    sentence = re.sub('\*ㅁ\*','',sentence)
+    sentence = re.sub('` 3`\*','',sentence)
+    sentence = re.sub('><','', sentence)
+    sentence = re.sub('\( ◍˃̵㉦˂̵◍ \)', '', sentence)
+    sentence = re.sub('ღ`ᴗ`ღ', '', sentence)
+    sentence = re.sub('\+_\+', '', sentence)
+    sentence = re.sub('‘-‘', '', sentence)
+    sentence = re.sub('ㅠ_ㅠ', '', sentence)
+    sentence = re.sub('>_<', '', sentence)
+    sentence = re.sub('\^-\^/', '', sentence)
+    sentence = re.sub('\^_\^', '', sentence)
+    sentence = re.sub(':-\)', '', sentence)
+    sentence = re.sub('\;','', sentence)
+    sentence = re.sub('\^\^', '', sentence)
+    sentence = re.sub(':\)', '', sentence)
+    sentence = re.sub('>.<', '', sentence)
+    sentence = re.sub('ㅎㅅㅎ', '', sentence)
+    sentence = re.sub(' \*\_\*','', sentence)
+    sentence = re.sub(' \*ㅅ\*','',sentence)
+    sentence = re.sub('> 3 <', '', sentence)
+    sentence = re.sub('// _ //', '', sentence)
+    sentence = re.sub('ㅋ.ㅋ', '', sentence)
+    sentence = re.sub('\(--\)\(__\)', '', sentence)
+    sentence = re.sub('ㅠㅅㅜ', '', sentence)
+    sentence = re.sub(':D', '', sentence)
+    sentence = re.sub('\+_\+/', '', sentence)
+    sentence = re.sub('\^-\^*', '', sentence)
+    sentence = re.sub('ㅎ_ㅎ', '', sentence)
+    sentence = re.sub('-_-;', '', sentence)
+    sentence = re.sub('\+\+', '', sentence)
+    sentence = re.sub('- -', '', sentence)
+    sentence = re.sub('`-`', '', sentence)
+    sentence = re.sub('ෆ', '', sentence)
+    
+    # ~ 2
+    
+    return sentence
+    
+
 def remove_texticon(sentence):
     # 텍스트 이모지
 

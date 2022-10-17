@@ -8,10 +8,10 @@
 
 cd scripts
 
-python do_preprocessing.py
+# python do_preprocessing.py
 
 # python do_stratifiedKFold.py
 
 # python no_pred.py
 
-# python evaluate.py
+python evaluate.py

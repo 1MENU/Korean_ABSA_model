@@ -26,7 +26,7 @@ device = torch.device('cuda')
 set_seed(args.seed, device) #random seed 정수로 고정.
 
 # multiple files
-train_file_list = ["2Fold.jsonl", "3Fold.jsonl"]   # "1Fold_spell.jsonl", 
+train_file_list = ["train.jsonl", "dev.jsonl"]   # "1Fold_spell.jsonl", 
 dev_file_list = ["1Fold.jsonl"]
 test_file_list = ["test.jsonl"]
 
