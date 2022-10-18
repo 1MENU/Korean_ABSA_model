@@ -66,7 +66,7 @@ class CD_model(nn.Module):
         # self.labels_classifier = SimpleClassifier(config, 0.1, 2)
         # self.bi_lstm = biLSTMClassifier(config, 2)
         
-        self.labels_classifier = nn.Linear(config.hidden_size, 2)
+        self.labels_classifier = nn.Linear(config.hidden_size * 2, 2)
 
     def forward(self, input_ids, token_type_ids, attention_mask, e1_mask, e2_mask):
         outputs = self.model(
@@ -82,9 +82,12 @@ class CD_model(nn.Module):
         
         cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
         
-        e2 = self.entity_average(outputs['last_hidden_state'], e2_mask)
+        # e1 = self.entity_average(outputs['last_hidden_state'], e1_mask)
+        second_cls = self.entity_average(outputs['last_hidden_state'], e2_mask)
         
-        output = torch.mul(cls_token, e2)
+        # mul = torch.mul(e1, e2)
+        
+        output = torch.cat([cls_token, second_cls], dim=-1)
         
         logits = self.labels_classifier(output)
         

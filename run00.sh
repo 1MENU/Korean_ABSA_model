@@ -16,6 +16,6 @@ cd scripts
 
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "1lay_90" \
+CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "C+C_1lay_90" \
     --batch_size=64 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
     --LS=0.01 --weight_decay=0.001 --seed=2 --save=1 --nsplit=3 --kfold=2
