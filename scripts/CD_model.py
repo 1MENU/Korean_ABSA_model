@@ -71,7 +71,7 @@ class CD_model(nn.Module):
         # self.bi_lstm = biLSTMClassifier(config, 2)
         
         self.label_classifier = FCLayer(
-            config.hidden_size * 2,
+            config.hidden_size,
             2,
             dropout_rate = 0.0,
             use_activation=False,
@@ -98,8 +98,8 @@ class CD_model(nn.Module):
         second_cls = self.entity_average(outputs['last_hidden_state'], e2_mask)
         second_cls = self.entity_fc_layer1(second_cls)
         
-        # output = torch.mul(sentence_representation, second_cls)
-        output = torch.cat([sentence_representation, second_cls], dim=-1)
+        output = torch.mul(sentence_representation, second_cls)
+        # output = torch.cat([sentence_representation, second_cls], dim=-1)
         
         logits = self.label_classifier(output)
         
