@@ -2,6 +2,26 @@ from util.utils import *
 from util.preprocessing import *
 from base_data import *
 
+# import logging
+# # 로그 생성
+# logger = logging.getLogger()
+# # 로그의 출력 기준 설정
+# logger.setLevel(logging.INFO)
+# # log 출력 형식
+# formatter = logging.Formatter('%(message)s')
+# # log 출력
+# stream_handler = logging.StreamHandler()
+# stream_handler.setFormatter(formatter)
+# logger.addHandler(stream_handler)
+# # log를 파일에 출력
+# file_handler = logging.FileHandler('my.log')
+# file_handler.setFormatter(formatter)
+# logger.addHandler(file_handler)
+
+# # 밑에 넣을 코드
+# tokenized_text = tokenizer.tokenize(form)
+# logger.info(form)
+# logger.info(tokenized_text)
 
 def CD_dataset(raw_data, tokenizer, max_len):
     input_ids_list = []
@@ -32,8 +52,7 @@ def CD_dataset(raw_data, tokenizer, max_len):
         # # 반복제거
         # form = repeat_del(form, n=3)
         # # 텍스트 이모티콘 제거 
-        # form = remove_texticon(form)
-    
+        # form = remove_texticon(form)    
 
         entity_property_data_dict, polarity_data_dict = tokenize_and_align_labels(tokenizer, form, utterance['annotation'], max_len)
         
