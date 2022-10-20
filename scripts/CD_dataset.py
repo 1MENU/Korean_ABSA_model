@@ -155,15 +155,15 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         e1_mask = [0] * len(tokenized_data['input_ids'])
         e2_mask = [0] * len(tokenized_data['input_ids'])
         
-        # 여기가 뽑아낼 부분
-        # 지금은 2번째 CLS만 뽑아보자
-        e2_mask[second_cls] = 1
+        # # 여기가 뽑아낼 부분
+        # # 지금은 2번째 CLS만 뽑아보자
+        # e2_mask[second_cls] = 1
         
-        # # 지금은 e1, e2 다 뽑아보자
-        # for i in range(1, second_cls):
-        #     e1_mask[i] = 1
-        # for i in range(second_cls + 1, last_sep):
-        #     e2_mask[i] = 1
+        # 지금은 e1, e2 다 뽑아보자
+        for i in range(1, second_cls):
+            e1_mask[i] = 1
+        for i in range(second_cls + 1, last_sep):
+            e2_mask[i] = 1
             
         entity_property_data_dict['e1_mask'].append(e1_mask)
         entity_property_data_dict['e2_mask'].append(e2_mask)
