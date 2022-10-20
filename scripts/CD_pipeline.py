@@ -46,7 +46,6 @@ TrainLoader, DevLoader, InferenceLoader = load_data(dataset_train, dataset_dev, 
 mymodel = CD_model(args.pretrained)
 mymodel.to(device)
 
-exit()
 
 
 FULL_FINETUNING = True
