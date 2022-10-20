@@ -113,7 +113,7 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         
         sent = form + tokenizer.cls_token + pair_final
         
-        tokenized_data = tokenizer(sent, padding='max_length', max_length=max_len, truncation=True)
+        tokenized_data = tokenizer(form, pair_final, padding='max_length', max_length=max_len, truncation=True)
         
         for annotation in annotations:
             entity_property = annotation[0]
@@ -149,8 +149,8 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
 
 
 
-        second_cls = tokenized_data['input_ids'][1:].index(2)
-        last_sep = tokenized_data['input_ids'].index(3)
+        # second_cls = tokenized_data['input_ids'][1:].index(2)
+        # last_sep = tokenized_data['input_ids'].index(3)
         
         e1_mask = [0] * len(tokenized_data['input_ids'])
         e2_mask = [0] * len(tokenized_data['input_ids'])
@@ -159,11 +159,11 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         # # 지금은 2번째 CLS만 뽑아보자
         # e2_mask[second_cls] = 1
         
-        # 지금은 e1, e2 다 뽑아보자
-        for i in range(1, second_cls):
-            e1_mask[i] = 1
-        for i in range(second_cls + 1, last_sep):
-            e2_mask[i] = 1
+        # # 지금은 e1, e2 다 뽑아보자
+        # for i in range(1, second_cls):
+        #     e1_mask[i] = 1
+        # for i in range(second_cls + 1, last_sep):
+        #     e2_mask[i] = 1
             
         entity_property_data_dict['e1_mask'].append(e1_mask)
         entity_property_data_dict['e2_mask'].append(e2_mask)
