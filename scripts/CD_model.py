@@ -94,11 +94,11 @@ class CD_model(nn.Module):
         cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
         
         pooled_output = self.pooler(cls_token)
-        sentence_representation = self.cls_fc_layer(cls_token)
+        sentence_representation = self.cls_fc_layer(pooled_output)
         
         # e1 = self.entity_average(outputs['last_hidden_state'], e1_mask)
         second_cls = self.entity_average(outputs['last_hidden_state'], e2_mask)
-        second_cls = self.pooler2(second_cls)
+        # second_cls = self.pooler2(second_cls)
         second_cls = self.entity_fc_layer1(second_cls)
         
         # output = torch.mul(sentence_representation, second_cls)
