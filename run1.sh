@@ -19,7 +19,7 @@ cd scripts
 
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "p(f(C))*f(E2)_1lay_90" \
+CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "ap(C)_fSp_1lay_90" \
     --batch_size=64 --lr=2e-5 --pretrained="kykim/electra-kor-base" \
     --LS=0.01 --weight_decay=0.01 --seed=1 --save=1 --nsplit=3 --kfold=1
 
