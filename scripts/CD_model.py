@@ -66,8 +66,8 @@ class CD_model(nn.Module):
         self.cls_fc_layer = FCLayer(config.hidden_size, config.hidden_size, 0.1)
         self.entity_fc_layer1 = FCLayer(config.hidden_size, config.hidden_size, 0.1)
         
-        self.attention_pooler = Attention_pooler(config)
-        self.attention_pooler2 = Attention_pooler(config)
+        self.pooler = LSTMPooler(config)
+        self.pooler2 = LSTMPooler(config)
         
         # self.pooler = BertPooler(config)
         # self.pooler2 = BertPooler(config)
@@ -76,11 +76,11 @@ class CD_model(nn.Module):
         # self.bi_lstm = biLSTMClassifier(config, 2)
         
         self.label_classifier = FCLayer(
-            64,
+            config.hidden_size,
             2,
             dropout_rate = 0.0,
             use_activation=False,
-        )   # config.hidden_size
+        )   # config.hidden_size or batch size after attention pooling
 
     def forward(self, input_ids, token_type_ids, attention_mask, e1_mask, e2_mask):
         outputs = self.model(
@@ -94,8 +94,8 @@ class CD_model(nn.Module):
         # outputs=torch.cat([outputs['hidden_states'][9][:, 0, :], outputs['hidden_states'][10][:, 0, :], outputs['hidden_states'][11][:, 0, :], outputs['hidden_states'][12][:, 0, :]], dim = -1)
         # logits = self.labels_classifier(outputs)
         
-        pooled_cls = self.attention_pooler(outputs)
-        logits = self.label_classifier(pooled_cls)
+        logits = self.pooler(outputs)
+        # logits = self.label_classifier(pooled_cls)
         
         # cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
         
@@ -152,11 +152,12 @@ class BertPooler(nn.Module):
 
 class LSTMPooler(nn.Module):
     
-    def __init__(self, config, num_label):
+    def __init__(self, config):
         super().__init__()
-        self.dense = nn.Linear(config.hidden_size, config.hidden_size)
         
-        self.size = 100
+        self.hidden_size = config.hidden_size
+        
+        self.size = 12
         
         self.lstm = nn.LSTM(
             input_size = config.hidden_size, 
@@ -164,22 +165,28 @@ class LSTMPooler(nn.Module):
             num_layers = 1, 
             bias = True, 
             batch_first = True, 
-            dropout = 0.0, 
-            bidirectional = True
+            dropout = 0.0
         )
         
-        self.classifier = nn.Linear(self.size * 2, 2)
+        self.classifier = nn.Linear(self.size, 2)
 
     def forward(self, x):
         
-        h0 = torch.zeros(2, x.size(0), self.size).to('cuda') # (BATCH SIZE, SEQ_LENGTH, HIDDEN_SIZE)
-        c0 = torch.zeros(2, x.size(0), self.size).to('cuda') # hidden state와 동일
+        hidden_states = x['hidden_states']
         
-        out, _ = self.lstm(x, (h0, c0))
+        hidden_states = torch.stack([hidden_states[layer_i][:, 0].squeeze() for layer_i in range(0, self.size)], dim=-1)
+        
+        hidden_states = hidden_states.view(-1, self.size, self.hidden_size)
+        
+        h0 = torch.zeros(1, hidden_states.size(0), self.size).to('cuda') # (BATCH SIZE, SEQ_LENGTH, HIDDEN_SIZE)
+        c0 = torch.zeros(1, hidden_states.size(0), self.size).to('cuda') # hidden state와 동일
+        
+        out, _ = self.lstm(hidden_states, (h0, c0))
+
         
         # output_concat = torch.cat([out[:, 0, :], out[:, -1, :]], dim = -1)
         
-        out = self.classifier(out[:, 0, :])
+        out = self.classifier(out[:, -1, :])
         
         return out
     
