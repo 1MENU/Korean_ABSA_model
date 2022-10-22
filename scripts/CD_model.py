@@ -66,8 +66,8 @@ class CD_model(nn.Module):
         self.cls_fc_layer = FCLayer(config.hidden_size, config.hidden_size, 0.1)
         self.entity_fc_layer1 = FCLayer(config.hidden_size, config.hidden_size, 0.1)
         
-        self.pooler = LSTMPooler(config)
-        self.pooler2 = LSTMPooler(config)
+        self.pooler = Attention_pooler(config)
+        self.pooler2 = Attention_pooler(config)
         
         # self.pooler = BertPooler(config)
         # self.pooler2 = BertPooler(config)
@@ -76,11 +76,11 @@ class CD_model(nn.Module):
         # self.bi_lstm = biLSTMClassifier(config, 2)
         
         self.label_classifier = FCLayer(
-            config.hidden_size,
+            48,
             2,
             dropout_rate = 0.0,
             use_activation=False,
-        )   # config.hidden_size or batch size after attention pooling
+        )   # config.hidden_size or 256 after attention pooling
 
     def forward(self, input_ids, token_type_ids, attention_mask, e1_mask, e2_mask):
         outputs = self.model(
@@ -94,8 +94,8 @@ class CD_model(nn.Module):
         # outputs=torch.cat([outputs['hidden_states'][9][:, 0, :], outputs['hidden_states'][10][:, 0, :], outputs['hidden_states'][11][:, 0, :], outputs['hidden_states'][12][:, 0, :]], dim = -1)
         # logits = self.labels_classifier(outputs)
         
-        logits = self.pooler(outputs)
-        # logits = self.label_classifier(pooled_cls)
+        pooled_cls = self.pooler(outputs)
+        logits = self.label_classifier(pooled_cls)
         
         # cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
         
@@ -103,14 +103,19 @@ class CD_model(nn.Module):
         # sentence_representation = self.cls_fc_layer(pooled_output)
         
         # # e1 = self.entity_average(outputs['last_hidden_state'], e1_mask)
-        # second_cls = self.entity_average(outputs['last_hidden_state'], e2_mask)
+        
         # # second_cls = self.pooler2(second_cls)
-        # second_cls = self.entity_fc_layer1(second_cls)
+        
         
         # # output = torch.mul(sentence_representation, second_cls)
         # output = torch.cat([sentence_representation, second_cls], dim=-1)
         
-        # logits = self.label_classifier(pooled_cls)
+        
+        # second_cls = self.entity_average(outputs['last_hidden_state'], e2_mask)
+        # second_cls = self.entity_fc_layer1(second_cls)
+        # output = torch.cat([pooled_cls, second_cls], dim=-1)
+        
+        # logits = self.label_classifier(output)
         
         # # logits = self.bi_lstm(outputs['last_hidden_state'])
 
@@ -197,7 +202,7 @@ class Attention_pooler(nn.Module):
         self.num_classes = 2
         self.embed_dim = config.hidden_size
         self.num_layers = 12
-        self.fc_hid_dim = 64    # batch size
+        self.fc_hid_dim = 48
         self.device = torch.device('cuda')
         
         q_t = np.random.normal(loc=0.0, scale=0.1, size=(1, self.embed_dim))
