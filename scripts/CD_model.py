@@ -76,7 +76,7 @@ class CD_model(nn.Module):
         # self.bi_lstm = biLSTMClassifier(config, 2)
         
         self.label_classifier = FCLayer(
-            48,
+            64 + config.hidden_size,
             2,
             dropout_rate = 0.0,
             use_activation=False,
@@ -111,9 +111,9 @@ class CD_model(nn.Module):
         # output = torch.cat([sentence_representation, second_cls], dim=-1)
         
         
-        # second_cls = self.entity_average(outputs['last_hidden_state'], e2_mask)
-        # second_cls = self.entity_fc_layer1(second_cls)
-        # output = torch.cat([pooled_cls, second_cls], dim=-1)
+        second_cls = self.entity_average(outputs['last_hidden_state'], e2_mask)
+        second_cls = self.entity_fc_layer1(second_cls)
+        output = torch.cat([pooled_cls, second_cls], dim=-1)
         
         # logits = self.label_classifier(output)
         
@@ -202,7 +202,7 @@ class Attention_pooler(nn.Module):
         self.num_classes = 2
         self.embed_dim = config.hidden_size
         self.num_layers = 12
-        self.fc_hid_dim = 48
+        self.fc_hid_dim = 64
         self.device = torch.device('cuda')
         
         q_t = np.random.normal(loc=0.0, scale=0.1, size=(1, self.embed_dim))
