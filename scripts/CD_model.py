@@ -64,7 +64,7 @@ class CD_model(nn.Module):
         self.model.resize_token_embeddings(config.vocab_size + len(special_tokens_dict['additional_special_tokens']))
         
         self.cls_fc_layer = FCLayer(config.hidden_size, config.hidden_size, 0.1)
-        self.entity_fc_layer1 = FCLayer(config.hidden_size, 64, 0.1)  # config.hidden_size
+        self.entity_fc_layer1 = FCLayer(config.hidden_size, config.hidden_size, 0.1)  # config.hidden_size
         
         self.pooler = Attention_pooler(config)
         self.pooler2 = Attention_pooler(config)
@@ -205,6 +205,8 @@ class Attention_pooler(nn.Module):
         self.fc_hid_dim = 64
         self.device = torch.device('cuda')
         
+        self.dropout = nn.Dropout(0.1)
+        
         q_t = np.random.normal(loc=0.0, scale=0.1, size=(1, self.embed_dim))
         self.q = nn.Parameter(torch.from_numpy(q_t)).float().to(self.device)
         w_ht = np.random.normal(loc=0.0, scale=0.1, size=(self.embed_dim, self.fc_hid_dim))
@@ -222,6 +224,8 @@ class Attention_pooler(nn.Module):
         hidden_states = hidden_states.view(-1, self.num_layers, self.embed_dim)
         
         out = self.attention(hidden_states)
+        
+        out = self.dropout(out)
         
         return out
     
