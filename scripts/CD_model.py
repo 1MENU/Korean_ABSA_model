@@ -64,7 +64,7 @@ class CD_model(nn.Module):
         self.model.resize_token_embeddings(config.vocab_size + len(special_tokens_dict['additional_special_tokens']))
         
         self.cls_fc_layer = FCLayer(config.hidden_size, config.hidden_size, 0.1)
-        self.entity_fc_layer1 = FCLayer(config.hidden_size, config.hidden_size, 0.1)
+        self.entity_fc_layer1 = FCLayer(config.hidden_size, 64, 0.1)  # config.hidden_size
         
         self.pooler = Attention_pooler(config)
         self.pooler2 = Attention_pooler(config)
@@ -76,7 +76,7 @@ class CD_model(nn.Module):
         # self.bi_lstm = biLSTMClassifier(config, 2)
         
         self.label_classifier = FCLayer(
-            64 + config.hidden_size,
+            64,
             2,
             dropout_rate = 0.0,
             use_activation=False,
@@ -111,9 +111,9 @@ class CD_model(nn.Module):
         # output = torch.cat([sentence_representation, second_cls], dim=-1)
         
         
-        second_cls = self.entity_average(outputs['last_hidden_state'], e2_mask)
-        second_cls = self.entity_fc_layer1(second_cls)
-        output = torch.cat([pooled_cls, second_cls], dim=-1)
+        # second_cls = self.entity_average(outputs['last_hidden_state'], e2_mask)
+        # second_cls = self.entity_fc_layer1(second_cls)
+        # output = torch.cat([pooled_cls, second_cls], dim=-1)
         
         # logits = self.label_classifier(output)
         
