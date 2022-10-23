@@ -76,7 +76,7 @@ class CD_model(nn.Module):
         # self.bi_lstm = biLSTMClassifier(config, 2)
         
         self.label_classifier = FCLayer(
-            64,
+            64 + config.hidden_size,
             2,
             dropout_rate = 0.0,
             use_activation=False,
@@ -95,7 +95,7 @@ class CD_model(nn.Module):
         # logits = self.labels_classifier(outputs)
         
         pooled_cls = self.pooler(outputs)
-        logits = self.label_classifier(pooled_cls)
+        # logits = self.label_classifier(pooled_cls)
         
         # cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
         
@@ -111,11 +111,11 @@ class CD_model(nn.Module):
         # output = torch.cat([sentence_representation, second_cls], dim=-1)
         
         
-        # second_cls = self.entity_average(outputs['last_hidden_state'], e2_mask)
-        # second_cls = self.entity_fc_layer1(second_cls)
-        # output = torch.cat([pooled_cls, second_cls], dim=-1)
+        second_cls = self.entity_average(outputs['last_hidden_state'], e2_mask)
+        second_cls = self.entity_fc_layer1(second_cls)
+        output = torch.cat([pooled_cls, second_cls], dim=-1)
         
-        # logits = self.label_classifier(output)
+        logits = self.label_classifier(output)
         
         # # logits = self.bi_lstm(outputs['last_hidden_state'])
 
@@ -225,7 +225,7 @@ class Attention_pooler(nn.Module):
         
         out = self.attention(hidden_states)
         
-        out = self.dropout(out)
+        # out = self.dropout(out)
         
         return out
     
