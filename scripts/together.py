@@ -6,23 +6,72 @@ from SC_dataset import *
 from SC_model import *
 from SC_module import *
 
+import math
+
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--cd', required = True)
+parser.add_argument('--cd', required = True, nargs='+')
 parser.add_argument('--sc', required = True)
 parser.add_argument('--name', required = True)
-parser.add_argument('-bs', '--batch_size', type=int, default=128)
+parser.add_argument('-bs', '--batch_size', type=int, default=256)
 
 args = parser.parse_args()
 
 device = torch.device("cuda")
 
+CD_pretrained = "kykim/electra-kor-base"     # "kykim/electra-kor-base"
+SC_pretrained = "kykim/electra-kor-base"
+
 
 test_file_list = ["test.jsonl"]
 test_data = jsonlload(test_file_list)
 
-CD_pretrained = "kykim/electra-kor-base"     # "kykim/electra-kor-base"    # "kykim/funnel-kor-base"
-SC_pretrained = "beomi/KcELECTRA-base"
+_, _, dataset_test = get_CD_dataset(test_data, test_data, test_data, CD_pretrained, max_len = 90)
+
+_, _, InferenceLoader = load_data(dataset_test, dataset_test, dataset_test, batch_size = args.batch_size)
+
+CD_preds = []
+
+for i in range(len(args.cd)):
+    CD_model = CD_model(CD_pretrained)
+    CD_model.load_state_dict(torch.load(f'{saveDirPth_str}CD/{args.cd[i]}.pt'))
+    CD_model.to(device)
+    
+    model_pred = CD_inference_model(CD_model, InferenceLoader, device)
+    
+    CD_preds.append(model_pred)
+
+
+pred_model = []
+final_submission_pred = None
+#예측값에 똑같은 가중치를 주어서 argmax하여 결과값도출
+for p in CD_preds:
+
+    pred_model.append(p)
+
+    if final_submission_pred is None:
+        final_submission_pred = pred_model[i]
+    else:
+        final_submission_pred += pred_model[i]
+
+final_pred = np.argmax(final_submission_pred, axis=1)
+
+one_list = list(filter(lambda x: final_pred[x] == 1, range(len(final_pred))))  # 1인 index들을 return
+
+
+assert len(final_pred)/len(entity_property_pair) == len(test_data)
+
+
+
+for i in one_list:
+    sent_i = math.floor(i / len(entity_property_pair))
+    pair_i = i % len(entity_property_pair)
+    
+    print(test_data[sent_i]['sentence_form'], entity_property_pair[pair_i])
+
+# entity_property_pair
+
+exit()
 
 
 CD_model = CD_model(CD_pretrained)
@@ -43,6 +92,14 @@ num_added_toks = CD_tokenizer.add_special_tokens(special_tokens_dict)
     
 SC_tokenizer = AutoTokenizer.from_pretrained(SC_pretrained)
 num_added_toks = SC_tokenizer.add_special_tokens(special_tokens_dict)
+
+
+
+
+
+
+
+
 
 
 output_data = copy.deepcopy(test_data)

@@ -16,17 +16,17 @@ cd scripts
 
 
 
-# run_task 1 CD
-# CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "256ap(C)dr+fc(E2)_1lay_90" \
-#     --batch_size=64 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
-#     --LS=0.00 --weight_decay=0.01 --seed=5 --save=1 --nsplit=3 --kfold=2
-
-run_task 2 SC
-CUDA_VISIBLE_DEVICES=1 python SC_pipeline.py --name "fc(256ap(C))+fc(E2)_1lay_90" \
+run_task 1 CD
+CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "del_emoji_fc(256ap(C))+fc(E2)_1lay_90" \
     --batch_size=64 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
-    --LS=0.00 --weight_decay=0.01 --seed=2 --save=1 --nsplit=3 --kfold=2
+    --LS=0.00 --weight_decay=0.01 --seed=5 --save=1 --nsplit=3 --kfold=2
 
-run_task 2 SC
-CUDA_VISIBLE_DEVICES=1 python SC_pipeline.py --name "fc(256ap(C))+fc(E2)_1lay_90" \
-    --batch_size=64 --lr=1e-5 --pretrained="beomi/KcELECTRA-base-v2022" \
-    --LS=0.00 --weight_decay=0.01 --seed=2 --save=1 --nsplit=3 --kfold=2
+# run_task 2 SC
+# CUDA_VISIBLE_DEVICES=1 python SC_pipeline.py --name "fc(256ap(C))+fc(E2)_1lay_90" \
+#     --batch_size=64 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
+#     --LS=0.00 --weight_decay=0.01 --seed=2 --save=1 --nsplit=3 --kfold=2
+
+# run_task 2 SC
+# CUDA_VISIBLE_DEVICES=1 python SC_pipeline.py --name "fc(256ap(C))+fc(E2)_1lay_90" \
+#     --batch_size=64 --lr=1e-5 --pretrained="beomi/KcELECTRA-base-v2022" \
+#     --LS=0.00 --weight_decay=0.01 --seed=2 --save=1 --nsplit=3 --kfold=2
