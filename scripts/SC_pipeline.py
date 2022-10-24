@@ -26,8 +26,8 @@ device = torch.device('cuda')
 set_seed(args.seed, device) #random seed 정수로 고정.
 
 # multiple files
-train_file_list = ["train.jsonl"]
-dev_file_list = ["dev.jsonl"]
+train_file_list = ["train.jsonl", "dev.jsonl"]   # "1Fold_spell.jsonl", 
+dev_file_list = ["1Fold.jsonl"]
 test_file_list = ["test.jsonl"]
 
 if args.kfold == 0:     # not split K-fold
@@ -35,17 +35,17 @@ if args.kfold == 0:     # not split K-fold
     dev_data = jsonlload(dev_file_list)
     test_data = jsonlload(test_file_list)
 else:   # split K-fold
-    train_data, dev_data = kFold(train_file_list, args.nsplit, args.kfold)  # train list, n_split, k번째 fold 사용
+    train_data, dev_data = custom_stratified_KFold(train_file_list, args.nsplit, args.kfold)
     test_data = jsonlload(test_file_list)
 
 
-dataset_train, dataset_dev, dataset_test = get_SC_dataset(train_data, dev_data, test_data, args.pretrained, max_len = 100)
+dataset_train, dataset_dev, dataset_test = get_SC_dataset(train_data, dev_data, test_data, args.pretrained, max_len = 90)
 
 TrainLoader, DevLoader, InferenceLoader = load_data(dataset_train, dataset_dev, dataset_test, batch_size = args.batch_size)
 
-
 mymodel = SC_model(args.pretrained)
 mymodel.to(device)
+
 
 
 FULL_FINETUNING = True
@@ -58,17 +58,14 @@ if FULL_FINETUNING:
         {'params': [p for n, p in entity_property_param_optimizer if any(nd in n for nd in no_decay)],
             'weight_decay_rate': 0.0}
     ]
-    
+
 
 optimizer = build_optimizer(entity_property_optimizer_grouped_parameters, lr=args.lr, weight_decay=args.weight_decay, type = args.optimizer)
 
-scheduler = get_linear_schedule_with_warmup(
-    optimizer,
-    num_warmup_steps = 0,
-    num_training_steps = args.epochs * len(TrainLoader)
-)
+scheduler = build_scheduler(optimizer, name = args.scheduler)
 
-lf = LabelSmoothingLoss(smoothing = args.LS) # nn.CrossEntropyLoss()
+lf = LabelSmoothingLoss(smoothing = args.LS)
+# lf = FocalLossWithSmoothing(num_classes = 3, lb_smooth = args.LS)
 
 
 if args.wandb:
@@ -91,7 +88,7 @@ if args.wandb:
 
 
 
-print(f'\n[len {task_name}] train : {len(train_data)}, dev : {len(dev_data)}, test : {len(test_data)}\n')
+print(f'\n[len {task_name}] train : {len(TrainLoader)}, dev : {len(DevLoader)}, test : {len(InferenceLoader)}\n')
 
 print(f'Task : {task_name}, Model : {args.pretrained}, Wandb : {"off" if args.wandb == 0 else "on"}, Device : {device}, Epochs : {args.epochs}')
 print(f'Batch_size : {args.batch_size}, Label_smoothing : {args.LS}, RandSeedNum :{args.seed}')

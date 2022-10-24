@@ -1,4 +1,3 @@
-from regex import E
 from util.module_utils import *
 from base_data import *
 
@@ -63,7 +62,7 @@ class CD_model(nn.Module):
 
         self.model.resize_token_embeddings(config.vocab_size + len(special_tokens_dict['additional_special_tokens']))
         
-        self.cls_fc_layer = FCLayer(config.hidden_size, config.hidden_size, 0.1)
+        self.cls_fc_layer = FCLayer(256, 256, 0.1)
         self.entity_fc_layer1 = FCLayer(config.hidden_size, config.hidden_size, 0.1)  # config.hidden_size
         
         self.pooler = Attention_pooler(config)
@@ -76,7 +75,7 @@ class CD_model(nn.Module):
         # self.bi_lstm = biLSTMClassifier(config, 2)
         
         self.label_classifier = FCLayer(
-            64 + config.hidden_size,
+            256 + config.hidden_size,
             2,
             dropout_rate = 0.0,
             use_activation=False,
@@ -95,6 +94,7 @@ class CD_model(nn.Module):
         # logits = self.labels_classifier(outputs)
         
         pooled_cls = self.pooler(outputs)
+        pooled_cls = self.cls_fc_layer(pooled_cls)
         # logits = self.label_classifier(pooled_cls)
         
         # cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
@@ -202,7 +202,7 @@ class Attention_pooler(nn.Module):
         self.num_classes = 2
         self.embed_dim = config.hidden_size
         self.num_layers = 12
-        self.fc_hid_dim = 64
+        self.fc_hid_dim = 256
         self.device = torch.device('cuda')
         
         self.dropout = nn.Dropout(0.1)
