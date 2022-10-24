@@ -165,8 +165,8 @@ class LSTMPooler(nn.Module):
         self.size = 12
         
         self.lstm = nn.LSTM(
-            input_size = config.hidden_size, 
-            hidden_size = self.size, 
+            input_size =  self.size, 
+            hidden_size = config.hidden_size, 
             num_layers = 1, 
             bias = True, 
             batch_first = True, 

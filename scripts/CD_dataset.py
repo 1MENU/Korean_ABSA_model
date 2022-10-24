@@ -50,8 +50,9 @@ def CD_dataset(raw_data, tokenizer, max_len):
         # 이모티콘 제거 
         form = del_emoji_all(form)
         
-        # # 반복제거
-        # form = repeat_del(form, n=3)
+        # 반복제거
+        form = repeat_del(form, n=4)
+        
         # # 텍스트 이모티콘 제거 
         # form = remove_texticon(form)    
 
