@@ -395,6 +395,8 @@ def name_wandb(arg_name, config):
         pretrained = "kykE"
     elif pretrained == "beomi/KcELECTRA-base":
         pretrained = "KcE"
+    elif pretrained == "beomi/KcELECTRA-base-v2022":
+        pretrained = "KcE22"
     elif pretrained == "kykim/funnel-kor-base":
         pretrained = "fun"
     elif pretrained == "tunib/electra-ko-base":
