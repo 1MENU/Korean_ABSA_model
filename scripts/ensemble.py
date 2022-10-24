@@ -25,6 +25,8 @@ args = parser.parse_args()
 
 task_name = args.task
 
+
+
 pred_model = []
 final_submission_pred = None
 #예측값에 똑같은 가중치를 주어서 argmax하여 결과값도출
@@ -37,7 +39,9 @@ for i in range(len(args.preds)):
         final_submission_pred = pred_model[i] * args.weights[i]
     else:
         final_submission_pred += pred_model[i] * args.weights[i]
-        
+
+
+
 test_label_file_list = args.label  # test data의 정답값
 test_data = jsonlload(test_label_file_list) #리스트 타입으로 변환
 dataset_test , dataset_test , dataset_test = get_CD_dataset(test_data, test_data, test_data, args.pretrained)

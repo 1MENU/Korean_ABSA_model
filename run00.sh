@@ -16,6 +16,6 @@ cd scripts
 
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "fc(256ap(C))+fc(E2)_1lay_90" \
+CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "emoji_rep4_new" \
     --batch_size=64 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
     --LS=0.00 --weight_decay=0.01 --seed=5 --save=1 --nsplit=3 --kfold=2
