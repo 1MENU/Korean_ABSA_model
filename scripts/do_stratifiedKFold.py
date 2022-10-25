@@ -56,7 +56,7 @@ def custom_stratified_KFold(file_list, n_splits, which_k):
 device = torch.device('cuda')
 set_seed(1, device) #random seed 정수로 고정.
 
-input_file_list = ["train.jsonl", "dev.jsonl"]
+input_file_list = ["train.jsonl", "dev.jsonl", "temp_aug.jsonl"]
 
 
 train_data, dev_data = custom_stratified_KFold(input_file_list, 3, 1)
