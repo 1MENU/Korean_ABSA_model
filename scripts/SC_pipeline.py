@@ -121,7 +121,7 @@ for epoch in range(args.epochs):
         bestLoss_at = epoch
         print("! new low ! -> ", bestLoss)
 
-    if epoch >= bestF1_at + 5 and epoch >= bestLoss_at + 5 and args.early_stop:
+    if epoch >= bestF1_at + 10 and epoch >= bestLoss_at + 10 and args.early_stop:
         final_epoch = bestF1_at
         break
 

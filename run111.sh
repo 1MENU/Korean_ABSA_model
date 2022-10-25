@@ -19,16 +19,11 @@ cd scripts
 
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "del_emoji_fc(256ap(C))+fc(E2)_1lay_90" \
+CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "emoji_rep4_new_F" \
     --batch_size=64 --lr=8e-6 --pretrained="kykim/electra-kor-base" \
-    --LS=0.01 --weight_decay=0.01 --seed=6 --save=1 --nsplit=3 --kfold=3
+    --LS=0.01 --weight_decay=0.01 --seed=3 --save=1 --nsplit=3 --kfold=3
 
 # run_task 2 SC
-# CUDA_VISIBLE_DEVICES=1 python SC_pipeline.py --name "fc(256ap(C))+fc(E2)_1lay_90" \
+# CUDA_VISIBLE_DEVICES=1 python SC_pipeline.py --name "emoji_new" \
 #     --batch_size=64 --lr=8e-6 --pretrained="kykim/electra-kor-base" \
-#     --LS=0.01 --weight_decay=0.01 --seed=3 --save=1 --nsplit=3 --kfold=3
-
-# run_task 2 SC
-# CUDA_VISIBLE_DEVICES=1 python SC_pipeline.py --name "fc(256ap(C))+fc(E2)_1lay_90" \
-#     --batch_size=64 --lr=8e-6 --pretrained="beomi/KcELECTRA-base-v2022" \
 #     --LS=0.01 --weight_decay=0.01 --seed=3 --save=1 --nsplit=3 --kfold=3

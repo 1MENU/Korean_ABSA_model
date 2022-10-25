@@ -13,7 +13,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--cd', required = True, nargs='+')
 parser.add_argument('--sc', required = True, nargs='+')
 parser.add_argument('--name', required = True)
-parser.add_argument('-bs', '--batch_size', type=int, default=256)
+parser.add_argument('-bs', '--batch_size', type=int, default=2048)
 
 args = parser.parse_args()
 

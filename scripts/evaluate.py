@@ -117,19 +117,19 @@ def evaluation_f1_plus(true_data, pred_data):
 
 
 
-# our_pred = ["../materials/submission/ttttt.json"]
-# our_pred_data = jsonlload(our_pred)
+our_pred = ["../materials/submission/del_emoji+del_emoji.json"]
+our_pred_data = jsonlload(our_pred)
 
-# label = ["data_new.jsonl"]
-# test_data = jsonlload(label)
+label = ["data_new.jsonl"]
+test_data = jsonlload(label)
 
-# score_1, wrong = evaluation_f1_plus(test_data, our_pred_data)
-# print(score_1)
+score_1, wrong = evaluation_f1_plus(test_data, our_pred_data)
+print(score_1)
 
-# file_name = submissionPth + "wrong"
-# jsondump(wrong, f"{file_name}.json")
+file_name = submissionPth + "wrong_answer_note"
+jsondump(wrong, f"{file_name}.json")
 
-# exit()
+exit()
 
 
 

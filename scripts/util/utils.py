@@ -53,8 +53,59 @@ entity_property_pair = [
     
 ]   # 분포도 순서
 
+# def custom_stratified_KFold(file_list, n_splits, which_k):
+    
+#     def jsonlload(fname_list, encoding="utf-8"):
+#         json_list = []
+
+#         for index, value in enumerate(fname_list):
+#             fname = "../dataset/" + value
+
+#             with open(fname, encoding=encoding) as f:
+#                 for line in f.readlines():
+#                     # print(line)
+#                     json_list.append(json.loads(line))
+
+#         return json_list
+
+#     data = jsonlload(file_list)
+#     label = []
+    
+#     for d in data:
+        
+#         annotation = d["annotation"]
+        
+#         ano_index = entity_property_pair.index(annotation[0][0])
+        
+#         for a in annotation:
+#             if entity_property_pair.index(a[0]) > ano_index:
+#                 ano_index = entity_property_pair.index(a[0])
+        
+#         label.append(ano_index)
+
+
+#     skf = StratifiedKFold(n_splits = n_splits, shuffle = True, random_state=1)
+    
+#     n_iter = 0
+
+#     for train_idx, test_idx in skf.split(data, label):
+#         n_iter += 1
+
+#         # print(test_idx)
+
+#         if n_iter == which_k:
+#             print(f'------------------ {n_splits}-Fold 중 {n_iter}번째 ------------------')
+            
+#             features_train = [data[i] for i in train_idx]
+#             features_test = [data[i] for i in test_idx]
+
+#             return features_train, features_test
+        
+        
+
 def custom_stratified_KFold(file_list, n_splits, which_k):
     
+    # jsonl 파일 읽어서 list에 저장
     def jsonlload(fname_list, encoding="utf-8"):
         json_list = []
 
@@ -68,35 +119,21 @@ def custom_stratified_KFold(file_list, n_splits, which_k):
 
         return json_list
 
-    data = jsonlload(file_list)
-    label = []
+    if which_k == 1:
+        train_file_list = ["2Fold.jsonl", "3Fold.jsonl"]
+        dev_file_list = ["1Fold.jsonl"]
+    elif which_k == 2:
+        train_file_list = ["1Fold.jsonl", "3Fold.jsonl"]
+        dev_file_list = ["2Fold.jsonl"]
+    elif which_k == 3:
+        train_file_list = ["1Fold.jsonl", "2Fold.jsonl"]
+        dev_file_list = ["3Fold.jsonl"]
+        
+    augmentation_file_list = []
+    train_file_list = train_file_list + augmentation_file_list
+
+    train_data = jsonlload(train_file_list)
     
-    for d in data:
-        
-        annotation = d["annotation"]
-        
-        ano_index = entity_property_pair.index(annotation[0][0])
-        
-        for a in annotation:
-            if entity_property_pair.index(a[0]) > ano_index:
-                ano_index = entity_property_pair.index(a[0])
-        
-        label.append(ano_index)
-
-
-    skf = StratifiedKFold(n_splits = n_splits, shuffle = True, random_state=1)
+    dev_data = jsonlload(dev_file_list)
     
-    n_iter = 0
-
-    for train_idx, test_idx in skf.split(data, label):
-        n_iter += 1
-
-        # print(test_idx)
-
-        if n_iter == which_k:
-            print(f'------------------ {n_splits}-Fold 중 {n_iter}번째 ------------------')
-            
-            features_train = [data[i] for i in train_idx]
-            features_test = [data[i] for i in test_idx]
-
-            return features_train, features_test
+    return train_data, dev_data
