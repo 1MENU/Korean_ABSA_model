@@ -1,0 +1,9 @@
+matplotlib==3.6.0
+numpy==1.23.3
+pandas==1.5.0
+py_hanspell==1.1
+scikit_learn==1.1.2
+soynlp==0.0.493
+torch==1.12.1
+tqdm==4.64.1
+transformers==4.22.1
