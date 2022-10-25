@@ -134,6 +134,9 @@ def custom_stratified_KFold(file_list, n_splits, which_k):
 
     train_data = jsonlload(train_file_list)
     
+    
+    dev_file_list = ["data_new.jsonl"]
+    
     dev_data = jsonlload(dev_file_list)
     
     return train_data, dev_data

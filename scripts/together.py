@@ -19,7 +19,7 @@ args = parser.parse_args()
 
 device = torch.device("cuda")
 
-CD_pretrained = "kykim/electra-kor-base"     # "kykim/electra-kor-base"
+CD_pretrained = "kykim/electra-kor-base"     # "beomi/KcELECTRA-base-v2022"
 SC_pretrained = "kykim/electra-kor-base"
 
 

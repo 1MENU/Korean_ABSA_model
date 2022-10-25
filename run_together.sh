@@ -16,9 +16,7 @@ cd scripts
 
 CUDA_VISIBLE_DEVICES=1 python together.py \
     --cd  \
-    "del_emoji_fc(256ap(C))+fc(E2)_1lay_90_64_1e-05_N_1F3_rs4_kykE" \
-    "del_emoji_fc(256ap(C))+fc(E2)_1lay_90_64_1e-05_N_2F3_rs5_kykE" \
-    "del_emoji_fc(256ap(C))+fc(E2)_1lay_90_64_8e-06_N_3F3_rs6_kykE" \
+    "emoji_rep4_punct2_L_256_1e-05_N_1F3_rs1_kykE" \
     --sc \
     "emoji_new_64_1e-05_N_1F3_rs1_kykE" \
     "emoji_new_64_1e-05_N_2F3_rs2_kykE" \

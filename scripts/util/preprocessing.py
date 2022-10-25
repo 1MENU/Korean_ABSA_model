@@ -72,6 +72,12 @@ def preprocess_texticon(sentence):
     sentence = re.sub('\.\.\.\.\.', '...', sentence)
     sentence = re.sub('\.\.\.\.', '...', sentence)
     
+    # punct 2
+    
+    sentence = re.sub('\,\,\,\,','...', sentence)
+    sentence = re.sub('\,\,\,','...', sentence)
+    sentence = re.sub('\,\,','..',sentence)
+    
     return sentence
     
 
