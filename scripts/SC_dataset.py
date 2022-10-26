@@ -46,17 +46,14 @@ def SC_dataset(raw_data, tokenizer, max_len):
         
         form = utterance['sentence_form']
         
-        # form = preprocess_texticon(form)
-        
-        # form=replace_marks(form)
-        
         # 이모티콘 제거 
         form = del_emoji_all(form)
         
-        # # 반복제거
-        # form = repeat_del(form, n=3)
-        # # 텍스트 이모티콘 제거 
-        # form = remove_texticon(form)    
+        # 반복제거
+        form = repeat_del(form, n=4)
+        
+        # puncteh 반복 fix
+        form = preprocess_texticon(form)
 
         entity_property_data_dict, polarity_data_dict = tokenize_and_align_labels(tokenizer, form, utterance['annotation'], max_len)
         
