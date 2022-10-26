@@ -117,7 +117,7 @@ def evaluation_f1_plus(true_data, pred_data):
 
 
 
-our_pred = ["../materials/submission/del_emoji+del_emoji.json"]
+our_pred = ["../materials/submission/1024.json"]
 our_pred_data = jsonlload(our_pred)
 
 label = ["data_new.jsonl"]

@@ -2920,7 +2920,7 @@
 {"id": "nikluge-sa-2022-train-02922", "sentence_form": "나스 색조는 정말 짱이야", "annotation": [["본품#일반", ["나스 색조", 0, 5], "positive"]]}
 {"id": "nikluge-sa-2022-train-02923", "sentence_form": "어데이셔스 라인은 그렇다던데 뚜껑닫는 재미가 있다... ㅋㅋㅋㅋㅋ", "annotation": [["패키지/구성품#일반", ["어데이셔스 라인", 0, 8], "positive"]]}
 {"id": "nikluge-sa-2022-train-02924", "sentence_form": "나스가 미친 발색때문에 히트웨이브는 약간 매트한 감이 없지 않아았지만 쓰다보니 그래서 더 좋음?", "annotation": [["브랜드#품질", ["나스", 0, 2], "positive"]]}
-{"id": "nikluge-sa-2022-train-02925", "sentence_form": "그런데 라나는 발색떨어지지 않으면서 꽤 촉촉함", "annotation": [["본품#품질", ["라나", 4, 6], "positive"], ["본품#품질", ["라나", 4, 6], "positive"]]}
+{"id": "nikluge-sa-2022-train-02925", "sentence_form": "그런데 라나는 발색떨어지지 않으면서 꽤 촉촉함", "annotation": [["본품#품질", ["라나", 4, 6], "positive"]]}
 {"id": "nikluge-sa-2022-train-02926", "sentence_form": "나스 발색력은 원래 알아주기 때문에 좀 더 촉촉한 걸 찾는다면 라나", "annotation": [["브랜드#품질", ["나스 발색력", 0, 6], "positive"], ["본품#품질", ["라나", 35, 37], "positive"]]}
 {"id": "nikluge-sa-2022-train-02927", "sentence_form": "근데 나는 히트웨이브가 첫 정?이 들어서 히트웨이브가 더 좋다", "annotation": [["본품#일반", ["히트웨이브", 6, 11], "positive"]]}
 {"id": "nikluge-sa-2022-train-02928", "sentence_form": "발바닥 굳은살 때문에 맨날 스타킹도 나가고 부끄러워서 굳은살 각질제거팩도 해보고 스크럽도 해보고 좋다는거 다해봤었는데 별로 효과를 못보다가 이번에 발 각질제거팩 보다 더 좋은걸 찾았어요!!", "annotation": [["본품#품질", [null, 0, 0], "positive"]]}

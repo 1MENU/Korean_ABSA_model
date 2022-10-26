@@ -129,13 +129,16 @@ def custom_stratified_KFold(file_list, n_splits, which_k):
         train_file_list = ["1Fold.jsonl", "2Fold.jsonl"]
         dev_file_list = ["3Fold.jsonl"]
         
-    augmentation_file_list = []
+        
+        
+    augmentation_file_list = ["aug.jsonl"]
+    
     train_file_list = train_file_list + augmentation_file_list
 
     train_data = jsonlload(train_file_list)
     
     
-    dev_file_list = ["data_new.jsonl"]
+    dev_file_list = ["data_new.jsonl"]  # don't touch
     
     dev_data = jsonlload(dev_file_list)
     
