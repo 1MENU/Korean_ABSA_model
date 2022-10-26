@@ -1,0 +1,853 @@
+{"id": "nikluge-sa-2022-test-00002", "sentence_form": "동양인 피부톤과 잘 어울리고 우아한 분위기를 풍긴다네?", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00003", "sentence_form": "근데 이건 마르살라보다 더 지나친 색 같은데..", "annotation": [["본품#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00006", "sentence_form": "생각보다 드라큘라 백작같지 않던데?", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00007", "sentence_form": "보통 밝은 조명에서 보면 그리 부담스럽지 않다", "annotation": [["본품#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00008", "sentence_form": "바르면 정말 괜찮은데.. 그냥 컬러만 보면 부담스러운건 사실 ㅋㅋㅋ", "annotation": [["본품#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00009", "sentence_form": "몇 일 써보니 알로에젤 들과는 달리 끈적임도 없고, 알로에젤은 금방 마르면서 피부 막 씌인 느낌으로 오히려 건조해지는 느낌인데 이건 그런 느낌도 안들었어요", "annotation": [["본품#품질", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00012", "sentence_form": "냉장고에 넣어놓고 차갑게 쓰면 여름철에 더 좋을 것 같아요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00015", "sentence_form": "바디로션으로 써도되고차갑게해서 팩 처럼 듬뿍 올려도 좋다고 함.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00019", "sentence_form": "유분감이 안느껴지는데 단독으로 발라도 건조하지 않아서 신기함.", "annotation": [["본품#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00025", "sentence_form": "스무스 도우 퍼프가 내장되었다는데 그동안 써본 에어퍼프들과 달라요", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00033", "sentence_form": "퍼프만 따로 사고 싶네요.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00034", "sentence_form": "항균퍼프라고 하니 애껴써야징ㅋㅋㅋ...", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00035", "sentence_form": "힘안주고 살짝만 톡톡 눌려도 퍼프에 많은 양이 흡수되더라구요", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00039", "sentence_form": "완전 쌩얼이 부담스러울 때 부분적으로 살짝살짝 커버할 때 넘나 좋을 것 같은 쿠션퍼프였어요", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00041", "sentence_form": "단점은 촉촉한 제형이라서 그런지 에스티로더 더블웨어를 썼을 때 보다는, 눈밑이나 팔자같은 주름진 부분에는 시간지나면 끼여서 티가 나더라구요", "annotation": [["본품#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00049", "sentence_form": "한 통에 두 가지(비타민, 수분)에센스가 함께 들어있어서 비타민-수분 순서로 같이 바르는데 제형도 완전 물 같아서 가볍고~ 색상이나 향에서는 반대로 진한 느낌을 풍기는 아이라 가벼운 사용감에 딥한 효과를 느끼고 싶은 분들에게 세럼추천.?", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00055", "sentence_form": "아직도 초크초크 ♥", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00057", "sentence_form": "느낌 괜찮았어요 :)", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00060", "sentence_form": "색깔있는 립글로즈 같은 느낌이에요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00064", "sentence_form": "넘 예뻐 ㅋㅋ", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00065", "sentence_form": "빤딱빤딱???", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00067", "sentence_form": "저 손등 발색을 보고 반해버렸음?", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00071", "sentence_form": "그리고 건조함 잡으려고 여러번 덧발라도 전혀 진해지지 않는 부담없는 색이라서 좋아요 :)? ???", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00073", "sentence_form": "아리따움은 발림성이 그닥이고, 이니스프리는 고르게 발리는데 착색이 있어서 여러번 바르진 못해요?", "annotation": [["본품#품질", ["null"], "negative"], ["본품#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00079", "sentence_form": "그리고 입술 닿는 거라서 작은병이 더 위생적이고 들고다니기도 편해서 좋은 것 같아요 ㅋ ㅋ???", "annotation": [["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00080", "sentence_form": "크기 귀여웡? ???", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["패키지/구성품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00083", "sentence_form": "?타 제품들은 입술에 바르면 바른 부분과 안바른 부분이 그라 하기도 전에딱 경계선이 질 정도로 발색과 착색이 강한데, 이건 물을 많이 탄 듯한 연한 워터 제형이라 여리여리한 장미꽃잎 색깔이랄까 ? *_*", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00085", "sentence_form": "왜 사람들이 베네피트껄 쓰는지 알았답니다.", "annotation": [["브랜드#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00091", "sentence_form": "통에 그다지 투자를 안한 느낌?", "annotation": [["패키지/구성품#디자인", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00092", "sentence_form": "?통이 불투명해서 남은 용량이 확인이 안되네요.?? ???", "annotation": [["패키지/구성품#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00095", "sentence_form": "전성분에서 향료가 3번째에 위치하는데 향을 뺐으면 좋았을 텐데 싶네요?", "annotation": [["본품#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00096", "sentence_form": "바이빠세껀 무알콜 이라는 점이 마음에 들었어요?", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00103", "sentence_form": "여튼 그라데이션 하기에 굿굿???", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00106", "sentence_form": "각질부각이 적다", "annotation": [["본품#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00108", "sentence_form": "디자인이 이뻐서 파우치에 넣고 다니면 예쁠 듯", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["패키지/구성품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00111", "sentence_form": "누적구매수량이 5만개가 훌쩍 넘어요", "annotation": [["제품 전체#인지도", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00115", "sentence_form": "왜 하필 색소를 이렇게 진하게 넣었을까 생각했었는데~~~ 원래 천연 색이 이렇데요 ㅋㅋㅋ", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00117", "sentence_form": "아무튼 가격대비 무난하고 따갑거나 하지도 않아서 잘 쓰고 있답니다 :)", "annotation": [["본품#가격", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00119", "sentence_form": "올리브영미스트로 불리우는 피부진정을 위한 알로베라 퓨어젤 미스트 하나쯤 가지고 있으면 좋을 잇템이라고 해서 저도 구비해놓았죠!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00121", "sentence_form": "아주 시원시원하게 뿜어져 나옵니다!", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00126", "sentence_form": "프레온가스 방식의 스프레이가 아니고 그냥 액체 분사 방식의 스프레이인데, 생각보다 분사력도 좋아서 간편하게 골고루 뿌려줄 수 있습니닷", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00131", "sentence_form": "현재는 총 6가지 색사으로 준비되어 있지만 준비중인 색상까지 8가지 색상으로 준비될 오카 립유어는 각 색들마다 발색이 도드라져 하나씩 갖고 있어도 너무 좋은 제품인데요!?", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00134", "sentence_form": "은은한 블랙톤에 oka 포인트가 상당히 매력적으로 파우치에 쏘옥 넣고다니면 너무 좋은 제품입니다 :)??", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["패키지/구성품#디자인", ["null"], "positive"], ["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00139", "sentence_form": "오카 립유어의 마그네틱 용기는 손에 감기는 그립감이 상당히 우수해서 손에 들고 열었다 닫았다만 해도 특별함을 느껴보실 수 있어요 ㅎㅎ?? ?", "annotation": [["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00140", "sentence_form": "다른 메이크업 필요없이 입술에 포인트만 주어도 너무 예쁜 오카 립유어!?", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00145", "sentence_form": "BDIH인증은 물론 까다롭기로 유명한 바이오 인증마크도 발급받아 선물하기에도 아주 좋은 화장품이랍니다 :)", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00157", "sentence_form": "이제는 색조화장품도 천연화장품만 써야곘다는 생각이 계속 들어요~ㅎㅎ", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00158", "sentence_form": "안심하고 사용할 수 있는 유기농인증화장품 찾는다면 산테 립스틱 이용해보시길 추천드려요!", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00165", "sentence_form": "요 프레게 젤 하나면 끝이라는 말에 혹했는데요~", "annotation": [["제품 전체#일반", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00175", "sentence_form": "소중한사람에게 선물하기 좋은 고품격 화장품으로 받자마자 고급스러움이 묻어나는 한방화장품이에요~", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00176", "sentence_form": "숨쉬는 인삼 한뿌리의 영양 그대로 담고있음은 물론 피부에 좋다는 금도 듬뿍 함유되어있어 바르는 것만으로도 피부가 좋아지는것을 기대해볼 수 있는 한방화장품!", "annotation": [["본품#일반", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00178", "sentence_form": "피부 에너지를 향상화 시켜피부 면역력을 증진시키고싶으신 분! 피부 긴장작용을 통해 탄력있는 피부로 개선하고 싶으신 분들은 더욱 집중해보셔야할 것 같아요!ㅎㅎ", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00193", "sentence_form": "여드름까지 자극 없이 스며들고 은은한 향까지 더해져서 기분까지 편안하게 해준답니다", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00195", "sentence_form": "그리고 제품이 흐르지 않도록 마개(?!)가 같이 있기 때문에 마개를 살짝 들어주기만 하면 바로 간편히 사용 할 수 있어 좋아요", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00204", "sentence_form": "연애인들도 사용하고 tv유명 드라마에도 협찬되는 천연화장품 스와니코코", "annotation": [["제품 전체#인지도", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00210", "sentence_form": "메이크업 한 번 하고 하루에 수시로 덧바를 때마다 느낌이 확확 변하니까 사랑하지 않을 수 없는 아이고요,", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00213", "sentence_form": "저런 1차 제형이 입술각질을 잠재우고, 주름사이사이로 쏙쏙 들어가준답니다.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00221", "sentence_form": "처음에 케이스를 보고는 데일리로 바를 수 있는걸까 고민했는데 막상 열어서 발라보니 전혀 부담스럽지 않아요.", "annotation": [["본품#일반", ["null"], "positive"], ["패키지/구성품#디자인", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00222", "sentence_form": "특히 어떻게, 얼만큼의 양을 얼마나 걸려서 바르느냐에 따라 질감이나 발색의 강도, 수분감, 한참 뒤에 나오는 착색 등이 아주 다 달라서 매력적인 색상이에요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00224", "sentence_form": "저는 개인적으로 보송한 마무리감도 좋지만 한 번 씩 수정화장할 때, 중앙에 한 번 더덧발라주는 방식으로 해서 위 사진처럼 세미글로시 느낌으로 잠깐 다녀요 ㅋㅋㅋ", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00230", "sentence_form": "쉬폰같은 부들부들 발림성이 미쳤어요..", "annotation": [["본품#품질", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00234", "sentence_form": "연하면 연한대로 레트로스러우면서도 맑은 무드의 레드.. 벨벳틴트추천 두번, 아니 세번 가능하답니다.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00235", "sentence_form": "풍성한 거품이 나서 녹기 직전의 휘핑크림같은 제형이에요.", "annotation": [["본품#품질", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00239", "sentence_form": "고민 말고 샤워중에바르는 팜스웰 머스크향 인샤워바디로션 사세요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00240", "sentence_form": "매끈~ 진짜 요즘 너무너무 편안해요.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00244", "sentence_form": "저는 그립감이 허전해서 아직 적응 못하고있어요 ㅋㅋㅋㅋ", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00247", "sentence_form": "입구에서 양 조절까지 한번에 되는 똑똑한 패키지에 두근!", "annotation": [["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00248", "sentence_form": "오픈해서 사용하려고 뺀 어플리케이터에 1회 충분히 쓸 만큼, 불편하지 않게 ``적당량만`` 묻어나온다는 사실도 두근!", "annotation": [["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00251", "sentence_form": "다른 제품이나 본연의 입술 색상과 레이어드가 충분히 되니까요!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00255", "sentence_form": "그.. 입술픽서제품 올인원같은 느낌이에요.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00256", "sentence_form": "두 호수 모두 너무너무너무 예뻐요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00257", "sentence_form": "정말 맑은 매트립 이라고 해야하나..", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00260", "sentence_form": "핑크레드 계열이라 그라데이션발색이나 옅고 얇게 발색하면 맑게 핑크가 올라오고, 여러번 레이어링해주면 정말 제 두꺼운 입술에 발라도 부담스럽지않은 데일리☆와따 레드립이 완성 XD", "annotation": [["본품#품질", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00266", "sentence_form": "*아쉬워요*", "annotation": [["제품 전체#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00267", "sentence_form": "그래도 레이어링이 되기때문에 톤을 많이 타지 않을듯.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00268", "sentence_form": "(색상 다 내꺼 낄낄)", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00269", "sentence_form": "2. 풀립으로 활용하기엔 간단하지 않은 점.", "annotation": [["본품#편의성", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00270", "sentence_form": "3. 케이스가 너무 얇다보니까 개인적으로 잘 잃어버리거나 그립감이 허전...", "annotation": [["제품 전체#디자인", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00272", "sentence_form": "1. 스키니한 케이스와 양조절이 쉬운 팁!", "annotation": [["패키지/구성품#디자인", ["null"], "positive"], ["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00273", "sentence_form": "2. 착색컬러가 모두 오렌지나 핑크로 베이스가 같은경우가 많은데, 쏘 립 픽스 두 호수 모두 컬러베이스가 다르고, 매력적인 컬러와 착색감을 갖고있음~", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00275", "sentence_form": "4. 레이어링이 너무 잘됨.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00276", "sentence_form": "느낌 표현하기 너무 좋아...", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00284", "sentence_form": "다른 코스메디칼 브랜드에서는 온라인에만 명시하거나 2~3줄로 어느단계에 쓰면 되는지 적어두는데 이렇게 효능이나 함께 쓰면 좋은제품, 특징, 사용법등을 제대로 알려주는 종이가 함께 동봉되어있어서 진짜 신기하더라구요,", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00286", "sentence_form": "가장 사용이 손쉬운 튜브형태에 입구가 얇게 빠져서 양조절도 쉬운 미백세럼입니다.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00287", "sentence_form": "추출물이 많은것 치고는 발림성이 좋은 편이에요.", "annotation": [["본품#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00290", "sentence_form": "3.톤업 - 백탁현상마냥 떡져서 사용직후를 찍으라고 한걸까 궁금했는데, `백탁반응이다!`하는건 아니고 톤업효과 정도의 즉각미백이 됩니다.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00297", "sentence_form": "좋은데 ㅠ3ㅠ한가지 아쉬운점이 있다면 ~이렇게 겉으로는컬러확인이 불가능하다는 점 ....", "annotation": [["본품#일반", ["null"], "neutral"], ["제품 전체#디자인", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00300", "sentence_form": "립오일은 브러쉬보단스파츌러에 가깝게 생겨서립오일을 입술위에 덜어서얹어주기 좋게 되어있어요", "annotation": [["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00309", "sentence_form": "생기있는 코랄 느낌으로 발색이 되고저는 세가지 중에서개인적으로 가장 마음에 들었던 컬러에요 ~", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00313", "sentence_form": "탑코트를 얹으면 !뭔가 .. 가을겨울 파티룩에 어울릴 것 같은무드있는 매력 뿜뿜 ~", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00314", "sentence_form": "저는 꼰빠냐 302를 그라데이션해서 발라주고탑코트를 엄청 얇게 발라서생기있게 표현해주는게 너무너무 예쁘더라구요 !", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00316", "sentence_form": "가을에 자주 사용하는 블러셔랑도 색이 잘 어울려서올 가을 매트립은 라마레따와 함께해야겠어요 ♡", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00318", "sentence_form": "요즘 매트립스틱이 또 대박인거 같아여 *ㅁ*", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00320", "sentence_form": "이태리 제조의 하이퀄리티 포뮬러 !입술 굴곡에 맞춰서 디자인된텐션감있는 스페셜 질감의 신상 립스틱이에요 ~", "annotation": [["본품#품질", ["null"], "positive"], ["본품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00322", "sentence_form": "입술 굴곡을 따라서밀착력을 높인 테일 쉐잎 !", "annotation": [["본품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00323", "sentence_form": "브러쉬로 정교하게 바른듯디테일하게 립표현을 할 수 있어요", "annotation": [["본품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00325", "sentence_form": "따뜻한 핑크라서 차가운 느낌은 거의 없어요", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00328", "sentence_form": "이렇게 입술 라인에 맞춰서야무지게 발라줄 수 있는 꿀템 :)", "annotation": [["본품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00329", "sentence_form": "피부톤을 밝혀주는 브라이트 핑크 !", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00332", "sentence_form": "발색도 좋고 ~ 지속력도 좋고 ~디자인도 너무 예쁜투쿨포스쿨 다이노플라츠 바치오브라키오", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00333", "sentence_form": "선명하고 또렷한 입술을 만나보세요 !", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00337", "sentence_form": "잔잔한 수면위에 잉크를 떨어트려 나타난화려하고 고급스러운 패턴레드 블루 그린 세가지 컬러가 출시되었는데저는 레드에디션을 만나봤어요", "annotation": [["본품#일반", ["null"], "positive"], ["본품#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00341", "sentence_form": "피부를 투명하게 해주고 피부톤을 개선해주는 제품이기도 하면서완전 물같은 제형이 피부에 촉촉하게 스며든답니다 !", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00345", "sentence_form": "제형은 액체이긴 하지만완전 물같은 느낌보단 피부 표면에도촉촉하게 에센스가 코팅되는 느낌이 있는데요 -", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00355", "sentence_form": "사용감은 가볍지만 가벼운 사용감에 비해서는 영양감도 좋아요.", "annotation": [["본품#일반", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00356", "sentence_form": "흡수도 잘되고 끈적임은 없었지만 4번 이상 레이어드하면 갑자기 너무 무거워지는 느낌이 들어서 3번 정도로 추천드려요.", "annotation": [["본품#품질", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00363", "sentence_form": "참존이라는 회사는 모두 다 한 번쯤 들어봤을 정도로 유명한 회사라 믿고 사용해봤는데 아니나 다를까 실망시키지 않더라고요.", "annotation": [["브랜드#인지도", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00365", "sentence_form": "자민경 달팽이 크림은 수딩젤에 가까운 달팽이 점액처럼 찐득한 제형이였어요.?", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00369", "sentence_form": "자민경 달팽이 크림 - 수딩젤 같은 제형이라, 정이 안 갔지만 아침에 기초로 쓰기엔 아쉽고, 저녁에 수면팩 대용으로 사용하면 참 좋을 것 같다는 생각이 듬?", "annotation": [["본품#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00371", "sentence_form": "큰박스에 제품만 덩그러니 있는곳도 많은데, 에반옴므는 선물용 으로 많이 구매해서 그런지 포장부터 남다르네요", "annotation": [["패키지/구성품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00374", "sentence_form": "로고가 촌스럽지 않고, 세련되게 들어갔어요.", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00375", "sentence_form": "50ml 아담한 사이즈도 있어요.", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00376", "sentence_form": "주머니에도 쏙 들어갈 정도에요.", "annotation": [["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00386", "sentence_form": "무엇보다 가격이 참~ 착해요!", "annotation": [["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00402", "sentence_form": "사이즈가 어머어마하게 커요 ㅋㅋㅋ", "annotation": [["본품#디자인", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00404", "sentence_form": "제형이 엄청난 버터(?)제형이에요 ㅋㅋ", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00407", "sentence_form": "오 신기하게 생김.", "annotation": [["제품 전체#디자인", ["null"], "neutral"], ["패키지/구성품#디자인", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00408", "sentence_form": "안.맞.아.요.", "annotation": [["제품 전체#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00409", "sentence_form": "번.져.요...ㅠㅠㅠ", "annotation": [["본품#품질", ["null"], "negative"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00411", "sentence_form": "다섯시간동안 화장실 바닥에서 통곡해도 멀쩡한 얼굴을 만들어 준다는 어반디케이 메이크업픽서.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00413", "sentence_form": "효과는 괜찮은 것 같은데 아침에 뿌릴때마다 누군가 침뱉는 느낌이라 기분이 나빠짐.", "annotation": [["본품#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00418", "sentence_form": "계속 이렇게 디자인해주세요", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00422", "sentence_form": "돈값한당.", "annotation": [["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00424", "sentence_form": "그래도 세트로 사니까 예쁘고(외모지상주의가 틴트에도 반영되다 아아) 향도 매우 됴음.", "annotation": [["본품#디자인", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00427", "sentence_form": "저희는 머리색이 블랙이라 완전 블랙으로 아이브로우를 살까했는데 그럼 또 너무 촌스러울수있을것같아. VT코스메틱 눈썹펜슬(아이브로우펜슬) 그레이브라운으로 주문해봤는데, 딱 좋아요!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00428", "sentence_form": "블랙에 가까운 모발이신분들은 브라운이면 뭔가 안어울릴수있으니 자연스러운 VT코스메틱 그레이브라운컬러 좋을듯해요 !", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00430", "sentence_form": "그런데 하나의 몸통에 아이라이너도 마스카라도 붙어있으니 넘나 좋은것 !", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00432", "sentence_form": "색감도 브라운컬러로 자연스럽고 풍성하게 표현이 되는 VT코스메틱 아이라이너 마스카라 듀오 추천드리고싶네용 !", "annotation": [["본품#일반", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00444", "sentence_form": "그리고 향이 좀 강하다고 하시는 분들의 후기도 보았는데 저는 사용하는데 향이 진해서 사용하는데 어렵다 라는 느낌은 전혀없더라구요 !", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00449", "sentence_form": "개인적으로 안나수이 디자인과 향이 나랑은 잘 맞지않지만, 색상이 예뻐서 계속 사용중인 제품이다.", "annotation": [["본품#일반", ["null"], "positive"], ["패키지/구성품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00451", "sentence_form": "색상은 예쁘다.", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00454", "sentence_form": "사실 난 진한색을 좋아해서그런지 별루다.", "annotation": [["본품#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00455", "sentence_form": "색이 발색이 좋지도 않고 벚꽃색이야♥하고 좋아했지만 나에게는 별루웅", "annotation": [["본품#일반", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00456", "sentence_form": "정말 자연스러운 발색을 원하는 사람이라면 괜찮겠지만 진한 발색을 원한다면 비추이다.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00457", "sentence_form": "그냥저냥 그런 폴카핑크 틴트 :)", "annotation": [["본품#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00460", "sentence_form": "예쁘다-", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00461", "sentence_form": "난 묽은건 조금 안맞는것같지만, 스윙코랄은 색이 너무 예뽀니 그리고 가격도 5000원씩 너무 저렴하니 그냥 그렇게 그냥 헤헤 사용할 수있을것같다.", "annotation": [["제품 전체#가격", ["null"], "positive"], ["본품#품질", ["null"], "negative"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00465", "sentence_form": "어쩜 용기 디자인도 맘에 쏙~", "annotation": [["패키지/구성품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00466", "sentence_form": "펌핑타입인 것도 맘에 들어요.", "annotation": [["패키지/구성품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00468", "sentence_form": "용량은 작은 편이지만 민감하고 건조한 아이피부를 위해 욕실 한 켠에 두고 아이들만 사용하고 있습니다.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00469", "sentence_form": "어떤 향료나 색소를 넣지 않았기 때문에 투명한데 요것도 맘에 들더라고요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00474", "sentence_form": "특히 손 피부가 까지고 해서 순한 제품을 찾았는데 엔질힐스가 딱 좋았답니다.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00477", "sentence_form": "베비루미 아토 바스앤샴푸 펌핑 타입이라 아이들 혼자서 씻기에도 편하고 좋은데요.", "annotation": [["본품#편의성", ["null"], "positive"], ["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00478", "sentence_form": "손바닥에 펌핑해보니 투명 색상으로 풀냄새향이 나는게 식물유래성분이 듬뿍 들었구나~~싶더라고요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00480", "sentence_form": "유아샴푸로도 함께 쓸 수 있어서 더 좋았어요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00481", "sentence_form": "하나의 제품으로 샴푸까지 할 수 있으니 좋더라고요.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00488", "sentence_form": "몽디에스 바쓰앤샴푸머리부터 발끝까지 한 제품으로 깨끗하게 세정할 수 있으니 좋아요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00494", "sentence_form": "유해성분, 원료를 최소화 했다는 것을 검증받으며 제품의 완성도와 안정성 만큼은 강박증에 가까울 정도로 완벽에 가까워지려는 신념을 갖고 있는 브랜드이고제품 써보니 너무나 만족스러워서 출산 앞두고 있는 동생에게도 선물하고 울 아이들 쓸 제품들 미리 쟁여야겠습니다.", "annotation": [["제품 전체#품질", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00497", "sentence_form": "게다가 봄철 고민인 각질, 모공케어에 미백까지 한 번에 해결해주는 녀석이라고 해서 제가 원하는 바로 그런 제품이에요", "annotation": [["제품 전체#일반", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00506", "sentence_form": "피부 톤과 잡티를 한 번에...", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00509", "sentence_form": "그리고 화사함의 결정판, 바로 아이소이립스틱입니다.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00510", "sentence_form": "이 3가지면 뭐, 원하는 입술 표현은 다 있다고 말해도 과언이 아니죠.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00511", "sentence_form": "강렬한 레드와 은은한 인디핑크, 그리고 뮤즈코랄까지.. 전 이 촉촉한립스틱 3가지로 다 해결합니다.~", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00513", "sentence_form": "하나쯤 있어야 하는 기본 색상 중에 하나죠!!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00516", "sentence_form": "피부 톤과 살짝 비슷하면서도 화사함이 들어가서 때로는 좀 더 섹시하게.. 또는 분위기 있는 표현이 가능해요~", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00517", "sentence_form": "화사하고 싶은 봄에 아이소이립스틱으로 화사함을 담아보세요~", "annotation": [["제품 전체#일반", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00519", "sentence_form": "소량만 사용해도 거품이 풍성하게 나오니 경제적.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00520", "sentence_form": "거품망을 이용하면 더욱 풍성한 거품이 만들어져요~", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00521", "sentence_form": "풍성한 거품 보이시죠?", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00524", "sentence_form": "연보라색이 참 매력적인 isoi 품제으로수분감이 가득한 라인들로 구성해보았어요~", "annotation": [["브랜드#일반", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00527", "sentence_form": "펌핑타입이라서 공기노출 없이 깔끔하게 사용할 수 있다는게 매력 포인트..", "annotation": [["본품#편의성", ["null"], "positive"], ["패키지#구성품", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00528", "sentence_form": "양 조절도 수월하네요~", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00534", "sentence_form": "바르는 순간 시선집중!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00539", "sentence_form": "온몸에 골고루 뿌려진답니다.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00546", "sentence_form": "샤워 후에 슥슥 뿌리면 되니까~ 굿굿", "annotation": [["제품 전체#편의성", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00552", "sentence_form": "하지만 살짝 귀찮을 수도 있다는 ㅎㅎ", "annotation": [["제품 전체#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00554", "sentence_form": "남자스킨로션추천 올인원이니까!! ㅎㅎ", "annotation": [["제품 전체#일반", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00573", "sentence_form": "수분에센스 추천", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00580", "sentence_form": "저처럼 기초제품 많이 안쓰시는 분들이라면더쉴 에센스하나로스킨 로션 에센스를 해결 할 수 있어서좋을거 같아용", "annotation": [["본품#편의성", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00584", "sentence_form": "더쉴 기초라인이랑 같이쓰면피부톤이 확실히 밝아질거 같아서둘러보는 중이랍니다~~", "annotation": [["제품 전체#품질", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00587", "sentence_form": "반딱반딱 맘에든당ㅋㅋㅋ", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00592", "sentence_form": "손에 딱 잡히는 크기로 30ml 용량으로 유리용기에 들어있고 뚜껑 잠금이 가능해 들고 다녀도 쏟아질 걱정 없어요.", "annotation": [["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00598", "sentence_form": "첨에는 웩 스러웠는데 지금은 익숙해져서 그런지 거부감이 없네요.", "annotation": [["본품#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00602", "sentence_form": "제가 얼굴에 유분기가 많다 보니 오일프리 제품을 선호하는데 데이케어 에센스로 미니째즈가 딱 깔끔하고 좋더라고요. ^^", "annotation": [["제품 전체#일반", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00604", "sentence_form": "무방부제 제품이다 보니, 멸균처리해서 낱개포장이 되어있는데 박스 하단이 요렇게 서랍식?으로 되어있어서 편하게 꺼내 쓸 수 있어서 좋았답니다.", "annotation": [["본품#품질", ["null"], "positive"], ["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00606", "sentence_form": "무방부제 멸균 처리된 거라 실온 보관이 가능한데 늘 새 제품을 오픈해서 쓰는 느낌이라 위생적으로도 좋아요!", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00607", "sentence_form": "데이케어 에센스로, 스킨 토너 사용 후 발라주시면 되는데 넥스젠 제품을 이용중이시라면, 탱고로 피부결 정리 한번 해주시고 미니째즈를 발라주시면 좋답니다~", "annotation": [["제품 전체#일반", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00608", "sentence_form": "한 팩으로 얼굴 전체를 충분히 케어할 수 있어요.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00610", "sentence_form": "역시 깔끔한 게 최고~~", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00612", "sentence_form": "낱개 포장이라 여행 갈 때 챙겨가기도 좋고 무방부제 제품이니 피부를 위해서도 추천드리고 싶어요!", "annotation": [["패키지#구성품", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00615", "sentence_form": "수면팩이라 밤에 자기전에 발라주기만하면 되서 편한데다 효과도 좋아용! ㅎㅎ", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00626", "sentence_form": "푸석푸석한 피부를 맑고 생기있게 가꾸고싶으시다면~ CL4 리바이탈라이징C 앰플 슬리핑팩으로 비타민을 피부에 선물하세요!", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00627", "sentence_form": "자기전에 간단히 수면팩만 해도 효과 볼 수 있어서 마음에 드네요 ㅎㅎ", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00628", "sentence_form": "고급스러운 선물, 스와로브스키로 디자인된 스타일71 잉크 벨벳 립 틴트", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00629", "sentence_form": "케이스 디자인만 예쁜게 아니라 색감도 좋고 느낌도 특이한 부분이 있어서 소개해드릴게요.", "annotation": [["본품#일반", ["null"], "positive"], ["패키지/구성품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00634", "sentence_form": "틴트중에 가장 선호하는 컬러인 것 같아요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00638", "sentence_form": "풀립으로 바르니 세련된 느낌이 물씬 정말 데일리로 쓰기 딱 좋아요!", "annotation": [["본품#일반", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00639", "sentence_form": "어떤 화장에도 잘 어울리는 ^^", "annotation": [["제품 전제#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00645", "sentence_form": "저희 생기없던 입술을 매력적으로 만들어줍니다.", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00646", "sentence_form": "역시나 벨벳 느낌 저는 정말 극호!!!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00648", "sentence_form": "벨벳느낌이 부드러워서 입술에 머리카락 전혀 안붙어요.", "annotation": [["본품#품질", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00651", "sentence_form": "파우치에 가지고 나갔다가 꽃이 예뻐서 함께 찍어봤는데 고급스러운 분위기와 잘 어울리게 사진이 찍혔어요.", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00653", "sentence_form": "케이스부터 취향저격 블링블링인데 발색력 대박 쩌는 립스틱 발견!!", "annotation": [["본품#품질", ["null"], "positive"], ["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00659", "sentence_form": "허쉬코랄, 허쉬핑크, 허쉬퍼플!!!! 이 3가지 색만 있으면.. 어떤 옷이든.. 분위기든.. 표현하기 딱 좋아요~~~?? ???", "annotation": [["제품 전체#다양성", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00664", "sentence_form": "어쩜 이리 다 이쁜지~~~", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00666", "sentence_form": "주변에서 지속력 좋은 틴트 물어볼때마다.. 순시키 코스메틱 제품이라고 소개하고 다니고 잇네요...ㅎㅎ?? ??", "annotation": [["제품 전체#일반", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00668", "sentence_form": "색감이 너무 이쁜 순시키 코스메틱의 허쉬틴트 3가지색을 믹싱!!!?? ???", "annotation": [["제품 전체#다양성", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00670", "sentence_form": "부드러운 발림성은 물론,, 비비드한 발색력과 지속력까지 갖춘 만능 립틴트네요^^", "annotation": [["본품#일반", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00675", "sentence_form": "임신,육아 아기로션, 피부가려움에도 좋은 아토피바디로션!!", "annotation": [["제품 전체#일반", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00682", "sentence_form": "펌핑하면 나오는 제품이라.. 아이들이 직접 쓰거나.. 제가 사용할때도,, 양이 갑자기 많이 나오거나 쏟아질 염려가 없어 좋네요~~ ??", "annotation": [["패키지/구성품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00689", "sentence_form": "천연계면활성제 샴푸 밀크바오밥 센서티브는 우선 로즈향이 정말 너무 좋아요,,", "annotation": [["본품#일반", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00691", "sentence_form": "자꾸 냄새 맡고 싶어지더라구요~~", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00696", "sentence_form": "양도 넉넉하고,, 머릿결도 보호할 수 있어 요즘엔 머르감을때 기분이 좋아집니다^^", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00697", "sentence_form": "메이크업 베이스와 선크림, 파운데이션을이제 스틱 파운데이션 하나만 있으면 해결되니 훨씬 가볍답니다", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00706", "sentence_form": "이렇게 피부 자체에 슥 ~ 몇 번 왔다 갔다 하면 끝 -", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00713", "sentence_form": "밀키한 타입 자체가 매우 기분 좋은데요 -", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00726", "sentence_form": "세계적인 향수의 도시 프랑스 그라스 지역에서 오월 중 단 3주만 추출되는 메이로즈인 서양장미꽃수가 사용되어 럭셔리한 황홀함을 부여해준답니다 :)", "annotation": [["본품#일반", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00735", "sentence_form": "라벤더오일 함유로 은은한 라벤더향이 느껴져서 피부에 남는 잔향도 좋구요 ~", "annotation": [["본품#일반", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00738", "sentence_form": "오렌지 컬러를 사랑하는 저에겐 케이스마저 마음에 드는데요 !!", "annotation": [["본품#일반", ["null"], "positive"], ["패키지/구성품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00739", "sentence_form": "이렇게 한번 톡 , 세럼 안에 몽글몽글한 오렌지 캡슐이 가득 ♥", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00744", "sentence_form": "표정 주름까지 케어해주는 세럼은 모양뿐만 아니라 향도 좋아서 사용할 때마다 기분이 좋아지네요 :)", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00745", "sentence_form": "주름 고민에서 해방되는 차앤박 이데베논 캡슐세럼 매일매일 사용해요 :)", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00747", "sentence_form": "흡수력은진짜 오지고 지립니다!!", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00748", "sentence_form": "개인적으로 흡수력 높은 아이템을 좋아하는데!! 이거 개강추 ㅜㅜ", "annotation": [["제품 전체#품질", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00757", "sentence_form": "정말 미약하고 피부에 막 씌워지는 느낌으로기 때문에 달래는 요 아이가 정말 마음에 드네요 ㅎㅎ", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00761", "sentence_form": "바른듯 안 바른듯한 워터 에센스 제형♥", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00766", "sentence_form": "밀림은 없지만뭔가 화장 지워지는 느낌? 있어서 한번 더 팩트로 두드려야 할 거 같아요!", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00767", "sentence_form": "여름 끈적임없는 선크림 찾고 계셨다면 달바 워터풀 에센스 선크림 사용해 보시는거 어떨까요~?", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00768", "sentence_form": "촉촉한 파운데이션 락컬러 락 잇 굿 바운데이션 ♥ &name& PICK ♥", "annotation": [["제품 전체#일반", ["null"], "positive"], ["본품#일반", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00770", "sentence_form": "둘다 자연스럽죠? ㅎㅎㅎㅎ좋타!", "annotation": [["제품 전체#품질", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00772", "sentence_form": "예뻐요 ㅎㅎ", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00774", "sentence_form": "컬러를 자유롭게 섞어서 사용할 수 있는거도 완전 장점 이에요!", "annotation": [["본품#일반", ["null"], "positive"], ["본품#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00783", "sentence_form": "그래서! 화장품 동물실험 금지에 적극 앞장서고 있는 트리앤씨가 너무나 착해보여요 :)", "annotation": [["브랜드#일반", ["null"], "positive"], ["브랜드#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00792", "sentence_form": "요즘에 귀찮아서 움짤 거의 안했느데 진짜..효과 짱좋아서 열심히 찍..었는데ㅜㅜ", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00795", "sentence_form": "홍조, 민감성에게 짱짱맨인 북극곰 트리앤시 토너 완전 강력추천 합니다 :)", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00800", "sentence_form": "아마, 건조한 피부분들은 &name&처럼 안맞지 않을까 싶네요 ㅠ_ㅠ", "annotation": [["제품 전체#일반", ["null"], "negative"], ["제품 전체#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00802", "sentence_form": "&name&같이 어두운 비비크림쓰면 칙칙해 보이는 피부면 더더욱 좋을듯 싶네요 :)", "annotation": [["제품 전체#일반", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00803", "sentence_form": "타 바디로션 보다 은은한 향기간 지속됩니다?", "annotation": [["본품#일반", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00811", "sentence_form": "기분까지 상쾌합니다 ㅎ? ??", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00819", "sentence_form": "핑거스푼 큐어순 베이비밤은 튜브제형이라도 양조절이 용이하고 깔끔하게 사용할 수 있어서 좋아요.", "annotation": [["제품 전체#일반", ["null"], "positive"], ["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00820", "sentence_form": "다소 되직한 제형이지만 발림성은 좋고요,", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00827", "sentence_form": "신생아 때는 많이 건조하지 않으면 화장품이나 바디로션 따로 안 발라줘도 된다해서 기저귀발진 크림 말고는 얼굴이나 몸에는 아무것도 안 발랐었는데 계절도 가을로 가면서 건조해지고, 얼굴 상처에 핑거스푼 큐어순 베이이밤 발라주다보니확실히 발라주는 게 좋은 것 같아서 이제 매일 목욕 후에 얼굴 전체에 발라주고 있어요.", "annotation": [["제품 전체#일반", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00829", "sentence_form": "처음 알게 된 브랜드라 어떨지 몰라서 &name& 상처 진정용으로 큐어순 베이비밤만 써봤는데 아주 만족스러워서 크림과 바스 제품도 구입해볼려구요.", "annotation": [["브랜드#인지도", ["null"], "neutral"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00830", "sentence_form": "아가들 화장품이 다 그렇듯 핑거스푼도 가격이 만만치 않은데 마침 11월 동안 1+1 세일이라 딱 좋아요!", "annotation": [["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00831", "sentence_form": "민감하고 연약한 피부에 사용하기 좋은 순하고 보습력 아기화장품, 핑거스푼 큐어순 베이비밤 추천드립니다♡", "annotation": [["제품 전체#일반", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00833", "sentence_form": "그래도 이렇게 예쁜 파우치.. 주신다면 땡큐져..", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00834", "sentence_form": "가장 마음에 들었던 사은품.", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00835", "sentence_form": "디자인도 심플하고 무소음이라서 너무 너무 좋다.", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00837", "sentence_form": "새하얀 그램과 잘 어울리는 흰색 마우스.", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00838", "sentence_form": "전용마우스라고 하니 호환성이 가장 좋지 않을까 싶다. ??", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00839", "sentence_form": "한컴오피스 외에 넷피스? 이지포토? 모두 낯설다.", "annotation": [["브랜드#인지도", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00840", "sentence_form": "사용할 일 없을 것 같다.", "annotation": [["제품 전체#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00841", "sentence_form": "원래 쓰던 노트북도 엘지라서 이번에도 엘지로 가고 싶었고 그렇게 총 네가지 모델로 좁혀졌다.. ?", "annotation": [["브랜드#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00845", "sentence_form": "그리고 신기했던 게 노트북을 닫으면 15.6인치인데 펼치면 17인치라는 거!!! 호오오에에", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00846", "sentence_form": "실제로 무게는 같지만 17인치가 큼지막해서인지 12인치보다 더 가볍게 느껴지는 기적.. ??", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00848", "sentence_form": "정말 얇다.", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00851", "sentence_form": "미국 국방성 신뢰성 테스트 7개 항목을 통과 했다고는 하는데...내 무게라면 가능할지도...", "annotation": [["제품 전체#일반", ["null"], "neutral"], ["제품 전체#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00852", "sentence_form": "충전기 모 이렇게 무식하게 크게 만들었나여 엘지..", "annotation": [["패키지/구성품", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00853", "sentence_form": "근데 뭐 들고 다닐 거 아니니까 스루함...", "annotation": [["패키지/구성품", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00854", "sentence_form": "최대사용 28시간, 동영상 재생 18.5시간으로 넉넉한 편.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00855", "sentence_form": "그리고 충전도 빨리됨...", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00856", "sentence_form": "충전 10분으로 100분 사용 가능하다.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00858", "sentence_form": "실제로 사용 해봐야 알겠지만 거의 집에서 사용할 나는 더더욱 배터리 걱정이 없을 것 같다.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00862", "sentence_form": "전원 켜보기 전까지 계속 긴장함.", "annotation": [["제품 전체#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00863", "sentence_form": "다행히 막눈인 내가 봤을 때는 누런 액정인 것 같지 않지만.. 살짝 누래도 뭐 어때", "annotation": [["본품#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00867", "sentence_form": "그리고 전원버튼 누를 때 지문인식도 같이 되서 좋다. ", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00870", "sentence_form": "아니 내용물이 이게 다여..", "annotation": [["패키지/구성품#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00872", "sentence_form": "심플하구만....", "annotation": [["제품 전체#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00873", "sentence_form": "진짜 소리 하나도 안나고 너무 좋다.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00874", "sentence_form": "옆사람 방해 안될 듯! ", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00875", "sentence_form": "사진에 잘 안나왔는데 키스킨..딱 어떤 느낌이냐면 축축하고 꿉꿉한 느낌이라 희한하게 자판에 잘 붙어 있는다.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00876", "sentence_form": "잘 붙어있어서 좋긴 한데 보기에는 별로 ㅎ.....", "annotation": [["제품 전체#디자인", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00878", "sentence_form": "Virtoo by LG 라는 어플을 받고 컴퓨터와 연동 시키면 폰에 오는 알림과 전화, 메시지를 컴퓨터로 확인 할 수 있다.", "annotation": [["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00882", "sentence_form": "가볍고 예쁘고 빠르고.", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00884", "sentence_form": "그래듀...디자인과 무게가 중요하다면 그램 사야지 뭐 어쩌겄어요..?", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00885", "sentence_form": "삼성 데스크탑 오디세이, 디자인과 편의성을 겸비하다", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00886", "sentence_form": "삼성전자의 야심작인 삼성 데스크탑 오디세이는 게이밍 데스크탑 치고는 작은 부피에도 불구하고, 강력한 쿨링과 편의성까지 겸비하고 있습니다.", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00887", "sentence_form": "기계치라도 어렵지 않은 저장공간 업그레이드", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00888", "sentence_form": "하지만 삼성 데스크탑 Odyssey는 덮개를 열고, 슬롯에 SSD나 하드디스크를 장착하기만 하면 업그레이드 과정이 완료됩니다.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00889", "sentence_form": "덕분에 초보자라도 기사님을 부를 필요없이 본인이 직접 손쉽게 업그레이드할 수 있습니다.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00891", "sentence_form": "삼성 데스크탑 오디세이는 추후 업그레이드와 장시간 사용에 대비해서 600W의 대용량 파워서플라이를 장착했습니다.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00892", "sentence_form": "제가 직접 테스트해본 결과 삼성 데스크탑 오디세이는 그런 불만으로부터 어느정도 자유롭다고 생각됩니다.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00894", "sentence_form": "환경에 따라 차이는 있겠지만 개인적으로 삼성 데스크탑 Odyssey 를 평가한다면 높은 공간 활용도와 안정성, 그리고 초보자를 배려한 업그레이드 편의성까지 겸비한 훌륭한 제품이라고 생각됩니다.", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00896", "sentence_form": "티레이저 기미제거는 633nm LED 빛으로 피부 깊숙이 나비존을 집중케어하는 제품으로 하루에 10분씩만 사용해도 뽀얀 피부를 되찾을 수 있는 기기입니다!", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00897", "sentence_form": "빛의나무 추출 성분이 미백과 멜라닌 색소 억제 기능을 도와주고 강력한 미백 시너지 효과도 느낄 수 있다고해서 받자마자 매일매일 10분씩 꾸준히 이용해왔어요 ㅎㅎ", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00898", "sentence_form": "사용법은 너무나간단!ㅎㅎ", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00900", "sentence_form": "시야를 막는게 아니기 때문에 코에 살짝 걸친 후 저는 웹툰도 보고 할거 다했네요 ㅎㅎ", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00901", "sentence_form": "요즘 얼굴 마스크 LED 기기가 한창 유행이다보니 이런거 넘 하나 갖구싶었는데 고가의 제품을 사긴 부담스럽고~ 더유핏에서 부담없이 하나 장만해서 너무 만족스러웠어요!", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#인지도", ["null"], "positive"], ["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00902", "sentence_form": "내구성도 좋아 오랫동안 제 피부를 지켜줄 것 만 같은 느낌!!", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00904", "sentence_form": "요 나비존 속 기미 개선에 도움을 줄 뿐만 아니라 피부색도 개선되고 눈 및 다크서클도 개선된다고 해요~", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00905", "sentence_form": "요즘 확실히 피부톤이 밝아져서 다들 무슨 관리 받냐고 물어보는 ㅎㅎ", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00913", "sentence_form": "그치만 요 작은아이가 실력은 상상이상이니 기대해보세요!", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00915", "sentence_form": "붙이면 부드럽게 붙고 떨어지는 재질이고 세척후 여러번 재사용이 가능해요!", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00917", "sentence_form": "첨에 멋모르고 가장 세게했다가 따끔해서 깜짝 놀랐...ㅎㅎ", "annotation": [["본품#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00919", "sentence_form": "매일매일하면 그 효과가 더욱좋은 미니마사지기!", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00921", "sentence_form": "만인의 고질병인 손목터널 증후근을 근본적으로 에방할 수 있는 혁신적인제품!!", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00923", "sentence_form": "블루투스 지원이 가능하기 때문에 노트북 뿐만아니라 핸드폰에서도 사용이 가능해요!ㅎㅎ", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00924", "sentence_form": "이제는 핸드폰으로 영상을보든 작업을 하든 누워서 편하게 하실 수 있답니다!ㅎㅎ", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00931", "sentence_form": "뭐, 가상 7.1 서라운드를 지원하고, 바이브레이션 기능이 있는 진동헤드셋이고 노이즈를 줄여주는 기능이랑 소프트 이어패드로 착용감이 편하다? 뭐 이런 장점들이 있는 것 같네요~", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00933", "sentence_form": "꼼꼼하게 잘 포장되어 있고, 해외 유명브랜드에서 나오는 고가의 제품들이 부럽지 않을만한 고급스러움도 느껴지네요!", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00934", "sentence_form": "가격대비 성능 뿐만 아니라 개인적으로 디자인도 꽤나 좋은 점수를 주고 싶어요!", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#디자인", ["null"], "positive"], ["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00935", "sentence_form": "제품 박스에도 적혀있던 것처럼 소프트 이어패드를 장착하여 오래 장착하고 있어도 크게 불편함이 없는 착용감을 느낄 수 있어요 :)", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00936", "sentence_form": "그동안 중저가, 중고가 제품에서는 찾기 힘들었던 헤드셋 리모콘!!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00937", "sentence_form": "7.1 게이밍 헤드셋 BMC 제품에는 리모콘이 달려있어서 쉽게 컨트롤 할 수 있네요~", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00938", "sentence_form": "선에도 디테일한 패턴을 적용했는데요.", "annotation": [["본품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00939", "sentence_form": "선 두께가 어느정도 있어서 내구성에서도 걱정 없을 듯 합니다 ^^", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00940", "sentence_form": "은은하게 빛나는 라이팅 LED를 통해 보는 사람이나 착용하는 사람 모두에게 고급스럽고 세련된 느낌이 들게 해요!", "annotation": [["본품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00941", "sentence_form": "약간 섭섭하긴 했지만 그만큼 게임의 집중도를 올려준다는 거겠죠?", "annotation": [["제품 전체#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-00942", "sentence_form": "아마 7.1채널이라 더 집중도가 높아지는 듯 해요!", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00943", "sentence_form": "리모콘 기능으로 소리를 키우거나 줄일 수 있고, 음소거 기능까지 할 수 있어서 이 가격대에 사용할 수 있는 제품 중에서는 정말 갑인 듯 합니다.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00945", "sentence_form": "유명 브랜드의 고가 제품과 완전히 겨눌 수는 없지만 기본기가 탄탄해서 게임을 즐기기에 부족함은 없을 듯.", "annotation": [["제품 전체#인지도", ["null"], "negative"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00951", "sentence_form": "13인치노트북추천 레노버 요가는 180도 뿐만 아니라 360도까지 접을 수 있습니다.", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00953", "sentence_form": "그림을 좋아하는 분들이나 가끔씩 낙서삼아 하고자 하시는분들에게도 상당히 매력적으로 다가오는 펜기능!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00955", "sentence_form": "제가 가지고 있던 스타벅스 다이어리와 비교해봤을때도 오히려 더 얇은 느낌.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00957", "sentence_form": "레노버 요가는 8세대 CPU를 사용합니다!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00959", "sentence_form": "자랑스러운 i7 8세대!!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00961", "sentence_form": "화면은 5.9mm의 얇은 베젤을 사용했는데요.", "annotation": [["본품#디자인 ", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00962", "sentence_form": "덕분에 눈으로 보이는 화면이 더 커졌습니다.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00965", "sentence_form": "레노버YOGA730-13IKB는 휴대성, 스펙, 부가기능까지 부족한 점 없는 노트북인 듯 합니다.", "annotation": [["제품 전체#편의성", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00967", "sentence_form": "대학생노트북추천 :: 가벼운노트북 하면 떠오르는 LG노트북!", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00969", "sentence_form": "그 중에서도 LG울트라는 굉장히 컴팩트하면서도 좋은 성능, 우수한 디자인을 유지하고 있는데요.", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00972", "sentence_form": "LG는 디스플레이 또한 전세계적으로 유명하죠.", "annotation": [["본품#인지도", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00976", "sentence_form": "옆면을 보면 얇으면서도 있을 건 다 있어요!", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00978", "sentence_form": "다만 운영체제에 따라 기능적 제한이 있을 수 있다네요~", "annotation": [["본품#품질", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00979", "sentence_form": "과제하거나, 인강을 많이 봐야하는 분들이라면 리더모드로 눈의 피로를 줄여보는 것도 좋겠죠!?", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00981", "sentence_form": "두께가 무려 20.9mm에 무게는 1.89kg로 휴대성이 높으면서 저렴한제품을 찾는다면 LG울트라가 좋을 것 같아요!", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00982", "sentence_form": "또, 성능도 좋고 ssd까지 달려있어서 완전 빠를 듯 해요!", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00984", "sentence_form": "요즘 왠만한 핸드폰 사는 값이면 사는 듯...???", "annotation": [["제품 전체#가격", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-00986", "sentence_form": "미모스 제품은 한국 여자 프로 골프 협회인 KLPGA 의 공식 인증페이셜 스킨케어 디바이스로 선정된 브랜드라 믿고 이용할 수 있는 제품이랍니다~!", "annotation": [["브랜드#인지도", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00988", "sentence_form": "워터프루프 기능으로 세안과 샤워시 사용에 적답한 완전방수 기계라 물닿으면 어쩌나 걱정하며 사용하지 않아도 되고 역방향 회전방식이라 저자극 클렌징 리프팅은 물론 휴대성까지 용이하답니다~!", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00989", "sentence_form": "구성품은 이렇게 본체와 건전지 제품설명서로 되어있는데 건전지로 120분 가량 사용할 수 있어 여행시에도 걱정없이 챙겨가서 이용할 수 있답니다~!", "annotation": [["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00991", "sentence_form": "특히 이 브러쉬 부분은 보들보들한 촉감이 정말 기분 좋게 만들어 준답니다~!", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00994", "sentence_form": "거품 클렌징폼으로 시도하긴 했지만 거품이 진동클렌징을 작동하면 할 수록더욱 부풀어 올라 결국 얼굴까지 깨끗하게 씻었네요 ㅎㅎ", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00995", "sentence_form": "손등에 테스트한 거품으로 얼굴 전체를 뽀득뽀득~ 사용하고나면 얼굴이 반짝반짝 해진 걸 느껴볼 수 있답니다!!", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00996", "sentence_form": "모공관리 뿐만 아니라 두피마사지까지 가능한 매력적인 진동클렌징 미모스!", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-00999", "sentence_form": "이전에도 자꾸 말썽을 부렸는데 어짜피 또 고장날거 가성비좋고 청소효율 좋은 네오스틱 T1으로 체체체체 체인지 했어요 ☆", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01001", "sentence_form": "한번 살펴보고 설명서도 살펴보고 바로 사용을 해보았는데 어렵지가 않았어요 :)", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01002", "sentence_form": "처음엔 이거 어떻게 거치하나 .. 했는데 설명서에 사진을 보고 따라하니 금방 거치가 끝나더라구요", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01003", "sentence_form": "전체적으로 다 자잔하게 분리가 되어서 청소하기도 좋고 보관하기에도 정말 좋더라구요 :)", "annotation": [["본품#편의성", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01004", "sentence_form": "숏 - 하게 사용을 할 수도 있는데요", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01006", "sentence_form": "이 상태로는 3in1 브러쉬를 연결해 좁은 부위에 청소를 하거나 차량 내부청소에도 좋을 것 같았어요", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01007", "sentence_form": "고가의 무선청소기와 맞먹는 출력의 140W 네오스틱 T1은 기존에 사용하던 청소기보다 가격과 성능면에서도 훨씬 마음에 들었어요 !", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01009", "sentence_form": "교체가 가능한 배터리라 배터리를 추가하면 연속 사용에도 무리가 없더라구요", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01010", "sentence_form": "기본 먼지통은 엄청 쉽게 분리되구요", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01011", "sentence_form": "벌집 필터도 깨끗하게 쏙 빠지더라구요", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01012", "sentence_form": "위쪽은 헤파 필터 분리도 가능해서 청소할때 너무너무 편하고 좋았어요 :)", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01013", "sentence_form": "은근 청소기 오래쓰다보면 청소를 해도 지저분할때가 있는데 이렇게 분리 잘되고 꼼꼼하게 청소가 된다면 오래써도 깨끗하게 쓰기 좋겠더라구요", "annotation": [["본품#편의성", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01014", "sentence_form": "구석구석 청소하기 좋은 3in1 콤비네이션 브러쉬가 들어있는데요", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01015", "sentence_form": "하나로 연결해서 보관이 가능하니 작지만 잃어버릴 염려도 없어요 ~", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01017", "sentence_form": "브러쉬는 거치대 안으로 쏙 들어가서 더욱 깔끔하게 정리가 가능하더라구요", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01018", "sentence_form": "이렇게 정리 잘 되는 거치대는 또 처음 ☆", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01023", "sentence_form": "LO로 사용을 해도 워낙 빨아들이는 힘이 좋아서 청소 깨끗하게 잘 되더라구요 *ㅅ*", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01024", "sentence_form": "청소기 사용할때 나는 소리도 생각보다 부드럽고 크지 않아 엄청 마음에 들었어요 !", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01025", "sentence_form": "낮게 사용을 해도 불편함이 없었구요", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01031", "sentence_form": "이전에는 큰 유선청소기만 사용을 하다가 무선청소기는 청소하기에 약할것이라는 생각을 했었는데 워낙 성능이 좋고 편해서 네오스틱T1 툴앤툴 무선청소기에 반했어용 :)", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01032", "sentence_form": "이제 청소기도 예쁘고 성능좋은 가성비 짱짱 ! 네오스틱 T1 무선청소기 추천해요 ♩", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"], ["제품 전체#디자인", ["null"], "positive"], ["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01036", "sentence_form": "세상에나 .. 사용법이 이렇게 쉬워버리면 사용 설명서가 뻘쭘하잖아요 ㅠ3ㅠ ㅋㅋㅋㅋㅋ", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01037", "sentence_form": "발볼, 발바닥, 발뒤꿈치 등등 발의 모든 굴곡면들을 다양하게 마사지해주는 3개의 롤러가 내장되어있구요", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01043", "sentence_form": "손지압 느낌 그대로 시원함을 느낄 수 있구요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01048", "sentence_form": "물론 손으로 야무지게 당기면 쉽게 빠진답니다", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01049", "sentence_form": "15분 사용 후 자동으로 전원이 꺼지고 무리한 사용을 하지 않고 잠들어도 걱정이 없더라구요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01050", "sentence_form": "사이즈가 그렇게 크고 막 공간차지를 하는 형태가 아니다보니 소파옆, 책상밑, 사무실, 침대 등등어디에 두어도 좋고 ~ 사용을 하면서 TV를 보거나 게임을 하거나 발만 사용하지 않는다면 다른 활동을 해도 좋더라구요", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01051", "sentence_form": "손을 넣어봤더니 ~ 음 .. 성인남자 발사이즈 280까지는 거뜬히 들어갈 것 같은 깊이감 !!", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01056", "sentence_form": "공기압 지압 롤링 온열기능 네가지 모드 중에서 원하는 모드로 선택을 해서 따뜻하게 사용을 했더니 마사지와 동시에 족욕효과도 기대할 수 있었어요", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01061", "sentence_form": "이렇게 작은 크기로 안마가 가능하다고? 신기방기 ", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01062", "sentence_form": "큰거랑 작은거 두개가 있어서 좋아요~", "annotation": [["제품 전체#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01063", "sentence_form": "작은 부위는 S패드를 붙여서 훨씬 효율적이에요", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01064", "sentence_form": "손목에는 S패드 작은 사이즈가 딱임", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01065", "sentence_form": "할때 뭔가 욱신욱신하지만 시원한 느낌이 들었고 꾹꾹 눌리는 듯한 기분이 들었어요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01068", "sentence_form": "근데 엄마가 팔에 해보시고 시원하다고 어깨에도 하시고, 모드1화이트 2단계 모드2 화이트 3단계 무릎에도 하시고 온몸 여기저기 쑤신곳에 마사지기를 야무지게 활용하셨어요:-)", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01072", "sentence_form": "40년 모터전문 회사 계양전기가 설계하고 생산한 전동킥보드 ``스쿠티PRO`` 요즘 각광받고 있는 전동킥보드에요~", "annotation": [["브랜드#일반", ["null"], "positive"], ["제품 전체#인지도", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01078", "sentence_form": "1년 이내 1,200km 무상보증 꼭 확인 하시고야외활동하기 딱! 좋은 날씨에계양전기 스쿠티PRO 타고 즐거운 봄바람 느끼세요~~", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01081", "sentence_form": "두께도 14.9mm로 얇고 가벼워서하루종일 휴대해도 편리해요!", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01082", "sentence_form": "그러면 노트북도 사용 못하고 그러는데,삼성노트북은 충전기로 충전이 가능해요~", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01083", "sentence_form": "하아 이 기술 정말 칭찬합니다!!", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01084", "sentence_form": "보조배터리, 휴대폰 충전기 등 다양한 방법으로 충전이 가능한 이지 충전!!!!!!!", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01085", "sentence_form": "빠밤! 단 20분 충전만으로도 무려 3시간을 사용한다니!!", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01086", "sentence_form": "완충도 80분이면 다 된다고하니노트북 배터리 없어서 전전긍긍하는 시대는 이제 빠잉~", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01087", "sentence_form": "삼성노트북 그리고 지문인식으로 컴퓨터 로그인을 빠르게 할수있습니다~", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01092", "sentence_form": "삼성노트북 인텔 i5-7200u CPU와 DDR4 8gd 메모리,NVMe SSD 256gb로 고사양 작업이 가능한가벼운노트북 삼성 올웨이즈 노트북!", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01093", "sentence_form": "초경량 가벼운노트북 삼성노트북 올웨이즈!", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01094", "sentence_form": "쉽게 선택하지 못하고 있다가 테팔 에어포스360을 들이게 되었는데 가격도 착한 게 사용해보니까 괜찮더라구요", "annotation": [["제품 전체#가격", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01099", "sentence_form": "매번 충전하려고 꽂고 그럴 필요 없으니까 편하네요~", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01103", "sentence_form": "손으로 들어서 바닥 외에 다른 곳들도 간편하게.. 그리고 앉아서 집중되어 있는 부분만 청소할 때 용이하죠!", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01104", "sentence_form": "구석 청소할 때도 사용할 수 있고.. 간편하고 짧게 사용하고 싶을 때 이용할 수 있는 브러시랍니다.~", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01106", "sentence_form": "그래서 소파를 손상시키지 않고 소파 위나 구석의 먼지를 제거해줍니다.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01108", "sentence_form": "가장 기본적으로 흡입력 좋은 무선청소기를 따져보고 골랐지만.. 이렇게 간편하게 다양한 기능도 이용할 수 있다니 괜찮은 것 같네요", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01109", "sentence_form": "이런 모서리도 문제없어요~", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01110", "sentence_form": "하나하나 물티슈로 닦으며 청소했는데.. 아니 안 하는 곳도 너무 많았는데.. 이젠 이런 모서리 청소 브러시 하나면 OK~", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01112", "sentence_form": "먼지는 손으로 만지지 않아도 원터치로 뚜껑이 열려서 쓰레기통에 쓩~ 45도 정도로 레버를 잡아당기면 먼지통의 뚜껑이 자동으로 열립니다.", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01113", "sentence_form": "언제나 충전 만땅, 파워 좋은 상태로 청소를 시작할 수 있어요~", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01115", "sentence_form": "청소할 때 나오는 미세먼지나 유해물질도 무시할 수 없는데.. 이런 저의 고민을 삼성무선청소기 NEW 삼성 파워건 150은 해결해 줄 수 있겠더라구요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01120", "sentence_form": "아마도 자녀를 키우고 있는 집에서라면 강력한 파워력, 그리고 빨아들인 미세먼지의 배출 차단이 무엇보다도 매력적으로 다가올 것 같습니다.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01121", "sentence_form": "청소기의 먼지통은 쉽게 분리가 가능합니다.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01122", "sentence_form": "그래서 먼지통 레버만 당기게 되면 덩어리진 먼지가 쏙~ 빠지도록 설계되어 있는데요", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01123", "sentence_form": "먼지통 전체를 물청소 할 수 있기 때문에 편리하기도 하면서 위생적으로 관리가 가능하죠", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01125", "sentence_form": "청소기를 돌려도 집안에 공기가 탁해질 거라 걱정할 필요가 없어요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01126", "sentence_form": "아이들이 없을 때만 웬만해선 청소기를 돌리려고 하고, 청소기를 돌릴 때는 꼭 창문을 다 열어놓고 돌리는 등. 나름 집안에 미세먼지로부터 해방되기 위해서 노력했는데.. 무선청소기 추천하는 삼성 파워건과 함께라면 이젠 그럴 필요가 없겠어요~", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01129", "sentence_form": "최대 50도까지 꺾여 손목, 무릎, 허리에 부담을 덜 주도록 디자인되었는데요", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01132", "sentence_form": "NEW 삼성 파워건 배터리는 착탈식 대용량 배터리 입니다.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01134", "sentence_form": "특히 청소하다가 배터리가 방전되더라도 착탈식이라서 쉽게 교체가 가능하답니다.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01136", "sentence_form": "충전은 배터리만 빼서 쏙~", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01137", "sentence_form": "만약 청소기 수리를 맡기려고 할 때 기존에는 청소기를 통째로 들고 가야 했다면 이젠 배터리만 들고 가시면 됩니다.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01140", "sentence_form": "손목을 편안하게 플렉스 핸들, 착탈식의 편리한 대용량 배터리, 청소과 관리가 간편한 이지클린 먼지통까지 소개를 해드렸습니다.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01144", "sentence_form": "기존의 제품들과는 다르게 강력한 파워는 물론이고 모발 건조 범위를 넓고 빠르게 가능하도록 해주더라구요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01148", "sentence_form": "이번에 유닉스 드라이기 UN-B1595의 포인트는 바로 3D에어스핀 노즐이예요", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01150", "sentence_form": "기능들도 그렇고 사용하기 참 편한 것 같아요~", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01152", "sentence_form": "긴 목을 가진 부분이나 강력한 바람이 가능하도록 변환시켜주는 넓은 흡입망 디자인도 스타일리쉬하고.. 3D에어스핀 유닉스 드라이기 참 맘에들어요..", "annotation": [["본품#디자인", ["null"], "positive"], ["제품 전체#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01154", "sentence_form": "파워가 다릅니다.~", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01155", "sentence_form": "손등으로 직접 느껴보니 일반 바람은 한곳을 향해서 쭉~뻗는다고 느껴지면. 3D 에어스핀의 바람은 넓게 리듬을 타면서 쏟아집니다..", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01156", "sentence_form": "손등으로 느껴지는 바람만 맞아도..아~ 라는 이야기가 나오게 되더라구요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01157", "sentence_form": "왜 더 빠르고, 더 넓고, 더 강하게 바람이 분사되는지요.~", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01165", "sentence_form": "실용성과 기능성 모두 갖춘이 PRO3000은 제가 들고 있는 이 블루 컬러와핑크 컬러로 총 2종의 색상이 있다고 하니 참고 하시길.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01168", "sentence_form": "권장 교체시기인 3개월 지나 교체시기가 되면 칫솔모만 교체하면 되니 경제적이구요..", "annotation": [["본품#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01169", "sentence_form": "꽂아놓기만 하면 충전이 되는 충전 스테이션으로 관리도 편하고 바디 하나에 칫솔모를 본인의 구강 상태에 알맞은 효과의 칫솔모를 끼워서 사용할 수 있어요~", "annotation": [["본품#편의성", ["null"], "positive"], ["본품#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01170", "sentence_form": "그만큼 믿을 수 있는 브랜드이기도 하고 치과의사들이 권장하는 칫솔법을 동시에 구현한, 상하진동, 좌우회전을 결합한 3D 입체세정 방식까지 작동되니 치아 구석구석까지 꼼꼼하게 케어가 가능하다는게 장점 중에 장점이랍니다.", "annotation": [["제품 전체#품질", ["null"], "positive"], ["브랜드#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01171", "sentence_form": "그래서 일반 칫솔보다 99.8% 더 뛰어난 플라그제거력으로 구강관리에 도움을 준다고 하더라구요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01173", "sentence_form": "그래서 시간을 따로 체크하지 않아도 알아서 권장 양치 시간인 2분 양치가 가능해요", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01174", "sentence_form": "엄지손가락이 닿는 부분에 파워버튼이 있어서 간편하게 조작 가능!!", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01175", "sentence_form": "이런 올바른 칫솔질에 맞도록 오랄비 PRO3000이 회전법과 바스법을 구현했다고 해요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01176", "sentence_form": "3차원 입체세정 기능으로 치아에 가볍게 가져다 대고 있기만 하면, 가장 효과적인 방법으로 치아를 닦아준답니다", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01181", "sentence_form": "홈뷰로 집청소를 제대로 하고 있는지 실시간 검사도 할 수 있다고 해서 부푼 마음을 안고 직접 써보기로 했다.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01185", "sentence_form": "청소기가 있어도 직접 쓸고 닦으면 땀을 뻘뻘 흘리게 되는데, 알아서 돌아다니며 청소를 해준다니 이보다 더 좋을 순 없었다.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01187", "sentence_form": "설명서대로 따라하면 쉽게 어플을 설치하고 로봇청소기를 연결할 수 있다.", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01189", "sentence_form": "실제로 작동시켰을 때 턱시도 입은 로봇청소기가 돌아다니는 모습을 구경하는 재미도 있었다.", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01194", "sentence_form": "그 후에 가장자리 청소, 뱅글뱅글 돌면서 하는 부분청소를 더 해주면 깨끗하게 청소를 마친 느낌이 들었다.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01196", "sentence_form": "물걸레 청소를 할 땐 물이 한꺼번에 확 나오면 어쩌나 걱정했는데, 자동 물 조절 펌프가 내장되어 있어서 적당량의 물이 나왔다.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01197", "sentence_form": "예상보다 물걸레 청소가 깔끔하게 잘 되어서 놀랐다.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01199", "sentence_form": "처음 작동시킬 땐 직접 지켜봤지만, 집에 없을 때 이렇게 청소를 해 놓는다면 더 편리할 것 같았다.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01205", "sentence_form": "잘 작동하고 있는지 홈뷰로 얼마든지 지켜볼 수 있고, 청소 모드를 바꿔줄 수도 있으니 그야말로 스마트한 청소라 할 수 있다.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01208", "sentence_form": "디자인 청소기 / 오브제 청소기라고 불리며 플러스마이너스의 스테디셀러인 무선청소기!", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["제품 전체#인지도", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01211", "sentence_form": "◈ 탈착 가능한 리튬이온배터리를 사용했기에 무게는 가볍게, 수명은 길게 사용할 수 있는데 항공기에 사용되는 모터 기술로 마모를 줄여 인체에 유해한 먼지는 발생시키지 않고 수명이 무려 1500시간 이상으로 일반 모터보다 8배나 길다는 사실!", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01214", "sentence_form": "플로어 노즐 상단에 이렇게 버튼이 있는데 버튼을 오른쪽으로 눌러주면 브러시가 이렇게 위로 올라와서 러그를 청소할 때 좀 더 용이하더라고요. ", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01219", "sentence_form": "디자인적으로도 훌륭하지만 기능적으로도 더할 나위 없이 만족스러운 제품이에요.", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01220", "sentence_form": "저는 개인적으로 벽에 거치를 하는 것보다 이렇게 스탠드가 가능한 제품을 선호하는데 스탠드 후크 부분도 굉장히 심플하면서도 사용이 편리하도록 되어 있더라고요. ", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01221", "sentence_form": "위에서 설명드린 것처럼 상단에 있는 버튼을 눌러 브러시가 올라오도록 한 뒤에 사용하니 확실히 먼지 제거가 좀 더 용이하더라고요. ", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01222", "sentence_form": "빗자루 노즐은 6cm 빗자루 털 안에 4개의 고무 노즐이 들어가 있어 부드럽게 쓸어주며 청소가 가능하기에 서랍이나 창틀, 키보드 등 틈새 먼지 제거를 하기에 좋으며 저는 따로 선택하지 않았지만 반려동물이 있으신분들은 헤드에 부드러운 결의 패브릭이 부착되어 러그나 소파 혹은 이불 등에 달라붙은 먼지를 흡착하기에 좋은 먼지 제거 노즐을 선택하셔도 좋을 것 같아요. ", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01223", "sentence_form": "그 외 기본 구성품인 틈새 노즐은 침대나 소파 틈 사이에 사용하기 좋고 압축 어댑터 노즐은 이불이나 옷 가지 등을 압축할 때 사용하시면 됩니다. ", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01224", "sentence_form": "제가 직접 바닥에 원두 가루를 뿌리고 흡입력 테스트를 해 보았는데 작은 입자인 가루가 남김없이 잘 흡입이 되는 걸 확인할 수 있었어요. ", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01225", "sentence_form": "플러스마이너스제로 무선청소기 C030 사용 후 더스트 박스는 이 버튼을 누르면 쉽게 분리를 할 수 있도록 되어 있는데요. ", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01227", "sentence_form": "너무나도 예쁜 디자인 청소기로 오브제의 역할을 톡톡히 해내고 있지만 그보다 더 중요한 건 기본적인 흡입력과 사용의 편의성! ", "annotation": [["제품 전체#디자인", ["n"], "positive"], ["제품 전체#품질", ["n"], "positive"], ["제품 전체#편의성", ["n"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01228", "sentence_form": "상단에 있는 더스트 박스를 비롯해 본체, 기본적인 롱 노즐과 플로어노즐, 틈새노즐과 틈새노즐 홀더, 탈 부착이 가능한 배터리와 스탠드, 어댑터, 추가로 구매가 가능한 플렉시블 호스+압축팩 노즐, 빗자루 노즐 그 외에도 필요에 따른 추가 노즐이 있어서 사용자의 편의에 꼭 맞춘 세심한 배려가 돋보였어요.", "annotation": [["본품#편의성", ["null"], "positive"], ["본품#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01229", "sentence_form": "벽에 거치하지 않고 전용 스탠드에 세워두니 사용하기 편해 어느 곳에 두어도 좋고 가볍고 사용하기 편하며 흡입력까지 좋은 데다 적절한 노즐도 굉장히 마음에 들더라고요.", "annotation": [["본품#일반", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01234", "sentence_form": "처음에 가격대가 좀 있는 편이라 고민이 되었었는데 두피 마사지뿐만 아니라 목이나 어깨 등 다른 곳에도 관리를 할 수 있어서 활용도가 높겠다는 생각이 들더라고요. ", "annotation": [["제품 전체#가격", ["null"], "negative"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01235", "sentence_form": "한 손안에 들어오는 사이즈로 지압과 두피케어에 도움을 주고 기본적인 생활방수가 되기에 미용실에 가서 두피케어를 받을 때처럼 시원하게 순환이 될 것 같더라고요. ", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01237", "sentence_form": "사이즈가 컴팩트해서 출장이나 장기간 여행을하는 경우에도 가지고 다니기 좋은데 이때 작동 고장이나 에너지 소모 방지를 위해서 잠금장치가 설계되었답니다. ", "annotation": [["제품 전체#편의성", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01241", "sentence_form": "작동 시 소리는 좀 나는 편인데 거슬리는 정도의 소음은 아니고 움직이는 모습이 꼭 귀여운 동물의 발 같기도 하고 그러네요. ", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01242", "sentence_form": "어깨가 피곤한 날은 목과 어깨에 이렇게 대고 있었더니 저는 생각보다 진짜 시원하던데 울서방님에게는 좀 약하게 느껴진다고 해요. ", "annotation": [["제품 전체#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01244", "sentence_form": "앞에서 뒤로 이렇게 하다 보면 피로도 풀리는 느낌이 들고 전동두피마사지기라 조작이 번거롭지 않아서 사용하기도 좋아요. ", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01246", "sentence_form": "메디유 두피마사지기는 세척도 이렇게 물로 헹궈 내주기만 하면 되니 관리하기도 편해서 여러모로 잘 사용하고 있어요. ", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01247", "sentence_form": "긴 머리를 가진 저도 사용하는데 머리 엉킴이나 그런 부분은 전혀 없었고 샤워할 때 어깨나 목에 사용해도 좋더라고요.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01251", "sentence_form": "우선 진공청소와 물걸레 청소를 둘 다 할 수 있다는 것에서 매력적이고요.", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01252", "sentence_form": "로봇청소기 중 고가의 제품을 제외하고 앱으로 사용가능 한 경우는 흔치 않다죠.", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01253", "sentence_form": "그냥 리모컨으로만 사용해도 되지만 이렇게 앱을 다운로드해 사용하니 확실히 더 편하고 좋은 것 같아요.", "annotation": [["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01254", "sentence_form": "화면의 카테고리가 보기 편하게 되어 있어서 사용하는데 불편함은 전혀 없었습니다.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01255", "sentence_form": "워터 탱크를 장착하면 진공+물걸레를 동시에 할 수 있지만 더스트박스를 장착해 진공청소를 한 후에 워터 탱크로 바꾸고 한 번 더 해 주면 확실히 더 깨끗하더라고요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01258", "sentence_form": "그리고 단차가 높을 때 어떻게 반응하는지 확인하기 위해서 일부러 화장실 문을 열어 두었는데 정말 신통방통하게 이렇게 잘 피해 떨어지지 않고 다니더라고요.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01259", "sentence_form": "거실 청소 후 모습인데 물걸레를 사용하기 전이지만 손끝으로 바닥을 쓸어보아도 정말 깨끗하게 된 걸 확인할 수 있었어요.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01260", "sentence_form": "문턱도 잘 넘어요.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01262", "sentence_form": "주방매트도 걷어줘야 하는데 지난번에 보니 얇은 소재라 브러시에 끼어서 에러코드가 뜨며 정지를 하길래 그 장면을 촬영하려고 일부러 이렇게 두었는데 이날따라 컨디션이 좋은지 위아래로 문제없이 그냥 잘 다니더라고요.", "annotation": [["본품#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01263", "sentence_form": "이건 아마도 파의 작은 조각으로 보이는데 사이드 브러시가 쓸어주는 과정에서 이렇게 튕겨 나가기도 하네요.", "annotation": [["본품#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01265", "sentence_form": "매트까지 걷어내고 거실, 주방, 침실과 컴퓨터 방, 그리고 드레스룸까지 모두 완벽하게 다 돌렸는데도 배터리가 모자라지는 않았답니다.", "annotation": [["제품 전체#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01268", "sentence_form": "흡입력 ★★★★☆", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01272", "sentence_form": "소음의 정도 ★★★★☆", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01273", "sentence_form": "장애물 대응 ★★★★☆", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01276", "sentence_form": "어떤 제품들은 턱을 잘 못 넘거나 장애물에 부딪히면 뒤로는 못 빠져나온다고 하던데 이건 두 가지 모두 꽤 현명하게? 대처를 하고 나오더라고요.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01277", "sentence_form": "한 번 충전을 하면 진공과 물걸레 2가지를 모두 다 사용하더라도 집 전체를 청소하기에 충분하고요.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01278", "sentence_form": "타사 제품들에 비해 가격도 합리적이며 소음의 정도도 크지 않고 디자인도 깔끔하니 예쁘답니다.", "annotation": [["제품 전체#가격", ["null"], "positive"], ["제품 전체#디자인", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01279", "sentence_form": "단점으로는 더스트박스 이용시 먼지들이 모여서 작은 먼지 덩어리가 하나씩 떨어지는 경우가 있고 사이드 브러시가 앞에서 쓸어주는 역할을 하는데 작은 브러시가 원형으로 돌아가다 보니바로 앞에 있는 먼지들이 튕겨서 나중에 흡입되는 경우가 종종 발생이 되네요.", "annotation": [["본품#품질", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-01280", "sentence_form": "모 브랜드처럼 앞에 흡입구가 진공청소기의 그것처럼 생겼다면 어떨까 생각해보며 물걸레는 흥건한 정도는 아니지만 물기가 아주 조금만 더 적게 나온다면 좋을 것 같아요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01281", "sentence_form": "더스트 박스의 경우는 물청소가 불가하니 뚜껑을 위로 열어 완벽히 분리할 수 있다면 먼지를 털어내는게 쉬울 것 같고요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01283", "sentence_form": "아침에 출근이나 외출 시 시간을 설정해 놓고 사람이 없을 때 작동을 시켜놓고 나갔다 들어오면 깨끗한 집안을 확인 할 수 있으니 너무 좋고 신세계를 알려주는 전자제품이라는 얘기를 들었는데 제가 직접 사용해보니 확실히 이해가 되네요.", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01284", "sentence_form": "아 ~~~ 그런데 그게 유선이라 그런지 사용할 때 마다 일일이 꺼내서 선을 풀어서 사용하기가 불편하셨던 모양이더라구요.", "annotation": [["제품 전체#편의성", ["null"], "neutral"], ["본품#편의성", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01285", "sentence_form": "가장 마음에 들었던 것 무선이라는 점 ~", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01286", "sentence_form": "어머니 물걸레 청소기 사 드릴때도 아너스랑 오토비스랑 두가지 제품을 장/단점 다 비교해서 최종적으로 아너스로 결정한건데 사실 그 때는 휴스톰을 잘 몰랐던 것이 아쉬운 마음이네요.", "annotation": [["브랜드#인지도", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01287", "sentence_form": "제품은 이렇게 위부분 손잡이와 물걸레 부분 2가지라 조립도 간편하죠.", "annotation": [["본품#일반", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01288", "sentence_form": "위 아래 구멍 부분을 잘 맞추고 끼우면 바로바로 끝입니다요.", "annotation": [["제품 전체#일반", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01289", "sentence_form": "ON / OFF 부분도 사용자의 높이에 잘 맞고 버튼 부분이 굉장히 부드럽게 작동이 되어서 좋더라구요.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01290", "sentence_form": "확실히 차이가 많이 나더라구요.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01291", "sentence_form": "끈적한? 찌든때는 휴스톰에도 조금 더 힘을 실어 앞뒤로 닦았더니 반짝반짝 ~", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01293", "sentence_form": "일회용 물걸레청소포는 양면 구조로 되어 있어 앞뒤로 뒤집어 사용가능하고 99.9% 항균효과와 엠보싱 표면으로 찌든때까지 깨끗하게 청소할 수 있어요.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01295", "sentence_form": "청소 시 소음의 정도는 아너스가 조금 더 조용한 편이었습니다.", "annotation": [["제품 전체#품질", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-01296", "sentence_form": "헤드 LED 라이팅은 처음에 굳이 필요한가? 생각했던 직접 청소를 해보니 앞에 작은 먼지나 머리카락이 잘 보여서 청소시 용이한 점이 있더라구요.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01297", "sentence_form": "그래서 물걸레청소기의 높이가 8cm 인 휴스톰 물걸레청소기를 가지고 구석구석 청소하기가 좋아요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01298", "sentence_form": "무선 제품이다 보니 충전을 해서 사용해야 하는 단점? 이 있지만 충전시간은 총 4시간에 풀충전이 가능하고 한번 충전으로 30분간 지속으로 사용가능!", "annotation": [["제품 전체#편의성", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01299", "sentence_form": "청소력 : 아너스 = 휴스톰", "annotation": [["제품 전체#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01300", "sentence_form": "무게감 : 아너스 = 휴스톰", "annotation": [["제품 전체#편의성", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01303", "sentence_form": "핸들링 : 아너스 < 휴스톰", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01304", "sentence_form": "소음 정도 : 아너스 > 휴스톰", "annotation": [["제품 전체#품질", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-01305", "sentence_form": "무선이고 셀프 스텐딩이 가능한 제품, 그리고 디자인까지 예뻐서 사용후 어디든 세워두웠다가 바로바로 사용이 간편!", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["본품#편의성", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01307", "sentence_form": "기존에 아너스보다는 조금 더 있고 큰 아가씨집에 있는 오토비스에 비해서는 조용한 편에 속한답니다.", "annotation": [["본품#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01308", "sentence_form": "3가지 걸레로 용도에 따라 맞춰 사용가능하기에 방, 거실 등 실내 뿐만 아니라 현관, 베란다 등 실외까지 휴스톰 홈쇼핑 물걸레청소기 한대로 간편하게 깨끗하게 청소 가능!", "annotation": [["본품#편의성", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01310", "sentence_form": "제가 직접 본 모든 물걸레청소기가 청소의 용이성 때문에 어쩔 수 없이 기본적인 무게와 두께가 있는데 그 부분만 조금 더 보완이 된다면 정말 100% 만족하는 제품이랍니다.", "annotation": [["본품#편의성", ["null"], "neutral"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01311", "sentence_form": "그리고 실내 청소는 거실, 주방, 방 3개까지 30분 내로 청소가 가능하지만 현관 입구까지 하기에는 사용시간이 좀 짧은 편이라 사용시간이 조금 더 길었으면 하는 아쉬움이 있어요.", "annotation": [["제품 전체#품질", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-01314", "sentence_form": "제품의 무게감 ★★★★☆", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01316", "sentence_form": "소음정도 ★★★★☆", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01317", "sentence_form": "가격 ★★★★☆", "annotation": [["제품 전체#가격", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01319", "sentence_form": "이전에 다른 걸 쓰고 있었는데 이게 훨씬 접착력도 좋고, 디자인도 깔끔하고 패드 사이즈도 두 가지라 여기저기 사용하기에 좋더라고요  ", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"], ["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01321", "sentence_form": "그래서 이번에 받아본 클럭 미니마사지기s DUO는 이렇게 본체가 넉넉해서 좋아요, ", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01323", "sentence_form": "조작 버튼도 단순해서 인지가 어려운 저희 엄마도 잘 사용하시더라고요 ㅎ", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01324", "sentence_form": "저는 찌릿찌릿한 게 무서워서 잘 못하겠더라고요 ㅎㅎ", "annotation": [["제품 전체#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-01334", "sentence_form": "손목에는 이 작은 패드를 써주면 좋아요,", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01335", "sentence_form": "길게 하면 옆이 뜨는데 이렇게 감싸듯 감으니까 부착이 좀 더 안정적이더라고요 ~ ", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01337", "sentence_form": "글로는 전해지지 않는 시원한 느낌? ㅎㅎㅎ", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01338", "sentence_form": "팔 쪽은 강도가 쌔도 크게 따끔거리지 않아요,", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01341", "sentence_form": "작지만 활용도 높고 부착도 잘되고 또 큰 사이즈 작은 사이즈를 선택할 수 있어서 넓은 부위에도 사용이 가능하고요", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01345", "sentence_form": "최신 인텔 셀러론 CPU에 듀얼 스토리지도 가능하고 1080p Full HD 고해상도에다 무게 1.75kg, 두께 19.9mm로 가볍고 화면은 커서 간단한 문서작업이나 웹서핑 인터넷 강의용으로 적합한 제품이더라고요!", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01350", "sentence_form": "또 한가지 마음에 든 점은 키보드였는데요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01352", "sentence_form": "보통 PC 사용하다가 노트북을 쓰면 키보드가 익숙하지 않아서 불편하다고 하는 분들이 많던데 레노버 S145는 그런 불편을 좀 덜 수 있어서 문서작업용으로도 좋더라고요!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01353", "sentence_form": "또 한 가지 놀라운 점은 180도까지 펼쳐진다는 거!", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01354", "sentence_form": "보통 180도까지 열리는 힌지는 고가 제품들에서만 볼 수 있는 거였는데 레노버 S145가 왜 가성비 노트북으로 불리는지를 알겠더라고요~ ^^", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01355", "sentence_form": "이렇게 180도로 펼쳐지니까 회사 업무 작업을 공유하거나 과제나 공부를 할 때 화면을 함께 보기 좋은데 저 같은 경우는 집에서 초등학생인 아이와 함께 공부를 할 때 화면을 같이 보기도 좋을 것 같아서 마음에 들었답니다~", "annotation": [["본품#품질", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01361", "sentence_form": "SSD도 추가 장착하고 메모리도 8G로 올리면 훨씬 더 빠르고 편하게 쓸 수 있지요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01362", "sentence_form": "요즘은 인강도 미리 영상을 받아두고 보는 경우가 많은데 저장용량이 넉넉하면 외부에서도 편하게 동영상 시청이 가능해서 참 좋아요.", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01363", "sentence_form": "15.6인치로 화면은 큰데 슬림 하고 가벼워서 휴대하기도 좋으니 인강용으로 정말 딱이네요.", "annotation": [["본품#편의성", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01364", "sentence_form": "레노버 가성비 노트북 S145는 간간이 음악을 듣거나 영화, 게임을 할 때도 참 편한데요.", "annotation": [["제품 전체#가격", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01370", "sentence_form": "부담 없는 가격에 이런 성능이라니!", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01371", "sentence_form": "디자인도 스타일리시하고 고급스럽고~ 외부에서 인강을 듣거나 웹서핑, 게임 등등 다양한 작업을 하기 좋은 가성비 노트북으로 추천할만하더라고요~ ^^", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["제품 전체#가격", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01376", "sentence_form": "귀여운 캐릭터와 함께 양치질을 할 수 있어서 아이 취향에도 딱 맞고 올바른 양치질 방법 익히기에도 좋더라고요!", "annotation": [["패키지/구성품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01377", "sentence_form": "꾸미기 스티커는 손잡이 교체용 8종과 캐릭터 스티커 2장이 들어있는데 손잡이에 붙여서 아이 취향에 맞게 전동칫솔을 꾸며줄 수 있어요.", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01378", "sentence_form": "무엇을 고르던 다 너무 귀엽다는 사실!", "annotation": [["패키지/구성품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01381", "sentence_form": "위생캡이 있어서 보관도 깔끔한데 3개월마다 한 번씩 칫솔모 교체를 하면서 쓰면 되더라고요~ ^^", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01382", "sentence_form": "아이가 쓰는 거다 보니 칫솔모 디자인도 아이들의 작은 잇몸에 적합한 사이즈로 만들어진데다 칫솔모도 부드럽고 말랑하고 부드러운 고무처리가 되어 있어요~", "annotation": [["본품#품질", ["null"], "positive"], ["본품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01385", "sentence_form": "무엇보다 마음에 드는 건 블루투스를 이용한 코칭앱 연동을 통해 아이 혼자서도 즐겁고 올바른 양치질을 할 수 있다는 점이었어요.", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01386", "sentence_form": "필립스 소닉케어 키즈 코칭앱은 iOS폰과 안드로이드폰 둘 다 사용이 가능한데 다운받아서 첫 실행을 하면 이렇게 귀여운 캐릭터를 입양 받을 수 있어요~", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01387", "sentence_form": "이제 치약을 바르고 이를 닦으면 되는데 아이들이 혼자서도 올바른 양치를 할 수있게 코칭앱에서 쉽게 설명해줘서 동영상을 따라 하기만 하면 되더라고요!", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01388", "sentence_form": "작은 아이들 손에 맞게 디자인되어 있어서 한 손으로 편하게 양치를 할 수 있는데 하단에 있는 강도 조절 버튼으로 모드를 선택한 후 입안에 칫솔을 넣고 엄지손가락으로 작동 버튼을 누르면 양치질을 바로 시작할 수 있어요.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01389", "sentence_form": "음파칫솔이라, 일본칫솔로 할 때처럼 위아래 앞뒤로 힘줘서 칫솔질을 하지 않고 부드럽게 대고만 있어도 구석구석 깨끗하게 양치질이 가능해서 너무편하고 좋아요!", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01390", "sentence_form": "필립스 소닉케어 키즈 코칭앱과 함께 하는 즐거운 양치 시간 한번 보실까요? ^^", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01394", "sentence_form": "평소에 일반칫솔을 쓸 땐 대충대충 3분을못 채우고 나왔는데, &name& 전동칫솔로 바꾸고 나니 어찌나 꼼꼼하게 닦던지! ㅋㅋ", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01397", "sentence_form": "게다가 이렇게 이를 잘 닦고 나면 코칭앱에서 작은 선물박스를 받을 수 있는데 캐릭터와 함께 놀고 꾸며줄 수 있는 아이템들이 들어 있어서 아이가 엄청 좋아해요!", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01398", "sentence_form": "이 닦는 걸 깜빡하면 귀요미 캐릭터도 같이 이가 더러워지는게 보여서 아이가 더 열심히 또 즐겁게 양치질을 하고 있답니다. ^^", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01399", "sentence_form": "코칭앱에 부모 대시보드가 따로 있어서 아이가 빼먹거나 놓친 양치타임 알림도 해둘 수 있고, 칫솔모 교체 관리도 할 수 있어서 든든하기도 해요.", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01400", "sentence_form": "아이가 잘할 때 적절한 보상이 들어가면 더욱 열심히 하는데, 요렇게 부모님이 직접 입력하는 보상 설정도 할 수 있답니다. ^^", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01402", "sentence_form": "다른 제품과 다르게 귀여운 캐릭터와 코칭앱이 있어서 더욱 즐겁게 양치습관을 들일 수 있어서 너무 좋은 것 같아요.", "annotation": [["패키지/구성품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01411", "sentence_form": "사용시간은 더 길어져서 일반모드 사용시 20분 연속 사용이 가능하며, 강모드로 사용했을 때는 12분으로 타사 제품보다 2배 더 길게 사용할 수 있답니다!", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01413", "sentence_form": "빠른 충전 대비 사용시간은 넉넉하니 한번 충전해서 집안청소를 한 번에 싹 끝낼 수 있어 효율적인 대청소를 할 수 있겠죠?", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01415", "sentence_form": "Tefal 테팔 무선청소기 중 가장 강력한 먼지제거력을 가진 제품이라 사각지대 없이 강력한 360도 먼지제거가 되기 때문에 지나간 자리뿐만 아니라 주위의 먼지까지도 제거를 해준답니다. ^^", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01416", "sentence_form": "타사 제품과 성능 비교 테스트도 했었는데 마룻바닥과 카펫 청소시 테팔 Tefal 에어포스360의 먼지 제거량이 가장 많았다고 하네요!", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01419", "sentence_form": "강력한 성능까지 가지고있으니 추천할 수밖에 없는 청소기에요~", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01424", "sentence_form": "게다가 소파용 브러쉬, 틈새 브러쉬 등 다양한 추가 액세서리도 있어서 평소에 손이 잘 안 가던 집안 구석구석을 다 청소해줄 수 있어요!", "annotation": [["패키지/구성품#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01430", "sentence_form": "이건 소파용 브러시인데, 브러시 바닥에 부드러운 솔이 있어서 간단히 끼워만 주면 편하게 핸디형으로 소파 청소를 할 수 있어요.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01433", "sentence_form": "소파 브러시를 직접 써보니, 소파 틈새랑 쿠션과 방석도 한꺼번에 청소할 수 있어서 참 편하더라고요~", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01436", "sentence_form": "소파 정리 후, 벽 선반 먼지도 오랜만에 제거 해봤는데, 쓰던 브러시만 쏙 빼주면 바로 핸디형으로 쓸 수 있으니 확실히 편해요~", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01437", "sentence_form": "여기다 다시 틈새 브러쉬를 달면 좁은 TV 밑이나 가구 사이에 낀 먼지도 쏙쏙~ 빨아들일 수 있어요. ㅎㅎ", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01445", "sentence_form": "작동 버튼이 원터치라 한 번만 누르면 켜지고 한번 더 누르면 꺼지니 손목 부담을 줄일 수있더라고요.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01446", "sentence_form": "타사 제품은 버튼을 손가락으로 계속 누르고 있어야 해서 힘들다던데 저질 체력인 저한테는 요게 딱!", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01447", "sentence_form": "인체공학적으로 디자인으로 작동버튼 배터리, 모터, 먼지통 등의 주요부품이 손잡이 쪽에 있어서 무게 중심이 잘 잡혀 있으니 밀 때 힘도 덜 들어서 좋았네요. ^^", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01448", "sentence_form": "침대 헤드 부분도 바로바로 핸디형으로 변신시켜서 먼지 제거를 해주니 너무나 편하게 대청소를 끝낼 수 있었어요.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01452", "sentence_form": "먼지통 비우는 것을 동영상으로도 찍어봤는데, 쓰레기통에서 위쪽 레버를 당기면 바로 밑으로 먼지가 쏟아져서 쓰레기통으로 골인하니 제 손에 먼지 하나 안 묻히고도 먼지통을 비울 수 있어요~ 대박! ㅋㅋㅋ", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01456", "sentence_form": "브러시를 꺼내보니 머리카락이 생각보다 많이 엉켜있던데, 가운데 홈을 따라 가위로 슥~ 자르며 훑어주니 끼어있던 머리카락도 쉽게 제거할 수 있었네요. ^^", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01457", "sentence_form": "이렇게 파워슬림 비전헤드를 분리해서 청소 하고 나니 깨끗깨끗~", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01458", "sentence_form": "새것 같아졌네요.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01459", "sentence_form": "이렇게 계속 관리만 잘해주면 최상의 성능을 유지할 수 있는데, 후 관리가 쉽고 간편해서 늘 새것 같이 유지하며 쓸 수 있을 같아요!", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01460", "sentence_form": "사용 후 충전은 벽 거치대에서 깔끔하게~ 고속충전이 되는 것도 좋지만, 소파, 틈새 브러쉬를 수납할 수 있는 거치대라서 자리도 덜 차지하고 깔끔하고 편해서 너무 좋네요!", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01461", "sentence_form": "무엇보다 액세서리는 한번 쓰고 나면 잃어버리거나 찾기 어려웠는데 이렇게 거치대에 한 번에 보관할 수 있으니까 너무 편하고 좋아요~", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01462", "sentence_form": "&name&씨도 추천하는 능력자 무선 청소기", "annotation": [["제품 전체#인지도", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01466", "sentence_form": "타사 제품 대비 가격은 합리적이면서도 최고의 성능을 가지고 있어서 센스있는 신혼부부 선물로도 딱인 듯!", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"], ["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01470", "sentence_form": "최상의 편안함과 럭셔리한 라이프 스타일을 위해 가장 이상적인 포지션을 만들어주는 제품으로 무선 리모콘을 이용해서 각도조절 및 마사지도 즐길 수 있고, 누워있으면 마치 우주에 떠 있는 듯한 편안함을 느낄 수 있답니다. ^^", "annotation": [["제품 전체#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01471", "sentence_form": "좋은 매트리스에 움직이는 프레임까지 더하니 일반 침대와는 아예 차원이 달라지는데 프레임과 헤드 부분도 고급스럽더라고요. ^^", "annotation": [["본품#품질", ["null"], "positive"], ["본품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01473", "sentence_form": "무중력 우주에 떠 있는 듯한 느낌을 주는 최상의 편안함을 주는 제로지 Zero G모드는 버튼 하나만 눌러줘도 자동으로 만들어주는데 요게 온몸의 근육이 이완되어 가장 편안한 자세를 만들어주는 포지션이래요. ^^", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01474", "sentence_form": "누워봐도 된다고 해서 직접 체험도 해보고 왔는데, 진짜 눕는 순간 전동침대에 그냥 온몸을 맡기는 듯한 느낌! ㅋㅋ", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01475", "sentence_form": "어디 하나 베기는 느낌도 없고 무중력처럼 구름 위에 누워 있는 것 같다고 해야 할까요?", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01476", "sentence_form": "정말 편안함을 느꼈답니다. ㅎㅎ", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01477", "sentence_form": "이게 전동침대 프레임만 좋다고 되는 게 아니다 싶었는데, 역시 매트리스 자체도 남다르더라고요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01480", "sentence_form": "쇠구슬을 떨어트려보면 좀 더 확실하게 알 수있는데, 너무 신기해서 동영상으로도 찍어보았네요.", "annotation": [["본품#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01481", "sentence_form": "다른 매트 위에서는 통통 튀어오르는데, Tempur 폼 위에서는 떨어지자마자 그대로 일시정지! 진짜 다르더라고요~", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01482", "sentence_form": "이건 소재를 좀 더 자세히 찍어본 사진인데 통기성이 뛰어난 수십억 개의 Tempur 오픈 셀 분자 구조를 가진 소재 덕에 체온과 무게를 적절히 조절해주니 잠 잘 때 뒤척이거나 하는 움직임에도 몸에 딱 맞게 피트 되어 압력도 분산시켜주고 편안한 수면을 할 수 있게 해준대요!", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01483", "sentence_form": "제가 실제로 누워본 건 자유로운 움직임을 편안하게 즐길 수 있는 센세이션 콜렉션 매트리스였는데, 견고한 느낌의 오리지널 부드러운 느낌의 클라우드까지 사람마다 편안함을 느끼는 감도가 다른만큼 자신에게 제일 잘 맞는 매트리스를 선택할 수 있다는 점도 참 마음에 들었답니다. ^^", "annotation": [["본품#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01486", "sentence_form": "나사에서 개발한 소재로 매트리스를 만드는 회사라 그런지 Zero G 무중력 기능성에 더 신경을 쓴 것 같은데, 제로 지 모드도 좋지만 요렇게 상단부분만 세워서 쓰면 TV 볼 때나 책을 읽을 때도 더욱 편하게 즐길 수 있고 상체를 살짝 올리고 수면할 경우 코골이나 역류성 식도염에도 도움을 줄 수 있니까 잘 활용하면 정말 좋을 것 같아요.", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01488", "sentence_form": "하체 쪽도 따로 조절해서 올려줄 수 있는데 다리 부종이 있는 사람들은 요렇게 하고 잠을 자면 도움이 좀 된다고 하네요. ^^", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01490", "sentence_form": "또 재미있는 게 템퍼 전동침대는 마사지도 가능하다는 거~", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01493", "sentence_form": "반면 템퍼 정품은 분리가 편한 지퍼가 달린 커버라 세탁도 가능해서 위생적으로 오래 관리하며 쓸 수 있답니다. ^^", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01497", "sentence_form": "직접 체험해보니 단순히 각도 조절을 해주는 제품과는 다르네요. ^^", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01498", "sentence_form": "제로지와 Tempur 매트리스가 함께 했을 때 그 진가가 제대로 발휘되는 것 같아요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01499", "sentence_form": "지금 행사 중이라 청첩장을 가지고 오면 할인 해주는 신혼부부 이벤트를 하고 있던데 한번 사면 오래 쓰는 게 침대인지라 혼수로 준비하면 참 좋을 것 같네요. ^^", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01501", "sentence_form": "디자인도 쌔끈하고~ 힘 안 들이고 쉽게 밀리는 제품이라 되게 편하더라고요!", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01502", "sentence_form": "더블에스샤이니는 본체 바디가 펄 느낌이 감도는 와인색이라 무척 고급스럽죠! ^^", "annotation": [["본품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01503", "sentence_form": "밑을 살짝 들여다보니 동그란 판이 두 개가 보이는데 벨크로가 각 3개씩 있어서 탈부착이 참 쉬운데요.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01506", "sentence_form": "바닥에 물기도 안 남고 뽀드득하게 닦이는데 노후 된 패드를 계속 쓰다 보면 물기도 남을 수 있고 아무래도 덜 닦이니까 2~3개월 쓰고 교체해주는 게 제일 좋답니다.", "annotation": [["본품#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01507", "sentence_form": "동봉 된 정품 싹쓸이 패드는 극세사와 분섬사가 적절히 조합되어 세척도 쉽고, 오염과 먼지까지 잘 닦아준다고 하네요!", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01508", "sentence_form": "만져보면 아주 많이 부드럽진 않고 적당히 까슬한 느낌인데 원목마루, 강화마루, 장판, 데코타일, 대리석, 놀이매트 등등 어떤 바닥재도 손상 부담 없이 뽀송하게~ 쉽게 잘 밀리니 광택제 사용해서 바닥 광택 낼 때도 쓸 수 있답니다. ^^", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01512", "sentence_form": "더블에스샤이니 꺼내서 묵은 때 싸악 벗겨봤는데 유선이지만 전선이 6M 길이라 길어서 크게 불편함은 없더라고요. ^^", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01513", "sentence_form": "전원은 손잡이 위에 있는 버튼을 살짝 내려주면 켜지는데 그립감도 좋고, 전원 버튼이 딱 엄지손가락 닿는 곳에 위치하니 참 편하답니다.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01514", "sentence_form": "사용자의 키에 따라 높이 조절도 가능한데, 중간에 길이 조절 버튼을 누르면 요렇게 줄였다가 늘였다가~ 자유자재로! ^^", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01515", "sentence_form": "신랑들 일 시킬 땐 길게 뽑아서 주면 편하게 할 수 있을 것 같아요!", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01516", "sentence_form": "그리고 또 더블에스샤이니 물걸레청소기가 좋은 게 헤드 부분이 상하좌우로 180도 회전이 되어서 정말 편했는데요.", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01518", "sentence_form": "요렇게 침대 밑 안까지 쓰윽~ 180도로 꺾이니 진짜 좋네요. ^^", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01520", "sentence_form": "요즘 허리랑 무릎이 아파서 집안 정리하기 너무 힘들었는데.. 더블에스샤이니 물걸레청소기가 있으니 높낮이 적당히 조절해서 허리도 안숙이고 힘도 안 들이고 너무 쉽게 해결!", "annotation": [["본품#편의성", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01523", "sentence_form": "정말 힘 안 들이고 청소할 수 있어서 너무 좋아요~", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01524", "sentence_form": "직접 사용하는 동영상도 찍어보았는데 헤드도 상하좌우 180도로 유연하게 꺾이니 편하고 소음도 그리 크지 않아서 부담 없답니다. ^^", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01526", "sentence_form": "유선이지만 불편 없이 쓸 수 있는 제품이랍니다.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01528", "sentence_form": "극세사와 분섬사로 된 원단이라 세척도 무척 쉽다고 하던데 손으로 중성세제 좀 써서 주물주물 하니 금세 깨끗~~", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01530", "sentence_form": "다 쓴 후엔 이렇게 선 정리해서 구석에 세워서 보관하면 되니 자리 차지도 덜하고 깔끔하네요. ^^", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01533", "sentence_form": "기존 전동칫솔모와 호환도 된다하고.. ^^", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01535", "sentence_form": "어떤분들은 전동칫솔이 너무 강해서, 치아에 오히려 안좋은거 아니냐는 이야기도 하시던데 Oral-B 트라이존 3000 전동칫솔은 압력센서도 달려있고, 기존 일반 칫솔과 비슷한 형태라 일반칫솔보다 더 개운하면서도, 치아에 큰 무리없이 쓸수있어서 좋더라구요.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01537", "sentence_form": "전동칫솔로는 약 2분정도 양치를 해주면되는데 이건 30초마다 짧은 진동이 울리고, 2분이 지나면, 긴 진동이 나서 양치시간 체크하기도 쉬워요~", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01538", "sentence_form": "손잡이 부분은 미끄럼방지 처리도 되어있고, 가볍고 그립감도 좋답니다!", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01539", "sentence_form": "가족 여럿이서 쓸땐, 거치대까지 붙여 쓰면 칫솔보관하기 편해요 ㅎㅎ", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01540", "sentence_form": "가족이 여럿이라도 배터리 걱정없이 한대로 쓸수있답니다~", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01543", "sentence_form": "윗쪽의 길죽한 파워팁솔이 깊숙히 잘 안닫는 어금니까지도 잘 닦아줘요~", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01545", "sentence_form": "쉽게 넘어지지않으니, 넘어지거나 할 염려도 없어요.", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01547", "sentence_form": "Oral-B 트라이존 3000 은 일반 칫솔질과 비슷하게 쓰면되서 더 편하고 금방 익숙해진답니다. ^^", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01549", "sentence_form": "첨엔 그냥 일반칫솔쓰면되지 왜 비싼 전동칫솔 쓰나했는데.. 정말 써보면 개운함이 다르더라구요~ ^^", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01550", "sentence_form": "양치할때 치아를 4등분 나누어서 한구역마다 약 30초씩 칫솔질 한다고치고 2분동안 양치하면되는데 위에 써 있는데로, 그 부분에 살짝 대주기만해도 양치가되니 정말 넘넘 편하답니다.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01556", "sentence_form": "전통칫솔은 2분정도 양치하면되는데 사용중에 30초마다 짧은 진동이 울리고 2분이 지나면 긴진동이 나서 양치시간 체크도 쉽더라구요. ^^", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01558", "sentence_form": "손잡이 부분이 미끄럼 방지도 되어있고 가벼운편이라 좋더라구요. ^^", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01561", "sentence_form": "쉽게 넘어지지않으니, 넘어지거나 할 염려도 없어요.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01564", "sentence_form": "칫솔케이스엔 칫솔모가 4개까지 들어가니, 4인가족이 쓰기에 딱 좋아요. ^^", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01565", "sentence_form": "일반 칫솔질하다 전동칫솔쓰면 어색하고 아프고, 어렵다는 분들 많다는데 이번 오랄비 트라이존은 처음 쓰는 사람도 바로 좋다는걸 느낄수있어요~~", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01567", "sentence_form": "전 처음에 비싸기만하고 그냥 편하기만한게 전동칫솔인줄 알았는데 써보니 편한건 둘째치고 개운한 정도가 다르더라구요~~", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"], ["제품 전체#가격", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-01569", "sentence_form": "치아를 4등분 나누어서 한구역마다 약 30초씩 칫솔질 한다고치고 2분동안 양치하면되는데 위에 써 있는데로, 그 부분에 살짝 대주기만해도 양치가되니 정말 넘넘 편하답니다.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01571", "sentence_form": "이번 블랙앤데커 전동공구는 배터리 충전이 40분만에 뚝딱~~", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01572", "sentence_form": "급하게 전동공구를 써야할때 배터리가 다 떨어지면 참 난감한데.. 블랙앤데커 전동공구는 40분안에 충전이 되니 너무 편하더라구요. ^^", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01574", "sentence_form": "손잡이 부분이 실리콘처리되어있어서 작업할때 미끄러지지않고 손에 잡히는 느낌도 좋답니다.", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01584", "sentence_form": "내장 메모리가 여전히 아쉽지만 확실하게 업그레이드된 스펙을 갖췄다.", "annotation": [["본품#품질", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01592", "sentence_form": "골드 컬러의 메탈 유닛바디는 부담스럽지 않은 정도로 깔끔하게 디자인되어 있었고, 특히 옆면 라인을 따라 무광과 유광의 컬러감이 번갈아가며 나타나 과하지 않으면서도 입체적인 느낌을 줘 고급스러움을 더했다.", "annotation": [["본품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01595", "sentence_form": "딱 한 손으로 쥘 수 있는 사이즈. 부담 없는 크기와 야외에서도 충분히 사용할 수 있는 밝기와 선명함. 스테레오로 들리는 입체적인 사운드까지.", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01596", "sentence_form": "진짜 딱 가로로 즐기는 영상 퍼포먼스에 특화되어 있다고 해도 과언이지 않을까?", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01597", "sentence_form": "요즘 유행하는 고사양의 모바일 MMORPG 게임들 딱 1개 정도를 즐기는 데는 나쁘지는 않을 것으로 보인다.", "annotation": [["제품 전체#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01602", "sentence_form": "물론 완전히 만족스러운 게이밍 태블릿은 아니다.", "annotation": [["제품 전체#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01604", "sentence_form": "딱 한 개의 게임을 플레이할 유저라면 16GB 내에서 내부 시스템이 잡아먹는 용량을 제외해도 3~4GB 정도 하는 게임 하나 정도는 충분히 설치할 수 있고, 무리 없이 퍼포먼스를 돌릴 수 있겠지만?  여러 개의 게임을 돌리고 싶어 하는 하드코어 한 유저들에게는 16GB라는 메모리는 너무나도 적은 용량이기 때문이다.", "annotation": [["본품#품질", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-01606", "sentence_form": "보급형 태블릿에서는 쉽게 만날 수 없는 독특한 스테레오 사운드 채널, LTE 지원까지 생각하면? 리니지 2 레볼루션이나 리니지 M과 같은 하드코어 하게 달릴 게임 하나를 위해 게이밍 태블릿의 구매를 고려하는 분들에게는 충분히 고려해볼 만한 제품이다.", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01609", "sentence_form": "무광의 다운된 핑크 컬러가 고급스럽기도 하고요 ", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01612", "sentence_form": "저는 지금 머릿결관리가 시급하기 때문에 어드밴스드 케어 기능 보고서 바로 결정했어요 ", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01614", "sentence_form": "헤어드라이기가 머릿결관리에 가장 좋은 최적의 드라이 환경을 만들어주다니 ~", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01616", "sentence_form": "특히 온도가 나눠져 있어 참 좋더라구요", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01617", "sentence_form": "저는 헤어드라이기는 그냥 바람이 나오면서 말려주는 용도라고만 생각했는데 넘나 과학적인거 있죠 ? ㅋㅋㅋ", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01619", "sentence_form": "테팔 Tefal 프리미엄 케어 무빙에어 HV6076 헤어드라이기의 가장 큰 장점은 요 무빙에어 부스터!!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01620", "sentence_form": "진짜 신기 +_+ ㅋㅋㅋ", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01623", "sentence_form": "온도와 풍속을 간편하게 조절할 수 있으니 그때그때 맞춰 사용하고 있답니다", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01626", "sentence_form": "거기다 머릿결 자체가 푸석하지 않고 윤기나는 거 보이시나요 ?", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01627", "sentence_form": "특히 저처럼 얇은 머리카락은 날리기 쉬운데 윤기가 나니 저렇게 가지런히 :) 윤기나면서 차분하게 연출되더라구요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01632", "sentence_form": "그 이유인즉슨 에르고라피도 제품을 사용하고 있는데 너무 간편하고 성능도 좋아서 만족하고 있어서 브랜드 자체 신뢰도가 매우 매우 높았답니다", "annotation": [["브랜드#편의성", ["null"], "positive"], ["브랜드#품질", ["null"], "positive"], ["브랜드#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01636", "sentence_form": "어찌나 똑똑한지 모바일앱과 연동되어 앱컨트롤이 가능하기 때문에 제가 밖에 있을 때도 청소가 가능해요", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01637", "sentence_form": "대박 .. ㅋㅋ 실제로 매장에서 봤을 때도 이런 기능은 몰랐다는 ㅋㅋ", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01639", "sentence_form": "이제는 그럴 걱정 없이 남편 없는 대낮에도 ㅋㅋㅋ 깔끔하게 청소가 되니까 참 좋구요 :)", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01642", "sentence_form": "집안 곳곳에 있는 코너들을 요리조리 어찌나 잘 다니며 청소하는지 입이 마르도록 칭찬해야 할 판 ㅋㅋㅋㅋㅋ", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01644", "sentence_form": "그저 신기 @.@", "annotation": [["제품 전체#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01645", "sentence_form": "고급스러운 디자인에 성능도 좋고 ! 무엇보다 로봇청소기 맞나 싶을 정도로 강력한 흡입력에 저희집에 항상 공존하던 털이며 먼지는 이제 싹 ~ 사라진듯해요 ㅋㅋㅋ", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01650", "sentence_form": "일단 보디 자체도 진짜 고급스럽지 않나요 ?", "annotation": [["본품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01654", "sentence_form": "두피케어에도 딱 좋겠죠 ?", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01656", "sentence_form": "활용도가 정말 높은 전문가용드라이기라 마음에 들 수밖에 없어요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01657", "sentence_form": "고급스러움이 다른 LCD디스플레이 보이시나요 ?", "annotation": [["본품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01660", "sentence_form": "진짜 성능 좋고 제대로 된 고급스러움을 만나고 싶다면 전문가용드라이기 JMW에어컬렉션 MS8001A 후회 없는 선택이네요 +_+♥", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01662", "sentence_form": "무엇보다 최대 소음이 도서관 소음 기준 정도의 41dB(A)의 저소음 장치로 조용하게 사용할 수 있구요 !", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01663", "sentence_form": "필터 교체주기를 연장하고 에너지를 절약해주는정말 똑똑한 공기청정기네요 :)", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01667", "sentence_form": "일단 어디든 이렇게 세워두기 편해서 보관이 정말 편하더라구요 ~", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01668", "sentence_form": "일단 강한 성능도 좋지만 활용도가 정말 좋아요 :)", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01670", "sentence_form": "스틱 청소기와 핸디청소기를 한 번에 사용할 수 있는 매우 편리한 무선청소기라 사용할수록 감동 ♥", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01671", "sentence_form": "무엇보다 자유자재로 움직이는 헤드 덕분에 청소할 때 힘이 들지 않고 작은 움직임에도 꼼꼼하게 청소가 가능하더라구요 ~", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01674", "sentence_form": "이렇게 다양한 활용으로 알차게 사용 중인 일렉트로룩스 무선청소기 펫프로 +_+", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01675", "sentence_form": "간단한 먼지통 분리와 필터 먼지 제거가 편리해요", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01677", "sentence_form": "일단 차원이 다른 악세사리 조합으로 11가지 다용도 브러쉬가 들어있는데요 -", "annotation": [["본품#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01678", "sentence_form": "그뿐만 아니라 먼지통 분리가 깔끔해서 먼지통 청소하기도 참 좋지요 :)", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01679", "sentence_form": "무엇보다 , 지웰은 짧게도 길게도 쓸 수 있는데요 -", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01680", "sentence_form": "그 편견을 완전히 깨버린 지웰 +_+", "annotation": [["브랜드#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01681", "sentence_form": "유선만큼 강력한 파워를 느낄 수 있는데요 -", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01689", "sentence_form": "그리고 11종 브러쉬의 활용도가 정말 높은 이유!!", "annotation": [["본품#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01690", "sentence_form": "이렇게 슥슥 ~ 집어넣어서 청소할 수 있으니까 평소에 청소하지 못하는 곳까지 깔끔하게 청소할 수 있어요 :)", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01691", "sentence_form": "이렇게 여러 가지로 조합해서 사용할 수 있어서 각도도 다양하게 , 브러쉬도 다양하게 !!  온 집안 대청소가 가능해진답니다", "annotation": [["본품#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01692", "sentence_form": "우리집 먼지 청소는 지웰로 !!", "annotation": [["브랜드#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01693", "sentence_form": "상쾌한 집안으로 만들어주는 무선청소기 아무래도 힘이 센 만큼 사운드는 좀 큰 편이지만 그만큼 깔끔하게 청소해주니 매우 만족 중입니다 :)", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01694", "sentence_form": "11가지 다용도 브러쉬로 활용도가 정말 높은데요 - :)", "annotation": [["본품#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01696", "sentence_form": "이제 편하게 무선으로 사용하면서도 유선만큼의 어마어마한 강력한 파워를 느낄 수 있지요 :)", "annotation": [["본품#품질", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01697", "sentence_form": "먼지통은 이렇게 분리되기 때문에 청소 후 먼지통도 깨끗하게 청소하기 좋구요 -", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01698", "sentence_form": "18.5V 의 강력한 무선 전동모터브러쉬 진공청소기로 작은 먼지들까지도 깔끔하게 청소할 수 있죠 :)", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01699", "sentence_form": "지웰은 무선에다 강력한 출력까지 갖추고 있지만 10만 원대로 가성비까지 제대로 갖췄지요 :)", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01702", "sentence_form": "움직이는거 자체가 편해서 구석구석 청소하기 참 좋죠 - :)", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01703", "sentence_form": "청소하면서 내 마음대로 마구마구 움직일 수 있어서 어떤 공간의 청소도 편리해요", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01705", "sentence_form": "거기다 정~말 마음에 드는 애견브러쉬!!!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01706", "sentence_form": "저흰 강아지 2마리를 키우다 보니 사용하면 할수록 이 반려동물 전용브러쉬가 참 마음에 드네요 ♥", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01707", "sentence_form": "이렇게 작은 미세먼지까지 깨끗하게 청소해주는 지웰 +_+", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01708", "sentence_form": "지웰 브랜드 자체가 가성비 좋고 제품 잘 나오기로 유명한데 제가 사용해보니 더욱 만족스러워요", "annotation": [["제품 전체#일반", ["null"], "positive"], ["브랜드#인지도", ["null"], "positive"], ["브랜드#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01709", "sentence_form": "아 , 소리가 좀 큰 건 함정 ㅠㅠ", "annotation": [["제품 전체#품질", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-01710", "sentence_form": "그만큼 흡입력이 좋아서 만족하며 사용하고 있어요 :)", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01711", "sentence_form": "슬림하고 강력한 로봇청소기 +_+", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01712", "sentence_form": "에코백스는 슬림하고 , 심플하고 , 자동청소와 충전이 가능해요!!", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01714", "sentence_form": "분리하기 간편해서 먼지통 청소도 쉽더라구요 :)", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01715", "sentence_form": "2600mAh 배터리로 충전 후 오랜 시간 사용가능하구요 -", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01716", "sentence_form": "친정에 있는 로봇청소기랑 비교해보니 훨씬 얇고 가벼워요 :)", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01717", "sentence_form": "어디든 쏙쏙 들어가기 좋구요 -", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01718", "sentence_form": "리모컨으로 조정할 수 있는 건 물론 !! 디자인도 참 예뻐요 !! 상큼 +_+♥", "annotation": [["본품#일반", ["null"], "positive"], ["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01720", "sentence_form": "거기에 극세사 걸레로 마무리까지 깔끔하게 해주니 수시로 청소해야 하는 저희집에 딱이죠 ?", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01721", "sentence_form": "공간에 따라 다양한 청소 주행모드가 가능한 스마트 로봇청소기 에코백스 ♥", "annotation": [["제품 전체#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01722", "sentence_form": "디자인과 구성 , 가격까지 매우 만족스러운 스마트 로봇청소기네요 :)", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01723", "sentence_form": "컬러도 디자인도 정말 예쁘죠 ♥", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01725", "sentence_form": "평범하지 않아서 , 레트로라서 더 특별한 ♥", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01726", "sentence_form": "시간이 흐를수록 가치를 더해가는 유러피언 레트로 스타일 +_+", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01727", "sentence_form": "1등급이라 효율성도 굿 !!", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01728", "sentence_form": "똑똑한 수납공간으로 실속도 굿 !!", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01729", "sentence_form": "유럽의 감성을 그대로 ,", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01732", "sentence_form": "그래서 냉동실은 서랍형이 정말 편한데요 -", "annotation": [["본품#일반", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01733", "sentence_form": "유러피안 레트로 냉장고는 서랍형으로 설계되어 있어서 편리하게 사용할 수 있을 것 같아요", "annotation": [["제품 전체#편의성", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01734", "sentence_form": "고효율 압축기로 전기료는 알뜰하게!!", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01735", "sentence_form": "에너지 낭비를 막아주는 제품이네용", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01742", "sentence_form": "냉동실 상단 공간도 알뜰하게 , 냉동실은 정리가 은근히 힘들거든요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01744", "sentence_form": "야채실과 경사 포켓 등 디자인만 예쁜 줄 알았더니 사용자의 편리함과 실용성까지 제대로 갖춰 나와서 계속 탐내고 있답니다 :)", "annotation": [["본품#디자인", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01749", "sentence_form": "저는 참머리에 머리카락 자체가 워낙 얇아서 손질을 하지 않으면 머리가 달라붙는데 이제 손질도 필요 없이 말리면서 볼륨을 업 !! :)", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01753", "sentence_form": "무슨 드라이기가 이렇게 기능이 많고 고급스럽냐며 ♥", "annotation": [["제품 전체#다양성", ["null"], "positive"], ["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01755", "sentence_form": "빠른 건조는 물론 비할 수 없는 보습효과와 윤기를 내는 Nano-Fuzeion 특허기술을 가지고 있어요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01756", "sentence_form": "열을 고르게 분배시켜 머리를 더 빨리 마르게 하는 디퓨저 !!", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01759", "sentence_form": "이제 머리 스타일링 편하고 쉽게 !!! 빠르게 할 수 있어요 :)", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01763", "sentence_form": "괜히 지테크가 아니다 싶은 성능 !!", "annotation": [["브랜드#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01764", "sentence_form": "요즘 칭찬 자자한 지테크로 초이스 ~", "annotation": [["브랜드#인지도", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01770", "sentence_form": "자유자재로 움직일 수 있어서 바닥 구석구석까지 청소할 수 있어요", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01771", "sentence_form": "지테크는 리튬이온배터리라 파워모드로도 20분까지 사용 가능하니까 집안 구석구석 청소를 한 번에 끝낼 수 있어요 :)", "annotation": [["브랜드#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01772", "sentence_form": "진짜 알차게 나와있다는 +_+", "annotation": [["제품 전체#일반", ["null"], "positive"], ["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01773", "sentence_form": "파워가 세다 보니까 몇 번씩 왔다 갔다 할 필요 없고 한번 슥 ~ 밀기만 하면 청소 끝 - !", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01774", "sentence_form": "한 번에 되니까 청소시간 자체도 단축돼요", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01776", "sentence_form": "매트리스, 이불청소할 때마다 침구청소기로 따로 했었는데 이제 헤드만 바꿔서 사용하니까훨씬 편한 거 있죠 +_+", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01777", "sentence_form": "호스 노즐로 본체가 들어가기 힘든 구석구석까지 깔끔하게 청소하구요 ,", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01779", "sentence_form": "틈새 노즐은 천장에도 사용하고 , 이렇게 사이사이 청소하기 힘들었던 곳들도 깔끔하게!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01783", "sentence_form": "그래서 사용하기 편한 드라이기 없을까 보는데 역시 가성비갑 드라이기 하면 유닉스 아니겠어요 ?", "annotation": [["브랜드#인지도", ["null"], "positive"], ["브랜드#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01784", "sentence_form": "사실 예뻐서 뿅 ♥.♥", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01786", "sentence_form": "사이즈도 작고 무게감도 가벼워서 편하게 사용하기 좋을 것 같아서 이건 무조건 내꺼!!! 외친 아이템 - :)", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01787", "sentence_form": "국내 드라이기 하면 유닉스!!", "annotation": [["브랜드#인지도", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01792", "sentence_form": "유니크한 바디라인으로 편안한 그립감을 제공하는 원통형의 바디라인인데요 ㅋㅋㅋㅋㅋ", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01793", "sentence_form": "접이식 손잡이라 간편한 수납과 휴대가 용이해요 -", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01794", "sentence_form": "1600W의 파워 열풍으로 신속한 모발 건조 및 감각적인 스타일 연출이 가능한데요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01796", "sentence_form": "화장대에 두고 사용하기도 좋고 +_+♥ 예뻐서 화장대 위에 그대로 올려두고 싶어요 - ㅋㅋ", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01797", "sentence_form": "평소엔 크고 보기 싫어서 서랍에 넣어두기 바빴는데 이제 이렇게 그냥 올려두게 되는 느낌 , ㅋㅋ", "annotation": [["제품 전체#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01801", "sentence_form": "손에 딱 들었을 때 미니미한 사이즈와 충분한 풍량감 느껴지시나요 ?.?", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01802", "sentence_form": "한번 상하면 되돌리기 힘든 내 머릿결을 위해 이온 에센셜 케어 기능이 있는 유닉스로 이렇게 착한 가격에 이런 기능까지 갖추다니 감격스러워요 ㅋㅋㅋ", "annotation": [["제품 전체#가격", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01804", "sentence_form": "겨울철 더 빛을 발하는 유닉스 제품!!!", "annotation": [["브랜드#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01806", "sentence_form": "청소 시간이 단축되는 휴스톰 진공물걸레청소기", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01807", "sentence_form": "근데근데근데!!!!!!!!!!!!!!! 진공청소기랑 물걸레를 한번에 할수있는착한 아이템을 발견함 :)", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01809", "sentence_form": "휴스톰 회전물걸레 청소기는 전부터 탐내고 있었긴 한데 물걸레청소기가 있어서 그냥 좋아보이네 하며 보고 있다가 HS-7000 요곤 진공도 물걸레도 한방에 되니까 굿아이템 -", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01810", "sentence_form": "요게 찌든때 제거에 좋다하는데 난 이거 빨기 귀찮아서 자주 사용하진 않을듯하고 한달에 한번정도 대청소할때 사용할듯 ?", "annotation": [["제품 전체#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01813", "sentence_form": "선길이 짧으면 여기 꽂았다 저기 꽂았다 겁나 피곤해지는데 선길이 길어서 충분하고 본체무게 다해서 4.7kg밖에 안되니까 손목에 무리도 전혀 안가는데다가 요기 밑에보면 바퀴가 있어서 힘이 하나도 안듬", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01817", "sentence_form": "요 앞에 보면 충격 파손 방지댐퍼가 있어서 청소하면서 가구 탁탁 부딪혀도 가구손상을방지해주니까 가구갈대 조심조심 할필요도 없고", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01819", "sentence_form": "요래요래 전체적으로 부드럽게 돌돌 돌아가고 침대밑 청소할때도 부드럽게 스륵스륵 움직이니까 청소하기 편하고", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01825", "sentence_form": "성능 대박이쥬 ?", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01826", "sentence_form": "남편이 이거 보고서 모든 기계는 한가지 기능만 하는게 좋은데 이거 진공도 물걸레도 어설픈거 아니냐고 했었는데 사용해보고 이거 진짜 잘만들었다고 극찬했음 ㅋㅋㅋ", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01830", "sentence_form": "충전해서 쓰는거라 건전지 갈아대는 불편함이 없어서 좋아요", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01833", "sentence_form": "일반세정, 부드러운 세정, 미백모드의 세가지 칫솔질 모드가 있어서 개인취향대로 맞춰서 사용할 수 있어요", "annotation": [["본품#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01835", "sentence_form": "예상보다 입안에서 칫솔모가 크지 않아서 좋네요", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01836", "sentence_form": "닦고나면 치아 표면이 매끈하면서 프라그가 잘 끼는 아래앞니쪽이 너무 개운해서 좋네요^^", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01837", "sentence_form": "치약 뭍혀서 이에 갖다 대놓기만 하면 저절로 양치가 되고 닦기 힘들었던 곳까지 구석구석 닦아주니까 요새는 요놈때문에 양치시간이 재밌습니다", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01842", "sentence_form": "무선으로 전동드릴을 사용할수있어서 정말 괜찮은 제품인거같구요!", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01844", "sentence_form": "일단 BOSCH 의 마크와 색상이 참 이쁜것같습니다.", "annotation": [["패키지/구성품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01845", "sentence_form": "디월트도 참 좋은 제품인데 저는 색상면에서 이쁜 보쉬를 선택을 했습니다.", "annotation": [["브랜드#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01846", "sentence_form": "성능도 중요하지만 저는 색상과 디자인도 많이 따지는 인간이라 ㅋㅋ? ??", "annotation": [["제품 전체#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01847", "sentence_form": "일단 이제품은 무선으로 사용할 수 있는게 가장큰 장점이였네요", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01848", "sentence_form": "유선보다 사실 힘이 딸리는건 사실이지만 콘크리트벽을 뚫을순있으니 무선에 햄머기능까지 있어서 정말 괜찮은 제품이였습니다.??", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01849", "sentence_form": "대성공 역시 비싼게 좋긴하다는걸 이번에도 느끼네!", "annotation": [["제품 전체#일반", ["null"], "positive"], ["제품 전체#가격", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-01850", "sentence_form": "?근데 소음은 조금심하니...옆집을 생각해서 조심스럽고 평일에 작업하시길 추천합니다.", "annotation": [["본품#품질", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-01851", "sentence_form": "윈도우용 적격 / 가성비로 굿!", "annotation": [["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01855", "sentence_form": "신생업체가 만든거라도 믿기지 않을정도로 깔끔합니다.", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01857", "sentence_form": "/ 가성비 노트북", "annotation": [["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01858", "sentence_form": "이제막 스타트업에서 만든 컴퓨터지만, 확실히 디테일한 면도 있습니다.", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01859", "sentence_form": "18v = 2.0A 일반 우리가 쓰고있는 아답터 충전시간도 금새 충전이되고 3~4시간 정도는 충분히 사용 가능한듯 합니다.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01860", "sentence_form": "보통 노트북 사용할때는 항상 휴대하고 다니기 때문에 시간은 크게 상관없어서 저는 불편함이 없었습니다.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01862", "sentence_form": "키스킨은 블랙으로 주문했는데, 키감 역시 좋습니다.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01863", "sentence_form": "마우스와 노트북의 키감도 정말 괜찮습니다. ?", "annotation": [["본품#품질", ["null"], "positive"], ["패키지/구성품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01864", "sentence_form": "386,000원치고는 정말 괜찮은 상태 입니다.", "annotation": [["제품 전체#가격", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01867", "sentence_form": "노트북의 블랙 키스킨은 전체적으로 더 깔끔함을 더해줍니다.", "annotation": [["본품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01872", "sentence_form": "매일매일 사용해보면서 편안한 조작에 한번 더 놀랐답니다.?", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01875", "sentence_form": "우리집 소파는 다리가 있어서 바닥과 떨어져있어서 바닥부분 청소가 쉽지않은데 컴팩트하다보니 쑤욱쑤욱 저아래 깊은 곳까지 청소가 쉽답니다 .", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01879", "sentence_form": "왜 이제야 만났을까 아쉬움이 클정도로 정말 편한 휴스톰 무선 듀얼스핀 물걸레청소기", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01882", "sentence_form": "넘나 귀여운 mooyee", "annotation": [["브랜드#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01883", "sentence_form": "작지만 이렇게 효율적으로 사용할 수 있어서 정말 좋은듯 해요! ??????? ?", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01884", "sentence_form": "?스마트폰 어플을 사용하기 때문에 다른 장치가 따로 필요없고 간편하고 편리하게 조작이 가능해서 넘 좋더라구요????????", "annotation": [["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01885", "sentence_form": "모이 스마트 마카롱마사지기를 어깨,허리에 사용해 봤는데 정말 간편하면서도 진동이 꽤 세서 신랑이 놀랐다고 하더라구요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01886", "sentence_form": "2세트가 하나기 때문에 지금은 요렇게 비슷한 부분에 붙혀놓았지만 예를들어 한개는 허리 한개는 다리 이런식으로 동시에 다른 부위를 마사지 할 수 있으니깐 정말 효율적인듯 해요???????? ?", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01891", "sentence_form": "바로 어깨마사지기로 유명한 아텍스코리아의 핸디 릴라밍고 랍니다", "annotation": [["제품 전체#인지도", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01896", "sentence_form": "힘들이지 않고 여러 곳을 간단하게 마사지 할 수 있으니까 사용하기도 좋고 쉽고 간편하면서 효과가 좋으니까 자주 사용하게 되요.", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01899", "sentence_form": "16종이 있는데 원하는 표정으로 나만의 마사지기를 만들 수 있어서 재미있고 좋은 것 같아요.^^", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01905", "sentence_form": "효과만점이랍니다. ?", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01908", "sentence_form": "PC / 패드 / 스마트폰 등 다양한 기기와 호환이 가능해서 실용적인 그림태블릿이에요", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01909", "sentence_form": "5인치의 넓은 작업 패드라서 그림 그릴 때 아주 편하답니다?????", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01910", "sentence_form": "이지드로잉 위에서 펜을 사용할 때 인체공학적인 펜 기울기 각도가 돼, 오래 사용해도 손의 불편함을 최소화 한 펜이에요", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01911", "sentence_form": "가볍고 실제 연필과 거의 비슷한 느낌이라서 그립감도 좋더라고요?????", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01912", "sentence_form": "케이블 선이 길어서 태블릿을 왼쪽 오른쪽 어디에 놓아도 편하게 사용할 수 있습니다", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01913", "sentence_form": "그말은 곧 왼손, 오른손 양손을 다 사용해도 불편하지 않다는 거죠?????", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01916", "sentence_form": "태블릿 뒤에는 미끄럼방지가 돼 있어서 10kg의 초경량 무게에도 밀리지 않아요", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01918", "sentence_form": "제가 다운받은 이비스페인트X 어플만 그런지 몰라도 펜의 포인트 위치가 표시가 되지 않아 엄청 불편하더라고요", "annotation": [["본품#품질", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-01927", "sentence_form": "하이 테크놀로지 기술력의 닥터웰이 자신 있게 추천하는 제품!", "annotation": [["브랜드#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01928", "sentence_form": "2가지 포지션으로 사용할 수 있어서 훨씬 더 효율적인데요", "annotation": [["제품 전체#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01933", "sentence_form": "발등과 발바닥도 따로 관리되는 똑똑한 녀석이라는 거!", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01939", "sentence_form": "사운드만 들어도 시원하네요", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01941", "sentence_form": "종아리 라인까지 예쁘게 다듬어주는 기분이 들어요", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01942", "sentence_form": "커버는 탈부착이 가능해서 위생적인 관리까지 가능하지요", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01948", "sentence_form": "땅콩 같은 디자인으로 구석구석 어느 한 곳도 놓치지 않고 미세먼지를 깨끗이 닦아내는 애니스~~", "annotation": [["패키지/구성품#디자인", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01949", "sentence_form": "고급스러운 알루미늄 스틱!!!", "annotation": [["본품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01952", "sentence_form": "또한 자유롭게 각도 조절까지 되더라고요", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01953", "sentence_form": "요런 세심함도 맘에 드네요", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01957", "sentence_form": "똑딱 붙이는 건 아니지만 중심에 맞추기 쉽게 되어 있어서 부착하기 쉬워요", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01961", "sentence_form": "일단, 구강상태가 어떤지 상관없이 누구나 쉽게 사용할 수 있다는 것과 앱 연동으로 보다 구체적인 치아 세정을 도와준다는 점이 마음에 드는데요", "annotation": [["본품#편의성", ["null"], "positive"], ["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01962", "sentence_form": "혹시 어르신들 앱 연동하는걸 힘들어한다면, 앱 연동하지 않고 전동칫솔만으로 꼼꼼한 구강 케어가 가능하기 때문에 전혀 걱정할 필요는 없답니다", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01963", "sentence_form": "오랄비 전동칫솔과 호환되는 칫솔모가 기본적으로 3개 포함돼 있는데 다양한 기능&타입의 칫솔모가 있어서 구강상태나 원하는 세정방법에 따라 선택할 수 있어요", "annotation": [["본품#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01965", "sentence_form": "추석 기념 한정판으로만 만날 수 있는 플라워에디션 제품이라서 더 값지게 느껴지는 듯요", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01967", "sentence_form": "아주 쉬워요~", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01969", "sentence_form": "여기에서 더 나아가 집중케어나 구강관리프로그램을 이용하면 훨씬 더 전문적이고 구체적인 코칭을 해주는데요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01970", "sentence_form": "사용자의 잘못된 양치습관을 보완해주는 기능이라서 테스트하면서 정말 놀라웠네요", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01971", "sentence_form": "왜 오랄비 지니어스 9000을 혁신적인 제품이라고 하는지 알겠어요", "annotation": [["제품 전체#인지도", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01979", "sentence_form": "차갑고 매끄러운 메탈은 청소할 때마저도 기분이 좋을 것 같아요", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01980", "sentence_form": "15℃ 숙성 버튼도 따로 있어서 갓 구입(저희는 김치를 사서 먹으니까)한 생지도 빠르게 익혀 먹을 수 있답니다", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01982", "sentence_form": "저희 집 일반 냉장고보다 수납공간이 훨씬 많아서 참 놀랐던 삼성 지펠아삭 M9000 김치냉장고", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01985", "sentence_form": "그게 바로 너였니??", "annotation": [["제품 전체#일반", ["null"], "neutral"]]}
+{"id": "nikluge-sa-2022-test-01986", "sentence_form": "슬라이딩 뚜껑까지 달린 밀폐된 공간이라서 밖으로 비린내가 배이지 않는다는 엄청난 메리트~", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01988", "sentence_form": "중칸은 서랍 전체가 메탈이라서 신선하게 보관해야 하는 채소나 과일류 보관에 최적화된 곳입니다", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01990", "sentence_form": "이중 서랍으로 꼼꼼하고 알차게 수납이 가능한 하칸도 완전 매력!", "annotation": [["본품#품질", ["null"], "positive"], ["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01991", "sentence_form": "커다란 통서랍 하나보다 이렇게 공간별로 나눠진 서랍이 훨씬 유용하다는 건 김치냉장고 한 번 써본 주부라면 다 아는 사실이죠", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01992", "sentence_form": "김치통뿐 아니라 다른 식품 수납이 가능하니 정말 활용도는 굿굿~", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01993", "sentence_form": "매일매일 아삭한 김치 맛을 볼 수 있고, 짱짱한 수납력을 보여주는 삼성 지펠아삭 M9000 김치냉장고!", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01995", "sentence_form": "힐링이지유를 만든 코이노월드는 15년 동안 안마기만 만든 전문기업이라고 해요", "annotation": [["브랜드#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01996", "sentence_form": "구성품도 아주 간단하더라고요?", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-01997", "sentence_form": "그런데 요게 첫 개봉할 때 냄새가 좀 나긴 하더라고요", "annotation": [["제품 전체#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-01999", "sentence_form": "색상부터 완전 환상적임..", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02001", "sentence_form": "코드선이 엄~~청 길어서 어디에서든 편하게 사용할 수 있겠더라고요", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02003", "sentence_form": "겉은 포근한 털 원단이라서 아주 부드럽답니다 ?", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02006", "sentence_form": "사용하지 않을 때는 전선을 돌돌말아 깔끔하게 보관할 수 있답니다", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02008", "sentence_form": "모발의 건강도 지키고 무빙에어 부스터로 빠르게 말려주는 테팔 Tefal 드라이기 좋다!", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02011", "sentence_form": "테팔 Tefal 헤어드라이기 리스펙트 무빙에어 HV6071KO에 고리가 달려있어서 걸어두고 사용하기 딱 편리해요!", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02019", "sentence_form": "가장 중요한 핵심은 시간 단축이었으니 결론적으로만 말씀드리자면 마음에 들어 추천해드리고 싶습니다.", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02020", "sentence_form": "깔끔하기도 하면서 2분 이내에 이를 닦는 게 끝난다는 것이 신세계 그 자체였지요. ?", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02023", "sentence_form": "기능적으로만 봐도 혹시 모를 오랜 칫솔질을 방지하기 위하여 2분 자동 타이머와 다양한 양치 모드, 충전 기능까지 완벽 그 자체였답니다.", "annotation": [["본품#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02024", "sentence_form": "구성품도 굉장히 단순해서 남녀노소 누구나 사용하더라도 설명서 보지 않아도 직관적으로 알 수 있도록 잘 표현되어 있었습니다.", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02025", "sentence_form": "구강 내 이물감을 최소화했기 때문에 청량감이 우수하다는 것, 그거 하나만으로도 흐뭇함을 자아내기엔 충분해서 전동칫솔추천해드리고 싶네요.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02026", "sentence_form": "다른 제품과는 다르게 충전 거치대에 칫솔 헤드를 거치할 수 있는 공간이 있기에, 실제 사용하는 사람에 대한 배려가 엿보여 엄지를 치켜세우고 싶었습니다. ?", "annotation": [["패키지/구성품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02027", "sentence_form": "하루 2번 양치 기준으로 완충 시 최대 6주 사용 가능하니 오래가는 배터리로 인해 번거로움도 덜었답니다.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02028", "sentence_form": "입안을 4구간으로 나누어 각 구간당 30초씩 빠르게 쓱싹 해치우는 게 참 애매한데 능숙해진다면 아침 출퇴근 길이나 외출할 때 빠르게 나갈 수 있어 최고입니다. ?", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02032", "sentence_form": "기본적으로 C타입으로 충전이 가능하기 때문에 갤럭시 노트 9를 사용하는 제 입장에서는 번거롭게 충전 케이블을 하나 더 챙길 필요가 없어서 번거로울 필요가 없었답니다.", "annotation": [["본품#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02037", "sentence_form": "후면 카메라는 1300만 화소와 전면은 800만 화소라 평소 사진촬영을 좋아하는 &name& 군에게 아주 안성맞춤이었지 않나 싶을 정도로 마음에 쏙 들었는데?디자인도 그레이 컬러의 곡선형 메탈바디라 세련되기까지!", "annotation": [["제품 전체#디자인", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02041", "sentence_form": "그런 분들에게 아주 킬링 파트라고 할 수 있었던 저광 모드와 시력 보호 모드가 있습니다.", "annotation": [["본품#다양성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02042", "sentence_form": "한번 충전을 하게 된다면 2시간이면 빠르게 100%로 차오르고 한 번의 충전으로 최대 11시간 동안 비디오 재생이 가능하기 때문에 인강용 태블릿으로 추천하거나 게임을 좋아하는 게이머 분이시라면 최적화되어있는 화웨이 미디어패드 M5 제격이라 생각합니다. ?", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02047", "sentence_form": "후면 카메라 또한 블로거의 경우 제품을 예쁘게 담아내는 것에 대해서 중요하게 생각할 텐데 일반 카메라를 견주어봐도 꿀리지 않는 거 무엇? ?", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02048", "sentence_form": "휴대하기 편한 사이즈에 매끈한 디자인의 넓은 디스플레이 면적을 잘 활용할만한 직업군을 가지신 분이라면 미디어패드 M5 더욱 취향 저격일 것 같습니다.", "annotation": [["본품#디자인", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02049", "sentence_form": "글로벌한 시장에서 서서히 그 명성을 떨치려 발돋움을 하고 있는 브랜드 화웨이!", "annotation": [["브랜드#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02052", "sentence_form": "다얼유 EH755는 54가지 피라미터를 미세 조절하며 총 41명의 전문가의 테스트를 손수 걸쳐 만들어진 걸작이라고 볼 수 있기 때문에 사운드적인 부분에 있어서 기대를 굉장히 많이 한 부기 군이라 냉큼 개봉해보았습니다.", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02053", "sentence_form": "구성품은 헤드셋 본체와 들고 다닐 수 있도록 용이한 파우치, 착탈식 마이크 -사실 이게 가장 마음에 들었네요.-와 한글 설명서가 들어가 있었는데요.", "annotation": [["패키지/구성품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02059", "sentence_form": "고탄성 재질로 푹신하면서도 귀를 전체적으로 감싸주는 부드러운 느낌이라 오랫동안 착용하고 있어도 걸리적거리지 않는답니다.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02060", "sentence_form": "5개 독립 쿠션의 헤어밴드로 머리 모양에 따라 편안하게 자리를 잡아줘서 모자를 63호 쓰는 저의 머리에도 알맞게 안착했네요.", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02066", "sentence_form": "가벼운데 힘은 또 쌔고...어마어마한 아이에요...", "annotation": [["제품 전체#편의성", ["null"], "positive"], ["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02070", "sentence_form": "그리고 조작 방법도 쉬운데용 ㅎㅎㅎ", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02074", "sentence_form": "머리손상없이 스타일링이 가능해서 넘나 좋았던 것", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02076", "sentence_form": "참 쉽죠옹?!!", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02081", "sentence_form": "배속 재생 조절, 실시간 인터넷 강의 시청, 다운로드 후 인터넷 강의 시청이 가능한 인강 태블릿 에듀플Q는 의외로 많은 학생들이 중요하게 여기는 배속 재생을 적용해 확실한 인강 태블릿으로써의 역할을 해주는 제품입니다.", "annotation": [["본품#품질", ["null"], "positive"], ["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02087", "sentence_form": "브람스 EMS 저주파 마사지기 콤팩트형 은 사용법도 간단.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02089", "sentence_form": "그래도 헬스케어기기 인데 뽁뽁이로 감싸서 온게 아니라서 포장상태는 초큼 실망스러운 편이었다. ㅠㅠ", "annotation": [["제품 전체#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-02091", "sentence_form": "충전 중에도 사용이 가능한 점은 칭찬하고 싶다!", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02092", "sentence_form": "▲조작 방법은 간단하다.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02094", "sentence_form": "설명서에 친절하게 이런 그림까지 껴넣다니 센스 굿굿.", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02095", "sentence_form": "거의 매일 매일 온가족이 사용하는데도 강도가 약해졌다던가 하는 변형이 없는 점도 마음에 든다.", "annotation": [["제품 전체#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02099", "sentence_form": "컴퓨터 오래하는 날이면 손목이 약간 아픈데 그 때 바로바로 요 손마사지기 한 번 해주면 피로가 싹~ 가신다.", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02100", "sentence_form": "진짜 ㅠㅠㅠ 신제품 나올때마다 너무 가벼워지고 너무 더 좋아지니깐 어쩔수가 없음 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ", "annotation": [["제품 전체#품질", ["null"], "positive"], ["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02101", "sentence_form": "이전 버전의 태블릿에 비해서 달라진, 제가 체감한 강점을 쉽고 간단하게 말씀드리자면, 1. 더 얇고 가벼워졌다. 2. LTE 사용 가능하다 (이게 대박인듯. 자기 핸드폰 LTE혜택 그대로 데이터를 쓸 수 있어요!) 3. 전화도 사용 가능하다 4. 화면 비율이 달라졌다. (영상보다 독서 쪽으로 캐이득) ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ 정도로 말씀드릴 수 있을것 같아요.", "annotation": [["제품 전체#편의성", ["null"], "positive"], ["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02103", "sentence_form": "짜잔 오올 태블릿을 덮는 헝겊의 퀄리티도 업그레이드 되었어요", "annotation": [["패키지/구성품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02105", "sentence_form": "들어보면 생김새에 비해 가벼워서 놀람 ㅋㅋㅋㅋㅋㅋㅋㅋ", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02106", "sentence_form": "깔끔한 뒷면.", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02107", "sentence_form": "간단 사용 설명서는 너무 간단해요 ㅋㅋㅋㅋㅋ", "annotation": [["제품 전체#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02108", "sentence_form": "바탕화면도 느므 예뻐요", "annotation": [["본품#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02110", "sentence_form": "전면 카메라는 정말... 좀 실망스럽습니다.", "annotation": [["본품#일반", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-02111", "sentence_form": "태블릿은 휴대폰보다 이전 버전들을 사용해서 그런지 카메라도 좀 구식이예여..... ㅋㅋㅋㅋㅋㅋㅋㅋㅋ", "annotation": [["본품#품질", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-02112", "sentence_form": "후면 카메라는 나름 만족", "annotation": [["본품#일반", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02113", "sentence_form": "색감도 괜찮구요 ㅋㅋㅋㅋㅋ", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02114", "sentence_form": "샘플 동영상들 보시면 정말 화질 대박인걸 아실 수 있어요", "annotation": [["본품#품질", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02115", "sentence_form": "그럼 뭐하나 사진 자체 퀄리티가 좋아야지 ㅠㅠㅠㅠ", "annotation": [["제품 전체#품질", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-02116", "sentence_form": "실제로 사진 찍을때도 제일 용량 작은걸로 찍고 블로그 올리면서 사실 화질이 다 뭉개지고 해서 정말 소름끼치게 멋진 사진을 못보다가요, 가끔 용량 큰 영상 다운받아서 보면그 압도적인 화질에 깜놀해요 ㅋㅋㅋㅋㅋ", "annotation": [["본품#품질", ["null"], "negative"]]}
+{"id": "nikluge-sa-2022-test-02120", "sentence_form": "아이들과 어른들 얼굴 사이즈가 틀리기 때문에 같이 사용이 가능할까? 싶었는데 사진처럼 폴딩이 들어간 디자인이라 가운데 부분이 부드럽게 잘 접혀요.", "annotation": [["제품 전체#디자인", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02121", "sentence_form": "정리할때 접기도 편리하지만 각기 다른 얼굴 라인에 맞춘 고정하기도 편하더라구요.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}
+{"id": "nikluge-sa-2022-test-02123", "sentence_form": "간단한 충전으로 간편한 사용이 가능한거죠.", "annotation": [["제품 전체#편의성", ["null"], "positive"]]}

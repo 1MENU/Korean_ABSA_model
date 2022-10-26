@@ -117,7 +117,7 @@ def evaluation_f1_plus(true_data, pred_data):
 
 
 
-our_pred = ["../materials/submission/1024.json"]
+our_pred = ["../materials/submission/1026.json"]
 our_pred_data = jsonlload(our_pred)
 
 label = ["data_new.jsonl"]
@@ -126,7 +126,7 @@ test_data = jsonlload(label)
 score_1, wrong = evaluation_f1_plus(test_data, our_pred_data)
 print(score_1)
 
-file_name = submissionPth + "wrong_answer_note"
+file_name = submissionPth + "wrong_answer_note_1026"
 jsondump(wrong, f"{file_name}.json")
 
 exit()
