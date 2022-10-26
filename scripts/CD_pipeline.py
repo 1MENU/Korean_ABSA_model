@@ -47,7 +47,6 @@ mymodel = CD_model(args.pretrained)
 mymodel.to(device)
 
 
-
 FULL_FINETUNING = True
 if FULL_FINETUNING:
     entity_property_param_optimizer = list(mymodel.named_parameters())
