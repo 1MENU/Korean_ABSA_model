@@ -21,7 +21,7 @@ cd scripts
 #     --batch_size=64 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
 #     --LS=0.00 --weight_decay=0.01 --seed=2 --save=1 --nsplit=3 --kfold=2
 
-run_task 2 SC
-CUDA_VISIBLE_DEVICES=1 python SC_pipeline.py --name "emoji_rep4_punct2_L+aug1temp" \
+run_task 1 CD
+CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "b_aug_1" \
     --batch_size=64 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
     --LS=0.00 --weight_decay=0.01 --seed=2 --save=1 --nsplit=3 --kfold=2
