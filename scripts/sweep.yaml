@@ -1,0 +1,54 @@
+project: CD
+
+name: CD_sweep_test # BoolQ, COPA, WiC, COLA
+
+entity: malmung_team1
+
+program : CD_pipeline.py # BoolQ, COPA, WiC, COLA
+
+method: random # grid, bayes, random
+
+metric :
+  name: Best_F1  # wandb.log({"val_loss": validation_loss})
+  goal: maximize   # minimize, maximize
+
+parameters:
+
+  lr: # param_name, param name =x
+    values: [1e-5, 2e-5, 3e-5, 4e-5, 5e-5, 1e-6, 2e-6, 3e-6, 4e-6, 5e-6, 8e-7, 7e-7, 6e-7, 5e-7, 4e-7, 3e-7, 2e-7, 1e-7]
+
+  weight_decay:
+    values: [0.1, 0.01, 0.001, 0.0001]
+
+  batch_size:
+    values: [64]
+
+  LS:
+    values: [0.0, 0.1, 0.01, 0.001]
+
+  seed:
+    distribution: int_uniform
+    max: 1000
+    min: 1
+
+  kfold:
+    values: [1, 2, 3]
+
+
+
+command:
+  - ${env}
+  - python
+  - ${program}
+  - "--epochs"
+  - 1000
+  - "--name"
+  - "b"
+  - --pretrained
+  - "kykim/electra-kor-base"
+  - --nsplit
+  - 3
+  - ${args}
+
+
+# CUDA_VISIBLE_DEVICES=0

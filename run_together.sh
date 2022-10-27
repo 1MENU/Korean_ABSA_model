@@ -16,12 +16,11 @@ cd scripts
 
 CUDA_VISIBLE_DEVICES=1 python together.py \
     --cd  \
-    "emoji_rep4_punct2_L+aug1temp_64_1e-05_N_1F3_rs1_kykE" \
-    "emoji_rep4_punct2_L+aug1temp_64_1e-05_N_2F3_rs2_kykE" \
-    "emoji_rep4_punct2_L+aug1temp_64_8e-06_N_3F3_rs3_kykE" \
+    "b_aug_1_64_1e-05_N_1F3_rs1_kykE" \
+    "b_aug_1_64_8e-06_N_3F3_rs3_kykE" \
     --sc \
     "emoji_rep4_punct2_L+aug1temp_64_1e-05_N_1F3_rs1_kykE" \
     "emoji_rep4_punct2_L+aug1temp_64_1e-05_N_2F3_rs2_kykE" \
     "emoji_rep4_punct2_L+aug1temp_64_8e-06_N_3F3_rs3_kykE" \
-    --name="1026"
+    --name="1027"
 

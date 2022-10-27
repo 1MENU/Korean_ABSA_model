@@ -133,112 +133,128 @@ file_name = submissionPth + args.name
 jsondump(output_data, f"{file_name}.json")
 
 
-exit()
 
 
 
-
-
-exit()
-
-
-CD_model = CD_model(CD_pretrained)
-CD_model.load_state_dict(torch.load(f'{saveDirPth_str}CD/{args.cd}.pt'))
-CD_model.to(device)
-
-SC_model = SC_model(SC_pretrained)
-SC_model.load_state_dict(torch.load(f'{saveDirPth_str}SC/{args.sc}.pt'))
-SC_model.to(device)
-
-CD_model.eval()
-SC_model.eval()
-
-
-
-CD_tokenizer = AutoTokenizer.from_pretrained(CD_pretrained)
-num_added_toks = CD_tokenizer.add_special_tokens(special_tokens_dict)
+def evaluation_f1_plus(true_data, pred_data):
     
-SC_tokenizer = AutoTokenizer.from_pretrained(SC_pretrained)
-num_added_toks = SC_tokenizer.add_special_tokens(special_tokens_dict)
-
-
-
-
-
-
-
-
-
-
-output_data = copy.deepcopy(test_data)
-
-
-for sentence in output_data:
+    wrong = []
     
-    form = sentence['sentence_form']
-    sentence['annotation'] = []
-    
-    if type(form) != str:
-        print("form type is arong: ", form)
-        continue
-    
-    # form_spell = spacing_sent(form)
-    
-    for pair in entity_property_pair:
-        
-        # 이 자리에 전처리
-        
-        pair_final = pair
-        
-        # final_pair = replace_htag(final_pair)
-        
-        sent = form + CD_tokenizer.cls_token + pair_final
-        
-        tokenized_data = CD_tokenizer(sent, padding='max_length', max_length=100, truncation=True)
+    true_data_list = true_data
+    pred_data_list = pred_data
 
-        input_ids = torch.tensor([tokenized_data['input_ids']]).to(device)
-        token_type_ids = torch.tensor([tokenized_data['token_type_ids']]).to(device)
-        attention_mask = torch.tensor([tokenized_data['attention_mask']]).to(device)
-        
-        with torch.no_grad():
-            output = CD_model(input_ids, token_type_ids, attention_mask)
+    ce_eval = {
+        'TP': 0,
+        'FP': 0,
+        'FN': 0,
+        'TN': 0
+    }
 
-        ce_predictions = torch.argmax(output, dim = -1)
+    pipeline_eval = {
+        'TP': 0,
+        'FP': 0,
+        'FN': 0,
+        'TN': 0
+    }
 
-        if ce_predictions == 1:
-            
-            # 이 자리에 전처리
-        
-            tokenized_data = SC_tokenizer(form, pair, padding='max_length', max_length=256, truncation=True)
-            
-            input_ids = torch.tensor([tokenized_data['input_ids']]).to(device)
-            token_type_ids = torch.tensor([tokenized_data['token_type_ids']]).to(device)
-            attention_mask = torch.tensor([tokenized_data['attention_mask']]).to(device)
-            
-            with torch.no_grad():
-                output = SC_model(input_ids, token_type_ids, attention_mask)
+    for i in range(len(true_data_list)):
 
-            SC_predictions = torch.argmax(output, dim=-1)
-            
-            if SC_predictions == 0: SC_result = 'positive'
-            elif SC_predictions == 1: SC_result = 'negative'
-            elif SC_predictions == 2: SC_result = 'neutral'
-            
+        # TP, FN checking
+        is_ce_found = False
+        is_pipeline_found = False
+        for y_ano  in true_data_list[i]['annotation']:
+            y_category = y_ano[0]
+            y_polarity = y_ano[2]
 
-            sentence['annotation'].append([pair, SC_result])
+            for p_ano in pred_data_list[i]['annotation']:
+                p_category = p_ano[0]
+                p_polarity = p_ano[1]
+
+                if y_category == p_category:
+                    is_ce_found = True
+                    if y_polarity == p_polarity:
+                        is_pipeline_found = True
+
+                    break
+
+            if is_ce_found is True:
+                ce_eval['TP'] += 1
+            else:
+                ce_eval['FN'] += 1
+
+            if is_pipeline_found is True:
+                pipeline_eval['TP'] += 1
+            else:
+                pipeline_eval['FN'] += 1
+                
+                if wrong==[]:
+                    wrong.append(true_data_list[i])
+                else:
+                    if true_data_list[i] != wrong[-1]:
+                        wrong.append(true_data_list[i])
+
+            is_ce_found = False
+            is_pipeline_found = False
+
+        # FP checking
+        for p_ano in pred_data_list[i]['annotation']:
+            p_category = p_ano[0]
+            p_polarity = p_ano[1]
+
+            for y_ano  in true_data_list[i]['annotation']:
+                y_category = y_ano[0]
+                y_polarity = y_ano[2]
+
+                if y_category == p_category:
+                    is_ce_found = True
+                    if y_polarity == p_polarity:
+                        is_pipeline_found = True
+
+                    break
+
+            if is_ce_found is False:
+                ce_eval['FP'] += 1
+
+            if is_pipeline_found is False:
+                pipeline_eval['FP'] += 1
+                
+                if wrong==[]:
+                    wrong.append(true_data_list[i])
+                else:
+                    if true_data_list[i] != wrong[-1]:
+                        wrong.append(true_data_list[i])
 
 
-# output_data가 결과물
+    ce_precision = 0 if (ce_eval['TP']+ce_eval['FP']) == 0 else ce_eval['TP']/(ce_eval['TP']+ce_eval['FP'])
+    ce_recall = 0 if (ce_eval['TP']+ce_eval['FN']) == 0 else ce_eval['TP']/(ce_eval['TP']+ce_eval['FN'])
 
-# print('F1 result: ', evaluation_f1(test_data, output_data))
+    ce_result = {
+        'Precision': ce_precision,
+        'Recall': ce_recall,
+        'F1': 0 if (ce_recall+ce_precision) == 0 else 2*ce_recall*ce_precision/(ce_recall+ce_precision)
+    }
 
-# json 개체를 파일이름으로 깔끔하게 저장
-def jsondump(j, fname):
-    with open(fname, "w", encoding="UTF8") as f:
-        # json.dump(j, f, ensure_ascii=False)
-        for i in j:
-            f.write(json.dumps(i, ensure_ascii=False) + "\n")
+    pipeline_precision = 0 if (pipeline_eval['TP']+pipeline_eval['FP']) == 0 else pipeline_eval['TP']/(pipeline_eval['TP']+pipeline_eval['FP'])
+    pipeline_recall = 0 if (pipeline_eval['TP']+pipeline_eval['FN']) == 0 else pipeline_eval['TP']/(pipeline_eval['TP']+pipeline_eval['FN'])
 
-file_name = submissionPth + args.name
+    pipeline_result = {
+        'Precision': pipeline_precision,
+        'Recall': pipeline_recall,
+        'F1': 0 if (pipeline_recall+pipeline_precision) == 0 else 2*pipeline_recall*pipeline_precision/(pipeline_recall+pipeline_precision)
+    }
 
-jsondump(output_data, f"{file_name}.json")
+    # print(ce_eval)
+
+    return pipeline_result['F1'], wrong
+
+
+
+
+label = ["data_new.jsonl"]
+test_data = jsonlload(label)
+
+score_1, wrong = evaluation_f1_plus(test_data, output_data)
+print(score_1)
+
+file_name = submissionPth + "wrong_answer_note_" + args.name
+jsondump(wrong, f"{file_name}.json")
