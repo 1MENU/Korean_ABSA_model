@@ -45,7 +45,7 @@ from torch.optim.lr_scheduler import _LRScheduler, ExponentialLR, ReduceLROnPlat
 # build various type of optimizers
 def build_optimizer(parameters, lr, weight_decay, type):
     if type == "AdamW":
-        optimizer = AdamW(parameters, lr=lr, weight_decay=weight_decay, eps=1e-8)
+        optimizer = AdamW(parameters, lr=lr, eps=1e-8)  # weight_decay=weight_decay, 여기서는 분리하니까 X
     elif type == "SGD":
         optimizer = SGD(parameters, lr=lr, momentum=0.9, weight_decay=weight_decay)
 
