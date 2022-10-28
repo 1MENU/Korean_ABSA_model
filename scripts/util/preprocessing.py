@@ -265,3 +265,22 @@ def replace_marks(sentence):
     sentence = del_emoji_all(sentence)
    
     return sentence
+
+# 이모티콘 제거 전에 실행할 것
+def replace_stars(sentence):
+    # ★ or ★☆☆☆☆
+    sentence = re.sub('★','대실망', sentence)
+    sentence = re.sub('★☆☆☆☆','대실망', sentence)
+    #★★ or ★★☆☆☆
+    sentence = re.sub('★★','실망', sentence)
+    sentence = re.sub('★★☆☆☆','실망', sentence)
+    # ★★★ or ★★★☆☆
+    sentence = re.sub('★','그럭저럭', sentence)
+    sentence = re.sub('★★★☆☆','그럭저럭', sentence)
+    # ★★★★ or ★★★★☆
+    sentence = re.sub('★','만족', sentence)
+    sentence = re.sub('★★★★☆','만족', sentence)
+    # ★★★★★
+    sentence = re.sub('★','대만족', sentence)
+    
+    return sentence
