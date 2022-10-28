@@ -19,8 +19,4 @@ format_check(){     # Format Check
 
 cd scripts
 
-# task1 : CD
-run_task 1 CD
-CUDA_VISIBLE_DEVICES=0 python CD_pred.py --model="dev_pf_biLstm-1_32_2e-05_kykE_rs41.pt" --pretrained="kykim/electra-kor-base"
-
-# kykim/electra-kor-base
+python label.py

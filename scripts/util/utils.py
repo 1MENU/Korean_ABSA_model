@@ -131,7 +131,7 @@ def custom_stratified_KFold(file_list, n_splits, which_k):
         
         
         
-    augmentation_file_list = ["aug1.json"]
+    augmentation_file_list = ["aug1_jiwoo.json"]
     
     train_file_list = train_file_list + augmentation_file_list
 

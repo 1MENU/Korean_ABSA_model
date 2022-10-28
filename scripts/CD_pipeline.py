@@ -53,7 +53,7 @@ if FULL_FINETUNING:
     no_decay = ['bias', 'LayerNorm.weight']
     entity_property_optimizer_grouped_parameters = [
         {'params': [p for n, p in entity_property_param_optimizer if not any(nd in n for nd in no_decay)],
-            'weight_decay_rate': 0.01},
+            'weight_decay_rate': args.weight_decay},
         {'params': [p for n, p in entity_property_param_optimizer if any(nd in n for nd in no_decay)],
             'weight_decay_rate': 0.0}
     ]
