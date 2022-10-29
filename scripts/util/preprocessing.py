@@ -1,33 +1,33 @@
 import re
-from soynlp.normalizer import *
-from hanspell import spell_checker
+# from soynlp.normalizer import *
+# from hanspell import spell_checker
 
-def spacing_sent(sentence):
+# def spacing_sent(sentence):
     
-    def special_tok_change(sentence):
-        #'&name&', '&affiliation&', '&social-security-num&', 
-        # '&tel-num&', '&card-num&', '&bank-account&', '&num&', '&online-account&'
-        sentence=re.sub('&name&','$name$',sentence)
-        sentence=re.sub('&affiliation&','$affiliation$',sentence)
-        sentence=re.sub('&social-security-num&','$social-security-num$',sentence)
-        sentence=re.sub('&tel-num&','$tel-num$',sentence)
-        sentence=re.sub('&card-num&','$card-num$',sentence)
-        sentence=re.sub('&bank-account&','$bank-account$',sentence)
-        sentence=re.sub('&num&','$num$',sentence)
-        sentence=re.sub('&online-account&','$online-account$',sentence)
-        return sentence
+#     def special_tok_change(sentence):
+#         #'&name&', '&affiliation&', '&social-security-num&', 
+#         # '&tel-num&', '&card-num&', '&bank-account&', '&num&', '&online-account&'
+#         sentence=re.sub('&name&','$name$',sentence)
+#         sentence=re.sub('&affiliation&','$affiliation$',sentence)
+#         sentence=re.sub('&social-security-num&','$social-security-num$',sentence)
+#         sentence=re.sub('&tel-num&','$tel-num$',sentence)
+#         sentence=re.sub('&card-num&','$card-num$',sentence)
+#         sentence=re.sub('&bank-account&','$bank-account$',sentence)
+#         sentence=re.sub('&num&','$num$',sentence)
+#         sentence=re.sub('&online-account&','$online-account$',sentence)
+#         return sentence
     
-    sentence=special_tok_change(sentence) # xml 파싱 시에 &에서 오류발생해서 다 바꿔주기
-    sentence=re.sub('&',', ',sentence)
+#     sentence=special_tok_change(sentence) # xml 파싱 시에 &에서 오류발생해서 다 바꿔주기
+#     sentence=re.sub('&',', ',sentence)
     
-   # print("before : ", sentence)
+#    # print("before : ", sentence)
     
-    result_train = spell_checker.check(sentence)
-    sentence = result_train.as_dict()['checked']
+#     result_train = spell_checker.check(sentence)
+#     sentence = result_train.as_dict()['checked']
     
-   # print("after : ", sentence)
+#    # print("after : ", sentence)
     
-    return sentence 
+#     return sentence
 
 
 def preprocess_texticon(sentence):
@@ -243,28 +243,33 @@ def del_emoji_all(sentence):
         
     return re.sub(pattern, '', sentence)
 
+repeatchars_pattern = re.compile('(\w)\\1{3,}')
+doublespace_pattern = re.compile('\s+')
 
-def repeat_del(sentence, n): #의미없는 반복 제거 함수 
-    sentence=repeat_normalize(sentence, num_repeats=n)   
-    return sentence
+def repeat_del(sentence, n): #의미없는 반복 제거 함수
+    if n > 0:
+        sentence = repeatchars_pattern.sub('\\1' * n, sentence)
+    sentence = doublespace_pattern.sub(' ', sentence)
+
+    return sentence.strip()
 
 def replace_htag(sentence, to): # annotation 해시 제거 용 
     # 해시태그 바꾸기
     sentence = re.sub('#', to, sentence)
     return sentence
 
-def replace_marks(sentence):
-    # 띄어쓰기
-    #sentence ="별로네 ,, "
-    sentence = spacing_sent(sentence)
-    #반복제거 
-    sentence = repeat_del(sentence, n=3)    
-    # 텍스트 이모티콘 제거 
-    sentence = remove_texticon(sentence)
-    # 이모티콘 제거 
-    sentence = del_emoji_all(sentence)
+# def replace_marks(sentence):
+#     # 띄어쓰기
+#     #sentence ="별로네 ,, "
+#     sentence = spacing_sent(sentence)
+#     #반복제거 
+#     sentence = repeat_del(sentence, n=3)    
+#     # 텍스트 이모티콘 제거 
+#     sentence = remove_texticon(sentence)
+#     # 이모티콘 제거 
+#     sentence = del_emoji_all(sentence)
    
-    return sentence
+#     return sentence
 
 # 이모티콘 제거 전에 실행할 것
 def replace_stars(sentence):
@@ -278,5 +283,11 @@ def replace_stars(sentence):
     sentence = re.sub('★★★★☆',' 만족', sentence)
     # ★★★★★
     sentence = re.sub('★★★★★',' 대만족', sentence)
+    
+    return sentence
+
+def change_to_heart(sentence):
+    
+    sentence = re.sub('♡', '♥', sentence)
     
     return sentence

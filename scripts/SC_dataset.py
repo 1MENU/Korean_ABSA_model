@@ -46,6 +46,9 @@ def SC_dataset(raw_data, tokenizer, max_len):
         
         form = utterance['sentence_form']
         
+        # heart 정보 살리기
+        form = change_to_heart(form)
+        
         # 별점 정보 살리기
         form = replace_stars(form)
         
