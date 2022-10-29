@@ -49,7 +49,7 @@ def CD_dataset(raw_data, tokenizer, max_len):
         # 반복제거
         form = repeat_del(form, n=4)
         
-        # puncteh 반복 fix
+        # punct 반복 fix
         form = preprocess_texticon(form)
         
         print(form)
