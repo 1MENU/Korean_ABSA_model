@@ -5,7 +5,7 @@ echo "$value"
 
 run_task(){    # wandb 재로그인, echo
     echo "run task$1 : $2 !!  [cuda : 0]"
-    wandb login --relogin $value
+    # wandb login --relogin $value
 }
 
 cd scripts
@@ -16,6 +16,6 @@ cd scripts
 
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "emoji_rep4_punct2_L+aug1temp" \
+CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "aug1" \
     --batch_size=64 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
     --LS=0.00 --weight_decay=0.01 --seed=2 --save=1 --nsplit=3 --kfold=2

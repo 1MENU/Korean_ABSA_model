@@ -2,27 +2,24 @@ from util.utils import *
 from util.preprocessing import *
 from base_data import *
 
-# import logging
-# # 로그 생성
-# logger = logging.getLogger()
-# # 로그의 출력 기준 설정
-# logger.setLevel(logging.INFO)
-# # log 출력 형식
-# formatter = logging.Formatter('%(message)s')
-# # log 출력
-# stream_handler = logging.StreamHandler()
-# stream_handler.setFormatter(formatter)
-# logger.addHandler(stream_handler)
-# # log를 파일에 출력
-# file_handler = logging.FileHandler('my.log')
-# file_handler.setFormatter(formatter)
-# logger.addHandler(file_handler)
+import logging
+# 로그 생성
+logger = logging.getLogger()
+# 로그의 출력 기준 설정
+logger.setLevel(logging.INFO)
+# log 출력 형식
+formatter = logging.Formatter('%(message)s')
+# log 출력
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+logger.addHandler(stream_handler)
+# log를 파일에 출력
+file_handler = logging.FileHandler('my.log')
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
 
 
-#         # 밑에 넣을 코드
-#         tokenized_text = tokenizer.tokenize(form)
-#         logger.info(form)
-#         logger.info(tokenized_text)
+
 
 
 
@@ -56,6 +53,11 @@ def CD_dataset(raw_data, tokenizer, max_len):
         form = preprocess_texticon(form)
         
         print(form)
+        
+        # 밑에 넣을 코드
+        tokenized_text = tokenizer.tokenize(form)
+        logger.info(form)
+        logger.info(tokenized_text)
         
 
         entity_property_data_dict, polarity_data_dict = tokenize_and_align_labels(tokenizer, form, utterance['annotation'], max_len)
