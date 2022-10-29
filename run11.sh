@@ -5,7 +5,7 @@ echo "$value"
 
 run_task(){    # wandb 재로그인, echo
     echo "run task$1 : $2 !!  [cuda : 1]"
-    wandb login --relogin $value
+    # wandb login --relogin $value
 }
 
 cd scripts
