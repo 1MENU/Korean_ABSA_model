@@ -43,6 +43,9 @@ def CD_dataset(raw_data, tokenizer, max_len):
         
         form = utterance['sentence_form']
         
+        # 별점 정보 살리기
+        form = replace_stars(form)
+        
         # 이모티콘 제거 
         form = del_emoji_all(form)
         
