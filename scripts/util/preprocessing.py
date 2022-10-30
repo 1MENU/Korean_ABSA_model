@@ -232,7 +232,9 @@ def del_emoji_all(sentence):
         u"\U0001f926-\U0001f937"
         u"\U00010000-\U0010ffff"
         u"\u2640-\u2642" 
-        u"\u2600-\u2B55"
+        u"\u2600-\u2664"
+        # 2665는 검정색 하트인데 special token으로 사용할거라 남겨두기
+        u"\u2666-\u2B55"
         u"\u200d"
         u"\u23cf"
         u"\u23e9"
@@ -283,11 +285,5 @@ def replace_stars(sentence):
     sentence = re.sub('★★★★☆',' 만족', sentence)
     # ★★★★★
     sentence = re.sub('★★★★★',' 대만족', sentence)
-    
-    return sentence
-
-def change_to_heart(sentence):
-    
-    sentence = re.sub('♡', '♥', sentence)
     
     return sentence

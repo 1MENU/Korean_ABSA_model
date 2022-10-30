@@ -21,6 +21,6 @@ polarity_name_to_id = {polarity_id_to_name[i]: i for i in range(len(polarity_id_
 
 special_tokens_dict = {
     'additional_special_tokens': [
-        '♥',
-        '&name&', '&affiliation&', '&social-security-num&', '&tel-num&', '&card-num&', '&bank-account&', '&num&', '&online-account&']
+        '&name&', '&affiliation&', '&social-security-num&', '&tel-num&', '&card-num&', '&bank-account&', '&num&', '&online-account&'
+    ]
 }
