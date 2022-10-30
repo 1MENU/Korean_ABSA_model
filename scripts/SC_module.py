@@ -142,16 +142,13 @@ def SC_inference_model(model, data_loader, device):
     y_pred_softmax = softmax(y_pred)
     
     y_pred = np.argmax(y_pred, axis=1)
-    
-    yy = y_true | y_pred
 
-    y_true = y_true[yy == 1]
-    y_pred = y_pred[yy == 1]
+    f1_w = f1_score(y_true, y_pred, average = 'weighted')
 
-    f1_b = f1_score(y_true, y_pred, average = 'binary')
-
-    print('test_f1 = ', f1_b)
+    print('test_f1 = ', f1_w)
     
     # np.save(f'{predPth}{task_name}/{model_name}', submission_pred)
+    
+    yy = y_true == y_pred
 
-    return y_pred_softmax
+    return y_pred_softmax, yy

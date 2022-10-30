@@ -232,16 +232,14 @@ def del_emoji_all(sentence):
         u"\U0001f926-\U0001f937"
         u"\U00010000-\U0010ffff"
         u"\u2640-\u2642" 
-        u"\u2600-\u2664"
-        # 2665는 검정색 하트인데 special token으로 사용할거라 남겨두기
-        u"\u2666-\u2B55"
+        u"\u2600-\u2B55"
         u"\u200d"
         u"\u23cf"
         u"\u23e9"
         u"\u231a"
         u"\ufe0f"  # dingbats
         u"\u3030"
-                           "]+", re.UNICODE) 
+                           "]+", re.UNICODE)
         
     return re.sub(pattern, '', sentence)
 
@@ -287,3 +285,29 @@ def replace_stars(sentence):
     sentence = re.sub('★★★★★',' 대만족', sentence)
     
     return sentence
+
+
+def replace_unknown_token(sentence):
+    
+    sentence = re.sub('ㅠ', '', sentence)
+    sentence = re.sub('ㅜ', '', sentence)
+    
+    return sentence
+
+def my_preprocessing(form):
+    
+    form = replace_unknown_token(form)
+    
+    # 별점 정보 살리기
+    form = replace_stars(form)
+    
+    # 이모티콘 제거 
+    form = del_emoji_all(form)
+    
+    # 반복제거
+    form = repeat_del(form, n=4)
+    
+    # punct 반복 fix
+    form = preprocess_texticon(form)
+    
+    return form

@@ -38,6 +38,10 @@ else:   # split K-fold
     train_data, dev_data = custom_stratified_KFold(train_file_list, args.nsplit, args.kfold)
     test_data = jsonlload(test_file_list)
 
+special_augmentation_file_list = []
+aug_data = jsonlload(special_augmentation_file_list)
+
+train_data = train_data + aug_data
 
 dataset_train, dataset_dev, dataset_test = get_SC_dataset(train_data, dev_data, test_data, args.pretrained, max_len = 90)
 

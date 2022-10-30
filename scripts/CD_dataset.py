@@ -19,7 +19,7 @@ from base_data import *
 # logger.addHandler(file_handler)
 
 
-#                 # 밑에 넣을 코드
+#         # 밑에 넣을 코드
 #         tokenized_text = tokenizer.tokenize(form)
 #         logger.info(form)
 #         logger.info(tokenized_text)
@@ -46,19 +46,11 @@ def CD_dataset(raw_data, tokenizer, max_len):
         
         form = utterance['sentence_form']
         
-        # 별점 정보 살리기
-        form = replace_stars(form)
-        
-        # 이모티콘 제거 
-        form = del_emoji_all(form)
-        
-        # 반복제거
-        form = repeat_del(form, n=4)
-        
-        # punct 반복 fix
-        form = preprocess_texticon(form)
+        form = my_preprocessing(form)
         
         print(form)
+        
+
 
         entity_property_data_dict, polarity_data_dict = tokenize_and_align_labels(tokenizer, form, utterance['annotation'], max_len)
         
