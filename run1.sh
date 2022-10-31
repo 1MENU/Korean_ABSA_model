@@ -25,6 +25,6 @@ cd scripts
 #     --LS=0.01 --weight_decay=0.001 --seed=1 --save=1 --nsplit=3 --kfold=1
 
 run_task 2 SC
-CUDA_VISIBLE_DEVICES=0 python SC_pipeline.py --name "aug2" \
+CUDA_VISIBLE_DEVICES=1 python SC_pipeline.py --name "aug3" \
     --batch_size=64 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
     --LS=0.01 --weight_decay=0.001 --seed=1 --save=1 --nsplit=3 --kfold=1

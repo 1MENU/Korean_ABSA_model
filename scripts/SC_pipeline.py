@@ -38,8 +38,8 @@ else:   # split K-fold
     train_data, dev_data = custom_stratified_KFold(train_file_list, args.nsplit, args.kfold)
     test_data = jsonlload(test_file_list)
 
-special_augmentation_file_list = []
-aug_data = jsonlload(special_augmentation_file_list)
+sentimental_augmentation_file_list = ["sentimental_aug.json"]
+aug_data = jsonlload(sentimental_augmentation_file_list)
 
 train_data = train_data + aug_data
 

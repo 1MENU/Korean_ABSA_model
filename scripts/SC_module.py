@@ -148,7 +148,6 @@ def SC_inference_model(model, data_loader, device):
     print('test_f1 = ', f1_w)
     
     # np.save(f'{predPth}{task_name}/{model_name}', submission_pred)
-    
-    yy = y_true == y_pred
 
-    return y_pred_softmax, yy
+
+    return y_pred_softmax
