@@ -16,10 +16,10 @@ cd scripts
 
 CUDA_VISIBLE_DEVICES=1 python together.py \
     --cd  \
-    "aug2_256_1e-05_N_1F3_rs1_kykE" \
-    "aug2_256_1e-05_N_2F3_rs2_kykE" \
+    "aug3_256_1e-05_N_1F3_rs1_kykE" \
+    "aug3_256_1e-05_N_2F3_rs2_kykE" \
     --sc \
-    "aug2_64_1e-05_N_1F3_rs1_kykE" \
-    "aug2_64_1e-05_N_2F3_rs2_kykE" \
-    "aug2_64_8e-06_N_3F3_rs3_kykE" \
-    --name="1030"
+    "aug3_64_1e-05_N_1F3_rs1_kykE" \
+    "aug3_64_1e-05_N_2F3_rs2_kykE" \
+    "aug3_64_8e-06_N_3F3_rs3_kykE" \
+    --name="1031"
