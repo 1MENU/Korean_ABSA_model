@@ -14,12 +14,13 @@ cd scripts
 
 # CUDA_VISIBLE_DEVICES=0
 
-CUDA_VISIBLE_DEVICES=1 python together.py \
+CUDA_VISIBLE_DEVICES=0 python together.py \
     --cd  \
-    "aug3_256_1e-05_N_1F3_rs1_kykE" \
-    "aug3_256_1e-05_N_2F3_rs2_kykE" \
+    "aug3_300_64_64_1e-05_N_1F3_rs1_kykE" \
+    "aug3_300_64_64_1e-05_N_2F3_rs2_kykE" \
+    "aug3_300_64_64_8e-06_N_3F3_rs3_kykE" \
     --sc \
-    "aug3_64_1e-05_N_1F3_rs1_kykE" \
-    "aug3_64_1e-05_N_2F3_rs2_kykE" \
-    "aug3_64_8e-06_N_3F3_rs3_kykE" \
-    --name="1031"
+    "aug3_300_64_64_1e-05_N_1F3_rs1_kykE" \
+    "aug3_300_64_64_1e-05_N_2F3_rs2_kykE" \
+    "aug3_300_64_64_8e-06_N_3F3_rs3_kykE" \
+    --name="1101"

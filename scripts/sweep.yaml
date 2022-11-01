@@ -51,4 +51,4 @@ command:
   - ${args}
 
 
-# CUDA_VISIBLE_DEVICES=0
+# CUDA_VISIBLE_DEVICES=1 wandb agent malmung_team1/CD/zb7phffp

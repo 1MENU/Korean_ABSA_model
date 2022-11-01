@@ -15,12 +15,12 @@ cd scripts
 # CUDA_VISIBLE_DEVICES=0
 
 
-run_task 1 CD
-CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "aug3" \
-    --batch_size=256 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
-    --LS=0.00 --weight_decay=0.01 --seed=2 --save=1 --nsplit=3 --kfold=2
-
-# run_task 2 SC
-# CUDA_VISIBLE_DEVICES=0 python SC_pipeline.py --name "star_heart_aug1" \
+# run_task 1 CD
+# CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "aug3_300_64" \
 #     --batch_size=64 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
 #     --LS=0.00 --weight_decay=0.01 --seed=2 --save=1 --nsplit=3 --kfold=2
+
+run_task 2 SC
+CUDA_VISIBLE_DEVICES=0 python SC_pipeline.py --name "aug3_300_64" \
+    --batch_size=64 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
+    --LS=0.00 --weight_decay=0.01 --seed=2 --save=1 --nsplit=3 --kfold=2
