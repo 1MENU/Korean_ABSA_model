@@ -1,10 +1,10 @@
-project: CD
+project: SC
 
-name: CD_sweep_test # BoolQ, COPA, WiC, COLA
+name: SC_sweep_test # BoolQ, COPA, WiC, COLA
 
 entity: malmung_team1
 
-program : CD_pipeline.py # BoolQ, COPA, WiC, COLA
+program : SC_pipeline.py # BoolQ, COPA, WiC, COLA
 
 method: random # grid, bayes, random
 
@@ -52,4 +52,5 @@ command:
   - ${args}
 
 
-# CUDA_VISIBLE_DEVICES=0 wandb agent malmung_team1/CD/zb7phffp
+# CUDA_VISIBLE_DEVICES=1 wandb agent malmung_team1/CD/06cs1yg8
+# CUDA_VISIBLE_DEVICES=1 wandb agent malmung_team1/SC/1qz0sebl

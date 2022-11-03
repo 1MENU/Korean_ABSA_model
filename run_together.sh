@@ -20,7 +20,7 @@ CUDA_VISIBLE_DEVICES=0 python together.py \
     "aug3_300_64_64_1e-05_N_2F3_rs2_kykE" \
     "aug3_300_64_64_8e-06_N_3F3_rs3_kykE" \
     --sc \
-    "aug3_300_64_64_1e-05_N_1F3_rs1_kykE" \
-    "aug3_300_64_64_1e-05_N_2F3_rs2_kykE" \
-    "aug3_300_64_64_8e-06_N_3F3_rs3_kykE" \
-    --name="1101"
+    "sweep_64_4e-05_N_1F3_rs843_kykE" \
+    "sweep_64_8e-06_N_2F3_rs1000_kykE" \
+    "sweep_64_4e-05_N_3F3_rs817_kykE" \
+    --name="1103"
