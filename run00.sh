@@ -16,11 +16,7 @@ cd scripts
 
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "aug3_628_64" \
+CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "b1000" \
     --batch_size=64 --lr=2e-05 --pretrained="kykim/electra-kor-base" \
     --LS=0.00 --weight_decay=0.001 --seed=830 --save=1 --nsplit=3 --kfold=2
 
-# run_task 2 SC
-# CUDA_VISIBLE_DEVICES=0 python SC_pipeline.py --name "aug3_300_64" \
-#     --batch_size=64 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
-#     --LS=0.00 --weight_decay=0.01 --seed=2 --save=1 --nsplit=3 --kfold=2
