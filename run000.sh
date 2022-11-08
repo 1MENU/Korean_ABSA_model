@@ -18,7 +18,7 @@ cd scripts
 
 
 run_task 1 CD
-CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "b1000" \
+CUDA_VISIBLE_DEVICES=0 python CD_pipeline.py --name "A1" \
     --batch_size=64 --lr=9e-6 --pretrained="kykim/electra-kor-base" \
     --LS=0 --weight_decay=0.001 --seed=702 --save=1 --nsplit=3 --kfold=3
 

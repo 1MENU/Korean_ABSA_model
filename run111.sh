@@ -18,7 +18,12 @@ cd scripts
 # CUDA_VISIBLE_DEVICES=1 python together.py --cd="spell_p+cls+f+1lay_16_8e-06_fun_rs21" --sc="last4_32_2e-05_KcE_rs1111"
 
 
-run_task 2 SC
-CUDA_VISIBLE_DEVICES=1 python SC_pipeline.py --name "b1000" \
-    --batch_size=64 --lr=8e-6 --pretrained="kykim/electra-kor-base" \
-    --LS=0.01 --weight_decay=0.01 --seed=3 --save=1 --nsplit=3 --kfold=3
+run_task 1 CD
+CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "b_1064" \
+    --batch_size=64 --lr=9e-6 --pretrained="kykim/electra-kor-base" \
+    --LS=0 --weight_decay=0.001 --seed=702 --save=1 --nsplit=3 --kfold=3
+
+# run_task 2 SC
+# CUDA_VISIBLE_DEVICES=1 python SC_pipeline.py --name "A1" \
+#     --batch_size=64 --lr=4e-5 --pretrained="kykim/electra-kor-base" \
+#     --LS=0 --weight_decay=0.1 --seed=817 --save=1 --nsplit=3 --kfold=3

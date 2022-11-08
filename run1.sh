@@ -19,12 +19,12 @@ cd scripts
 
 
 
-# run_task 1 CD
-# CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "aug4_AddFlip" \
-#     --batch_size=64 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
-#     --LS=0 --weight_decay=0.1 --seed=776 --save=1 --nsplit=3 --kfold=1
-
-run_task 2 SC
-CUDA_VISIBLE_DEVICES=1 python SC_pipeline.py --name "b1000" \
+run_task 1 CD
+CUDA_VISIBLE_DEVICES=1 python CD_pipeline.py --name "b_1064" \
     --batch_size=64 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
-    --LS=0.01 --weight_decay=0.001 --seed=1 --save=1 --nsplit=3 --kfold=1
+    --LS=0 --weight_decay=0.1 --seed=776 --save=1 --nsplit=3 --kfold=1
+
+# run_task 2 SC
+# CUDA_VISIBLE_DEVICES=1 python SC_pipeline.py --name "A1" \
+#     --batch_size=64 --lr=1e-5 --pretrained="kykim/electra-kor-base" \
+#     --LS=0.01 --weight_decay=0.001 --seed=1 --save=1 --nsplit=3 --kfold=1
