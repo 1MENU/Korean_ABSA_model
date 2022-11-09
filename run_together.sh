@@ -14,13 +14,13 @@ cd scripts
 
 # CUDA_VISIBLE_DEVICES=0
 
-CUDA_VISIBLE_DEVICES=1 python together.py \
+CUDA_VISIBLE_DEVICES=0 python together.py \
     --cd  \
-    "A1_64_1e-05_N_1F3_rs776_kykE" \
-    "b_1064_64_2e-05_N_2F3_rs830_kykE" \
-    "b_1064_64_9e-06_N_3F3_rs702_kykE" \
+    "A2_64_1e-05_N_1F3_rs776_kykE" \
+    "A2_64_2e-05_N_2F3_rs830_kykE" \
+    "A2_64_9e-06_N_3F3_rs702_kykE" \
     --sc \
-    "A1_64_1e-05_N_1F3_rs1_kykE" \
-    "A1_64_4e-05_N_3F3_rs817_kykE" \
-    "A1_64_8e-06_N_2F3_rs1000_kykE" \
-    --name="1108_3"
+    "A2_64_1e-05_N_1F3_rs1_kykE" \
+    "A2_64_4e-05_N_3F3_rs817_kykE" \
+    "A2_64_8e-06_N_2F3_rs1000_kykE" \
+    --name="1109_test3"
