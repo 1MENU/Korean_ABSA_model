@@ -1,15 +1,15 @@
 project: SC
 
-name: SC_sweep_test # BoolQ, COPA, WiC, COLA
+name: SC_sweep_test
 
 entity: malmung_team1
 
-program : SC_pipeline.py # BoolQ, COPA, WiC, COLA
+program : SC_pipeline.py
 
 method: random # grid, bayes, random
 
 metric :
-  name: Best_F1  # wandb.log({"val_loss": validation_loss})
+  name: Best_F1
   goal: maximize   # minimize, maximize
 
 parameters:
@@ -52,5 +52,4 @@ command:
   - ${args}
 
 
-# CUDA_VISIBLE_DEVICES=1 wandb agent malmung_team1/CD/06cs1yg8
-# CUDA_VISIBLE_DEVICES=1 wandb agent malmung_team1/SC/1qz0sebl
+# CUDA_VISIBLE_DEVICES=1 wandb agent ###

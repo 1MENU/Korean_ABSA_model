@@ -48,9 +48,8 @@ def CD_dataset(raw_data, tokenizer, max_len):
         
         form = my_preprocessing(form)
         
-        print(form)
+        # print(form)
         
-
 
         entity_property_data_dict, polarity_data_dict = tokenize_and_align_labels(tokenizer, form, utterance['annotation'], max_len)
         
@@ -109,11 +108,7 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         
         pair_final = pair
         
-        sent = form + tokenizer.cls_token + pair_final
-        
         tokenized_data = tokenizer(form, pair_final, padding='max_length', max_length=max_len, truncation=True)
-        
-        # tokenized_data = tokenizer(sent, padding='max_length', max_length=max_len, truncation=True)
         
         for annotation in annotations:
             entity_property = annotation[0]

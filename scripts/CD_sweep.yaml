@@ -1,15 +1,15 @@
 project: CD
 
-name: CD_sweep_test # BoolQ, COPA, WiC, COLA
+name: CD_sweep_test
 
 entity: malmung_team1
 
-program : CD_pipeline.py # BoolQ, COPA, WiC, COLA
+program : CD_pipeline.py
 
 method: random # grid, bayes, random
 
 metric :
-  name: Best_F1  # wandb.log({"val_loss": validation_loss})
+  name: Best_F1
   goal: maximize   # minimize, maximize
 
 parameters:
@@ -52,4 +52,4 @@ command:
   - ${args}
 
 
-# CUDA_VISIBLE_DEVICES=0 wandb agent malmung_team1/CD/zb7phffp
+# CUDA_VISIBLE_DEVICES=0 wandb agent ###

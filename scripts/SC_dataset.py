@@ -112,16 +112,7 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
         
         pair_final = pair
         
-        sent = form + tokenizer.cls_token + pair_final
-        
         tokenized_data = tokenizer(form, pair_final, padding='max_length', max_length=max_len, truncation=True)
-        
-        # tokenized_data = tokenizer(sent, padding='max_length', max_length=max_len, truncation=True)
-        
-        
-        
-        # second_cls = tokenized_data['input_ids'][1:].index(2)
-        # last_sep = tokenized_data['input_ids'].index(3)
         
         first_sep = tokenized_data['input_ids'].index(3)
         last_sep = tokenized_data['input_ids'][first_sep+1:].index(3)
@@ -182,10 +173,6 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
             entity_property_data_dict['attention_mask'].append(tokenized_data['attention_mask'])
             entity_property_data_dict['label'].append(label_name_to_id['False'])
 
-
-
-        
-        
     return entity_property_data_dict, polarity_data_dict
 
 

@@ -17,41 +17,6 @@ class FCLayer(nn.Module):
         return self.linear(x)
 
 
-
-class biLSTMClassifier(nn.Module):
-    
-    def __init__(self, config, num_label):
-        super().__init__()
-        self.dense = nn.Linear(config.hidden_size, config.hidden_size)
-        
-        self.size = 100
-        
-        self.lstm = nn.LSTM(
-            input_size = config.hidden_size, 
-            hidden_size = self.size, 
-            num_layers = 1, 
-            bias = True, 
-            batch_first = True, 
-            dropout = 0.0, 
-            bidirectional = True
-        )
-        
-        self.classifier = nn.Linear(self.size * 2, 2)
-
-    def forward(self, x):
-        
-        h0 = torch.zeros(2, x.size(0), self.size).to('cuda') # (BATCH SIZE, SEQ_LENGTH, HIDDEN_SIZE)
-        c0 = torch.zeros(2, x.size(0), self.size).to('cuda') # hidden state와 동일
-        
-        out, _ = self.lstm(x, (h0, c0))
-        
-        # output_concat = torch.cat([out[:, 0, :], out[:, -1, :]], dim = -1)
-        
-        out = self.classifier(out[:, 0, :])
-        
-        return out
-
-
 class CD_model(nn.Module):
     def __init__(self, pretrained_model):
         super(CD_model, self).__init__()
@@ -66,20 +31,13 @@ class CD_model(nn.Module):
         self.entity_fc_layer1 = FCLayer(config.hidden_size, config.hidden_size, 0.1)  # config.hidden_size
         
         self.pooler = Attention_pooler(config)
-        self.pooler2 = Attention_pooler(config)
-        
-        # self.pooler = BertPooler(config)
-        # self.pooler2 = BertPooler(config)
-
-        # self.labels_classifier = FCLayer(config, 0.1, 2)
-        # self.bi_lstm = biLSTMClassifier(config, 2)
         
         self.label_classifier = FCLayer(
             256 + config.hidden_size,
             2,
             dropout_rate = 0.0,
             use_activation=False,
-        )   # config.hidden_size or 256 after attention pooling
+        )
 
     def forward(self, input_ids, token_type_ids, attention_mask, e1_mask, e2_mask):
         outputs = self.model(
@@ -88,36 +46,15 @@ class CD_model(nn.Module):
             attention_mask=attention_mask,
             output_hidden_states = True
         )
-        # , output_hidden_states = True
-        
-        # outputs=torch.cat([outputs['hidden_states'][9][:, 0, :], outputs['hidden_states'][10][:, 0, :], outputs['hidden_states'][11][:, 0, :], outputs['hidden_states'][12][:, 0, :]], dim = -1)
-        # logits = self.labels_classifier(outputs)
         
         pooled_cls = self.pooler(outputs)
         pooled_cls = self.cls_fc_layer(pooled_cls)
-        # logits = self.label_classifier(pooled_cls)
-        
-        # cls_token = outputs['last_hidden_state'][:, 0, :]     # CLS token
-        
-        # pooled_output = self.pooler(cls_token)
-        # sentence_representation = self.cls_fc_layer(pooled_output)
-        
-        # # e1 = self.entity_average(outputs['last_hidden_state'], e1_mask)
-        
-        # # second_cls = self.pooler2(second_cls)
-        
-        
-        # # output = torch.mul(sentence_representation, second_cls)
-        # output = torch.cat([sentence_representation, second_cls], dim=-1)
-        
         
         second_cls = self.entity_average(outputs['last_hidden_state'], e2_mask)
         second_cls = self.entity_fc_layer1(second_cls)
         output = torch.cat([pooled_cls, second_cls], dim=-1)
         
         logits = self.label_classifier(output)
-        
-        # # logits = self.bi_lstm(outputs['last_hidden_state'])
 
         return logits
     
@@ -138,62 +75,6 @@ class CD_model(nn.Module):
         sum_vector = torch.bmm(e_mask_unsqueeze.float(), hidden_output).squeeze(1)
         avg_vector = sum_vector.float() / length_tensor.float()  # broadcasting
         return avg_vector
-    
-
-class BertPooler(nn.Module):
-    def __init__(self, config):
-        super().__init__()
-        self.dense = nn.Linear(config.hidden_size, config.hidden_size)
-        self.activation = nn.Tanh()
-
-    def forward(self, hidden_states: torch.Tensor) -> torch.Tensor:
-        # We "pool" the model by simply taking the hidden state corresponding
-        # to the first token.
-        pooled_output = self.dense(hidden_states)
-        pooled_output = self.activation(pooled_output)
-        
-        return pooled_output
-    
-
-class LSTMPooler(nn.Module):
-    
-    def __init__(self, config):
-        super().__init__()
-        
-        self.hidden_size = config.hidden_size
-        
-        self.size = 12
-        
-        self.lstm = nn.LSTM(
-            input_size =  self.size, 
-            hidden_size = config.hidden_size, 
-            num_layers = 1, 
-            bias = True, 
-            batch_first = True, 
-            dropout = 0.0
-        )
-        
-        self.classifier = nn.Linear(self.size, 2)
-
-    def forward(self, x):
-        
-        hidden_states = x['hidden_states']
-        
-        hidden_states = torch.stack([hidden_states[layer_i][:, 0].squeeze() for layer_i in range(0, self.size)], dim=-1)
-        
-        hidden_states = hidden_states.view(-1, self.size, self.hidden_size)
-        
-        h0 = torch.zeros(1, hidden_states.size(0), self.size).to('cuda') # (BATCH SIZE, SEQ_LENGTH, HIDDEN_SIZE)
-        c0 = torch.zeros(1, hidden_states.size(0), self.size).to('cuda') # hidden state와 동일
-        
-        out, _ = self.lstm(hidden_states, (h0, c0))
-
-        
-        # output_concat = torch.cat([out[:, 0, :], out[:, -1, :]], dim = -1)
-        
-        out = self.classifier(out[:, -1, :])
-        
-        return out
     
     
 class Attention_pooler(nn.Module):
@@ -224,8 +105,6 @@ class Attention_pooler(nn.Module):
         hidden_states = hidden_states.view(-1, self.num_layers, self.embed_dim)
         
         out = self.attention(hidden_states)
-        
-        # out = self.dropout(out)
         
         return out
     

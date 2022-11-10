@@ -85,7 +85,6 @@ if args.wandb:
     wandb.init(entity="malmung_team1", project=task_name, name = wandb_name, config = config)
 
 
-
 print(f'\n[len {task_name}] train : {len(train_data)}, dev : {len(dev_data)}, test : {len(test_data)}\n')
 
 print(f'Task : {task_name}, Model : {args.pretrained}, Wandb : {"off" if args.wandb == 0 else "on"}, Device : {device}, Epochs : {args.epochs}')

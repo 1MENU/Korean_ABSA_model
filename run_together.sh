@@ -23,4 +23,6 @@ CUDA_VISIBLE_DEVICES=0 python together.py \
     "A2_64_1e-05_N_1F3_rs1_kykE" \
     "A2_64_4e-05_N_3F3_rs817_kykE" \
     "A2_64_8e-06_N_2F3_rs1000_kykE" \
-    --name="1109_test3"
+    --pretrained="kykim/electra-kor-base" \
+    --test_file="nikluge-sa-2022-test.jsonl" \
+    --name="final"
