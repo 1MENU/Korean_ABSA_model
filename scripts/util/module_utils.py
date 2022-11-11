@@ -14,15 +14,11 @@ from util.utils import *
 
 datasetPth = '../dataset/'
 saveDirPth_str = "../materials/saved_model/"
-predPth = '../materials/pred/'
 submissionPth = '../materials/submission/'
 
 def make_directories(task):
     if not os.path.exists(saveDirPth_str + task + "/"):
         os.makedirs(saveDirPth_str + task + "/")
-        
-    if not os.path.exists(predPth + task + "/"):
-        os.makedirs(predPth + task + "/")
         
     if not os.path.exists(submissionPth):
         os.makedirs(submissionPth)
