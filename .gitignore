@@ -3,8 +3,6 @@
 git_remote/*
 runs/*
 
-dataset/
-
 *.pt
 
 __pycache__
