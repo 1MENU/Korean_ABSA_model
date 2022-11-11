@@ -78,7 +78,7 @@ class SC_model(nn.Module):
         sum_vector = torch.bmm(e_mask_unsqueeze.float(), hidden_output).squeeze(1)
         avg_vector = sum_vector.float() / length_tensor.float()  # broadcasting
         return avg_vector
-    
+
  
 class Attention_pooler(nn.Module):
     def __init__(self, config):
