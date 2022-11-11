@@ -142,10 +142,6 @@ def tokenize_and_align_labels(tokenizer, form, annotations, max_len):
             entity_property_data_dict['attention_mask'].append(tokenized_data['attention_mask'])
             entity_property_data_dict['label'].append(label_name_to_id['False'])
 
-
-
-        # second_cls = tokenized_data['input_ids'][1:].index(2)
-        # last_sep = tokenized_data['input_ids'].index(3)
         
         first_sep = tokenized_data['input_ids'].index(3)
         last_sep = tokenized_data['input_ids'][first_sep+1:].index(3)

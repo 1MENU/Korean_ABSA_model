@@ -162,7 +162,5 @@ def CD_inference_model(model, data_loader, device):
     f1_b = f1_score(y_true, y_pred, average = 'binary')
 
     print('test_f1 = ', f1_b)
-    
-    # np.save(f'{predPth}{task_name}/{model_name}', submission_pred)
 
     return y_pred_softmax

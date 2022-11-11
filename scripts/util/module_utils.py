@@ -419,3 +419,41 @@ def name_wandb(arg_name, config):
     name = f"{arg_name}_{bs}_{lr}_{scheduler}_{kFold}F{nSplit}_rs{seed}_{pretrained}"
     
     return name
+
+
+
+def custom_stratified_KFold(file_list, n_splits, which_k):
+    
+    # jsonl 파일 읽어서 list에 저장
+    def jsonlload(fname_list, encoding="utf-8"):
+        json_list = []
+
+        for index, value in enumerate(fname_list):
+            fname = "../dataset/" + value
+
+            with open(fname, encoding=encoding) as f:
+                for line in f.readlines():
+                    # print(line)
+                    json_list.append(json.loads(line))
+
+        return json_list
+
+    if which_k == 1:
+        train_file_list = ["2Fold.jsonl", "3Fold.jsonl", "2Fold_imbalance.jsonl", "3Fold_imbalance.jsonl"]
+        dev_file_list = ["1Fold.jsonl"]
+    elif which_k == 2:
+        train_file_list = ["1Fold.jsonl", "3Fold.jsonl", "1Fold_imbalance.jsonl", "3Fold_imbalance.jsonl"]    # 1Fold_imbalance.jsonl
+        dev_file_list = ["2Fold.jsonl"]
+    elif which_k == 3:
+        train_file_list = ["1Fold.jsonl", "2Fold.jsonl", "1Fold_imbalance.jsonl", "2Fold_imbalance.jsonl"]
+        dev_file_list = ["3Fold.jsonl"]
+
+
+    augmentation_file_list = ["aug0.json", "aug1.json", "aug2.json"]
+    
+    train_file_list = train_file_list + augmentation_file_list
+
+    train_data = jsonlload(train_file_list)    
+    dev_data = jsonlload(dev_file_list)
+    
+    return train_data, dev_data
