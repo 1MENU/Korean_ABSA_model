@@ -36,7 +36,7 @@ def set_seed(seedNum, device):
 from torch.utils.data import DataLoader
 
 from torch.optim import AdamW, SGD
-from torch.optim.lr_scheduler import _LRScheduler, ExponentialLR, ReduceLROnPlateau, CyclicLR
+from torch.optim.lr_scheduler import ExponentialLR, ReduceLROnPlateau, CyclicLR
 
 # build various type of optimizers
 def build_optimizer(parameters, lr, weight_decay, type):
@@ -245,8 +245,6 @@ def evaluation_f1(true_data, pred_data):
         'F1': 0 if (pipeline_recall+pipeline_precision) == 0 else 2*pipeline_recall*pipeline_precision/(pipeline_recall+pipeline_precision)
     }
 
-    # print(ce_eval)
-
     return {
         'category extraction result': ce_result,
         'entire pipeline result': pipeline_result
@@ -325,17 +323,6 @@ def jsonlload(fname_list, encoding="utf-8"):
 
     return json_list
 
-def jsonltoDataFrame(fname_list, encoding="utf-8"):
-    df = pd.DataFrame()
-
-    for index, value in enumerate(fname_list):
-        print(value['annotation'])
-        fname = value
-        idf = pd.read_json(fname, lines=True)
-        df = pd.concat([df, idf],ignore_index=True)
-        
-    #print(df)
-    return df
     
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
