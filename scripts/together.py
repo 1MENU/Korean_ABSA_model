@@ -40,9 +40,6 @@ for i in range(len(args.cd)):
     
     model_pred = CD_inference_model(CD_pred_model, InferenceLoader, device)
     
-    print(model_pred)
-    print("fin")
-    
     CD_preds.append(model_pred)
 
 
@@ -89,9 +86,6 @@ for i in range(len(args.sc)):
     SC_pred_model.to(device)
     
     model_pred = SC_inference_model(SC_pred_model, InferenceLoader, device)
-    
-    print(model_pred)
-    print("fin")
     
     SC_preds.append(model_pred)
     
