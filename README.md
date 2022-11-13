@@ -65,7 +65,7 @@ docker cp <컨테이너 이름>:<컨테이너 내부 파일 경로> <복사할 �
 
 ## Members
 
-Jiwoo Jung | <br>
+Jiwoo Jung | travelandi01@gmail.com<br>
 Doyeon Hyun | 118ssun@naver.com<br>
 Seonghyun Kang | manomono0610@gmail.com<br>
 Heejin Jang | heejin00628@gmail.com<br>

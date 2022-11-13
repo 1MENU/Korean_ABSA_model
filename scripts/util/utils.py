@@ -1,7 +1,6 @@
 import os
 import json
 
-
 from transformers import AutoTokenizer, AutoModel, AutoConfig
 
 from torch.utils.data import Dataset
@@ -17,8 +16,6 @@ from torch import nn
 
 import time
 import re
-from soynlp.normalizer import *
-
 
 from sklearn.metrics import f1_score, accuracy_score
 
