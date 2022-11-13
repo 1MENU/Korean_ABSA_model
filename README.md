@@ -4,7 +4,7 @@
 ## Solution
 ### Dataset Preprocessing
 
-1. train, dev data의 속성범주 및 감성 label 분포도
+1. train, dev data의 속성범주 및 감성 label 분포도 (Data imbalance)
 <p align="center"><img src="https://github.com/1MENU/Korean_ABSA_model/blob/main/Image/annotation_lbl.png?raw=true" height =45% width=45%>
 <img src="https://github.com/1MENU/Korean_ABSA_model/blob/main/Image/sentiment_lbl.png?raw=true" height =20% width=20%>
 </p>
