@@ -24,7 +24,7 @@
 
  > * 약 5,800건 가량의 train, dev 데이터에서 라벨 분류가 애매모호한 문장 삭제 (약 15문장)
  > * 같은 속성 범주 내 다른 감성분석 주석이 있는 경우 이를 제거 혹은 수정
- > Label Smoothing을 통해 부정확한 데이터에 대한 보정 효과를 주고, 모델의 over-confident도 줄임
+ > * Label Smoothing을 통해 부정확한 데이터에 대한 보정 효과를 주고, 모델의 over-confident도 줄임
 
 
 ### ACD & ASC
@@ -51,7 +51,7 @@ ASC 또한 같은 모델 구조를 지니고 있으며, Class label이 0(positiv
 1. git clone (https://github.com/1MENU/Korean_ABSA_model.git)
 2. Download the model (https://drive.google.com/file/d/10we9m3JXnjaJxocT1v69ShppvmcKFlCO/view?usp=sharing)
 > 구글드라이브에서 가져온 파일을 압축해제하여 materials/saved_model 폴더 아래에 넣기 (용량이 커서 스캔할 수 없다는 경고창이 뜨지만 ‘Download Anyway’를 선택한다.)
-> - CD 폴더 안의 파일은 CD 폴더 아래에, SC 폴더 안의 파일은 SC 폴더 아래에 넣는다.
+> CD 폴더 안의 파일은 CD 폴더 아래에, SC 폴더 안의 파일은 SC 폴더 아래에 넣는다.
 
 3. 모델에 넣을 dataset마련
 * 실행시 dataset 폴더 아래에다가 inference 할 데이터 넣기
