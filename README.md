@@ -41,7 +41,7 @@ ASC 또한 같은 모델 구조를 지니고 있으며, Class label이 0(positiv
 ## Implement
 1. git clone (https://github.com/1MENU/Korean_ABSA_model.git)
 2. Download the model (https://drive.google.com/file/d/10we9m3JXnjaJxocT1v69ShppvmcKFlCO/view?usp=sharing)
--구글드라이브에서 가져온 파일을 압축해제하여 materials 디렉토리 아래에 넣기 (용량이 커서 스캔할 수 없다는 경고창이 뜨지만 ‘Download Anyway’를 선택한다.)
+> 구글드라이브에서 가져온 파일을 압축해제하여 materials 디렉토리 아래에 넣기 (용량이 커서 스캔할 수 없다는 경고창이 뜨지만 ‘Download Anyway’를 선택한다.)
 
 3. 모델에 넣을 dataset마련
 * 실행시 dataset 폴더 아래에다가 inference 할 데이터 넣기
