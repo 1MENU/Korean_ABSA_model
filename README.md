@@ -20,7 +20,7 @@
 
 
 ### ACD & ASC
-Aspect Category Detection (ACD) 모델과 Aspect Sentiment Classification (ASC) 모델을 연결하였다. 학습 데이터가 충분하지 않기 때문에 transfer learning을 이용해 기존의 pretrained model 모델에 독자전인 classification head를 추가한 후 fine-tuning하여 학습하였다.
+Aspect Category Detection (ACD) 모델과 Aspect Sentiment Classification (ASC) 모델을 연결하였다. 학습 데이터가 충분하지 않기 때문에 transfer learning을 이용해 기존의 pretrained model 모델에 독자적인 classification head를 추가한 후 fine-tuning하여 학습하였다.
 
 <p align="center"><img src="https://github.com/1MENU/Korean_ABSA_model/blob/main/Image/model_architecture.png?raw=true" height =70% width=70%></p>
 
@@ -35,7 +35,7 @@ Aspect Category Detection (ACD) 모델과 Aspect Sentiment Classification (ASC) 
 
 ASC 또한 같은 모델 구조를 지니고 있으며, Class label이 0(positive), 1(negative), 2(neutral)로 이루어져있어 분류벡터에서 1024 -> 3 linear를 적용하는 것만 제외하면 전부 동일하다. 
 
-아래는 결과이다.
+아래는 본 모델의 결과이다.
 
 <p align="center"><img src="https://github.com/1MENU/Korean_ABSA_model/blob/main/Image/result.png?raw=true" height =70% width=70%></p>
 
