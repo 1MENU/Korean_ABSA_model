@@ -41,8 +41,8 @@ ASC 또한 같은 모델 구조를 지니고 있으며, Class label이 0(positiv
 ## Implement
 1. git clone (https://github.com/1MENU/Korean_ABSA_model.git)
 2. Download the model (https://drive.google.com/file/d/10we9m3JXnjaJxocT1v69ShppvmcKFlCO/view?usp=sharing)
-> 구글드라이브에서 가져온 파일을 압축해제하여 materials 디렉토리 아래에 넣기 (용량이 커서 스캔할 수 없다는 경고창이 뜨지만 ‘Download Anyway’를 선택한다.)
-> CD 디렉토리 안의 파일은 CD 폴더 아래에, SC 디렉토리 안의 파일은 SC 폴더 아래에 넣는다.
+> 구글드라이브에서 가져온 파일을 압축해제하여 materials/saved_model 폴더 아래에 넣기 (용량이 커서 스캔할 수 없다는 경고창이 뜨지만 ‘Download Anyway’를 선택한다.)
+> - CD 폴더 안의 파일은 CD 폴더 아래에, SC 폴더 안의 파일은 SC 폴더 아래에 넣는다.
 
 3. 모델에 넣을 dataset마련
 * 실행시 dataset 폴더 아래에다가 inference 할 데이터 넣기
@@ -58,7 +58,7 @@ docker run –it —name team1 gcu-1menu:1.0
 ```zsh
 bash run_together.sh 
 ```
-- 결과 파일은 material/submission 디렉토리 아래 생성된다. 현재 final.json이라는 이름으로 결과값이 나오게 되어있다
+- 결과 파일은 material/submission 폴더 아래 생성된다. 현재 final.json이라는 이름으로 결과값이 나오게 되어있다
 - 다만 주의해야할 점은 결과파일은 도커 내부 환경에만 반영이 되어있으므로 도커 컨테이너 환경에서 결과 파일을 가져오고 싶은 경우에는 아래의 명령어를 사용한다.
 ```zsh
 docker cp <컨테이너 이름>:<컨테이너 내부 파일 경로> <복사할 파일 경로> 
