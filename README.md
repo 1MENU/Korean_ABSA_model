@@ -39,30 +39,29 @@ ASC 또한 같은 모델 구조를 지니고 있으며, Class label이 0(positiv
 <p align="center"><img src="https://github.com/1MENU/Korean_ABSA_model/blob/main/Image/result.png?raw=true" height =70% width=70%></p>
 
 ## Implement
-1. git clone
-- github 주소 : https://github.com/1MENU/Korean_ABSA_model.git
-2. Dwonload the model
-- 모델 다운로드 주소 : 
-https://drive.google.com/file/d/10we9m3JXnjaJxocT1v69ShppvmcKFlCO/view?usp=sharing
+1. git clone (https://github.com/1MENU/Korean_ABSA_model.git)
+2. Download the model (https://drive.google.com/file/d/10we9m3JXnjaJxocT1v69ShppvmcKFlCO/view?usp=sharing)
 -구글드라이브에서 가져온 파일을 압축해제하여 materials 디렉토리 아래에 넣기 (용량이 커서 스캔할 수 없다는 경고창이 뜨지만 ‘Download Anyway’를 선택한다.)
 
 3. 모델에 넣을 dataset마련
-- 실행시 dataset 폴더 아래에다가 inference 할 데이터 넣기
-- 이때 설정할 파일의 이름은 run_together.sh 파일 내, —test_file값에 실행하고자하는 파일의 이름과 같아야한다. (기본값은 “nikluge-sa-2022-test.jsonl” 이다)
+* 실행시 dataset 폴더 아래에다가 inference 할 데이터 넣기
+* 이때 설정할 파일의 이름은 run_together.sh 파일 내, —test_file값에 실행하고자하는 파일의 이름과 같아야한다. (기본값은 “nikluge-sa-2022-test.jsonl” 이다)
 
 4. docker file를 이용하여 환경 구축하기 
--git clone한 디렉토리에 들어가 터미널을 열고 아래의 명령어를 친다.
-``` docker build -t gcu-1menu:1.0 .
-   docker run –it —name team1 gcu-1menu:1.0 ```
+
+```zsh
+docker build -t gcu-1menu:1.0 . 
+docker run –it —name team1 gcu-1menu:1.0
+```
 5.  run_together.sh 실행하기
-- bash run_together.sh 명령어를 터미널창에 친다. 
-	이 때 wandb 모듈이 없다는 에러가 나오면 pip install wandb 명령어를 친 후 다시 bash 파일을 실행한다
+```zsh
+bash run_together.sh 
+```
 - 결과 파일은 material/submission 디렉토리 아래 생성된다. 현재 1109_test3.json이라는 이름으로 결과값이 나오게 되어있다
 - 다만 주의해야할 점은 결과파일은 도커 내부 환경에만 반영이 되어있으므로 도커 컨테이너 환경에서 결과 파일을 가져오고 싶은 경우에는 아래의 명령어를 사용한다.
- 	docker cp <컨테이너 이름>:<컨테이너 내부 파일 경로> <복사할 파일 경로> 
-
-- 해당 파일이 제출되면 리더보드에 성적이 반영된다
-
+```zsh
+docker cp <컨테이너 이름>:<컨테이너 내부 파일 경로> <복사할 파일 경로> 
+```
 
 ## Members
 
@@ -73,5 +72,8 @@ Heejin Jang | heejin00628@gmail.com<br>
 Hajeong Lee | hjpurege@gachon.ac.kr
 
 ## Reference
-(Jason Wei, Kai Zou, EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks, Protago Labs Research, Tysons Corner, Virginia, USA, Department of Computer Science, Dartmouth College, Department of Mathematics and Statistics, Georgetown University ,2019, p.5) 
+* Dataset : https://corpus.korean.go.kr/task/taskDownload.do?taskId=8&clCd=END_TASK&subMenuId=sub02
+* Extra Data for Augmentation : https://github.com/bab2min/corpus/blob/master/sentiment/naver_shopping.txt
+* Pretrained model : https://github.com/kiyoungkim1/LMkor
+* Description for modeling : Jason Wei, Kai Zou, EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks, Protago Labs Research, Tysons Corner, Virginia, USA, Department of Computer Science, Dartmouth College, Department of Mathematics and Statistics, Georgetown University ,2019, p.5
 
