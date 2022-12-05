@@ -1,5 +1,8 @@
 # Korean_ABSA_model
 2022 국립국어원 인공 지능 언어 능력 평가 (속성 기반 감성 분석 : ABSA)
+<p align="center"><img src="https://github.com/1MENU/Korean_ABSA_model/blob/main/Image/leader_borad.png?raw=true" height =70% width=70%></p>
+[인공지능 언어 능력 평가 대상에 '가천대학교 1인 1메뉴' 팀](http://www.edujin.co.kr/news/articleView.html?idxno=40816)
+
 
 ## Task
 ### 속성 기반 감성 분석 (ABSA)
