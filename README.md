@@ -8,6 +8,8 @@
 
 ## Task
 ### 속성 기반 감성 분석 (ABSA)
+Task 설명 : https://corpus.korean.go.kr/task/taskList.do?taskId=8&clCd=END_TASK&subMenuId=sub01
+
 감성 분석이란 화자의 의견, 긍/부정의 태도가 나타나는 문장의 감성 극성을 분석하여 정량화하는 것이다. 주로 문장 단위로 긍정, 부정의 유무 혹은 정도를 평가해 왔으며, 제품 및 여행의 리뷰 분석, 추천 시스템에 널리 활용되고 있는 추세이다.
 
 최근 감성 분석 연구자들은 제품 후기 등에 전반적으로 나타나는 하나의 감성 극성(긍정 또는 부정)을 추출하는 것을 넘어 더 세부적이고 구체적인 수준의 감성 관련 정보를 추출하는 데 관심을 갖기 시작했다. 속성 기반 감성 분석은 언어 자료에 나타난 개체와 속성 정보를 고려한 감성 분석 방법으로 일반적인 감성 분석에 비해 더 세밀한 정보를 얻을 수 있다는 장점이 있다. 예를 들어, 음식점 도메인의 리뷰 “콩국수가 싸서 좋다”라는 문장에서 일반적인 감성 분석의 결과는 “긍정”이 되지만, 속성 기반 감성 분석에서는 개체:{음식(콩국수)}, 속성{가격}, 감성:{긍정}으로 더 많고 구체적인 정보를 얻을 수 있다. 
@@ -54,8 +56,8 @@ ASC 또한 같은 모델 구조를 지니고 있으며, Class label이 0(positiv
 
 ## Implement
 1. git clone (https://github.com/1MENU/Korean_ABSA_model.git)
-2. Download the model (https://drive.google.com/file/d/10we9m3JXnjaJxocT1v69ShppvmcKFlCO/view?usp=sharing)
-> 구글드라이브에서 가져온 파일을 압축해제하여 materials/saved_model 폴더 아래에 넣기 (용량이 커서 스캔할 수 없다는 경고창이 뜨지만 ‘Download Anyway’를 선택한다.)
+2. Download the model (https://huggingface.co/juicyjung/Korean_ABSA_model_1MENU)
+> huggingface에서 가져온 파일을 압축해제하여 materials/saved_model 폴더 아래에 넣기
 > CD 폴더 안의 파일은 CD 폴더 아래에, SC 폴더 안의 파일은 SC 폴더 아래에 넣는다.
 
 3. 모델에 넣을 dataset마련
