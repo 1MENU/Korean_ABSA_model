@@ -5,6 +5,12 @@
 
 (http://www.edujin.co.kr/news/articleView.html?idxno=40816)
 
+### 결과물 발표 영상 및 시상 (Click)
+
+<a href="http://www.youtube.com/YWelwWwNhpg" target="_blank">
+ <img src="http://img.youtube.com/vi/YWelwWwNhpg/mqdefault.jpg" alt="Watch the video" width="800" height="450" border="10" />
+</a>
+
 
 ## Task
 ### 속성 기반 감성 분석 (ABSA)
